@@ -6,7 +6,7 @@
     "title": "Amazon SSM (Simple Systems Manager)",
     "description": "AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the configuration of your managed instances. A managed instance is any Amazon Elastic Compute Cloud instance (EC2 instance), or any on-premises server or virtual machine (VM) in your hybrid environment that has been configured for Systems Manager. This reference is intended to be used with the AWS Systems Manager User Guide. To get started, verify prerequisites and configure managed instances. For more information, see Setting up AWS Systems Manager in the AWS Systems Manager User Guide. For information about other API actions you can perform on EC2 instances, see the Amazon EC2 API Reference. For information about how to use a Query API, see Making API requests.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Systems-Manager_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Systems-Manager_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4544,7 +4544,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonSSM.DescribeMaintenanceWindowExecutionTaskInvocations"]
+              "enum": [
+                "AmazonSSM.DescribeMaintenanceWindowExecutionTaskInvocations"
+              ]
             }
           }
         ],
@@ -15102,7 +15104,13 @@
       },
       "CreateMaintenanceWindowRequest": {
         "type": "object",
-        "required": ["Name", "Schedule", "Duration", "Cutoff", "AllowUnassociatedTargets"],
+        "required": [
+          "Name",
+          "Schedule",
+          "Duration",
+          "Cutoff",
+          "AllowUnassociatedTargets"
+        ],
         "title": "CreateMaintenanceWindowRequest",
         "properties": {
           "Name": {
@@ -21669,7 +21677,13 @@
       },
       "PutComplianceItemsRequest": {
         "type": "object",
-        "required": ["ResourceId", "ResourceType", "ComplianceType", "ExecutionSummary", "Items"],
+        "required": [
+          "ResourceId",
+          "ResourceType",
+          "ComplianceType",
+          "ExecutionSummary",
+          "Items"
+        ],
         "title": "PutComplianceItemsRequest",
         "properties": {
           "ResourceId": {
@@ -22144,7 +22158,14 @@
       },
       "RegisterTaskWithMaintenanceWindowRequest": {
         "type": "object",
-        "required": ["WindowId", "Targets", "TaskArn", "TaskType", "MaxConcurrency", "MaxErrors"],
+        "required": [
+          "WindowId",
+          "Targets",
+          "TaskArn",
+          "TaskType",
+          "MaxConcurrency",
+          "MaxErrors"
+        ],
         "title": "RegisterTaskWithMaintenanceWindowRequest",
         "properties": {
           "WindowId": {
@@ -27095,7 +27116,15 @@
       },
       "CommandStatus": {
         "type": "string",
-        "enum": ["Pending", "InProgress", "Success", "Cancelled", "Failed", "TimedOut", "Cancelling"]
+        "enum": [
+          "Pending",
+          "InProgress",
+          "Success",
+          "Cancelled",
+          "Failed",
+          "TimedOut",
+          "Cancelling"
+        ]
       },
       "StatusDetails": {
         "type": "string",
@@ -27420,7 +27449,13 @@
       },
       "CommandFilterKey": {
         "type": "string",
-        "enum": ["InvokedAfter", "InvokedBefore", "Status", "ExecutionStage", "DocumentName"]
+        "enum": [
+          "InvokedAfter",
+          "InvokedBefore",
+          "Status",
+          "ExecutionStage",
+          "DocumentName"
+        ]
       },
       "CommandFilterValue": {
         "type": "string",
@@ -27468,7 +27503,16 @@
       },
       "CommandInvocationStatus": {
         "type": "string",
-        "enum": ["Pending", "InProgress", "Delayed", "Success", "Cancelled", "TimedOut", "Failed", "Cancelling"]
+        "enum": [
+          "Pending",
+          "InProgress",
+          "Delayed",
+          "Success",
+          "Cancelled",
+          "TimedOut",
+          "Failed",
+          "Cancelling"
+        ]
       },
       "InvocationTraceOutput": {
         "type": "string",
@@ -27673,7 +27717,14 @@
       },
       "CommandPluginStatus": {
         "type": "string",
-        "enum": ["Pending", "InProgress", "Success", "TimedOut", "Cancelled", "Failed"]
+        "enum": [
+          "Pending",
+          "InProgress",
+          "Success",
+          "TimedOut",
+          "Cancelled",
+          "Failed"
+        ]
       },
       "ResponseCode": {
         "type": "integer"
@@ -27885,7 +27936,14 @@
       },
       "ComplianceSeverity": {
         "type": "string",
-        "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFORMATIONAL", "UNSPECIFIED"]
+        "enum": [
+          "CRITICAL",
+          "HIGH",
+          "MEDIUM",
+          "LOW",
+          "INFORMATIONAL",
+          "UNSPECIFIED"
+        ]
       },
       "ComplianceItemDetails": {
         "type": "object",
@@ -28066,7 +28124,13 @@
       },
       "ComplianceQueryOperatorType": {
         "type": "string",
-        "enum": ["EQUAL", "NOT_EQUAL", "BEGIN_WITH", "LESS_THAN", "GREATER_THAN"]
+        "enum": [
+          "EQUAL",
+          "NOT_EQUAL",
+          "BEGIN_WITH",
+          "LESS_THAN",
+          "GREATER_THAN"
+        ]
       },
       "ComplianceResourceIdList": {
         "type": "array",
@@ -28979,7 +29043,14 @@
       },
       "PatchComplianceLevel": {
         "type": "string",
-        "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFORMATIONAL", "UNSPECIFIED"]
+        "enum": [
+          "CRITICAL",
+          "HIGH",
+          "MEDIUM",
+          "LOW",
+          "INFORMATIONAL",
+          "UNSPECIFIED"
+        ]
       },
       "PatchAction": {
         "type": "string",
@@ -29516,7 +29587,14 @@
       },
       "PatchProperty": {
         "type": "string",
-        "enum": ["PRODUCT", "PRODUCT_FAMILY", "CLASSIFICATION", "MSRC_SEVERITY", "PRIORITY", "SEVERITY"]
+        "enum": [
+          "PRODUCT",
+          "PRODUCT_FAMILY",
+          "CLASSIFICATION",
+          "MSRC_SEVERITY",
+          "PRIORITY",
+          "SEVERITY"
+        ]
       },
       "PatchSet": {
         "type": "string",
@@ -31766,7 +31844,14 @@
       },
       "InstancePatchState": {
         "type": "object",
-        "required": ["InstanceId", "PatchGroup", "BaselineId", "OperationStartTime", "OperationEndTime", "Operation"],
+        "required": [
+          "InstanceId",
+          "PatchGroup",
+          "BaselineId",
+          "OperationStartTime",
+          "OperationEndTime",
+          "Operation"
+        ],
         "properties": {
           "InstanceId": {
             "allOf": [
@@ -32262,7 +32347,14 @@
       },
       "InventoryQueryOperatorType": {
         "type": "string",
-        "enum": ["Equal", "NotEqual", "BeginWith", "LessThan", "GreaterThan", "Exists"]
+        "enum": [
+          "Equal",
+          "NotEqual",
+          "BeginWith",
+          "LessThan",
+          "GreaterThan",
+          "Exists"
+        ]
       },
       "InventoryFilter": {
         "type": "object",
@@ -33631,7 +33723,14 @@
       },
       "NotificationEvent": {
         "type": "string",
-        "enum": ["All", "InProgress", "Success", "TimedOut", "Cancelled", "Failed"]
+        "enum": [
+          "All",
+          "InProgress",
+          "Success",
+          "TimedOut",
+          "Cancelled",
+          "Failed"
+        ]
       },
       "OpsAggregatorType": {
         "type": "string",
@@ -33825,7 +33924,14 @@
       },
       "OpsFilterOperatorType": {
         "type": "string",
-        "enum": ["Equal", "NotEqual", "BeginWith", "LessThan", "GreaterThan", "Exists"]
+        "enum": [
+          "Equal",
+          "NotEqual",
+          "BeginWith",
+          "LessThan",
+          "GreaterThan",
+          "Exists"
+        ]
       },
       "OpsFilter": {
         "type": "object",
@@ -34794,7 +34900,14 @@
       },
       "PatchComplianceData": {
         "type": "object",
-        "required": ["Title", "KBId", "Classification", "Severity", "State", "InstalledTime"],
+        "required": [
+          "Title",
+          "KBId",
+          "Classification",
+          "Severity",
+          "State",
+          "InstalledTime"
+        ],
         "properties": {
           "Title": {
             "allOf": [
@@ -34871,7 +34984,12 @@
       },
       "PatchDeploymentStatus": {
         "type": "string",
-        "enum": ["APPROVED", "PENDING_APPROVAL", "EXPLICIT_APPROVED", "EXPLICIT_REJECTED"]
+        "enum": [
+          "APPROVED",
+          "PENDING_APPROVAL",
+          "EXPLICIT_APPROVED",
+          "EXPLICIT_REJECTED"
+        ]
       },
       "PatchFilterKey": {
         "type": "string",
@@ -35661,7 +35779,14 @@
       },
       "SessionStatus": {
         "type": "string",
-        "enum": ["Connected", "Connecting", "Disconnected", "Terminated", "Terminating", "Failed"]
+        "enum": [
+          "Connected",
+          "Connecting",
+          "Disconnected",
+          "Terminated",
+          "Terminating",
+          "Failed"
+        ]
       },
       "SessionOwner": {
         "type": "string",
@@ -35797,7 +35922,14 @@
       },
       "SessionFilterKey": {
         "type": "string",
-        "enum": ["InvokedAfter", "InvokedBefore", "Target", "Owner", "Status", "SessionId"]
+        "enum": [
+          "InvokedAfter",
+          "InvokedBefore",
+          "Target",
+          "Owner",
+          "Status",
+          "SessionId"
+        ]
       },
       "SessionFilterValue": {
         "type": "string",
@@ -36148,7 +36280,14 @@
       },
       "StepExecutionFilterKey": {
         "type": "string",
-        "enum": ["StartTimeBefore", "StartTimeAfter", "StepExecutionStatus", "StepExecutionId", "StepName", "Action"]
+        "enum": [
+          "StartTimeBefore",
+          "StartTimeAfter",
+          "StepExecutionStatus",
+          "StepExecutionId",
+          "StepName",
+          "Action"
+        ]
       },
       "StepExecutionFilterValueList": {
         "type": "array",
@@ -36361,7 +36500,12 @@
       },
       "AssociateOpsItemRelatedItemRequest": {
         "type": "object",
-        "required": ["OpsItemId", "AssociationType", "ResourceType", "ResourceUri"],
+        "required": [
+          "OpsItemId",
+          "AssociationType",
+          "ResourceType",
+          "ResourceUri"
+        ],
         "title": "AssociateOpsItemRelatedItemRequest",
         "properties": {
           "OpsItemId": {

@@ -7,7 +7,7 @@
     "description": "This is the Amazon Rekognition API reference.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Rekognition_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Rekognition_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -7776,7 +7776,13 @@
       },
       "CreateProjectVersionRequest": {
         "type": "object",
-        "required": ["ProjectArn", "VersionName", "OutputConfig", "TrainingData", "TestingData"],
+        "required": [
+          "ProjectArn",
+          "VersionName",
+          "OutputConfig",
+          "TrainingData",
+          "TestingData"
+        ],
         "title": "CreateProjectVersionRequest",
         "properties": {
           "ProjectArn": {
@@ -12007,7 +12013,10 @@
       },
       "ContentClassifier": {
         "type": "string",
-        "enum": ["FreeOfPersonallyIdentifiableInformation", "FreeOfAdultContent"]
+        "enum": [
+          "FreeOfPersonallyIdentifiableInformation",
+          "FreeOfAdultContent"
+        ]
       },
       "ContentClassifiers": {
         "type": "array",
@@ -12546,7 +12555,17 @@
       },
       "EmotionName": {
         "type": "string",
-        "enum": ["HAPPY", "SAD", "ANGRY", "CONFUSED", "DISGUSTED", "SURPRISED", "CALM", "UNKNOWN", "FEAR"]
+        "enum": [
+          "HAPPY",
+          "SAD",
+          "ANGRY",
+          "CONFUSED",
+          "DISGUSTED",
+          "SURPRISED",
+          "CALM",
+          "UNKNOWN",
+          "FEAR"
+        ]
       },
       "Emotion": {
         "type": "object",
@@ -14342,7 +14361,15 @@
       },
       "TechnicalCueType": {
         "type": "string",
-        "enum": ["ColorBars", "EndCredits", "BlackFrames", "OpeningCredits", "StudioLogo", "Slate", "Content"]
+        "enum": [
+          "ColorBars",
+          "EndCredits",
+          "BlackFrames",
+          "OpeningCredits",
+          "StudioLogo",
+          "Slate",
+          "Content"
+        ]
       },
       "TextTypes": {
         "type": "string",

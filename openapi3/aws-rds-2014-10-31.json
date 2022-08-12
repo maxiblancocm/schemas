@@ -7,7 +7,7 @@
     "description": "",
     "x-categories": ["database"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-RDS_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-RDS_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -16254,7 +16254,10 @@
       },
       "CopyDBClusterSnapshotMessage": {
         "type": "object",
-        "required": ["SourceDBClusterSnapshotIdentifier", "TargetDBClusterSnapshotIdentifier"],
+        "required": [
+          "SourceDBClusterSnapshotIdentifier",
+          "TargetDBClusterSnapshotIdentifier"
+        ],
         "title": "CopyDBClusterSnapshotMessage",
         "properties": {
           "SourceDBClusterSnapshotIdentifier": {
@@ -16557,7 +16560,12 @@
       },
       "CreateDBClusterMessage": {
         "type": "object",
-        "required": ["DBClusterIdentifier", "Engine", "MasterUsername", "MasterUserPassword"],
+        "required": [
+          "DBClusterIdentifier",
+          "Engine",
+          "MasterUsername",
+          "MasterUserPassword"
+        ],
         "title": "CreateDBClusterMessage",
         "properties": {
           "AvailabilityZones": {
@@ -16905,7 +16913,11 @@
       },
       "CreateDBClusterParameterGroupMessage": {
         "type": "object",
-        "required": ["DBClusterParameterGroupName", "DBParameterGroupFamily", "Description"],
+        "required": [
+          "DBClusterParameterGroupName",
+          "DBParameterGroupFamily",
+          "Description"
+        ],
         "title": "CreateDBClusterParameterGroupMessage",
         "properties": {
           "DBClusterParameterGroupName": {
@@ -17530,7 +17542,12 @@
       },
       "CreateDBInstanceMessage": {
         "type": "object",
-        "required": ["DBInstanceIdentifier", "DBInstanceClass", "Engine", "DBClusterIdentifier"],
+        "required": [
+          "DBInstanceIdentifier",
+          "DBInstanceClass",
+          "Engine",
+          "DBClusterIdentifier"
+        ],
         "title": "CreateDBInstanceMessage",
         "properties": {
           "DBInstanceIdentifier": {
@@ -18629,7 +18646,11 @@
       },
       "CreateDBSubnetGroupMessage": {
         "type": "object",
-        "required": ["DBSubnetGroupName", "DBSubnetGroupDescription", "SubnetIds"],
+        "required": [
+          "DBSubnetGroupName",
+          "DBSubnetGroupDescription",
+          "SubnetIds"
+        ],
         "title": "CreateDBSubnetGroupMessage",
         "properties": {
           "DBSubnetGroupName": {
@@ -25186,7 +25207,10 @@
       },
       "CopyDBSnapshotMessage": {
         "type": "object",
-        "required": ["SourceDBSnapshotIdentifier", "TargetDBSnapshotIdentifier"],
+        "required": [
+          "SourceDBSnapshotIdentifier",
+          "TargetDBSnapshotIdentifier"
+        ],
         "title": "CopyDBSnapshotMessage",
         "properties": {
           "SourceDBSnapshotIdentifier": {
@@ -25553,7 +25577,11 @@
       },
       "CopyOptionGroupMessage": {
         "type": "object",
-        "required": ["SourceOptionGroupIdentifier", "TargetOptionGroupIdentifier", "TargetOptionGroupDescription"],
+        "required": [
+          "SourceOptionGroupIdentifier",
+          "TargetOptionGroupIdentifier",
+          "TargetOptionGroupDescription"
+        ],
         "title": "CopyOptionGroupMessage",
         "properties": {
           "SourceOptionGroupIdentifier": {
@@ -25774,7 +25802,11 @@
       },
       "CreateDBClusterEndpointMessage": {
         "type": "object",
-        "required": ["DBClusterIdentifier", "DBClusterEndpointIdentifier", "EndpointType"],
+        "required": [
+          "DBClusterIdentifier",
+          "DBClusterEndpointIdentifier",
+          "EndpointType"
+        ],
         "title": "CreateDBClusterEndpointMessage",
         "properties": {
           "DBClusterIdentifier": {
@@ -26254,7 +26286,11 @@
       },
       "CreateDBParameterGroupMessage": {
         "type": "object",
-        "required": ["DBParameterGroupName", "DBParameterGroupFamily", "Description"],
+        "required": [
+          "DBParameterGroupName",
+          "DBParameterGroupFamily",
+          "Description"
+        ],
         "title": "CreateDBParameterGroupMessage",
         "properties": {
           "DBParameterGroupName": {
@@ -26312,7 +26348,13 @@
       },
       "CreateDBProxyRequest": {
         "type": "object",
-        "required": ["DBProxyName", "EngineFamily", "Auth", "RoleArn", "VpcSubnetIds"],
+        "required": [
+          "DBProxyName",
+          "EngineFamily",
+          "Auth",
+          "RoleArn",
+          "VpcSubnetIds"
+        ],
         "title": "CreateDBProxyRequest",
         "properties": {
           "DBProxyName": {
@@ -26912,7 +26954,12 @@
       },
       "CreateOptionGroupMessage": {
         "type": "object",
-        "required": ["OptionGroupName", "EngineName", "MajorEngineVersion", "OptionGroupDescription"],
+        "required": [
+          "OptionGroupName",
+          "EngineName",
+          "MajorEngineVersion",
+          "OptionGroupDescription"
+        ],
         "title": "CreateOptionGroupMessage",
         "properties": {
           "OptionGroupName": {
@@ -33670,7 +33717,13 @@
       },
       "StartExportTaskMessage": {
         "type": "object",
-        "required": ["ExportTaskIdentifier", "SourceArn", "S3BucketName", "IamRoleArn", "KmsKeyId"],
+        "required": [
+          "ExportTaskIdentifier",
+          "SourceArn",
+          "S3BucketName",
+          "IamRoleArn",
+          "KmsKeyId"
+        ],
         "title": "StartExportTaskMessage",
         "properties": {
           "ExportTaskIdentifier": {
@@ -33825,7 +33878,12 @@
       },
       "TargetHealthReason": {
         "type": "string",
-        "enum": ["UNREACHABLE", "CONNECTION_FAILED", "AUTH_FAILURE", "PENDING_PROXY_CAPACITY"]
+        "enum": [
+          "UNREACHABLE",
+          "CONNECTION_FAILED",
+          "AUTH_FAILURE",
+          "PENDING_PROXY_CAPACITY"
+        ]
       },
       "UserAuthConfigInfo": {
         "type": "object",

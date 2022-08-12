@@ -6,7 +6,7 @@
     "title": "Amazon Connect Participant Service",
     "description": "Amazon Connect is a cloud-based contact center solution that makes it easy to set up and manage a customer contact center and provide reliable customer engagement at any scale. Amazon Connect enables customer contacts through voice or chat. The APIs described here are used by chat participants, such as agents and customers.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Connect_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Connect_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1146,7 +1146,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["ContentType", "AttachmentSizeInBytes", "AttachmentName", "ClientToken"],
+                "required": [
+                  "ContentType",
+                  "AttachmentSizeInBytes",
+                  "AttachmentName",
+                  "ClientToken"
+                ],
                 "properties": {
                   "ContentType": {
                     "description": "Describes the MIME file type of the attachment. For a list of supported file types, see <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#feature-limits\">Feature specifications</a> in the <i>Amazon Connect Administrator Guide</i>.",

@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "x-categories": ["blog"],
     "x-logo": {
-      "url": "/logos/medium.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/medium.svg"
     },
     "termsOfService": "https://medium.com/@feerst/2b405a832a2f",
     "contact": {

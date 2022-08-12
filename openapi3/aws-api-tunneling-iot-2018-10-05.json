@@ -6,7 +6,7 @@
     "title": "AWS IoT Secure Tunneling",
     "description": "AWS IoT Secure Tunnling enables you to create remote connections to devices deployed in the field. For more information about how AWS IoT Secure Tunneling works, see the User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-Core_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-Core_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {

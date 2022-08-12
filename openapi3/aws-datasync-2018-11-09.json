@@ -6,7 +6,7 @@
     "title": "AWS DataSync",
     "description": "AWS DataSync is a managed data transfer service that makes it simpler for you to automate moving data between on-premises storage and Amazon Simple Storage Service (Amazon S3) or Amazon Elastic File System (Amazon EFS).  This API interface reference for AWS DataSync contains documentation for a programming interface that you can use to manage AWS DataSync.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Data-Sync_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Data-Sync_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3399,7 +3399,12 @@
       },
       "CreateLocationFsxWindowsRequest": {
         "type": "object",
-        "required": ["FsxFilesystemArn", "SecurityGroupArns", "User", "Password"],
+        "required": [
+          "FsxFilesystemArn",
+          "SecurityGroupArns",
+          "User",
+          "Password"
+        ],
         "title": "CreateLocationFsxWindowsRequest",
         "properties": {
           "Subdirectory": {
@@ -3757,7 +3762,13 @@
       },
       "CreateLocationSmbRequest": {
         "type": "object",
-        "required": ["Subdirectory", "ServerHostname", "User", "Password", "AgentArns"],
+        "required": [
+          "Subdirectory",
+          "ServerHostname",
+          "User",
+          "Password",
+          "AgentArns"
+        ],
         "title": "CreateLocationSmbRequest",
         "properties": {
           "Subdirectory": {
@@ -5715,7 +5726,15 @@
       },
       "S3StorageClass": {
         "type": "string",
-        "enum": ["STANDARD", "STANDARD_IA", "ONEZONE_IA", "INTELLIGENT_TIERING", "GLACIER", "DEEP_ARCHIVE", "OUTPOSTS"]
+        "enum": [
+          "STANDARD",
+          "STANDARD_IA",
+          "ONEZONE_IA",
+          "INTELLIGENT_TIERING",
+          "GLACIER",
+          "DEEP_ARCHIVE",
+          "OUTPOSTS"
+        ]
       },
       "S3Config": {
         "type": "object",
@@ -5997,7 +6016,15 @@
       },
       "TaskExecutionStatus": {
         "type": "string",
-        "enum": ["QUEUED", "LAUNCHING", "PREPARING", "TRANSFERRING", "VERIFYING", "SUCCESS", "ERROR"]
+        "enum": [
+          "QUEUED",
+          "LAUNCHING",
+          "PREPARING",
+          "TRANSFERRING",
+          "VERIFYING",
+          "SUCCESS",
+          "ERROR"
+        ]
       },
       "long": {
         "type": "integer"

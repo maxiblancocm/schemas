@@ -6,7 +6,7 @@
     "title": "AWS Compute Optimizer",
     "description": "AWS Compute Optimizer is a service that analyzes the configuration and utilization metrics of your AWS resources, such as EC2 instances and Auto Scaling groups. It reports whether your resources are optimal, and generates optimization recommendations to reduce the cost and improve the performance of your workloads. Compute Optimizer also provides recent utilization metric data, as well as projected utilization metric data for the recommendations, which you can use to evaluate which recommendation provides the best price-performance trade-off. The analysis of your usage patterns can help you decide when to move or resize your running resources, and still meet your performance and capacity requirements. For more information about Compute Optimizer, including the required permissions to use the service, see the AWS Compute Optimizer User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Compute-Optimizer_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Compute-Optimizer_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -251,7 +251,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.DescribeRecommendationExportJobs"]
+              "enum": [
+                "ComputeOptimizerService.DescribeRecommendationExportJobs"
+              ]
             }
           }
         ],
@@ -394,7 +396,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.ExportAutoScalingGroupRecommendations"]
+              "enum": [
+                "ComputeOptimizerService.ExportAutoScalingGroupRecommendations"
+              ]
             }
           }
         ],
@@ -537,7 +541,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.ExportEC2InstanceRecommendations"]
+              "enum": [
+                "ComputeOptimizerService.ExportEC2InstanceRecommendations"
+              ]
             }
           }
         ],
@@ -680,7 +686,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.GetAutoScalingGroupRecommendations"]
+              "enum": [
+                "ComputeOptimizerService.GetAutoScalingGroupRecommendations"
+              ]
             }
           }
         ],
@@ -966,7 +974,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.GetEC2RecommendationProjectedMetrics"]
+              "enum": [
+                "ComputeOptimizerService.GetEC2RecommendationProjectedMetrics"
+              ]
             }
           }
         ],
@@ -1631,7 +1641,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.ExportLambdaFunctionRecommendations"]
+              "enum": [
+                "ComputeOptimizerService.ExportLambdaFunctionRecommendations"
+              ]
             }
           }
         ],
@@ -1897,7 +1909,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.GetEnrollmentStatusesForOrganization"]
+              "enum": [
+                "ComputeOptimizerService.GetEnrollmentStatusesForOrganization"
+              ]
             }
           }
         ],
@@ -2040,7 +2054,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComputeOptimizerService.GetLambdaFunctionRecommendations"]
+              "enum": [
+                "ComputeOptimizerService.GetLambdaFunctionRecommendations"
+              ]
             }
           }
         ],
@@ -2969,7 +2985,12 @@
       },
       "Finding": {
         "type": "string",
-        "enum": ["Underprovisioned", "Overprovisioned", "Optimized", "NotOptimized"]
+        "enum": [
+          "Underprovisioned",
+          "Overprovisioned",
+          "Optimized",
+          "NotOptimized"
+        ]
       },
       "UtilizationMetrics": {
         "type": "array",
@@ -3406,7 +3427,11 @@
       },
       "FilterName": {
         "type": "string",
-        "enum": ["Finding", "RecommendationSourceType", "RecommendationSourceType"]
+        "enum": [
+          "Finding",
+          "RecommendationSourceType",
+          "RecommendationSourceType"
+        ]
       },
       "FilterValues": {
         "type": "array",
@@ -3882,7 +3907,12 @@
       },
       "ResourceType": {
         "type": "string",
-        "enum": ["Ec2Instance", "AutoScalingGroup", "EbsVolume", "LambdaFunction"]
+        "enum": [
+          "Ec2Instance",
+          "AutoScalingGroup",
+          "EbsVolume",
+          "LambdaFunction"
+        ]
       },
       "RecommendationExportJob": {
         "type": "object",
@@ -3965,7 +3995,12 @@
       },
       "RecommendationSourceType": {
         "type": "string",
-        "enum": ["Ec2Instance", "AutoScalingGroup", "EbsVolume", "LambdaFunction"]
+        "enum": [
+          "Ec2Instance",
+          "AutoScalingGroup",
+          "EbsVolume",
+          "LambdaFunction"
+        ]
       },
       "RecommendationSource": {
         "type": "object",
@@ -5122,7 +5157,12 @@
       },
       "LambdaFunctionRecommendationFindingReasonCode": {
         "type": "string",
-        "enum": ["MemoryOverprovisioned", "MemoryUnderprovisioned", "InsufficientData", "Inconclusive"]
+        "enum": [
+          "MemoryOverprovisioned",
+          "MemoryUnderprovisioned",
+          "InsufficientData",
+          "Inconclusive"
+        ]
       },
       "LambdaFunctionUtilizationMetric": {
         "type": "object",

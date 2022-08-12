@@ -6,7 +6,7 @@
     "title": "AWS Elemental MediaPackage",
     "description": "AWS Elemental MediaPackage",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Elemental-MediaPackage_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Elemental-MediaPackage_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -469,7 +469,13 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["endTime", "id", "originEndpointId", "s3Destination", "startTime"],
+                "required": [
+                  "endTime",
+                  "id",
+                  "originEndpointId",
+                  "s3Destination",
+                  "startTime"
+                ],
                 "properties": {
                   "endTime": {
                     "description": "The end of the time-window which will be harvested\n",
@@ -3943,7 +3949,11 @@
         "type": "string"
       },
       "SegmentTemplateFormat": {
-        "enum": ["NUMBER_WITH_TIMELINE", "TIME_WITH_TIMELINE", "NUMBER_WITH_DURATION"],
+        "enum": [
+          "NUMBER_WITH_TIMELINE",
+          "TIME_WITH_TIMELINE",
+          "NUMBER_WITH_DURATION"
+        ],
         "type": "string"
       },
       "UtcTiming": {
@@ -6511,7 +6521,11 @@
         "description": "An OriginEndpoint resource configuration."
       },
       "StreamOrder": {
-        "enum": ["ORIGINAL", "VIDEO_BITRATE_ASCENDING", "VIDEO_BITRATE_DESCENDING"],
+        "enum": [
+          "ORIGINAL",
+          "VIDEO_BITRATE_ASCENDING",
+          "VIDEO_BITRATE_DESCENDING"
+        ],
         "type": "string"
       },
       "__PeriodTriggersElement": {

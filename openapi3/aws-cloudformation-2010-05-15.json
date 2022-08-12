@@ -6,7 +6,7 @@
     "title": "AWS CloudFormation",
     "description": "AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store, Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable, cost-effective applications without creating or configuring the underlying AWS infrastructure. With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of the stack together and manages all dependencies between the resources for you. For more information about AWS CloudFormation, see the AWS CloudFormation Product Page. Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS product, you can find the product's technical documentation at docs.aws.amazon.com.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-CloudFormation_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-CloudFormation_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -6137,7 +6137,11 @@
       },
       "Capability": {
         "type": "string",
-        "enum": ["CAPABILITY_IAM", "CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
+        "enum": [
+          "CAPABILITY_IAM",
+          "CAPABILITY_NAMED_IAM",
+          "CAPABILITY_AUTO_EXPAND"
+        ]
       },
       "ResourceType": {
         "type": "string",
@@ -6589,7 +6593,12 @@
       "ChangeSetNotFoundException": {},
       "DescribeStackDriftDetectionStatusOutput": {
         "type": "object",
-        "required": ["StackId", "StackDriftDetectionId", "DetectionStatus", "Timestamp"],
+        "required": [
+          "StackId",
+          "StackDriftDetectionId",
+          "DetectionStatus",
+          "Timestamp"
+        ],
         "properties": {
           "StackId": {
             "allOf": [
@@ -8331,7 +8340,14 @@
       },
       "ExecutionStatus": {
         "type": "string",
-        "enum": ["UNAVAILABLE", "AVAILABLE", "EXECUTE_IN_PROGRESS", "EXECUTE_COMPLETE", "EXECUTE_FAILED", "OBSOLETE"]
+        "enum": [
+          "UNAVAILABLE",
+          "AVAILABLE",
+          "EXECUTE_IN_PROGRESS",
+          "EXECUTE_COMPLETE",
+          "EXECUTE_FAILED",
+          "OBSOLETE"
+        ]
       },
       "CreationTime": {
         "type": "string",
@@ -8348,7 +8364,13 @@
       },
       "ChangeSource": {
         "type": "string",
-        "enum": ["ResourceReference", "ParameterReference", "ResourceAttribute", "DirectModification", "Automatic"]
+        "enum": [
+          "ResourceReference",
+          "ParameterReference",
+          "ResourceAttribute",
+          "DirectModification",
+          "Automatic"
+        ]
       },
       "Changes": {
         "type": "array",
@@ -9590,7 +9612,11 @@
       },
       "StackDriftDetectionStatus": {
         "type": "string",
-        "enum": ["DETECTION_IN_PROGRESS", "DETECTION_FAILED", "DETECTION_COMPLETE"]
+        "enum": [
+          "DETECTION_IN_PROGRESS",
+          "DETECTION_FAILED",
+          "DETECTION_COMPLETE"
+        ]
       },
       "StackDriftDetectionStatusReason": {
         "type": "string"
@@ -9634,7 +9660,11 @@
       },
       "DescribeStackInstanceInput": {
         "type": "object",
-        "required": ["StackSetName", "StackInstanceAccount", "StackInstanceRegion"],
+        "required": [
+          "StackSetName",
+          "StackInstanceAccount",
+          "StackInstanceRegion"
+        ],
         "title": "DescribeStackInstanceInput",
         "properties": {
           "StackSetName": {
@@ -9886,7 +9916,12 @@
       },
       "StackResourceDetail": {
         "type": "object",
-        "required": ["LogicalResourceId", "ResourceType", "LastUpdatedTimestamp", "ResourceStatus"],
+        "required": [
+          "LogicalResourceId",
+          "ResourceType",
+          "LastUpdatedTimestamp",
+          "ResourceStatus"
+        ],
         "properties": {
           "StackName": {
             "allOf": [
@@ -10645,7 +10680,13 @@
       },
       "StackResourceDrift": {
         "type": "object",
-        "required": ["StackId", "LogicalResourceId", "ResourceType", "StackResourceDriftStatus", "Timestamp"],
+        "required": [
+          "StackId",
+          "LogicalResourceId",
+          "ResourceType",
+          "StackResourceDriftStatus",
+          "Timestamp"
+        ],
         "properties": {
           "StackId": {
             "allOf": [
@@ -12004,7 +12045,12 @@
       },
       "PropertyDifference": {
         "type": "object",
-        "required": ["PropertyPath", "ExpectedValue", "ActualValue", "DifferenceType"],
+        "required": [
+          "PropertyPath",
+          "ExpectedValue",
+          "ActualValue",
+          "DifferenceType"
+        ],
         "properties": {
           "PropertyPath": {
             "allOf": [
@@ -12235,7 +12281,14 @@
       },
       "ResourceAttribute": {
         "type": "string",
-        "enum": ["Properties", "Metadata", "CreationPolicy", "UpdatePolicy", "DeletionPolicy", "Tags"]
+        "enum": [
+          "Properties",
+          "Metadata",
+          "CreationPolicy",
+          "UpdatePolicy",
+          "DeletionPolicy",
+          "Tags"
+        ]
       },
       "Scope": {
         "type": "array",
@@ -13021,7 +13074,14 @@
       },
       "StackInstanceDetailedStatus": {
         "type": "string",
-        "enum": ["PENDING", "RUNNING", "SUCCEEDED", "FAILED", "CANCELLED", "INOPERABLE"]
+        "enum": [
+          "PENDING",
+          "RUNNING",
+          "SUCCEEDED",
+          "FAILED",
+          "CANCELLED",
+          "INOPERABLE"
+        ]
       },
       "StackInstanceFilterName": {
         "type": "string",
@@ -13177,7 +13237,12 @@
       },
       "StackResource": {
         "type": "object",
-        "required": ["LogicalResourceId", "ResourceType", "Timestamp", "ResourceStatus"],
+        "required": [
+          "LogicalResourceId",
+          "ResourceType",
+          "Timestamp",
+          "ResourceStatus"
+        ],
         "properties": {
           "StackName": {
             "allOf": [
@@ -13321,7 +13386,12 @@
       },
       "StackResourceSummary": {
         "type": "object",
-        "required": ["LogicalResourceId", "ResourceType", "LastUpdatedTimestamp", "ResourceStatus"],
+        "required": [
+          "LogicalResourceId",
+          "ResourceType",
+          "LastUpdatedTimestamp",
+          "ResourceStatus"
+        ],
         "properties": {
           "LogicalResourceId": {
             "allOf": [
@@ -13501,7 +13571,13 @@
       },
       "StackSetDriftDetectionStatus": {
         "type": "string",
-        "enum": ["COMPLETED", "FAILED", "PARTIAL_SUCCESS", "IN_PROGRESS", "STOPPED"]
+        "enum": [
+          "COMPLETED",
+          "FAILED",
+          "PARTIAL_SUCCESS",
+          "IN_PROGRESS",
+          "STOPPED"
+        ]
       },
       "TotalStackInstancesCount": {
         "type": "integer",
@@ -13513,7 +13589,14 @@
       },
       "StackSetOperationStatus": {
         "type": "string",
-        "enum": ["RUNNING", "SUCCEEDED", "FAILED", "STOPPING", "STOPPED", "QUEUED"]
+        "enum": [
+          "RUNNING",
+          "SUCCEEDED",
+          "FAILED",
+          "STOPPING",
+          "STOPPED",
+          "QUEUED"
+        ]
       },
       "StackSetOperationResultStatus": {
         "type": "string",

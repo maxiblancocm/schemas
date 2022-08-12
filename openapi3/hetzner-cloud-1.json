@@ -5,7 +5,7 @@
     "description": "Copied from the official API documentation for the Public Hetzner Cloud.",
     "x-categories": ["cloud-computing"],
     "x-logo": {
-      "url": "/logos/hetzner-cloud.png"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/hetzner-cloud.png"
     },
     "contact": {
       "url": "https://docs.hetzner.cloud/"
@@ -65,7 +65,16 @@
             "$ref": "#/components/schemas/error"
           }
         },
-        "required": ["id", "command", "status", "progress", "started", "finished", "resources", "error"],
+        "required": [
+          "id",
+          "command",
+          "status",
+          "progress",
+          "started",
+          "finished",
+          "resources",
+          "error"
+        ],
         "description": "Actions show the results and progress of asynchronous requests to the API.",
         "title": "Action"
       },
@@ -1499,7 +1508,16 @@
                 "$ref": "#/components/schemas/error"
               }
             },
-            "required": ["id", "command", "status", "progress", "started", "finished", "resources", "error"],
+            "required": [
+              "id",
+              "command",
+              "status",
+              "progress",
+              "started",
+              "finished",
+              "resources",
+              "error"
+            ],
             "additionalProperties": false,
             "$ref": "#/components/schemas/action"
           },
@@ -2324,7 +2342,14 @@
           },
           "os_flavor": {
             "type": "string",
-            "enum": ["centos", "debian", "fedora", "ubuntu", "unknown", "unknown"],
+            "enum": [
+              "centos",
+              "debian",
+              "fedora",
+              "ubuntu",
+              "unknown",
+              "unknown"
+            ],
             "description": "Flavor of operating system contained in the Image",
             "example": "ubuntu"
           },
@@ -2444,7 +2469,14 @@
           },
           "os_flavor": {
             "type": "string",
-            "enum": ["centos", "debian", "fedora", "ubuntu", "unknown", "unknown"],
+            "enum": [
+              "centos",
+              "debian",
+              "fedora",
+              "ubuntu",
+              "unknown",
+              "unknown"
+            ],
             "description": "Flavor of operating system contained in the Image",
             "example": "ubuntu"
           },
@@ -3408,7 +3440,16 @@
             "example": "eu-central"
           }
         },
-        "required": ["id", "name", "description", "country", "city", "latitude", "longitude", "network_zone"],
+        "required": [
+          "id",
+          "name",
+          "description",
+          "country",
+          "city",
+          "latitude",
+          "longitude",
+          "network_zone"
+        ],
         "description": "Location where the Datacenter resides in | Location the Floating IP was created in. Routing is optimized for this Location. | Location where the routing is optimised for | Location of the Volume. Volume can only be attached to Servers in the same Location."
       },
       "metrics": {
@@ -3516,7 +3557,17 @@
             "example": "2016-01-30T23:50:00+00:00"
           }
         },
-        "required": ["id", "name", "ip_range", "subnets", "routes", "servers", "protection", "labels", "created"]
+        "required": [
+          "id",
+          "name",
+          "ip_range",
+          "subnets",
+          "routes",
+          "servers",
+          "protection",
+          "labels",
+          "created"
+        ]
       },
       "power_off_server_response": {
         "type": "object",
@@ -4084,7 +4135,16 @@
                 "description": "Point in time when the Network was created (in ISO-8601 format)"
               }
             },
-            "required": ["id", "name", "ip_range", "subnets", "routes", "servers", "protection", "created"],
+            "required": [
+              "id",
+              "name",
+              "ip_range",
+              "subnets",
+              "routes",
+              "servers",
+              "protection",
+              "created"
+            ],
             "$ref": "#/components/schemas/network"
           }
         },
@@ -4797,7 +4857,13 @@
             "description": "Configuration option for protocols http and https"
           }
         },
-        "required": ["protocol", "listen_port", "destination_port", "proxyprotocol", "health_check"],
+        "required": [
+          "protocol",
+          "listen_port",
+          "destination_port",
+          "proxyprotocol",
+          "health_check"
+        ],
         "description": "A service for a Load Balancer."
       },
       "shutdown_server_response": {
@@ -4854,7 +4920,14 @@
             "example": "2016-01-30T23:55:00+00:00"
           }
         },
-        "required": ["id", "name", "fingerprint", "public_key", "labels", "created"],
+        "required": [
+          "id",
+          "name",
+          "fingerprint",
+          "public_key",
+          "labels",
+          "created"
+        ],
         "description": "SSH keys are public keys you provide to the cloud system. They can be injected into Servers at creation time. We highly recommend that you use keys instead of passwords to manage your Servers."
       },
       "subnet": {
@@ -5152,7 +5225,16 @@
             "type": "string"
           }
         },
-        "required": ["id", "command", "status", "progress", "started", "finished", "resources", "error"],
+        "required": [
+          "id",
+          "command",
+          "status",
+          "progress",
+          "started",
+          "finished",
+          "resources",
+          "error"
+        ],
         "title": "NullableAction",
         "type": "object",
         "description": "Actions show the results and progress of asynchronous requests to the API."
@@ -5350,7 +5432,11 @@
                 "direction": "in",
                 "port": "80",
                 "protocol": "tcp",
-                "source_ips": ["28.239.13.1/32", "28.239.14.0/24", "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"]
+                "source_ips": [
+                  "28.239.13.1/32",
+                  "28.239.14.0/24",
+                  "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"
+                ]
               }
             ],
             "items": {
@@ -6027,7 +6113,14 @@
                   "type": "string"
                 }
               },
-              "required": ["id", "name", "labels", "type", "created", "servers"],
+              "required": [
+                "id",
+                "name",
+                "labels",
+                "type",
+                "created",
+                "servers"
+              ],
               "title": "PlacementGroup",
               "type": "object"
             },
@@ -6305,7 +6398,13 @@
             "type": "boolean"
           }
         },
-        "required": ["protocol", "listen_port", "destination_port", "proxyprotocol", "health_check"],
+        "required": [
+          "protocol",
+          "listen_port",
+          "destination_port",
+          "proxyprotocol",
+          "health_check"
+        ],
         "title": "LoadBalancerService",
         "type": "object",
         "description": "A service for a Load Balancer."
@@ -6357,7 +6456,14 @@
             "type": "integer"
           }
         },
-        "required": ["page", "per_page", "previous_page", "next_page", "last_page", "total_entries"],
+        "required": [
+          "page",
+          "per_page",
+          "previous_page",
+          "next_page",
+          "last_page",
+          "total_entries"
+        ],
         "type": "object",
         "description": "Information about the current pagination. The keys previous_page, next_page, last_page, and total_entries may be null when on the first page, last page, or when the total number of entries is unknown"
       },
@@ -6648,7 +6754,11 @@
           },
           "destination_ips": {
             "description": "List of permitted IPv4/IPv6 addresses in CIDR notation. Use `0.0.0.0/0` to allow all IPv4 addresses and `::/0` to allow all IPv6 addresses. You can specify 100 CIDRs at most.",
-            "example": ["28.239.13.1/32", "28.239.14.0/24", "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"],
+            "example": [
+              "28.239.13.1/32",
+              "28.239.14.0/24",
+              "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"
+            ],
             "items": {
               "type": "string"
             },
@@ -6671,7 +6781,11 @@
           },
           "source_ips": {
             "description": "List of permitted IPv4/IPv6 addresses in CIDR notation. Use `0.0.0.0/0` to allow all IPv4 addresses and `::/0` to allow all IPv6 addresses. You can specify 100 CIDRs at most.",
-            "example": ["28.239.13.1/32", "28.239.14.0/24", "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"],
+            "example": [
+              "28.239.13.1/32",
+              "28.239.14.0/24",
+              "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"
+            ],
             "items": {
               "type": "string"
             },
@@ -7045,7 +7159,11 @@
                       "created": "2019-01-08T12:10:00+00:00",
                       "not_valid_before": "2019-01-08T10:00:00+00:00",
                       "not_valid_after": "2019-07-08T09:59:59+00:00",
-                      "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                      "domain_names": [
+                        "example.com",
+                        "webmail.example.com",
+                        "www.example.com"
+                      ],
                       "fingerprint": "03:c7:55:9b:2a:d1:04:17:09:f6:d0:7f:18:34:63:d4:3e:5f",
                       "used_by": [
                         {
@@ -7084,7 +7202,11 @@
                 "managed": {
                   "summary": "Creating a type `managed` Certificate",
                   "value": {
-                    "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                    "domain_names": [
+                      "example.com",
+                      "webmail.example.com",
+                      "www.example.com"
+                    ],
                     "name": "my website cert",
                     "type": "managed"
                   }
@@ -7119,7 +7241,11 @@
                     "created": "2019-01-08T12:10:00+00:00",
                     "not_valid_before": "2019-01-08T10:00:00+00:00",
                     "not_valid_after": "2019-07-08T09:59:59+00:00",
-                    "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                    "domain_names": [
+                      "example.com",
+                      "webmail.example.com",
+                      "www.example.com"
+                    ],
                     "fingerprint": "03:c7:55:9b:2a:d1:04:17:09:f6:d0:7f:18:34:63:d4:3e:5f",
                     "used_by": [
                       {
@@ -7154,7 +7280,11 @@
                       "certificate": {
                         "certificate": null,
                         "created": "2019-01-08T12:10:00+00:00",
-                        "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                        "domain_names": [
+                          "example.com",
+                          "webmail.example.com",
+                          "www.example.com"
+                        ],
                         "fingerprint": null,
                         "id": 897,
                         "labels": {
@@ -7185,7 +7315,11 @@
                       "certificate": {
                         "certificate": "-----BEGIN CERTIFICATE-----\n...",
                         "created": "2019-01-08T12:10:00+00:00",
-                        "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                        "domain_names": [
+                          "example.com",
+                          "webmail.example.com",
+                          "www.example.com"
+                        ],
                         "fingerprint": "03:c7:55:9b:2a:d1:04:17:09:f6:d0:7f:18:34:63:d4:3e:5f",
                         "id": 897,
                         "labels": {
@@ -7248,7 +7382,11 @@
                     "created": "2019-01-08T12:10:00+00:00",
                     "not_valid_before": "2019-01-08T10:00:00+00:00",
                     "not_valid_after": "2019-07-08T09:59:59+00:00",
-                    "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                    "domain_names": [
+                      "example.com",
+                      "webmail.example.com",
+                      "www.example.com"
+                    ],
                     "fingerprint": "03:c7:55:9b:2a:d1:04:17:09:f6:d0:7f:18:34:63:d4:3e:5f",
                     "used_by": [
                       {
@@ -7315,7 +7453,11 @@
                     "created": "2019-01-08T12:10:00+00:00",
                     "not_valid_before": "2019-01-08T10:00:00+00:00",
                     "not_valid_after": "2019-07-08T09:59:59+00:00",
-                    "domain_names": ["example.com", "webmail.example.com", "www.example.com"],
+                    "domain_names": [
+                      "example.com",
+                      "webmail.example.com",
+                      "www.example.com"
+                    ],
                     "fingerprint": "03:c7:55:9b:2a:d1:04:17:09:f6:d0:7f:18:34:63:d4:3e:5f",
                     "used_by": [
                       {
@@ -7496,7 +7638,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "id:asc", "id:desc", "created", "created:asc", "created:desc"]
+              "enum": [
+                "id",
+                "id:asc",
+                "id:desc",
+                "created",
+                "created:asc",
+                "created:desc"
+              ]
             }
           },
           {
@@ -9728,7 +9877,12 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["open_connections", "connections_per_second", "requests_per_second", "bandwidth"]
+              "enum": [
+                "open_connections",
+                "connections_per_second",
+                "requests_per_second",
+                "bandwidth"
+              ]
             }
           },
           {
@@ -14440,7 +14594,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "id:asc", "id:desc", "name", "name:asc", "name:desc"]
+              "enum": [
+                "id",
+                "id:asc",
+                "id:desc",
+                "name",
+                "name:asc",
+                "name:desc"
+              ]
             }
           },
           {
@@ -15824,7 +15985,11 @@
                         "direction": "in",
                         "port": "80",
                         "protocol": "tcp",
-                        "source_ips": ["28.239.13.1/32", "28.239.14.0/24", "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"]
+                        "source_ips": [
+                          "28.239.13.1/32",
+                          "28.239.14.0/24",
+                          "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"
+                        ]
                       }
                     ]
                   }
@@ -16297,7 +16462,11 @@
                         "direction": "in",
                         "port": "80",
                         "protocol": "tcp",
-                        "source_ips": ["28.239.13.1/32", "28.239.14.0/24", "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"]
+                        "source_ips": [
+                          "28.239.13.1/32",
+                          "28.239.14.0/24",
+                          "ff21:1eac:9a3b:ee58:5ca:990c:8bc9:c03b/128"
+                        ]
                       }
                     ]
                   }
@@ -16743,7 +16912,14 @@
             "name": "sort",
             "required": false,
             "schema": {
-              "enum": ["id", "id:asc", "id:desc", "created", "created:asc", "created:desc"],
+              "enum": [
+                "id",
+                "id:asc",
+                "id:desc",
+                "created",
+                "created:asc",
+                "created:desc"
+              ],
               "type": "string"
             }
           },

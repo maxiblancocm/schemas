@@ -6,7 +6,7 @@
     "title": "Amazon S3 (Simple Storage Service)",
     "description": "",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-S3-Standard_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-S3-Standard_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -974,7 +974,12 @@
             "description": "The canned ACL to apply to the bucket.",
             "schema": {
               "type": "string",
-              "enum": ["private", "public-read", "public-read-write", "authenticated-read"]
+              "enum": [
+                "private",
+                "public-read",
+                "public-read-write",
+                "authenticated-read"
+              ]
             }
           },
           {
@@ -5210,7 +5215,12 @@
             "description": "The canned ACL to apply to the bucket.",
             "schema": {
               "type": "string",
-              "enum": ["private", "public-read", "public-read-write", "authenticated-read"]
+              "enum": [
+                "private",
+                "public-read",
+                "public-read-write",
+                "authenticated-read"
+              ]
             }
           },
           {
@@ -8246,7 +8256,12 @@
             "text/xml": {
               "schema": {
                 "type": "object",
-                "required": ["Expression", "ExpressionType", "InputSerialization", "OutputSerialization"],
+                "required": [
+                  "Expression",
+                  "ExpressionType",
+                  "InputSerialization",
+                  "OutputSerialization"
+                ],
                 "properties": {
                   "Expression": {
                     "description": "The expression that is used to query the object.",
@@ -12154,7 +12169,12 @@
       },
       "SelectParameters": {
         "type": "object",
-        "required": ["InputSerialization", "ExpressionType", "Expression", "OutputSerialization"],
+        "required": [
+          "InputSerialization",
+          "ExpressionType",
+          "Expression",
+          "OutputSerialization"
+        ],
         "properties": {
           "InputSerialization": {
             "allOf": [
@@ -13682,7 +13702,13 @@
       },
       "InventoryConfiguration": {
         "type": "object",
-        "required": ["Destination", "IsEnabled", "Id", "IncludedObjectVersions", "Schedule"],
+        "required": [
+          "Destination",
+          "IsEnabled",
+          "Id",
+          "IncludedObjectVersions",
+          "Schedule"
+        ],
         "properties": {
           "Destination": {
             "allOf": [
@@ -14859,7 +14885,13 @@
       },
       "TransitionStorageClass": {
         "type": "string",
-        "enum": ["GLACIER", "STANDARD_IA", "ONEZONE_IA", "INTELLIGENT_TIERING", "DEEP_ARCHIVE"]
+        "enum": [
+          "GLACIER",
+          "STANDARD_IA",
+          "ONEZONE_IA",
+          "INTELLIGENT_TIERING",
+          "DEEP_ARCHIVE"
+        ]
       },
       "NoncurrentVersionTransition": {
         "type": "object",

@@ -6,7 +6,7 @@
     "title": "Amazon CloudHSM",
     "description": "This is documentation for AWS CloudHSM Classic. For more information, see AWS CloudHSM Classic FAQs, the AWS CloudHSM Classic User Guide, and the AWS CloudHSM Classic API Reference.  For information about the current version of AWS CloudHSM, see AWS CloudHSM, the AWS CloudHSM User Guide, and the AWS CloudHSM API Reference.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-CloudHSM_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-CloudHSM_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3437,7 +3437,15 @@
       },
       "HsmStatus": {
         "type": "string",
-        "enum": ["PENDING", "RUNNING", "UPDATING", "SUSPENDED", "TERMINATING", "TERMINATED", "DEGRADED"]
+        "enum": [
+          "PENDING",
+          "RUNNING",
+          "UPDATING",
+          "SUSPENDED",
+          "TERMINATING",
+          "TERMINATED",
+          "DEGRADED"
+        ]
       },
       "EniId": {
         "type": "string",

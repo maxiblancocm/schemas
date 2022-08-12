@@ -6,7 +6,7 @@
     "description": "Zoom API",
     "x-categories": ["chat"],
     "x-logo": {
-      "url": "/logos/zoom.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/zoom.svg"
     },
     "contact": {
       "name": "Zoom Developers",
@@ -3180,7 +3180,12 @@
                           "type": "string",
                           "description": "Status of the Meeting Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -3204,7 +3209,12 @@
                           "type": "string",
                           "description": "Status of the Meeting Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -3260,7 +3270,12 @@
                           "type": "string",
                           "description": "Status of the Meeting Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -3284,7 +3299,12 @@
                           "type": "string",
                           "description": "Status of the Meeting Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -7722,7 +7742,10 @@
             "in": "query",
             "name": "action",
             "description": "Delete action type",
-            "x-enum-descriptions": ["Disassociate a user", "Permanently delete a user"],
+            "x-enum-descriptions": [
+              "Disassociate a user",
+              "Permanently delete a user"
+            ],
             "schema": {
               "type": "string",
               "enum": ["disassociate", "delete"],
@@ -8130,7 +8153,10 @@
                     "type": "string",
                     "description": "The action type",
                     "enum": ["activate", "deactivate"],
-                    "x-enum-descriptions": ["set users status to active", "set users status to inactive"]
+                    "x-enum-descriptions": [
+                      "set users status to active",
+                      "set users status to inactive"
+                    ]
                   }
                 }
               }
@@ -8145,7 +8171,10 @@
                     "type": "string",
                     "description": "The action type",
                     "enum": ["activate", "deactivate"],
-                    "x-enum-descriptions": ["set users status to active", "set users status to inactive"]
+                    "x-enum-descriptions": [
+                      "set users status to active",
+                      "set users status to inactive"
+                    ]
                   }
                 }
               }
@@ -9340,7 +9369,11 @@
                   "action": {
                     "type": "string",
                     "enum": ["approve", "cancel", "deny"],
-                    "x-enum-descriptions": ["Approve registrant", "Cancel registrant", "Deny registrant"]
+                    "x-enum-descriptions": [
+                      "Approve registrant",
+                      "Cancel registrant",
+                      "Deny registrant"
+                    ]
                   },
                   "registrants": {
                     "type": "array",
@@ -9367,7 +9400,11 @@
                   "action": {
                     "type": "string",
                     "enum": ["approve", "cancel", "deny"],
-                    "x-enum-descriptions": ["Approve registrant", "Cancel registrant", "Deny registrant"]
+                    "x-enum-descriptions": [
+                      "Approve registrant",
+                      "Cancel registrant",
+                      "Deny registrant"
+                    ]
                   },
                   "registrants": {
                     "type": "array",
@@ -9525,7 +9562,12 @@
                           "type": "string",
                           "description": "Status of the Webinar Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -9549,7 +9591,12 @@
                           "type": "string",
                           "description": "Status of the Webinar Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -9605,7 +9652,12 @@
                           "type": "string",
                           "description": "Status of the Webinar Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -9629,7 +9681,12 @@
                           "type": "string",
                           "description": "Status of the Webinar Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },
@@ -10190,7 +10247,10 @@
         "in": "query",
         "name": "action",
         "description": "The recording delete action",
-        "x-enum-descriptions": ["move recording to trash", "delete recording permanently"],
+        "x-enum-descriptions": [
+          "move recording to trash",
+          "delete recording permanently"
+        ],
         "schema": {
           "type": "string",
           "enum": ["trash", "delete"],
@@ -10228,7 +10288,11 @@
         "in": "query",
         "name": "type",
         "description": "The meeting type",
-        "x-enum-descriptions": ["all the scheduled meetings", "all the live meetings", "all the upcoming meetings"],
+        "x-enum-descriptions": [
+          "all the scheduled meetings",
+          "all the live meetings",
+          "all the upcoming meetings"
+        ],
         "schema": {
           "type": "string",
           "enum": ["scheduled", "live", "upcoming"],
@@ -10239,7 +10303,11 @@
         "in": "query",
         "name": "type",
         "description": "The meeting type",
-        "x-enum-descriptions": ["past meetings", "past one user meetings", "live meetings"],
+        "x-enum-descriptions": [
+          "past meetings",
+          "past one user meetings",
+          "live meetings"
+        ],
         "schema": {
           "type": "string",
           "enum": ["past", "pastOne", "live"],
@@ -10261,7 +10329,11 @@
         "in": "query",
         "name": "type",
         "description": "The meeting type",
-        "x-enum-descriptions": ["past meeting", "past one user meeting", "live meeting"],
+        "x-enum-descriptions": [
+          "past meeting",
+          "past one user meeting",
+          "live meeting"
+        ],
         "schema": {
           "type": "string",
           "enum": ["past", "pastOne", "live"],
@@ -10440,7 +10512,11 @@
         "in": "query",
         "name": "type",
         "description": "The webinar type",
-        "x-enum-descriptions": ["past meetings", "past one user meetings", "live meetings"],
+        "x-enum-descriptions": [
+          "past meetings",
+          "past one user meetings",
+          "live meetings"
+        ],
         "schema": {
           "type": "string",
           "enum": ["past", "pastOne", "live"],
@@ -10670,7 +10746,10 @@
             "type": "string",
             "description": "Payee",
             "enum": ["master", "sub"],
-            "x-enum-descriptions": ["Master account holder pays", "Sub account holder pays"],
+            "x-enum-descriptions": [
+              "Master account holder pays",
+              "Sub account holder pays"
+            ],
             "default": "master"
           }
         }
@@ -11166,7 +11245,11 @@
             "type": "string",
             "description": "Record meetings automatically as they start",
             "enum": ["local", "cloud", "none"],
-            "x-enum-descriptions": ["Record on local", "Record on cloud", "Disabled"]
+            "x-enum-descriptions": [
+              "Record on local",
+              "Record on cloud",
+              "Disabled"
+            ]
           },
           "cloud_recording_download": {
             "type": "boolean",
@@ -11324,7 +11407,17 @@
       "BillingContactRequired": {
         "type": "object",
         "description": "Billing Contact object",
-        "required": ["first_name", "last_name", "email", "phone_number", "address", "city", "state", "zip", "country"],
+        "required": [
+          "first_name",
+          "last_name",
+          "email",
+          "phone_number",
+          "address",
+          "city",
+          "state",
+          "zip",
+          "country"
+        ],
         "properties": {
           "first_name": {
             "type": "string",
@@ -11928,7 +12021,11 @@
             "type": "integer",
             "default": 2,
             "enum": [0, 1, 2],
-            "x-enum-descriptions": ["Automatically Approve", "Manually Approve", "No Registration Required"]
+            "x-enum-descriptions": [
+              "Automatically Approve",
+              "Manually Approve",
+              "No Registration Required"
+            ]
           },
           "registration_type": {
             "type": "integer",
@@ -11946,13 +12043,21 @@
             "description": "Determine how participants can join the audio portion of the meeting",
             "default": "both",
             "enum": ["both", "telephony", "voip"],
-            "x-enum-descriptions": ["Both Telephony and VoIP", "Telephony only", "VoIP only"]
+            "x-enum-descriptions": [
+              "Both Telephony and VoIP",
+              "Telephony only",
+              "VoIP only"
+            ]
           },
           "auto_recording": {
             "type": "string",
             "default": "none",
             "enum": ["local", "cloud", "none"],
-            "x-enum-descriptions": ["Record to local device", "Record to cloud", "No Recording"]
+            "x-enum-descriptions": [
+              "Record to local device",
+              "Record to cloud",
+              "No Recording"
+            ]
           },
           "enforce_login": {
             "type": "boolean",
@@ -12027,7 +12132,10 @@
             "type": "string",
             "description": "Action",
             "enum": ["start", "stop"],
-            "x-enum-descriptions": ["Start a meeting live stream.", "Stop a meeting live stream."]
+            "x-enum-descriptions": [
+              "Start a meeting live stream.",
+              "Stop a meeting live stream."
+            ]
           },
           "settings": {
             "type": "object",
@@ -12589,7 +12697,11 @@
             "type": "string",
             "description": "Determine if the meeting recording is shared",
             "enum": ["publicly", "internally", "none"],
-            "x-enum-descriptions": ["Publicly", "Internally(account members only)", "None"]
+            "x-enum-descriptions": [
+              "Publicly",
+              "Internally(account members only)",
+              "None"
+            ]
           },
           "viewer_download": {
             "type": "boolean",
@@ -12641,7 +12753,15 @@
             "type": "integer",
             "description": "Days of the week the meeting should repeat, multiple values separated by comma",
             "enum": [1, 2, 3, 4, 5, 6, 7],
-            "x-enum-descriptions": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            "x-enum-descriptions": [
+              "Sunday",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ]
           },
           "monthly_day": {
             "type": "integer",
@@ -12651,13 +12771,27 @@
             "type": "integer",
             "description": "Week for which the meeting should recur each month,",
             "enum": [-1, 1, 2, 3, 4],
-            "x-enum-descriptions": ["Last week", "First week", "Second week", "Third week", "Fourth week"]
+            "x-enum-descriptions": [
+              "Last week",
+              "First week",
+              "Second week",
+              "Third week",
+              "Fourth week"
+            ]
           },
           "monthly_week_day": {
             "type": "integer",
             "description": "Day for which the meeting should recur each month",
             "enum": [1, 2, 3, 4, 5, 6, 7],
-            "x-enum-descriptions": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            "x-enum-descriptions": [
+              "Sunday",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ]
           },
           "end_times": {
             "type": "integer",
@@ -12728,12 +12862,23 @@
           "purchasing_time_frame": {
             "type": "string",
             "description": "Purchasing Time Frame",
-            "enum": ["Within a month", "1-3 months", "4-6 months", "More than 6 months", "No timeframe"]
+            "enum": [
+              "Within a month",
+              "1-3 months",
+              "4-6 months",
+              "More than 6 months",
+              "No timeframe"
+            ]
           },
           "role_in_purchase_process": {
             "type": "string",
             "description": "Role in Purchase Process",
-            "enum": ["Decision Maker", "Evaluator/Recommender", "Influencer", "Not involved"]
+            "enum": [
+              "Decision Maker",
+              "Evaluator/Recommender",
+              "Influencer",
+              "Not involved"
+            ]
           },
           "no_of_employees": {
             "type": "string",
@@ -12817,7 +12962,11 @@
           "action": {
             "type": "string",
             "enum": ["approve", "cancel", "deny"],
-            "x-enum-descriptions": ["Approve registrant", "Cancel registrant", "Deny registrant"]
+            "x-enum-descriptions": [
+              "Approve registrant",
+              "Cancel registrant",
+              "Deny registrant"
+            ]
           },
           "registrants": {
             "type": "array",
@@ -13735,7 +13884,11 @@
             "default": "local",
             "description": "Automatic recording",
             "enum": ["local", "cloud", "none"],
-            "x-enum-descriptions": ["Record on local", "Record on cloud", "Disabled"]
+            "x-enum-descriptions": [
+              "Record on local",
+              "Record on cloud",
+              "Disabled"
+            ]
           },
           "auto_delete_cmr": {
             "type": "boolean",
@@ -14191,7 +14344,11 @@
             "type": "integer",
             "default": 2,
             "enum": [0, 1, 2],
-            "x-enum-descriptions": ["Automatically Approve", "Manually Approve", "No Registration Required"]
+            "x-enum-descriptions": [
+              "Automatically Approve",
+              "Manually Approve",
+              "No Registration Required"
+            ]
           },
           "registration_type": {
             "type": "integer",
@@ -14209,13 +14366,21 @@
             "description": "Determine how participants can join the audio portion of the meeting",
             "default": "both",
             "enum": ["both", "telephony", "voip"],
-            "x-enum-descriptions": ["Both Telephony and VoIP", "Telephony only", "VoIP only"]
+            "x-enum-descriptions": [
+              "Both Telephony and VoIP",
+              "Telephony only",
+              "VoIP only"
+            ]
           },
           "auto_recording": {
             "type": "string",
             "default": "none",
             "enum": ["local", "cloud", "none"],
-            "x-enum-descriptions": ["Record to local device", "Record to cloud", "No Recording"]
+            "x-enum-descriptions": [
+              "Record to local device",
+              "Record to cloud",
+              "No Recording"
+            ]
           },
           "enforce_login": {
             "type": "boolean",
@@ -14490,7 +14655,12 @@
                           "type": "string",
                           "description": "Status of Poll",
                           "enum": ["notstart", "started", "ended", "sharing"],
-                          "x-enum-descriptions": ["Poll not start", "Poll started", "Poll ended", "Poll is sharing"]
+                          "x-enum-descriptions": [
+                            "Poll not start",
+                            "Poll started",
+                            "Poll ended",
+                            "Poll is sharing"
+                          ]
                         }
                       }
                     },

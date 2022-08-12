@@ -6,7 +6,7 @@
     "title": "AWS IoT 1-Click Devices",
     "description": "Describes all of the AWS IoT 1-Click device-related API operations for the service.\n Also provides sample requests, responses, and errors for the supported web services\n protocols.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-1-Click_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-1-Click_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {

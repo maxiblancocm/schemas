@@ -7,7 +7,7 @@
     "description": "Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora Serverless DB cluster. To run these statements, you work with the Data Service API. For more information about the Data Service API, see Using the Data API for Aurora Serverless in the Amazon Aurora User Guide.  If you have questions or comments related to the Data API, send email to Rds-data-api-feedback@amazon.com.",
     "x-categories": ["database"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-RDS_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-RDS_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -615,7 +615,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["awsSecretStoreArn", "dbClusterOrInstanceArn", "sqlStatements"],
+                "required": [
+                  "awsSecretStoreArn",
+                  "dbClusterOrInstanceArn",
+                  "sqlStatements"
+                ],
                 "properties": {
                   "awsSecretStoreArn": {
                     "description": "The Amazon Resource Name (ARN) of the secret that enables access to the DB cluster.",

@@ -5,7 +5,7 @@
     "x-release": "v4",
     "title": "Amazon RDS (Relational Database Service)",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-RDS_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-RDS_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -6599,7 +6599,10 @@
       },
       "CopyDBSnapshotMessage": {
         "type": "object",
-        "required": ["SourceDBSnapshotIdentifier", "TargetDBSnapshotIdentifier"],
+        "required": [
+          "SourceDBSnapshotIdentifier",
+          "TargetDBSnapshotIdentifier"
+        ],
         "title": "CopyDBSnapshotMessage",
         "properties": {
           "SourceDBSnapshotIdentifier": {
@@ -6934,7 +6937,11 @@
       },
       "CreateDBParameterGroupMessage": {
         "type": "object",
-        "required": ["DBParameterGroupName", "DBParameterGroupFamily", "Description"],
+        "required": [
+          "DBParameterGroupName",
+          "DBParameterGroupFamily",
+          "Description"
+        ],
         "title": "CreateDBParameterGroupMessage",
         "properties": {
           "DBParameterGroupName": {
@@ -7014,7 +7021,11 @@
       },
       "CreateDBSubnetGroupMessage": {
         "type": "object",
-        "required": ["DBSubnetGroupName", "DBSubnetGroupDescription", "SubnetIds"],
+        "required": [
+          "DBSubnetGroupName",
+          "DBSubnetGroupDescription",
+          "SubnetIds"
+        ],
         "title": "CreateDBSubnetGroupMessage",
         "properties": {
           "DBSubnetGroupName": {
@@ -7111,7 +7122,12 @@
       },
       "CreateOptionGroupMessage": {
         "type": "object",
-        "required": ["OptionGroupName", "EngineName", "MajorEngineVersion", "OptionGroupDescription"],
+        "required": [
+          "OptionGroupName",
+          "EngineName",
+          "MajorEngineVersion",
+          "OptionGroupDescription"
+        ],
         "title": "CreateOptionGroupMessage",
         "properties": {
           "OptionGroupName": {
@@ -7891,7 +7907,12 @@
       },
       "SourceType": {
         "type": "string",
-        "enum": ["db-instance", "db-parameter-group", "db-security-group", "db-snapshot"]
+        "enum": [
+          "db-instance",
+          "db-parameter-group",
+          "db-security-group",
+          "db-snapshot"
+        ]
       },
       "DescribeEventsMessage": {
         "type": "object",
@@ -8949,7 +8970,10 @@
       },
       "RestoreDBInstanceToPointInTimeMessage": {
         "type": "object",
-        "required": ["SourceDBInstanceIdentifier", "TargetDBInstanceIdentifier"],
+        "required": [
+          "SourceDBInstanceIdentifier",
+          "TargetDBInstanceIdentifier"
+        ],
         "title": "RestoreDBInstanceToPointInTimeMessage",
         "properties": {
           "SourceDBInstanceIdentifier": {

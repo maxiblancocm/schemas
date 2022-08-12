@@ -6,7 +6,7 @@
     "title": "AWS Lambda",
     "description": "The AWS Lambda Developer Guide provides additional information. For the service overview, see What is AWS Lambda, and for information about how the service works, see AWS Lambda: How it Works in the AWS Lambda Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Lambda_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Lambda_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1394,7 +1394,13 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["FunctionName", "Runtime", "Role", "Handler", "Code"],
+                "required": [
+                  "FunctionName",
+                  "Runtime",
+                  "Role",
+                  "Handler",
+                  "Code"
+                ],
                 "properties": {
                   "FunctionName": {
                     "description": "<p>The name of the Lambda function.</p> <p class=\"title\"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>my-function</code>.</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>",

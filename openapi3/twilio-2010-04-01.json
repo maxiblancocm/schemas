@@ -6,7 +6,7 @@
     "description": "Enabling phones, VoIP, and messaging to be embedded into web, desktop, and mobile software.",
     "x-categories": ["chat"],
     "x-logo": {
-      "url": "/logos/twilio.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/twilio.svg"
     },
     "x-draft": true
   },
@@ -6429,7 +6429,16 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Daily", "Monthly", "Yearly", "AllTime", "Today", "Yesterday", "ThisMonth", "LastMonth"]
+              "enum": [
+                "Daily",
+                "Monthly",
+                "Yearly",
+                "AllTime",
+                "Today",
+                "Yesterday",
+                "ThisMonth",
+                "LastMonth"
+              ]
             }
           }
         ],
@@ -7796,7 +7805,16 @@
             "type": "string"
           },
           "status": {
-            "enum": ["queued", "ringing", "in-progress", "canceled", "completed", "failed", "busy", "no-answer"]
+            "enum": [
+              "queued",
+              "ringing",
+              "in-progress",
+              "canceled",
+              "completed",
+              "failed",
+              "busy",
+              "no-answer"
+            ]
           },
           "subresource_uris": {
             "properties": {
@@ -7891,7 +7909,16 @@
           },
           "status": {
             "description": "A string representing the status of the call.",
-            "enum": ["queued", "ringing", "in-progress", "canceled", "completed", "failed", "busy", "no-answer"]
+            "enum": [
+              "queued",
+              "ringing",
+              "in-progress",
+              "canceled",
+              "completed",
+              "failed",
+              "busy",
+              "no-answer"
+            ]
           },
           "subresource_uris": {
             "type": "object"

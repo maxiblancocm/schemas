@@ -6,7 +6,7 @@
     "title": "Amazon QLDB",
     "description": "The control plane for Amazon Quantum Ledger Database (QLDB)",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Quantum-Ledger-Database_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Quantum-Ledger-Database_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -841,7 +841,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["InclusiveStartTime", "ExclusiveEndTime", "S3ExportConfiguration", "RoleArn"],
+                "required": [
+                  "InclusiveStartTime",
+                  "ExclusiveEndTime",
+                  "S3ExportConfiguration",
+                  "RoleArn"
+                ],
                 "properties": {
                   "InclusiveStartTime": {
                     "description": "<p>The inclusive start date and time for the range of journal contents that you want to export.</p> <p>The <code>InclusiveStartTime</code> must be in <code>ISO 8601</code> date and time format and in Universal Coordinated Time (UTC). For example: <code>2019-06-13T21:36:34Z</code> </p> <p>The <code>InclusiveStartTime</code> must be before <code>ExclusiveEndTime</code>.</p> <p>If you provide an <code>InclusiveStartTime</code> that is before the ledger's <code>CreationDateTime</code>, Amazon QLDB defaults it to the ledger's <code>CreationDateTime</code>.</p>",
@@ -1544,7 +1549,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["RoleArn", "InclusiveStartTime", "KinesisConfiguration", "StreamName"],
+                "required": [
+                  "RoleArn",
+                  "InclusiveStartTime",
+                  "KinesisConfiguration",
+                  "StreamName"
+                ],
                 "properties": {
                   "RoleArn": {
                     "description": "The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write data records to a Kinesis Data Streams resource.",
@@ -2702,7 +2712,14 @@
       },
       "JournalKinesisStreamDescription": {
         "type": "object",
-        "required": ["LedgerName", "RoleArn", "StreamId", "Status", "KinesisConfiguration", "StreamName"],
+        "required": [
+          "LedgerName",
+          "RoleArn",
+          "StreamId",
+          "Status",
+          "KinesisConfiguration",
+          "StreamName"
+        ],
         "properties": {
           "LedgerName": {
             "allOf": [

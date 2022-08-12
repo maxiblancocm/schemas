@@ -6,7 +6,7 @@
     "title": "Amazon Pinpoint Email Service",
     "description": "Welcome to the Amazon Pinpoint Email API Reference. This guide provides information about the Amazon Pinpoint Email API (version 1.0), including supported operations, data types, parameters, and schemas.  Amazon Pinpoint is an AWS service that you can use to engage with your customers across multiple messaging channels. You can use Amazon Pinpoint to send email, SMS text messages, voice messages, and push notifications. The Amazon Pinpoint Email API provides programmatic access to options that are unique to the email channel and supplement the options provided by the Amazon Pinpoint API. If you're new to Amazon Pinpoint, you might find it helpful to also review the Amazon Pinpoint Developer Guide. The Amazon Pinpoint Developer Guide provides tutorials, code samples, and procedures that demonstrate how to use Amazon Pinpoint features programmatically and how to integrate Amazon Pinpoint functionality into mobile apps and other types of applications. The guide also provides information about key topics such as Amazon Pinpoint integration with other AWS services and the limits that apply to using the service. The Amazon Pinpoint Email API is available in several AWS Regions and it provides an endpoint for each of these Regions. For a list of all the Regions and endpoints where the API is currently available, see AWS Service Endpoints in the Amazon Web Services General Reference. To learn more about AWS Regions, see Managing AWS Regions in the Amazon Web Services General Reference. In each Region, AWS maintains multiple Availability Zones. These Availability Zones are physically isolated from each other, but are united by private, low-latency, high-throughput, and highly redundant network connections. These Availability Zones enable us to provide very high levels of availability and redundancy, while also minimizing latency. To learn more about the number of Availability Zones that are available in each Region, see AWS Global Infrastructure.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Simple-Email-Service_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Simple-Email-Service_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -5052,7 +5052,11 @@
       },
       "GetDeliverabilityTestReportResponse": {
         "type": "object",
-        "required": ["DeliverabilityTestReport", "OverallPlacement", "IspPlacements"],
+        "required": [
+          "DeliverabilityTestReport",
+          "OverallPlacement",
+          "IspPlacements"
+        ],
         "properties": {
           "DeliverabilityTestReport": {
             "allOf": [
@@ -5677,7 +5681,11 @@
       },
       "CloudWatchDimensionConfiguration": {
         "type": "object",
-        "required": ["DimensionName", "DimensionValueSource", "DefaultDimensionValue"],
+        "required": [
+          "DimensionName",
+          "DimensionValueSource",
+          "DefaultDimensionValue"
+        ],
         "properties": {
           "DimensionName": {
             "allOf": [
@@ -6120,7 +6128,13 @@
       },
       "DkimStatus": {
         "type": "string",
-        "enum": ["PENDING", "SUCCESS", "FAILED", "TEMPORARY_FAILURE", "NOT_STARTED"],
+        "enum": [
+          "PENDING",
+          "SUCCESS",
+          "FAILED",
+          "TEMPORARY_FAILURE",
+          "NOT_STARTED"
+        ],
         "description": "<p>The DKIM authentication status of the identity. The status can be one of the following:</p> <ul> <li> <p> <code>PENDING</code> – The DKIM verification process was initiated, and Amazon Pinpoint is still waiting for the required CNAME records to appear in the DNS configuration for the domain.</p> </li> <li> <p> <code>SUCCESS</code> – The DKIM authentication process completed successfully.</p> </li> <li> <p> <code>FAILED</code> – The DKIM authentication process failed. This can happen when Amazon Pinpoint fails to find the required CNAME records in the DNS configuration of the domain.</p> </li> <li> <p> <code>TEMPORARY_FAILURE</code> – A temporary issue is preventing Amazon Pinpoint from determining the DKIM authentication status of the domain.</p> </li> <li> <p> <code>NOT_STARTED</code> – The DKIM verification process hasn't been initiated for the domain.</p> </li> </ul>"
       },
       "DnsTokenList": {
@@ -6496,7 +6510,16 @@
       },
       "EventType": {
         "type": "string",
-        "enum": ["SEND", "REJECT", "BOUNCE", "COMPLAINT", "DELIVERY", "OPEN", "CLICK", "RENDERING_FAILURE"],
+        "enum": [
+          "SEND",
+          "REJECT",
+          "BOUNCE",
+          "COMPLAINT",
+          "DELIVERY",
+          "OPEN",
+          "CLICK",
+          "RENDERING_FAILURE"
+        ],
         "description": "An email sending event type. For example, email sends, opens, and bounces are all email events."
       },
       "GeneralEnforcementStatus": {
@@ -6645,7 +6668,11 @@
       },
       "MailFromAttributes": {
         "type": "object",
-        "required": ["MailFromDomain", "MailFromDomainStatus", "BehaviorOnMxFailure"],
+        "required": [
+          "MailFromDomain",
+          "MailFromDomainStatus",
+          "BehaviorOnMxFailure"
+        ],
         "properties": {
           "MailFromDomain": {
             "allOf": [

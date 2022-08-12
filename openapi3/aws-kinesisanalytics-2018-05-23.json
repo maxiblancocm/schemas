@@ -6,7 +6,7 @@
     "title": "Amazon Kinesis Analytics",
     "description": "Amazon Kinesis Data Analytics is a fully managed service that you can use to process and analyze streaming data using SQL or Java. The service enables you to quickly author and run SQL or Java code against streaming sources to perform time series analytics, feed real-time dashboards, and create real-time metrics.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Kinesis-Data-Analytics_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Kinesis-Data-Analytics_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -231,7 +231,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption"]
+              "enum": [
+                "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption"
+              ]
             }
           }
         ],
@@ -467,7 +469,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.AddApplicationInputProcessingConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20180523.AddApplicationInputProcessingConfiguration"
+              ]
             }
           }
         ],
@@ -693,7 +697,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.AddApplicationReferenceDataSource"]
+              "enum": [
+                "KinesisAnalytics_20180523.AddApplicationReferenceDataSource"
+              ]
             }
           }
         ],
@@ -806,7 +812,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.AddApplicationVpcConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20180523.AddApplicationVpcConfiguration"
+              ]
             }
           }
         ],
@@ -1318,7 +1326,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.DeleteApplicationCloudWatchLoggingOption"]
+              "enum": [
+                "KinesisAnalytics_20180523.DeleteApplicationCloudWatchLoggingOption"
+              ]
             }
           }
         ],
@@ -1431,7 +1441,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.DeleteApplicationInputProcessingConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20180523.DeleteApplicationInputProcessingConfiguration"
+              ]
             }
           }
         ],
@@ -1657,7 +1669,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.DeleteApplicationReferenceDataSource"]
+              "enum": [
+                "KinesisAnalytics_20180523.DeleteApplicationReferenceDataSource"
+              ]
             }
           }
         ],
@@ -1883,7 +1897,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.DeleteApplicationVpcConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20180523.DeleteApplicationVpcConfiguration"
+              ]
             }
           }
         ],
@@ -3129,7 +3145,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.CreateApplicationPresignedUrl"]
+              "enum": [
+                "KinesisAnalytics_20180523.CreateApplicationPresignedUrl"
+              ]
             }
           }
         ],
@@ -3551,7 +3569,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20180523.UpdateApplicationMaintenanceConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20180523.UpdateApplicationMaintenanceConfiguration"
+              ]
             }
           }
         ],
@@ -3695,7 +3715,11 @@
       },
       "AddApplicationCloudWatchLoggingOptionRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "CloudWatchLoggingOption"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "CloudWatchLoggingOption"
+        ],
         "title": "AddApplicationCloudWatchLoggingOptionRequest",
         "properties": {
           "ApplicationName": {
@@ -3866,7 +3890,12 @@
       },
       "AddApplicationInputProcessingConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "InputId", "InputProcessingConfiguration"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "InputId",
+          "InputProcessingConfiguration"
+        ],
         "title": "AddApplicationInputProcessingConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -3948,7 +3977,11 @@
       },
       "AddApplicationOutputRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "Output"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "Output"
+        ],
         "title": "AddApplicationOutputRequest",
         "properties": {
           "ApplicationName": {
@@ -4020,7 +4053,11 @@
       },
       "AddApplicationReferenceDataSourceRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "ReferenceDataSource"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "ReferenceDataSource"
+        ],
         "title": "AddApplicationReferenceDataSourceRequest",
         "properties": {
           "ApplicationName": {
@@ -4092,7 +4129,11 @@
       },
       "AddApplicationVpcConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "VpcConfiguration"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "VpcConfiguration"
+        ],
         "title": "AddApplicationVpcConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -4155,7 +4196,11 @@
       },
       "CreateApplicationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "RuntimeEnvironment", "ServiceExecutionRole"],
+        "required": [
+          "ApplicationName",
+          "RuntimeEnvironment",
+          "ServiceExecutionRole"
+        ],
         "title": "CreateApplicationRequest",
         "properties": {
           "ApplicationName": {
@@ -4342,7 +4387,11 @@
       },
       "DeleteApplicationCloudWatchLoggingOptionRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "CloudWatchLoggingOptionId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "CloudWatchLoggingOptionId"
+        ],
         "title": "DeleteApplicationCloudWatchLoggingOptionRequest",
         "properties": {
           "ApplicationName": {
@@ -4414,7 +4463,11 @@
       },
       "DeleteApplicationInputProcessingConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "InputId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "InputId"
+        ],
         "title": "DeleteApplicationInputProcessingConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -4476,7 +4529,11 @@
       },
       "DeleteApplicationOutputRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "OutputId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "OutputId"
+        ],
         "title": "DeleteApplicationOutputRequest",
         "properties": {
           "ApplicationName": {
@@ -4538,7 +4595,11 @@
       },
       "DeleteApplicationReferenceDataSourceRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "ReferenceId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "ReferenceId"
+        ],
         "title": "DeleteApplicationReferenceDataSourceRequest",
         "properties": {
           "ApplicationName": {
@@ -4579,7 +4640,11 @@
       },
       "DeleteApplicationSnapshotRequest": {
         "type": "object",
-        "required": ["ApplicationName", "SnapshotName", "SnapshotCreationTimestamp"],
+        "required": [
+          "ApplicationName",
+          "SnapshotName",
+          "SnapshotCreationTimestamp"
+        ],
         "title": "DeleteApplicationSnapshotRequest",
         "properties": {
           "ApplicationName": {
@@ -4641,7 +4706,11 @@
       },
       "DeleteApplicationVpcConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "VpcConfigurationId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "VpcConfigurationId"
+        ],
         "title": "DeleteApplicationVpcConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -5527,7 +5596,12 @@
       },
       "VpcConfigurationDescription": {
         "type": "object",
-        "required": ["VpcConfigurationId", "VpcId", "SubnetIds", "SecurityGroupIds"],
+        "required": [
+          "VpcConfigurationId",
+          "VpcId",
+          "SubnetIds",
+          "SecurityGroupIds"
+        ],
         "properties": {
           "VpcConfigurationId": {
             "allOf": [
@@ -6384,7 +6458,13 @@
       },
       "RuntimeEnvironment": {
         "type": "string",
-        "enum": ["SQL-1_0", "FLINK-1_6", "FLINK-1_8", "FLINK-1_11", "ZEPPELIN-FLINK-1_0"]
+        "enum": [
+          "SQL-1_0",
+          "FLINK-1_6",
+          "FLINK-1_8",
+          "FLINK-1_11",
+          "ZEPPELIN-FLINK-1_0"
+        ]
       },
       "RoleARN": {
         "type": "string",
@@ -6597,7 +6677,11 @@
       },
       "ApplicationRestoreType": {
         "type": "string",
-        "enum": ["SKIP_RESTORE_FROM_SNAPSHOT", "RESTORE_FROM_LATEST_SNAPSHOT", "RESTORE_FROM_CUSTOM_SNAPSHOT"]
+        "enum": [
+          "SKIP_RESTORE_FROM_SNAPSHOT",
+          "RESTORE_FROM_LATEST_SNAPSHOT",
+          "RESTORE_FROM_CUSTOM_SNAPSHOT"
+        ]
       },
       "SnapshotName": {
         "type": "string",
@@ -8702,7 +8786,11 @@
       },
       "ReferenceDataSourceDescription": {
         "type": "object",
-        "required": ["ReferenceId", "TableName", "S3ReferenceDataSourceDescription"],
+        "required": [
+          "ReferenceId",
+          "TableName",
+          "S3ReferenceDataSourceDescription"
+        ],
         "properties": {
           "ReferenceId": {
             "allOf": [
@@ -9264,7 +9352,10 @@
       },
       "UpdateApplicationMaintenanceConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "ApplicationMaintenanceConfigurationUpdate"],
+        "required": [
+          "ApplicationName",
+          "ApplicationMaintenanceConfigurationUpdate"
+        ],
         "title": "UpdateApplicationMaintenanceConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -9429,7 +9520,10 @@
       },
       "ApplicationMaintenanceConfigurationDescription": {
         "type": "object",
-        "required": ["ApplicationMaintenanceWindowStartTime", "ApplicationMaintenanceWindowEndTime"],
+        "required": [
+          "ApplicationMaintenanceWindowStartTime",
+          "ApplicationMaintenanceWindowEndTime"
+        ],
         "properties": {
           "ApplicationMaintenanceWindowStartTime": {
             "allOf": [

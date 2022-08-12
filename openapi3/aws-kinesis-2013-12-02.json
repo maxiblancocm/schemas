@@ -6,7 +6,7 @@
     "title": "Amazon Kinesis",
     "description": "Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big data.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Kinesis_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Kinesis_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4474,7 +4474,12 @@
       },
       "Consumer": {
         "type": "object",
-        "required": ["ConsumerName", "ConsumerARN", "ConsumerStatus", "ConsumerCreationTimestamp"],
+        "required": [
+          "ConsumerName",
+          "ConsumerARN",
+          "ConsumerStatus",
+          "ConsumerCreationTimestamp"
+        ],
         "properties": {
           "ConsumerName": {
             "allOf": [
@@ -4532,7 +4537,13 @@
       },
       "ConsumerDescription": {
         "type": "object",
-        "required": ["ConsumerName", "ConsumerARN", "ConsumerStatus", "ConsumerCreationTimestamp", "StreamARN"],
+        "required": [
+          "ConsumerName",
+          "ConsumerARN",
+          "ConsumerStatus",
+          "ConsumerCreationTimestamp",
+          "StreamARN"
+        ],
         "properties": {
           "ConsumerName": {
             "allOf": [
@@ -4908,7 +4919,13 @@
       },
       "ShardIteratorType": {
         "type": "string",
-        "enum": ["AT_SEQUENCE_NUMBER", "AFTER_SEQUENCE_NUMBER", "TRIM_HORIZON", "LATEST", "AT_TIMESTAMP"]
+        "enum": [
+          "AT_SEQUENCE_NUMBER",
+          "AFTER_SEQUENCE_NUMBER",
+          "TRIM_HORIZON",
+          "LATEST",
+          "AT_TIMESTAMP"
+        ]
       },
       "SequenceNumber": {
         "type": "string",

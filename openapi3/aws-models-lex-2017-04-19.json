@@ -7,7 +7,7 @@
     "description": "Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update, and delete conversational bots for new and existing client applications.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Lex_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Lex_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -5360,7 +5360,13 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["v1BotName", "v1BotVersion", "v2BotName", "v2BotRole", "migrationStrategy"],
+                "required": [
+                  "v1BotName",
+                  "v1BotVersion",
+                  "v2BotName",
+                  "v2BotRole",
+                  "migrationStrategy"
+                ],
                 "properties": {
                   "v1BotName": {
                     "description": "The name of the Amazon Lex V1 bot that you are migrating to Amazon Lex V2.",
@@ -6764,7 +6770,11 @@
               "name": "Type",
               "description": "The type of pizza to order.",
               "priority": 1,
-              "sampleUtterances": ["Get me a {Type} pizza.", "A {Type} pizza please.", "I'd like a {Type} pizza."],
+              "sampleUtterances": [
+                "Get me a {Type} pizza.",
+                "A {Type} pizza please.",
+                "I'd like a {Type} pizza."
+              ],
               "slotConstraint": "Required",
               "slotType": "DocPizzaType",
               "slotTypeVersion": "$LATEST",
@@ -6790,7 +6800,10 @@
               "name": "Crust",
               "description": "The type of pizza crust to order.",
               "priority": 2,
-              "sampleUtterances": ["Make it a {Crust} crust.", "I'd like a {Crust} crust."],
+              "sampleUtterances": [
+                "Make it a {Crust} crust.",
+                "I'd like a {Crust} crust."
+              ],
               "slotConstraint": "Required",
               "slotType": "DocPizzaCrustType",
               "slotTypeVersion": "$LATEST",
@@ -6812,7 +6825,10 @@
               "name": "Sauce",
               "description": "The type of sauce to use on the pizza.",
               "priority": 3,
-              "sampleUtterances": ["Make it {Sauce} sauce.", "I'd like {Sauce} sauce."],
+              "sampleUtterances": [
+                "Make it {Sauce} sauce.",
+                "I'd like {Sauce} sauce."
+              ],
               "slotConstraint": "Required",
               "slotType": "DocPizzaSauceType",
               "slotTypeVersion": "$LATEST",
@@ -7802,7 +7818,10 @@
               "name": "Sauce",
               "description": "The type of sauce to use on the pizza.",
               "priority": 3,
-              "sampleUtterances": ["Make it {Sauce} sauce.", "I'd like {Sauce} sauce."],
+              "sampleUtterances": [
+                "Make it {Sauce} sauce.",
+                "I'd like {Sauce} sauce."
+              ],
               "slotConstraint": "Required",
               "slotType": "DocPizzaSauceType",
               "slotTypeVersion": "$LATEST",
@@ -7824,7 +7843,11 @@
               "name": "Type",
               "description": "The type of pizza to order.",
               "priority": 1,
-              "sampleUtterances": ["Get me a {Type} pizza.", "A {Type} pizza please.", "I'd like a {Type} pizza."],
+              "sampleUtterances": [
+                "Get me a {Type} pizza.",
+                "A {Type} pizza please.",
+                "I'd like a {Type} pizza."
+              ],
               "slotConstraint": "Required",
               "slotType": "DocPizzaType",
               "slotTypeVersion": "$LATEST",
@@ -7850,7 +7873,10 @@
               "name": "Crust",
               "description": "The type of pizza crust to order.",
               "priority": 2,
-              "sampleUtterances": ["Make it a {Crust} crust.", "I'd like a {Crust} crust."],
+              "sampleUtterances": [
+                "Make it a {Crust} crust.",
+                "I'd like a {Crust} crust."
+              ],
               "slotConstraint": "Required",
               "slotType": "DocPizzaCrustType",
               "slotTypeVersion": "$LATEST",
@@ -8840,7 +8866,13 @@
       },
       "Status": {
         "type": "string",
-        "enum": ["BUILDING", "READY", "READY_BASIC_TESTING", "FAILED", "NOT_BUILT"]
+        "enum": [
+          "BUILDING",
+          "READY",
+          "READY_BASIC_TESTING",
+          "FAILED",
+          "NOT_BUILT"
+        ]
       },
       "BotMetadata": {
         "type": "object",

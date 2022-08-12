@@ -6,7 +6,7 @@
     "title": "Amazon MSK (Managed Streaming for Kafka)",
     "description": "The operations for managing an Amazon MSK cluster.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Managed-Streaming-for-Kafka_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Managed-Streaming-for-Kafka_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -231,7 +231,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["brokerNodeGroupInfo", "clusterName", "kafkaVersion", "numberOfBrokerNodes"],
+                "required": [
+                  "brokerNodeGroupInfo",
+                  "clusterName",
+                  "kafkaVersion",
+                  "numberOfBrokerNodes"
+                ],
                 "properties": {
                   "brokerNodeGroupInfo": {
                     "description": "\n            <p>Describes the setup to be used for Kafka broker nodes in the cluster.</p>\n         ",
@@ -422,7 +427,12 @@
                   "enhancedMonitoring": {
                     "description": "\n            <p>Specifies which metrics are gathered for the MSK cluster. This property has three possible values: DEFAULT, PER_BROKER, and PER_TOPIC_PER_BROKER. For a list of the metrics associated with each of these three levels of monitoring, see <a href=\"https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html\">Monitoring</a>.</p>\n         ",
                     "type": "string",
-                    "enum": ["DEFAULT", "PER_BROKER", "PER_TOPIC_PER_BROKER", "PER_TOPIC_PER_PARTITION"]
+                    "enum": [
+                      "DEFAULT",
+                      "PER_BROKER",
+                      "PER_TOPIC_PER_BROKER",
+                      "PER_TOPIC_PER_PARTITION"
+                    ]
                   },
                   "openMonitoring": {
                     "description": "\n            <p>JMX and Node monitoring for the MSK cluster.</p>\n         ",
@@ -3393,7 +3403,12 @@
                   "enhancedMonitoring": {
                     "description": "\n            <p>Specifies which metrics are gathered for the MSK cluster. This property has three possible values: DEFAULT, PER_BROKER, and PER_TOPIC_PER_BROKER. For a list of the metrics associated with each of these three levels of monitoring, see <a href=\"https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html\">Monitoring</a>.</p>\n         ",
                     "type": "string",
-                    "enum": ["DEFAULT", "PER_BROKER", "PER_TOPIC_PER_BROKER", "PER_TOPIC_PER_PARTITION"]
+                    "enum": [
+                      "DEFAULT",
+                      "PER_BROKER",
+                      "PER_TOPIC_PER_BROKER",
+                      "PER_TOPIC_PER_PARTITION"
+                    ]
                   },
                   "openMonitoring": {
                     "description": "\n            <p>JMX and Node monitoring for the MSK cluster.</p>\n         ",
@@ -5810,7 +5825,12 @@
       },
       "EnhancedMonitoring": {
         "type": "string",
-        "enum": ["DEFAULT", "PER_BROKER", "PER_TOPIC_PER_BROKER", "PER_TOPIC_PER_PARTITION"],
+        "enum": [
+          "DEFAULT",
+          "PER_BROKER",
+          "PER_TOPIC_PER_BROKER",
+          "PER_TOPIC_PER_PARTITION"
+        ],
         "description": "\n            <p>Specifies which metrics are gathered for the MSK cluster. This property has three possible values: DEFAULT, PER_BROKER, and PER_TOPIC_PER_BROKER. For a list of the metrics associated with each of these three levels of monitoring, see <a href=\"https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html\">Monitoring</a>.</p>\n         "
       },
       "OpenMonitoring": {
@@ -5853,7 +5873,16 @@
       },
       "ClusterState": {
         "type": "string",
-        "enum": ["ACTIVE", "CREATING", "UPDATING", "DELETING", "FAILED", "REBOOTING_BROKER", "UPDATING", "UPDATING"],
+        "enum": [
+          "ACTIVE",
+          "CREATING",
+          "UPDATING",
+          "DELETING",
+          "FAILED",
+          "REBOOTING_BROKER",
+          "UPDATING",
+          "UPDATING"
+        ],
         "description": "\n            <p>The state of a Kafka cluster.</p>\n         "
       },
       "StateInfo": {
@@ -6588,7 +6617,15 @@
       },
       "Configuration": {
         "type": "object",
-        "required": ["Description", "LatestRevision", "CreationTime", "KafkaVersions", "Arn", "Name", "State"],
+        "required": [
+          "Description",
+          "LatestRevision",
+          "CreationTime",
+          "KafkaVersions",
+          "Arn",
+          "Name",
+          "State"
+        ],
         "properties": {
           "Arn": {
             "allOf": [

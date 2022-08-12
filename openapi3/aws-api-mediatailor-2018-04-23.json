@@ -6,7 +6,7 @@
     "title": "AWS MediaTailor",
     "description": "Use the AWS Elemental MediaTailor SDK to configure scalable ad insertion for your live and VOD content. With AWS Elemental MediaTailor, you can serve targeted ads to viewers while maintaining broadcast quality in over-the-top (OTT) video applications. For information about using the service, including detailed information about the settings covered in this guide, see the AWS Elemental MediaTailor User Guide.Through the SDK, you manage AWS Elemental MediaTailor configurations the same as you do through the console. For example, you specify ad insertion behavior and mapping information for the origin server and the ad decision server (ADS).",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Elemental-MediaTailor_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Elemental-MediaTailor_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -963,7 +963,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["ScheduleConfiguration", "SourceLocationName", "VodSourceName"],
+                "required": [
+                  "ScheduleConfiguration",
+                  "SourceLocationName",
+                  "VodSourceName"
+                ],
                 "properties": {
                   "AdBreaks": {
                     "description": "The ad break configuration settings.",
@@ -4664,7 +4668,13 @@
         "format": "date-time"
       },
       "Alert": {
-        "required": ["ResourceArn", "AlertCode", "LastModifiedTime", "RelatedResourceArns", "AlertMessage"],
+        "required": [
+          "ResourceArn",
+          "AlertCode",
+          "LastModifiedTime",
+          "RelatedResourceArns",
+          "AlertMessage"
+        ],
         "type": "object",
         "properties": {
           "AlertCode": {
@@ -4727,7 +4737,13 @@
         }
       },
       "Channel": {
-        "required": ["ChannelState", "ChannelName", "Outputs", "Arn", "PlaybackMode"],
+        "required": [
+          "ChannelState",
+          "ChannelName",
+          "Outputs",
+          "Arn",
+          "PlaybackMode"
+        ],
         "type": "object",
         "properties": {
           "Arn": {
@@ -5097,7 +5113,13 @@
         "type": "string"
       },
       "ScheduleEntry": {
-        "required": ["VodSourceName", "ChannelName", "SourceLocationName", "Arn", "ProgramName"],
+        "required": [
+          "VodSourceName",
+          "ChannelName",
+          "SourceLocationName",
+          "Arn",
+          "ProgramName"
+        ],
         "type": "object",
         "properties": {
           "ApproximateDurationSeconds": {
@@ -5284,7 +5306,12 @@
         "description": "This response includes only the \"type\" : \"object\" property."
       },
       "VodSource": {
-        "required": ["VodSourceName", "SourceLocationName", "HttpPackageConfigurations", "Arn"],
+        "required": [
+          "VodSourceName",
+          "SourceLocationName",
+          "HttpPackageConfigurations",
+          "Arn"
+        ],
         "type": "object",
         "properties": {
           "Arn": {

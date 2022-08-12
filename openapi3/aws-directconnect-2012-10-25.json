@@ -6,7 +6,7 @@
     "title": "AWS Direct Connect",
     "description": "AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all AWS Regions except the China (Beijing) and (China) Ningxia Regions. AWS resources in the China Regions can only be accessed through locations associated with those Regions.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Direct-Connect_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Direct-Connect_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -191,7 +191,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["OvertureService.AcceptDirectConnectGatewayAssociationProposal"]
+              "enum": [
+                "OvertureService.AcceptDirectConnectGatewayAssociationProposal"
+              ]
             }
           }
         ],
@@ -1703,7 +1705,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["OvertureService.CreateDirectConnectGatewayAssociationProposal"]
+              "enum": [
+                "OvertureService.CreateDirectConnectGatewayAssociationProposal"
+              ]
             }
           }
         ],
@@ -2633,7 +2637,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["OvertureService.DeleteDirectConnectGatewayAssociationProposal"]
+              "enum": [
+                "OvertureService.DeleteDirectConnectGatewayAssociationProposal"
+              ]
             }
           }
         ],
@@ -3216,7 +3222,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["OvertureService.DescribeDirectConnectGatewayAssociationProposals"]
+              "enum": [
+                "OvertureService.DescribeDirectConnectGatewayAssociationProposals"
+              ]
             }
           }
         ],
@@ -3299,7 +3307,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["OvertureService.DescribeDirectConnectGatewayAssociations"]
+              "enum": [
+                "OvertureService.DescribeDirectConnectGatewayAssociations"
+              ]
             }
           }
         ],
@@ -3382,7 +3392,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["OvertureService.DescribeDirectConnectGatewayAttachments"]
+              "enum": [
+                "OvertureService.DescribeDirectConnectGatewayAttachments"
+              ]
             }
           }
         ],
@@ -5326,7 +5338,11 @@
       },
       "AcceptDirectConnectGatewayAssociationProposalRequest": {
         "type": "object",
-        "required": ["directConnectGatewayId", "proposalId", "associatedGatewayOwnerAccount"],
+        "required": [
+          "directConnectGatewayId",
+          "proposalId",
+          "associatedGatewayOwnerAccount"
+        ],
         "title": "AcceptDirectConnectGatewayAssociationProposalRequest",
         "properties": {
           "directConnectGatewayId": {
@@ -5601,7 +5617,13 @@
       },
       "AllocateConnectionOnInterconnectRequest": {
         "type": "object",
-        "required": ["bandwidth", "connectionName", "ownerAccount", "interconnectId", "vlan"],
+        "required": [
+          "bandwidth",
+          "connectionName",
+          "ownerAccount",
+          "interconnectId",
+          "vlan"
+        ],
         "title": "AllocateConnectionOnInterconnectRequest",
         "properties": {
           "bandwidth": {
@@ -5658,7 +5680,13 @@
       },
       "AllocateHostedConnectionRequest": {
         "type": "object",
-        "required": ["connectionId", "ownerAccount", "bandwidth", "connectionName", "vlan"],
+        "required": [
+          "connectionId",
+          "ownerAccount",
+          "bandwidth",
+          "connectionName",
+          "vlan"
+        ],
         "title": "AllocateHostedConnectionRequest",
         "properties": {
           "connectionId": {
@@ -5983,7 +6011,11 @@
       },
       "AllocatePrivateVirtualInterfaceRequest": {
         "type": "object",
-        "required": ["connectionId", "ownerAccount", "newPrivateVirtualInterfaceAllocation"],
+        "required": [
+          "connectionId",
+          "ownerAccount",
+          "newPrivateVirtualInterfaceAllocation"
+        ],
         "title": "AllocatePrivateVirtualInterfaceRequest",
         "properties": {
           "connectionId": {
@@ -6020,7 +6052,11 @@
       },
       "AllocatePublicVirtualInterfaceRequest": {
         "type": "object",
-        "required": ["connectionId", "ownerAccount", "newPublicVirtualInterfaceAllocation"],
+        "required": [
+          "connectionId",
+          "ownerAccount",
+          "newPublicVirtualInterfaceAllocation"
+        ],
         "title": "AllocatePublicVirtualInterfaceRequest",
         "properties": {
           "connectionId": {
@@ -6065,7 +6101,11 @@
       },
       "AllocateTransitVirtualInterfaceRequest": {
         "type": "object",
-        "required": ["connectionId", "ownerAccount", "newTransitVirtualInterfaceAllocation"],
+        "required": [
+          "connectionId",
+          "ownerAccount",
+          "newTransitVirtualInterfaceAllocation"
+        ],
         "title": "AllocateTransitVirtualInterfaceRequest",
         "properties": {
           "connectionId": {
@@ -6578,7 +6618,11 @@
       },
       "CreateDirectConnectGatewayAssociationProposalRequest": {
         "type": "object",
-        "required": ["directConnectGatewayId", "directConnectGatewayOwnerAccount", "gatewayId"],
+        "required": [
+          "directConnectGatewayId",
+          "directConnectGatewayOwnerAccount",
+          "gatewayId"
+        ],
         "title": "CreateDirectConnectGatewayAssociationProposalRequest",
         "properties": {
           "directConnectGatewayId": {
@@ -7074,7 +7118,12 @@
       },
       "CreateLagRequest": {
         "type": "object",
-        "required": ["numberOfConnections", "location", "connectionsBandwidth", "lagName"],
+        "required": [
+          "numberOfConnections",
+          "location",
+          "connectionsBandwidth",
+          "lagName"
+        ],
         "title": "CreateLagRequest",
         "properties": {
           "numberOfConnections": {
@@ -9282,7 +9331,17 @@
       },
       "ConnectionState": {
         "type": "string",
-        "enum": ["ordering", "requested", "pending", "available", "down", "deleting", "deleted", "rejected", "unknown"]
+        "enum": [
+          "ordering",
+          "requested",
+          "pending",
+          "available",
+          "down",
+          "deleting",
+          "deleted",
+          "rejected",
+          "unknown"
+        ]
       },
       "VirtualGatewayId": {
         "type": "string"
@@ -9868,7 +9927,15 @@
       },
       "InterconnectState": {
         "type": "string",
-        "enum": ["requested", "pending", "available", "down", "deleting", "deleted", "unknown"]
+        "enum": [
+          "requested",
+          "pending",
+          "available",
+          "down",
+          "deleting",
+          "deleted",
+          "unknown"
+        ]
       },
       "LoaContentType": {
         "type": "string",
@@ -9925,7 +9992,13 @@
       },
       "DirectConnectGatewayAssociationState": {
         "type": "string",
-        "enum": ["associating", "associated", "disassociating", "disassociated", "updating"]
+        "enum": [
+          "associating",
+          "associated",
+          "disassociating",
+          "disassociated",
+          "updating"
+        ]
       },
       "VirtualGatewayRegion": {
         "type": "string",
@@ -10037,7 +10110,15 @@
       },
       "LagState": {
         "type": "string",
-        "enum": ["requested", "pending", "available", "down", "deleting", "deleted", "unknown"]
+        "enum": [
+          "requested",
+          "pending",
+          "available",
+          "down",
+          "deleting",
+          "deleted",
+          "unknown"
+        ]
       },
       "LagList": {
         "type": "array",

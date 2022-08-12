@@ -7,7 +7,7 @@
     "description": "Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the cloud. With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and cluster failure handling much simpler than in a self-managed cache deployment. In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance statistics associated with their cache and can receive alarms if a part of their cache runs hot.",
     "x-categories": ["database"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-ElastiCache_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-ElastiCache_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -9466,7 +9466,11 @@
       },
       "RegionalConfiguration": {
         "type": "object",
-        "required": ["ReplicationGroupId", "ReplicationGroupRegion", "ReshardingConfiguration"],
+        "required": [
+          "ReplicationGroupId",
+          "ReplicationGroupRegion",
+          "ReshardingConfiguration"
+        ],
         "properties": {
           "ReplicationGroupId": {
             "allOf": [
@@ -9796,7 +9800,11 @@
       },
       "AuthorizeCacheSecurityGroupIngressMessage": {
         "type": "object",
-        "required": ["CacheSecurityGroupName", "EC2SecurityGroupName", "EC2SecurityGroupOwnerId"],
+        "required": [
+          "CacheSecurityGroupName",
+          "EC2SecurityGroupName",
+          "EC2SecurityGroupOwnerId"
+        ],
         "title": "AuthorizeCacheSecurityGroupIngressMessage",
         "properties": {
           "CacheSecurityGroupName": {
@@ -10854,7 +10862,14 @@
       },
       "NodeUpdateStatus": {
         "type": "string",
-        "enum": ["not-applied", "waiting-to-start", "in-progress", "stopping", "stopped", "complete"]
+        "enum": [
+          "not-applied",
+          "waiting-to-start",
+          "in-progress",
+          "stopping",
+          "stopped",
+          "complete"
+        ]
       },
       "NodeUpdateInitiatedBy": {
         "type": "string",
@@ -12164,7 +12179,11 @@
       },
       "CreateCacheParameterGroupMessage": {
         "type": "object",
-        "required": ["CacheParameterGroupName", "CacheParameterGroupFamily", "Description"],
+        "required": [
+          "CacheParameterGroupName",
+          "CacheParameterGroupFamily",
+          "Description"
+        ],
         "title": "CreateCacheParameterGroupMessage",
         "properties": {
           "CacheParameterGroupName": {
@@ -12265,7 +12284,11 @@
       },
       "CreateCacheSubnetGroupMessage": {
         "type": "object",
-        "required": ["CacheSubnetGroupName", "CacheSubnetGroupDescription", "SubnetIds"],
+        "required": [
+          "CacheSubnetGroupName",
+          "CacheSubnetGroupDescription",
+          "SubnetIds"
+        ],
         "title": "CreateCacheSubnetGroupMessage",
         "properties": {
           "CacheSubnetGroupName": {
@@ -12313,7 +12336,10 @@
       },
       "CreateGlobalReplicationGroupMessage": {
         "type": "object",
-        "required": ["GlobalReplicationGroupIdSuffix", "PrimaryReplicationGroupId"],
+        "required": [
+          "GlobalReplicationGroupIdSuffix",
+          "PrimaryReplicationGroupId"
+        ],
         "title": "CreateGlobalReplicationGroupMessage",
         "properties": {
           "GlobalReplicationGroupIdSuffix": {
@@ -12918,7 +12944,11 @@
       },
       "DecreaseNodeGroupsInGlobalReplicationGroupMessage": {
         "type": "object",
-        "required": ["GlobalReplicationGroupId", "NodeGroupCount", "ApplyImmediately"],
+        "required": [
+          "GlobalReplicationGroupId",
+          "NodeGroupCount",
+          "ApplyImmediately"
+        ],
         "title": "DecreaseNodeGroupsInGlobalReplicationGroupMessage",
         "properties": {
           "GlobalReplicationGroupId": {
@@ -13135,7 +13165,10 @@
       },
       "DeleteGlobalReplicationGroupMessage": {
         "type": "object",
-        "required": ["GlobalReplicationGroupId", "RetainPrimaryReplicationGroup"],
+        "required": [
+          "GlobalReplicationGroupId",
+          "RetainPrimaryReplicationGroup"
+        ],
         "title": "DeleteGlobalReplicationGroupMessage",
         "properties": {
           "GlobalReplicationGroupId": {
@@ -14220,7 +14253,11 @@
       },
       "DisassociateGlobalReplicationGroupMessage": {
         "type": "object",
-        "required": ["GlobalReplicationGroupId", "ReplicationGroupId", "ReplicationGroupRegion"],
+        "required": [
+          "GlobalReplicationGroupId",
+          "ReplicationGroupId",
+          "ReplicationGroupRegion"
+        ],
         "title": "DisassociateGlobalReplicationGroupMessage",
         "properties": {
           "GlobalReplicationGroupId": {
@@ -14358,7 +14395,11 @@
       },
       "FailoverGlobalReplicationGroupMessage": {
         "type": "object",
-        "required": ["GlobalReplicationGroupId", "PrimaryRegion", "PrimaryReplicationGroupId"],
+        "required": [
+          "GlobalReplicationGroupId",
+          "PrimaryRegion",
+          "PrimaryReplicationGroupId"
+        ],
         "title": "FailoverGlobalReplicationGroupMessage",
         "properties": {
           "GlobalReplicationGroupId": {
@@ -14548,7 +14589,11 @@
       },
       "IncreaseNodeGroupsInGlobalReplicationGroupMessage": {
         "type": "object",
-        "required": ["GlobalReplicationGroupId", "NodeGroupCount", "ApplyImmediately"],
+        "required": [
+          "GlobalReplicationGroupId",
+          "NodeGroupCount",
+          "ApplyImmediately"
+        ],
         "title": "IncreaseNodeGroupsInGlobalReplicationGroupMessage",
         "properties": {
           "GlobalReplicationGroupId": {
@@ -15363,7 +15408,11 @@
       },
       "ModifyReplicationGroupShardConfigurationMessage": {
         "type": "object",
-        "required": ["ReplicationGroupId", "NodeGroupCount", "ApplyImmediately"],
+        "required": [
+          "ReplicationGroupId",
+          "NodeGroupCount",
+          "ApplyImmediately"
+        ],
         "title": "ModifyReplicationGroupShardConfigurationMessage",
         "properties": {
           "ReplicationGroupId": {
@@ -16576,7 +16625,11 @@
       },
       "RevokeCacheSecurityGroupIngressMessage": {
         "type": "object",
-        "required": ["CacheSecurityGroupName", "EC2SecurityGroupName", "EC2SecurityGroupOwnerId"],
+        "required": [
+          "CacheSecurityGroupName",
+          "EC2SecurityGroupName",
+          "EC2SecurityGroupOwnerId"
+        ],
         "title": "RevokeCacheSecurityGroupIngressMessage",
         "properties": {
           "CacheSecurityGroupName": {

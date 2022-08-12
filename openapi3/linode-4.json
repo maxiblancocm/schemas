@@ -6,7 +6,7 @@
     "description": "",
     "x-categories": ["cloud-computing"],
     "x-logo": {
-      "url": "/logos/linode.png"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/linode.png"
     },
     "contact": {
       "name": "Linode",
@@ -3601,7 +3601,11 @@
             "description": "A collection of the specified Linode's available backups.",
             "content": {
               "application/json": {
-                "x-linode-cli-rows": ["automatic", "snapshot.current", "snapshot.in_progress"],
+                "x-linode-cli-rows": [
+                  "automatic",
+                  "snapshot.current",
+                  "snapshot.in_progress"
+                ],
                 "x-linode-cli-use-schema": {
                   "$ref": "#/components/schemas/Backup"
                 },
@@ -11987,7 +11991,12 @@
                   },
                   "acl": {
                     "type": "string",
-                    "enum": ["private", "public-read", "authenticated-read", "public-read-write"],
+                    "enum": [
+                      "private",
+                      "public-read",
+                      "authenticated-read",
+                      "public-read-write"
+                    ],
                     "description": "The Access Control Level of the bucket using a canned ACL string. For more fine-grained control of ACLs, use the S3 API directly.\n",
                     "default": "private",
                     "example": "private"
@@ -12248,7 +12257,13 @@
                   },
                   "acl": {
                     "type": "string",
-                    "enum": ["private", "public-read", "authenticated-read", "public-read-write", "custom"],
+                    "enum": [
+                      "private",
+                      "public-read",
+                      "authenticated-read",
+                      "public-read-write",
+                      "custom"
+                    ],
                     "description": "The Access Control Level of the bucket, as a canned ACL string. For more fine-grained control of ACLs, use the S3 API directly.\n",
                     "example": "private"
                   }
@@ -12310,7 +12325,13 @@
                   },
                   "acl": {
                     "type": "string",
-                    "enum": ["private", "public-read", "authenticated-read", "public-read-write", "custom"],
+                    "enum": [
+                      "private",
+                      "public-read",
+                      "authenticated-read",
+                      "public-read-write",
+                      "custom"
+                    ],
                     "description": "The Access Control Level of the bucket, as a canned ACL string. For more fine-grained control of ACLs, use the S3 API directly.\n",
                     "example": "private"
                   }
@@ -15998,7 +16019,13 @@
                   "properties": {
                     "acl": {
                       "type": "string",
-                      "enum": ["private", "public-read", "authenticated-read", "public-read-write", "custom"],
+                      "enum": [
+                        "private",
+                        "public-read",
+                        "authenticated-read",
+                        "public-read-write",
+                        "custom"
+                      ],
                       "description": "The Access Control Level of the bucket, as a canned ACL string. For more fine-grained control of ACLs, use the S3 API directly.\n",
                       "example": "public-read"
                     },
@@ -16054,7 +16081,13 @@
                 "properties": {
                   "acl": {
                     "type": "string",
-                    "enum": ["private", "public-read", "authenticated-read", "public-read-write", "custom"],
+                    "enum": [
+                      "private",
+                      "public-read",
+                      "authenticated-read",
+                      "public-read-write",
+                      "custom"
+                    ],
                     "description": "The Access Control Level of the bucket, as a canned ACL string. For more fine-grained control of ACLs, use the S3 API directly.\n",
                     "example": "public-read"
                   }
@@ -16073,7 +16106,13 @@
                   "properties": {
                     "acl": {
                       "type": "string",
-                      "enum": ["private", "public-read", "authenticated-read", "public-read-write", "custom"],
+                      "enum": [
+                        "private",
+                        "public-read",
+                        "authenticated-read",
+                        "public-read-write",
+                        "custom"
+                      ],
                       "description": "The Access Control Level of the bucket, as a canned ACL string. For more fine-grained control of ACLs, use the S3 API directly.\n",
                       "example": "public-read"
                     },
@@ -16397,7 +16436,12 @@
               "type": "string"
             },
             "description": "A list of capabilities your account supports.\n",
-            "example": ["Linodes", "NodeBalancers", "Block Storage", "Object Storage"],
+            "example": [
+              "Linodes",
+              "NodeBalancers",
+              "Block Storage",
+              "Object Storage"
+            ],
             "readOnly": true
           },
           "city": {
@@ -16612,7 +16656,15 @@
           },
           "status": {
             "type": "string",
-            "enum": ["paused", "pending", "running", "needsPostProcessing", "successful", "failed", "userAborted"],
+            "enum": [
+              "paused",
+              "pending",
+              "running",
+              "needsPostProcessing",
+              "successful",
+              "failed",
+              "userAborted"
+            ],
             "readOnly": true,
             "description": "The current state of a specific Backup.",
             "example": "successful",
@@ -16850,7 +16902,9 @@
               "type": "string"
             },
             "writeOnly": true,
-            "example": ["ssh-rsa AAAA_valid_public_ssh_key_123456785== user@their-computer"],
+            "example": [
+              "ssh-rsa AAAA_valid_public_ssh_key_123456785== user@their-computer"
+            ],
             "description": "A list of public SSH keys that will be automatically appended to the root user's `~/.ssh/authorized_keys` file.\n"
           },
           "authorized_users": {
@@ -17008,7 +17062,17 @@
           },
           "type": {
             "type": "string",
-            "enum": ["A", "AAAA", "NS", "MX", "CNAME", "TXT", "SRV", "PTR", "CAA"],
+            "enum": [
+              "A",
+              "AAAA",
+              "NS",
+              "MX",
+              "CNAME",
+              "TXT",
+              "SRV",
+              "PTR",
+              "CAA"
+            ],
             "description": "The type of Record this is in the DNS system. For example, A records associate a domain name with an IPv4 address, and AAAA records associate a domain name with an IPv6 address.\n",
             "example": "A",
             "x-linode-cli-display": 2
@@ -17367,7 +17431,13 @@
             "type": "string",
             "readOnly": true,
             "description": "The current status of this Event.",
-            "enum": ["failed", "finished", "notification", "scheduled", "started"],
+            "enum": [
+              "failed",
+              "finished",
+              "notification",
+              "scheduled",
+              "started"
+            ],
             "x-linode-cli-display": 7,
             "x-linode-cli-color": {
               "failed": "red",
@@ -18652,7 +18722,16 @@
                     "nullable": true,
                     "description": "The day of the week that your Linode's weekly Backup is taken.\nIf not set manually, a day will be chosen for you. Backups\nare taken every day, but backups taken on this day are\npreferred when selecting backups to retain for a longer period.\n\n\nIf not set manually, then when backups are initially enabled, this\nmay come back as `Scheduling` until the `day` is automatically selected.\n",
                     "example": "Saturday",
-                    "enum": ["Scheduling", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                    "enum": [
+                      "Scheduling",
+                      "Sunday",
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday"
+                    ]
                   },
                   "window": {
                     "type": "string",
@@ -19407,7 +19486,12 @@
         "properties": {
           "id": {
             "type": "string",
-            "enum": ["longview-3", "longview-10", "longview-40", "longview-100"],
+            "enum": [
+              "longview-3",
+              "longview-10",
+              "longview-40",
+              "longview-100"
+            ],
             "description": "The unique ID of this Subscription tier.\n",
             "example": "longview-10",
             "readOnly": true,
@@ -19455,7 +19539,12 @@
         "properties": {
           "longview_subscription": {
             "type": "string",
-            "enum": ["longview-3", "longview-10", "longview-40", "longview-100"],
+            "enum": [
+              "longview-3",
+              "longview-10",
+              "longview-40",
+              "longview-100"
+            ],
             "nullable": true,
             "description": "The subscription ID for a particular Longview plan. A value of `null` corresponds to Longview Free.\n\nYou can send a request to the [List Longview Subscriptions](/api/v4/longview-subscriptions/) endpoint to receive the details of each plan.\n",
             "example": "longview-10",
@@ -20891,7 +20980,12 @@
               "type": "string"
             },
             "description": "A list of capabilities of this region.\n",
-            "example": ["Linodes", "NodeBalancers", "Block Storage", "Object Storage"],
+            "example": [
+              "Linodes",
+              "NodeBalancers",
+              "Block Storage",
+              "Object Storage"
+            ],
             "readOnly": true,
             "x-linode-cli-display": 3
           },

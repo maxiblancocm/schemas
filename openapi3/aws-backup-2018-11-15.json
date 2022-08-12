@@ -6,7 +6,7 @@
     "title": "AWS Backup",
     "description": "AWS Backup is a unified backup service designed to protect AWS services and their associated data. AWS Backup simplifies the creation, migration, restoration, and deletion of backups, while also providing reporting and auditing.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Backup_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Backup_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3318,7 +3318,16 @@
             "description": "Returns only backup jobs that are in the specified state.",
             "schema": {
               "type": "string",
-              "enum": ["CREATED", "PENDING", "RUNNING", "ABORTING", "ABORTED", "COMPLETED", "FAILED", "EXPIRED"]
+              "enum": [
+                "CREATED",
+                "PENDING",
+                "RUNNING",
+                "ABORTING",
+                "ABORTED",
+                "COMPLETED",
+                "FAILED",
+                "EXPIRED"
+              ]
             }
           },
           {
@@ -4931,7 +4940,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["RecoveryPointArn", "SourceBackupVaultName", "DestinationBackupVaultArn", "IamRoleArn"],
+                "required": [
+                  "RecoveryPointArn",
+                  "SourceBackupVaultName",
+                  "DestinationBackupVaultArn",
+                  "IamRoleArn"
+                ],
                 "properties": {
                   "RecoveryPointArn": {
                     "description": "An ARN that uniquely identifies a recovery point to use for the copy job; for example, arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45. ",
@@ -5756,7 +5770,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["ReportPlanName", "ReportDeliveryChannel", "ReportSetting"],
+                "required": [
+                  "ReportPlanName",
+                  "ReportDeliveryChannel",
+                  "ReportSetting"
+                ],
                 "properties": {
                   "ReportPlanName": {
                     "description": "The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).",
@@ -8778,7 +8796,16 @@
       },
       "BackupJobState": {
         "type": "string",
-        "enum": ["CREATED", "PENDING", "RUNNING", "ABORTING", "ABORTED", "COMPLETED", "FAILED", "EXPIRED"]
+        "enum": [
+          "CREATED",
+          "PENDING",
+          "RUNNING",
+          "ABORTING",
+          "ABORTED",
+          "COMPLETED",
+          "FAILED",
+          "EXPIRED"
+        ]
       },
       "RecoveryPointCreator": {
         "type": "object",

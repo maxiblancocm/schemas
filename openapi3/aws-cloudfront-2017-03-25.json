@@ -6,7 +6,7 @@
     "title": "Amazon CloudFront",
     "description": "This is the Amazon CloudFront API Reference. This guide is for developers who need detailed information about CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the Amazon CloudFront Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-CloudFront_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-CloudFront_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4709,7 +4709,13 @@
       },
       "DefaultCacheBehavior": {
         "type": "object",
-        "required": ["TargetOriginId", "ForwardedValues", "TrustedSigners", "ViewerProtocolPolicy", "MinTTL"],
+        "required": [
+          "TargetOriginId",
+          "ForwardedValues",
+          "TrustedSigners",
+          "ViewerProtocolPolicy",
+          "MinTTL"
+        ],
         "properties": {
           "TargetOriginId": {
             "allOf": [
@@ -5345,7 +5351,13 @@
       },
       "DistributionConfig": {
         "type": "object",
-        "required": ["CallerReference", "Origins", "DefaultCacheBehavior", "Comment", "Enabled"],
+        "required": [
+          "CallerReference",
+          "Origins",
+          "DefaultCacheBehavior",
+          "Comment",
+          "Enabled"
+        ],
         "properties": {
           "CallerReference": {
             "allOf": [
@@ -5749,7 +5761,13 @@
       },
       "StreamingDistributionConfig": {
         "type": "object",
-        "required": ["CallerReference", "S3Origin", "Comment", "TrustedSigners", "Enabled"],
+        "required": [
+          "CallerReference",
+          "S3Origin",
+          "Comment",
+          "TrustedSigners",
+          "Enabled"
+        ],
         "properties": {
           "CallerReference": {
             "allOf": [
@@ -7027,7 +7045,14 @@
       },
       "StreamingDistribution": {
         "type": "object",
-        "required": ["Id", "ARN", "Status", "DomainName", "ActiveTrustedSigners", "StreamingDistributionConfig"],
+        "required": [
+          "Id",
+          "ARN",
+          "Status",
+          "DomainName",
+          "ActiveTrustedSigners",
+          "StreamingDistributionConfig"
+        ],
         "properties": {
           "Id": {
             "allOf": [
@@ -7570,7 +7595,12 @@
       },
       "EventType": {
         "type": "string",
-        "enum": ["viewer-request", "viewer-response", "origin-request", "origin-response"]
+        "enum": [
+          "viewer-request",
+          "viewer-response",
+          "origin-request",
+          "origin-response"
+        ]
       },
       "Headers": {
         "type": "object",

@@ -6,7 +6,7 @@
     "title": "AWS Elemental MediaConvert",
     "description": "AWS Elemental MediaConvert",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Elemental-MediaConvert_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Elemental-MediaConvert_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -951,7 +951,13 @@
             "description": "Optional. A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.",
             "schema": {
               "type": "string",
-              "enum": ["SUBMITTED", "PROGRESSING", "COMPLETE", "CANCELED", "ERROR"],
+              "enum": [
+                "SUBMITTED",
+                "PROGRESSING",
+                "COMPLETE",
+                "CANCELED",
+                "ERROR"
+              ],
               "description": "A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR."
             }
           },
@@ -5182,7 +5188,13 @@
       },
       "AacCodingMode": {
         "type": "string",
-        "enum": ["AD_RECEIVER_MIX", "CODING_MODE_1_0", "CODING_MODE_1_1", "CODING_MODE_2_0", "CODING_MODE_5_1"],
+        "enum": [
+          "AD_RECEIVER_MIX",
+          "CODING_MODE_1_0",
+          "CODING_MODE_1_1",
+          "CODING_MODE_2_0",
+          "CODING_MODE_5_1"
+        ],
         "description": "Mono (Audio Description), Mono, Stereo, or 5.1 channel layout. Valid values depend on rate control mode and profile. \"1.0 - Audio Description (Receiver Mix)\" setting receives a stereo description plus control track and emits a mono AAC encode of the description track, with control data emitted in the PES header as per ETSI TS 101 154 Annex E."
       },
       "AacRateControlMode": {
@@ -5354,7 +5366,12 @@
       },
       "Ac3CodingMode": {
         "type": "string",
-        "enum": ["CODING_MODE_1_0", "CODING_MODE_1_1", "CODING_MODE_2_0", "CODING_MODE_3_2_LFE"],
+        "enum": [
+          "CODING_MODE_1_0",
+          "CODING_MODE_1_1",
+          "CODING_MODE_2_0",
+          "CODING_MODE_3_2_LFE"
+        ],
         "description": "Dolby Digital coding mode. Determines number of channels."
       },
       "Ac3DynamicRangeCompressionProfile": {
@@ -5545,7 +5562,12 @@
       },
       "AccelerationStatus": {
         "type": "string",
-        "enum": ["NOT_APPLICABLE", "IN_PROGRESS", "ACCELERATED", "NOT_ACCELERATED"],
+        "enum": [
+          "NOT_APPLICABLE",
+          "IN_PROGRESS",
+          "ACCELERATED",
+          "NOT_ACCELERATED"
+        ],
         "description": "Describes whether the current job is running with accelerated transcoding. For jobs that have Acceleration (AccelerationMode) set to DISABLED, AccelerationStatus is always NOT_APPLICABLE. For jobs that have Acceleration (AccelerationMode) set to ENABLED or PREFERRED, AccelerationStatus is one of the other states. AccelerationStatus is IN_PROGRESS initially, while the service determines whether the input files and job settings are compatible with accelerated transcoding. If they are, AcclerationStatus is ACCELERATED. If your input files and job settings aren't compatible with accelerated transcoding, the service either fails your job or runs it without accelerated transcoding, depending on how you set Acceleration (AccelerationMode). When the service runs your job without accelerated transcoding, AccelerationStatus is NOT_ACCELERATED."
       },
       "AfdSignaling": {
@@ -5685,7 +5707,23 @@
       },
       "AudioChannelTag": {
         "type": "string",
-        "enum": ["L", "R", "C", "LFE", "LS", "RS", "LC", "RC", "CS", "LSD", "RSD", "TCS", "VHL", "VHC", "VHR"],
+        "enum": [
+          "L",
+          "R",
+          "C",
+          "LFE",
+          "LS",
+          "RS",
+          "LC",
+          "RC",
+          "CS",
+          "LSD",
+          "RSD",
+          "TCS",
+          "VHL",
+          "VHC",
+          "VHR"
+        ],
         "description": "You can add a tag for this mono-channel audio track to mimic its placement in a multi-channel layout.  For example, if this track is the left surround channel, choose Left surround (LS)."
       },
       "AudioChannelTaggingSettings": {
@@ -5709,7 +5747,19 @@
       },
       "AudioCodec": {
         "type": "string",
-        "enum": ["AAC", "MP2", "MP3", "WAV", "AIFF", "AC3", "EAC3", "EAC3_ATMOS", "VORBIS", "OPUS", "PASSTHROUGH"],
+        "enum": [
+          "AAC",
+          "MP2",
+          "MP3",
+          "WAV",
+          "AIFF",
+          "AC3",
+          "EAC3",
+          "EAC3_ATMOS",
+          "VORBIS",
+          "OPUS",
+          "PASSTHROUGH"
+        ],
         "description": "Type of Audio codec."
       },
       "Eac3AtmosSettings": {
@@ -7136,7 +7186,12 @@
       },
       "AudioNormalizationAlgorithm": {
         "type": "string",
-        "enum": ["ITU_BS_1770_1", "ITU_BS_1770_2", "ITU_BS_1770_3", "ITU_BS_1770_4"],
+        "enum": [
+          "ITU_BS_1770_1",
+          "ITU_BS_1770_2",
+          "ITU_BS_1770_3",
+          "ITU_BS_1770_4"
+        ],
         "description": "Choose one of the following audio normalization algorithms: ITU-R BS.1770-1: Ungated loudness. A measurement of ungated average loudness for an entire piece of content, suitable for measurement of short-form content under ATSC recommendation A/85. Supports up to 5.1 audio channels. ITU-R BS.1770-2: Gated loudness. A measurement of gated average loudness compliant with the requirements of EBU-R128. Supports up to 5.1 audio channels. ITU-R BS.1770-3: Modified peak. The same loudness measurement algorithm as 1770-2, with an updated true peak measurement. ITU-R BS.1770-4: Higher channel count. Allows for more audio channels than the other algorithms, including configurations such as 7.1."
       },
       "AudioNormalizationAlgorithmControl": {
@@ -9821,7 +9876,13 @@
       },
       "ColorSpaceConversion": {
         "type": "string",
-        "enum": ["NONE", "FORCE_601", "FORCE_709", "FORCE_HDR10", "FORCE_HLG_2020"],
+        "enum": [
+          "NONE",
+          "FORCE_601",
+          "FORCE_709",
+          "FORCE_HDR10",
+          "FORCE_HLG_2020"
+        ],
         "description": "Specify the color space you want for this output. The service supports conversion between HDR formats, between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR."
       },
       "Hdr10Metadata": {
@@ -10105,7 +10166,19 @@
       },
       "ContainerType": {
         "type": "string",
-        "enum": ["F4V", "ISMV", "M2TS", "M3U8", "CMFC", "MOV", "MP4", "MPD", "MXF", "WEBM", "RAW"],
+        "enum": [
+          "F4V",
+          "ISMV",
+          "M2TS",
+          "M3U8",
+          "CMFC",
+          "MOV",
+          "MP4",
+          "MPD",
+          "MXF",
+          "WEBM",
+          "RAW"
+        ],
         "description": "Container for this output. Some containers require a container settings object. If not specified, the default object will be created."
       },
       "F4vSettings": {
@@ -12992,7 +13065,12 @@
       },
       "OutputSdt": {
         "type": "string",
-        "enum": ["SDT_FOLLOW", "SDT_FOLLOW_IF_PRESENT", "SDT_MANUAL", "SDT_NONE"],
+        "enum": [
+          "SDT_FOLLOW",
+          "SDT_FOLLOW_IF_PRESENT",
+          "SDT_MANUAL",
+          "SDT_NONE"
+        ],
         "description": "Selects method of inserting SDT information into output stream.  \"Follow input SDT\" copies SDT information from input stream to  output stream. \"Follow input SDT if present\" copies SDT information from  input stream to output stream if SDT information is present in the input, otherwise it will fall back on the user-defined values. Enter \"SDT  Manually\" means user will enter the SDT information. \"No SDT\" means output  stream will not contain SDT information."
       },
       "__integerMin25Max2000": {
@@ -13124,7 +13202,12 @@
       },
       "Eac3AtmosCodingMode": {
         "type": "string",
-        "enum": ["CODING_MODE_9_1_6", "CODING_MODE_5_1_4", "CODING_MODE_7_1_4", "CODING_MODE_9_1_6"],
+        "enum": [
+          "CODING_MODE_9_1_6",
+          "CODING_MODE_5_1_4",
+          "CODING_MODE_7_1_4",
+          "CODING_MODE_9_1_6"
+        ],
         "description": "The coding mode for Dolby Digital Plus JOC (Atmos) is always 9.1.6 (CODING_MODE_9_1_6)."
       },
       "Eac3AtmosDialogueIntelligence": {
@@ -13134,17 +13217,37 @@
       },
       "Eac3AtmosDynamicRangeCompressionLine": {
         "type": "string",
-        "enum": ["NONE", "FILM_STANDARD", "FILM_LIGHT", "MUSIC_STANDARD", "MUSIC_LIGHT", "SPEECH"],
+        "enum": [
+          "NONE",
+          "FILM_STANDARD",
+          "FILM_LIGHT",
+          "MUSIC_STANDARD",
+          "MUSIC_LIGHT",
+          "SPEECH"
+        ],
         "description": "Specify the absolute peak level for a signal with dynamic range compression."
       },
       "Eac3AtmosDynamicRangeCompressionRf": {
         "type": "string",
-        "enum": ["NONE", "FILM_STANDARD", "FILM_LIGHT", "MUSIC_STANDARD", "MUSIC_LIGHT", "SPEECH"],
+        "enum": [
+          "NONE",
+          "FILM_STANDARD",
+          "FILM_LIGHT",
+          "MUSIC_STANDARD",
+          "MUSIC_LIGHT",
+          "SPEECH"
+        ],
         "description": "Specify how the service limits the audio dynamic range when compressing the audio."
       },
       "Eac3AtmosMeteringMode": {
         "type": "string",
-        "enum": ["LEQ_A", "ITU_BS_1770_1", "ITU_BS_1770_2", "ITU_BS_1770_3", "ITU_BS_1770_4"],
+        "enum": [
+          "LEQ_A",
+          "ITU_BS_1770_1",
+          "ITU_BS_1770_2",
+          "ITU_BS_1770_3",
+          "ITU_BS_1770_4"
+        ],
         "description": "Choose how the service meters the loudness of your audio."
       },
       "__integerMin384000Max768000": {
@@ -13177,7 +13280,13 @@
       },
       "Eac3BitstreamMode": {
         "type": "string",
-        "enum": ["COMPLETE_MAIN", "COMMENTARY", "EMERGENCY", "HEARING_IMPAIRED", "VISUALLY_IMPAIRED"],
+        "enum": [
+          "COMPLETE_MAIN",
+          "COMMENTARY",
+          "EMERGENCY",
+          "HEARING_IMPAIRED",
+          "VISUALLY_IMPAIRED"
+        ],
         "description": "Specify the bitstream mode for the E-AC-3 stream that the encoder emits. For more information about the EAC3 bitstream mode, see ATSC A/52-2012 (Annex E)."
       },
       "Eac3CodingMode": {
@@ -13192,12 +13301,26 @@
       },
       "Eac3DynamicRangeCompressionLine": {
         "type": "string",
-        "enum": ["NONE", "FILM_STANDARD", "FILM_LIGHT", "MUSIC_STANDARD", "MUSIC_LIGHT", "SPEECH"],
+        "enum": [
+          "NONE",
+          "FILM_STANDARD",
+          "FILM_LIGHT",
+          "MUSIC_STANDARD",
+          "MUSIC_LIGHT",
+          "SPEECH"
+        ],
         "description": "Specify the absolute peak level for a signal with dynamic range compression."
       },
       "Eac3DynamicRangeCompressionRf": {
         "type": "string",
-        "enum": ["NONE", "FILM_STANDARD", "FILM_LIGHT", "MUSIC_STANDARD", "MUSIC_LIGHT", "SPEECH"],
+        "enum": [
+          "NONE",
+          "FILM_STANDARD",
+          "FILM_LIGHT",
+          "MUSIC_STANDARD",
+          "MUSIC_LIGHT",
+          "SPEECH"
+        ],
         "description": "Specify how the service limits the audio dynamic range when compressing the audio."
       },
       "Eac3LfeControl": {
@@ -13474,7 +13597,14 @@
       },
       "H264CodecProfile": {
         "type": "string",
-        "enum": ["BASELINE", "HIGH", "HIGH_10BIT", "HIGH_422", "HIGH_422_10BIT", "MAIN"],
+        "enum": [
+          "BASELINE",
+          "HIGH",
+          "HIGH_10BIT",
+          "HIGH_422",
+          "HIGH_422_10BIT",
+          "MAIN"
+        ],
         "description": "H.264 Profile. High 4:2:2 and 10-bit profiles are only available with the AVC-I License."
       },
       "H264DynamicSubGop": {
@@ -13519,7 +13649,13 @@
       },
       "H264InterlaceMode": {
         "type": "string",
-        "enum": ["PROGRESSIVE", "TOP_FIELD", "BOTTOM_FIELD", "FOLLOW_TOP_FIELD", "FOLLOW_BOTTOM_FIELD"],
+        "enum": [
+          "PROGRESSIVE",
+          "TOP_FIELD",
+          "BOTTOM_FIELD",
+          "FOLLOW_TOP_FIELD",
+          "FOLLOW_BOTTOM_FIELD"
+        ],
         "description": "Use Interlace mode (InterlaceMode) to choose the scan line type for the output. * Top Field First (TOP_FIELD) and Bottom Field First (BOTTOM_FIELD) produce interlaced output with the entire output having the same field polarity (top or bottom first). * Follow, Default Top (FOLLOW_TOP_FIELD) and Follow, Default Bottom (FOLLOW_BOTTOM_FIELD) use the same field polarity as the source. Therefore, behavior depends on the input scan type, as follows.\n  - If the source is interlaced, the output will be interlaced with the same polarity as the source (it will follow the source). The output could therefore be a mix of \"top field first\" and \"bottom field first\".\n  - If the source is progressive, the output will be interlaced with \"top field first\" or \"bottom field first\" polarity, depending on which of the Follow options you chose."
       },
       "H264ParControl": {
@@ -14249,7 +14385,13 @@
       },
       "H265InterlaceMode": {
         "type": "string",
-        "enum": ["PROGRESSIVE", "TOP_FIELD", "BOTTOM_FIELD", "FOLLOW_TOP_FIELD", "FOLLOW_BOTTOM_FIELD"],
+        "enum": [
+          "PROGRESSIVE",
+          "TOP_FIELD",
+          "BOTTOM_FIELD",
+          "FOLLOW_TOP_FIELD",
+          "FOLLOW_BOTTOM_FIELD"
+        ],
         "description": "Choose the scan line type for the output. Choose Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Choose Top Field First (TOP_FIELD) or Bottom Field First (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Choose Follow, Default Top (FOLLOW_TOP_FIELD) or Follow, Default Bottom (FOLLOW_BOTTOM_FIELD) to create an interlaced output with the same field polarity as the source. If the source is interlaced, the output will be interlaced with the same polarity as the source (it will follow the source). The output could therefore be a mix of \"top field first\" and \"bottom field first\". If the source is progressive, your output will be interlaced with \"top field first\" or \"bottom field first\" polarity, depending on which of the Follow options you chose. If you don't choose a value, the service will default to Progressive (PROGRESSIVE)."
       },
       "H265ParControl": {
@@ -16381,7 +16523,13 @@
       },
       "InputRotate": {
         "type": "string",
-        "enum": ["DEGREE_0", "DEGREES_90", "DEGREES_180", "DEGREES_270", "AUTO"],
+        "enum": [
+          "DEGREE_0",
+          "DEGREES_90",
+          "DEGREES_180",
+          "DEGREES_270",
+          "AUTO"
+        ],
         "description": "Use Rotate (InputRotate) to specify how the service rotates your video. You can choose automatic rotation or specify a rotation. You can specify a clockwise rotation of 0, 90, 180, or 270 degrees. If your input video container is .mov or .mp4 and your input has rotation metadata, you can choose Automatic to have the service rotate your video according to the rotation specified in the metadata. The rotation must be within one degree of 90, 180, or 270 degrees. If the rotation metadata specifies any other rotation, the service will default to no rotation. By default, the service does no rotation, even if your input video has rotation metadata. The service doesn't pass through rotation metadata."
       },
       "InputTemplate": {
@@ -17019,7 +17167,14 @@
       },
       "M2tsSegmentationMarkers": {
         "type": "string",
-        "enum": ["NONE", "RAI_SEGSTART", "RAI_ADAPT", "PSI_SEGSTART", "EBP", "EBP_LEGACY"],
+        "enum": [
+          "NONE",
+          "RAI_SEGSTART",
+          "RAI_ADAPT",
+          "PSI_SEGSTART",
+          "EBP",
+          "EBP_LEGACY"
+        ],
         "description": "Inserts segmentation markers at each segmentation_time period. rai_segstart sets the Random Access Indicator bit in the adaptation field. rai_adapt sets the RAI bit and adds the current timecode in the private data bytes. psi_segstart inserts PAT and PMT tables at the start of segments. ebp adds Encoder Boundary Point information to the adaptation field as per OpenCable specification OC-SP-EBP-I01-130118. ebp_legacy adds Encoder Boundary Point information to the adaptation field using a legacy proprietary format."
       },
       "M2tsSegmentationStyle": {
@@ -17290,7 +17445,13 @@
       },
       "Mpeg2InterlaceMode": {
         "type": "string",
-        "enum": ["PROGRESSIVE", "TOP_FIELD", "BOTTOM_FIELD", "FOLLOW_TOP_FIELD", "FOLLOW_BOTTOM_FIELD"],
+        "enum": [
+          "PROGRESSIVE",
+          "TOP_FIELD",
+          "BOTTOM_FIELD",
+          "FOLLOW_TOP_FIELD",
+          "FOLLOW_BOTTOM_FIELD"
+        ],
         "description": "Use Interlace mode (InterlaceMode) to choose the scan line type for the output. * Top Field First (TOP_FIELD) and Bottom Field First (BOTTOM_FIELD) produce interlaced output with the entire output having the same field polarity (top or bottom first). * Follow, Default Top (FOLLOW_TOP_FIELD) and Follow, Default Bottom (FOLLOW_BOTTOM_FIELD) use the same field polarity as the source. Therefore, behavior depends on the input scan type.\n  - If the source is interlaced, the output will be interlaced with the same polarity as the source (it will follow the source). The output could therefore be a mix of \"top field first\" and \"bottom field first\".\n  - If the source is progressive, the output will be interlaced with \"top field first\" or \"bottom field first\" polarity, depending on which of the Follow options you chose."
       },
       "Mpeg2IntraDcPrecision": {
@@ -18058,7 +18219,16 @@
       },
       "NoiseReducerFilter": {
         "type": "string",
-        "enum": ["BILATERAL", "MEAN", "GAUSSIAN", "LANCZOS", "SHARPEN", "CONSERVE", "SPATIAL", "TEMPORAL"],
+        "enum": [
+          "BILATERAL",
+          "MEAN",
+          "GAUSSIAN",
+          "LANCZOS",
+          "SHARPEN",
+          "CONSERVE",
+          "SPATIAL",
+          "TEMPORAL"
+        ],
         "description": "Use Noise reducer filter (NoiseReducerFilter) to select one of the following spatial image filtering functions. To use this setting, you must also enable Noise reducer (NoiseReducer). * Bilateral preserves edges while reducing noise. * Mean (softest), Gaussian, Lanczos, and Sharpen (sharpest) do convolution filtering. * Conserve does min/max noise reduction. * Spatial does frequency-domain filtering based on JND principles. * Temporal optimizes video quality for complex motion."
       },
       "NoiseReducerFilterSettings": {
@@ -18757,7 +18927,13 @@
       },
       "ProresInterlaceMode": {
         "type": "string",
-        "enum": ["PROGRESSIVE", "TOP_FIELD", "BOTTOM_FIELD", "FOLLOW_TOP_FIELD", "FOLLOW_BOTTOM_FIELD"],
+        "enum": [
+          "PROGRESSIVE",
+          "TOP_FIELD",
+          "BOTTOM_FIELD",
+          "FOLLOW_TOP_FIELD",
+          "FOLLOW_BOTTOM_FIELD"
+        ],
         "description": "Use Interlace mode (InterlaceMode) to choose the scan line type for the output. * Top Field First (TOP_FIELD) and Bottom Field First (BOTTOM_FIELD) produce interlaced output with the entire output having the same field polarity (top or bottom first). * Follow, Default Top (FOLLOW_TOP_FIELD) and Follow, Default Bottom (FOLLOW_BOTTOM_FIELD) use the same field polarity as the source. Therefore, behavior depends on the input scan type.\n  - If the source is interlaced, the output will be interlaced with the same polarity as the source (it will follow the source). The output could therefore be a mix of \"top field first\" and \"bottom field first\".\n  - If the source is progressive, the output will be interlaced with \"top field first\" or \"bottom field first\" polarity, depending on which of the Follow options you chose."
       },
       "ProresParControl": {
@@ -19096,7 +19272,12 @@
       },
       "S3ObjectCannedAcl": {
         "type": "string",
-        "enum": ["PUBLIC_READ", "AUTHENTICATED_READ", "BUCKET_OWNER_READ", "BUCKET_OWNER_FULL_CONTROL"],
+        "enum": [
+          "PUBLIC_READ",
+          "AUTHENTICATED_READ",
+          "BUCKET_OWNER_READ",
+          "BUCKET_OWNER_FULL_CONTROL"
+        ],
         "description": "Choose an Amazon S3 canned ACL for MediaConvert to apply to this output."
       },
       "S3DestinationAccessControl": {
@@ -19338,7 +19519,19 @@
       },
       "VideoCodec": {
         "type": "string",
-        "enum": ["FRAME_CAPTURE", "AV1", "H_264", "H_265", "MPEG2", "PRORES", "VP8", "VP9", "VP8", "VP9", "XAVC"],
+        "enum": [
+          "FRAME_CAPTURE",
+          "AV1",
+          "H_264",
+          "H_265",
+          "MPEG2",
+          "PRORES",
+          "VP8",
+          "VP9",
+          "VP8",
+          "VP9",
+          "XAVC"
+        ],
         "description": "Type of video codec"
       },
       "Vp8Settings": {
@@ -20228,7 +20421,13 @@
       },
       "AvcIntraInterlaceMode": {
         "type": "string",
-        "enum": ["PROGRESSIVE", "TOP_FIELD", "BOTTOM_FIELD", "FOLLOW_TOP_FIELD", "FOLLOW_BOTTOM_FIELD"],
+        "enum": [
+          "PROGRESSIVE",
+          "TOP_FIELD",
+          "BOTTOM_FIELD",
+          "FOLLOW_TOP_FIELD",
+          "FOLLOW_BOTTOM_FIELD"
+        ],
         "description": "Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose."
       },
       "AvcIntraSlowPal": {
@@ -20882,12 +21081,26 @@
       },
       "Ac3DynamicRangeCompressionLine": {
         "type": "string",
-        "enum": ["FILM_STANDARD", "FILM_LIGHT", "MUSIC_STANDARD", "MUSIC_LIGHT", "SPEECH", "NONE"],
+        "enum": [
+          "FILM_STANDARD",
+          "FILM_LIGHT",
+          "MUSIC_STANDARD",
+          "MUSIC_LIGHT",
+          "SPEECH",
+          "NONE"
+        ],
         "description": "Choose the Dolby Digital dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby Digital stream for the line operating mode. Related setting: When you use this setting, MediaConvert ignores any value you provide for Dynamic range compression profile (DynamicRangeCompressionProfile). For information about the Dolby Digital DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf."
       },
       "Ac3DynamicRangeCompressionRf": {
         "type": "string",
-        "enum": ["FILM_STANDARD", "FILM_LIGHT", "MUSIC_STANDARD", "MUSIC_LIGHT", "SPEECH", "NONE"],
+        "enum": [
+          "FILM_STANDARD",
+          "FILM_LIGHT",
+          "MUSIC_STANDARD",
+          "MUSIC_LIGHT",
+          "SPEECH",
+          "NONE"
+        ],
         "description": "Choose the Dolby Digital dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby Digital stream for the RF operating mode. Related setting: When you use this setting, MediaConvert ignores any value you provide for Dynamic range compression profile (DynamicRangeCompressionProfile). For information about the Dolby Digital DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf."
       },
       "HlsRenditionGroupSettings": {
@@ -21770,7 +21983,13 @@
       },
       "XavcInterlaceMode": {
         "type": "string",
-        "enum": ["PROGRESSIVE", "TOP_FIELD", "BOTTOM_FIELD", "FOLLOW_TOP_FIELD", "FOLLOW_BOTTOM_FIELD"],
+        "enum": [
+          "PROGRESSIVE",
+          "TOP_FIELD",
+          "BOTTOM_FIELD",
+          "FOLLOW_TOP_FIELD",
+          "FOLLOW_BOTTOM_FIELD"
+        ],
         "description": "Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose."
       },
       "__integerMin4Max12": {
@@ -21908,7 +22127,13 @@
       },
       "XavcProfile": {
         "type": "string",
-        "enum": ["XAVC_HD_INTRA_CBG", "XAVC_4K_INTRA_CBG", "XAVC_4K_INTRA_VBR", "XAVC_HD", "XAVC_4K"],
+        "enum": [
+          "XAVC_HD_INTRA_CBG",
+          "XAVC_4K_INTRA_CBG",
+          "XAVC_4K_INTRA_VBR",
+          "XAVC_HD",
+          "XAVC_4K"
+        ],
         "description": "Specify the XAVC profile for this output. For more information, see the Sony documentation at https://www.xavc-info.org/. Note that MediaConvert doesn't support the interlaced video XAVC operating points for XAVC_HD_INTRA_CBG. To create an interlaced XAVC output, choose the profile XAVC_HD."
       },
       "XavcSlowPal": {

@@ -3,7 +3,8 @@
   "info": {
     "title": "GraphQL",
     "version": "1",
-    "x-categories": ["chainjet"]
+    "x-categories": ["chainjet"],
+    "x-logo": {}
   },
   "paths": {
     "/": {

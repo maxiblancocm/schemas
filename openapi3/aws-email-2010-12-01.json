@@ -6,7 +6,7 @@
     "title": "Amazon SES (Simple Email Service)",
     "description": "This document contains reference information for the Amazon Simple Email Service (Amazon SES) API, version 2010-12-01. This document is best used in conjunction with the Amazon SES Developer Guide.    For a list of Amazon SES endpoints to use in service requests, see Regions and Amazon SES in the Amazon SES Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Simple-Email-Service_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Simple-Email-Service_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -6677,7 +6677,12 @@
       },
       "ConfigurationSetAttribute": {
         "type": "string",
-        "enum": ["eventDestinations", "trackingOptions", "deliveryOptions", "reputationOptions"]
+        "enum": [
+          "eventDestinations",
+          "trackingOptions",
+          "deliveryOptions",
+          "reputationOptions"
+        ]
       },
       "DescribeReceiptRuleResponse": {
         "type": "object",
@@ -7826,7 +7831,14 @@
       },
       "BounceType": {
         "type": "string",
-        "enum": ["DoesNotExist", "MessageTooLarge", "ExceededQuota", "ContentRejected", "Undefined", "TemporaryFailure"]
+        "enum": [
+          "DoesNotExist",
+          "MessageTooLarge",
+          "ExceededQuota",
+          "ContentRejected",
+          "Undefined",
+          "TemporaryFailure"
+        ]
       },
       "RecipientDsnFields": {
         "type": "object",
@@ -8085,7 +8097,11 @@
       },
       "CloudWatchDimensionConfiguration": {
         "type": "object",
-        "required": ["DimensionName", "DimensionValueSource", "DefaultDimensionValue"],
+        "required": [
+          "DimensionName",
+          "DimensionValueSource",
+          "DefaultDimensionValue"
+        ],
         "properties": {
           "DimensionName": {
             "allOf": [
@@ -9150,7 +9166,16 @@
       },
       "EventType": {
         "type": "string",
-        "enum": ["send", "reject", "bounce", "complaint", "delivery", "open", "click", "renderingFailure"]
+        "enum": [
+          "send",
+          "reject",
+          "bounce",
+          "complaint",
+          "delivery",
+          "open",
+          "click",
+          "renderingFailure"
+        ]
       },
       "Explanation": {
         "type": "string"
@@ -9379,7 +9404,13 @@
       },
       "VerificationStatus": {
         "type": "string",
-        "enum": ["Pending", "Success", "Failed", "TemporaryFailure", "NotStarted"]
+        "enum": [
+          "Pending",
+          "Success",
+          "Failed",
+          "TemporaryFailure",
+          "NotStarted"
+        ]
       },
       "VerificationTokenList": {
         "type": "array",
@@ -9392,7 +9423,11 @@
       },
       "IdentityMailFromDomainAttributes": {
         "type": "object",
-        "required": ["MailFromDomain", "MailFromDomainStatus", "BehaviorOnMXFailure"],
+        "required": [
+          "MailFromDomain",
+          "MailFromDomainStatus",
+          "BehaviorOnMXFailure"
+        ],
         "properties": {
           "MailFromDomain": {
             "allOf": [
@@ -9432,7 +9467,12 @@
       },
       "IdentityNotificationAttributes": {
         "type": "object",
-        "required": ["BounceTopic", "ComplaintTopic", "DeliveryTopic", "ForwardingEnabled"],
+        "required": [
+          "BounceTopic",
+          "ComplaintTopic",
+          "DeliveryTopic",
+          "ForwardingEnabled"
+        ],
         "properties": {
           "BounceTopic": {
             "allOf": [
@@ -10205,7 +10245,11 @@
       },
       "SendBounceRequest": {
         "type": "object",
-        "required": ["OriginalMessageId", "BounceSender", "BouncedRecipientInfoList"],
+        "required": [
+          "OriginalMessageId",
+          "BounceSender",
+          "BouncedRecipientInfoList"
+        ],
         "title": "SendBounceRequest",
         "properties": {
           "OriginalMessageId": {

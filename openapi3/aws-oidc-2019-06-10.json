@@ -6,7 +6,7 @@
     "title": "AWS SSO OIDC",
     "description": "AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon successful authentication and authorization with AWS SSO. This service conforms with the OAuth 2.0 based implementation of the device authorization grant standard (https&#x3A;//tools.ietf.org/html/rfc8628). For general information about AWS SSO, see What is AWS Single Sign-On? in the AWS SSO User Guide. This API reference guide describes the AWS SSO OIDC operations that you can call programatically and includes detailed information on data types and errors.  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms such as Java, Ruby, .Net, iOS, and Android. The SDKs provide a convenient way to create programmatic access to AWS SSO and other AWS services. For more information about the AWS SDKs, including how to download and install them, see Tools for Amazon Web Services.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Single-Sign-On_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Single-Sign-On_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -270,7 +270,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["clientId", "clientSecret", "grantType", "deviceCode"],
+                "required": [
+                  "clientId",
+                  "clientSecret",
+                  "grantType",
+                  "deviceCode"
+                ],
                 "properties": {
                   "clientId": {
                     "description": "The unique identifier string for each client. This value should come from the persisted result of the <a>RegisterClient</a> API.",

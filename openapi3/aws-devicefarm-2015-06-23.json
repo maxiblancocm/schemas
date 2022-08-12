@@ -6,7 +6,7 @@
     "title": "AWS Device Farm",
     "description": "Welcome to the AWS Device Farm API documentation, which contains APIs for:   Testing on desktop browsers  Device Farm makes it possible for you to test your web applications on desktop browsers using Selenium. The APIs for desktop browser testing contain TestGrid in their names. For more information, see Testing Web Applications on Selenium with Device Farm.   Testing on real mobile devices Device Farm makes it possible for you to test apps on physical phones, tablets, and other devices in the cloud. For more information, see the Device Farm Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Device-Farm_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Device-Farm_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -8974,7 +8974,11 @@
       },
       "CreateVPCEConfigurationRequest": {
         "type": "object",
-        "required": ["vpceConfigurationName", "vpceServiceName", "serviceDnsName"],
+        "required": [
+          "vpceConfigurationName",
+          "vpceServiceName",
+          "serviceDnsName"
+        ],
         "title": "CreateVPCEConfigurationRequest",
         "properties": {
           "vpceConfigurationName": {
@@ -14079,7 +14083,12 @@
       },
       "DeviceAvailability": {
         "type": "string",
-        "enum": ["TEMPORARY_NOT_AVAILABLE", "BUSY", "AVAILABLE", "HIGHLY_AVAILABLE"]
+        "enum": [
+          "TEMPORARY_NOT_AVAILABLE",
+          "BUSY",
+          "AVAILABLE",
+          "HIGHLY_AVAILABLE"
+        ]
       },
       "Device": {
         "type": "object",
@@ -14694,7 +14703,15 @@
       },
       "ExecutionResult": {
         "type": "string",
-        "enum": ["PENDING", "PASSED", "WARNED", "FAILED", "SKIPPED", "ERRORED", "STOPPED"]
+        "enum": [
+          "PENDING",
+          "PASSED",
+          "WARNED",
+          "FAILED",
+          "SKIPPED",
+          "ERRORED",
+          "STOPPED"
+        ]
       },
       "ExecutionResultCode": {
         "type": "string",

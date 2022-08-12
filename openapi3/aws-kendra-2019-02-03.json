@@ -7,7 +7,7 @@
     "description": "Amazon Kendra is a service for indexing large document sets.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Kendra_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Kendra_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3408,7 +3408,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSKendraFrontendService.CreateQuerySuggestionsBlockList"]
+              "enum": [
+                "AWSKendraFrontendService.CreateQuerySuggestionsBlockList"
+              ]
             }
           }
         ],
@@ -3773,7 +3775,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSKendraFrontendService.DeleteQuerySuggestionsBlockList"]
+              "enum": [
+                "AWSKendraFrontendService.DeleteQuerySuggestionsBlockList"
+              ]
             }
           }
         ],
@@ -4115,7 +4119,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSKendraFrontendService.DescribeQuerySuggestionsBlockList"]
+              "enum": [
+                "AWSKendraFrontendService.DescribeQuerySuggestionsBlockList"
+              ]
             }
           }
         ],
@@ -4228,7 +4234,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSKendraFrontendService.DescribeQuerySuggestionsConfig"]
+              "enum": [
+                "AWSKendraFrontendService.DescribeQuerySuggestionsConfig"
+              ]
             }
           }
         ],
@@ -4710,7 +4718,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSKendraFrontendService.ListQuerySuggestionsBlockLists"]
+              "enum": [
+                "AWSKendraFrontendService.ListQuerySuggestionsBlockLists"
+              ]
             }
           }
         ],
@@ -5065,7 +5075,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSKendraFrontendService.UpdateQuerySuggestionsBlockList"]
+              "enum": [
+                "AWSKendraFrontendService.UpdateQuerySuggestionsBlockList"
+              ]
             }
           }
         ],
@@ -7716,7 +7728,11 @@
       },
       "ColumnConfiguration": {
         "type": "object",
-        "required": ["DocumentIdColumnName", "DocumentDataColumnName", "ChangeDetectingColumns"],
+        "required": [
+          "DocumentIdColumnName",
+          "DocumentDataColumnName",
+          "ChangeDetectingColumns"
+        ],
         "properties": {
           "DocumentIdColumnName": {
             "allOf": [
@@ -7801,7 +7817,13 @@
       },
       "ConnectionConfiguration": {
         "type": "object",
-        "required": ["DatabaseHost", "DatabasePort", "DatabaseName", "TableName", "SecretArn"],
+        "required": [
+          "DatabaseHost",
+          "DatabasePort",
+          "DatabaseName",
+          "TableName",
+          "SecretArn"
+        ],
         "properties": {
           "DatabaseHost": {
             "allOf": [
@@ -8244,7 +8266,11 @@
       },
       "DatabaseConfiguration": {
         "type": "object",
-        "required": ["DatabaseEngineType", "ConnectionConfiguration", "ColumnConfiguration"],
+        "required": [
+          "DatabaseEngineType",
+          "ConnectionConfiguration",
+          "ColumnConfiguration"
+        ],
         "properties": {
           "DatabaseEngineType": {
             "allOf": [
@@ -8646,7 +8672,15 @@
       },
       "DataSourceSyncJobStatus": {
         "type": "string",
-        "enum": ["FAILED", "SUCCEEDED", "SYNCING", "INCOMPLETE", "STOPPING", "ABORTED", "SYNCING_INDEXING"]
+        "enum": [
+          "FAILED",
+          "SUCCEEDED",
+          "SYNCING",
+          "INCOMPLETE",
+          "STOPPING",
+          "ABORTED",
+          "SYNCING_INDEXING"
+        ]
       },
       "DataSourceSyncJobMetrics": {
         "type": "object",
@@ -8894,7 +8928,12 @@
       },
       "DatabaseEngineType": {
         "type": "string",
-        "enum": ["RDS_AURORA_MYSQL", "RDS_AURORA_POSTGRESQL", "RDS_MYSQL", "RDS_POSTGRESQL"]
+        "enum": [
+          "RDS_AURORA_MYSQL",
+          "RDS_AURORA_POSTGRESQL",
+          "RDS_MYSQL",
+          "RDS_POSTGRESQL"
+        ]
       },
       "SqlConfiguration": {
         "type": "object",
@@ -8918,7 +8957,14 @@
       },
       "IndexStatus": {
         "type": "string",
-        "enum": ["CREATING", "ACTIVE", "DELETING", "FAILED", "UPDATING", "SYSTEM_UPDATING"]
+        "enum": [
+          "CREATING",
+          "ACTIVE",
+          "DELETING",
+          "FAILED",
+          "UPDATING",
+          "SYSTEM_UPDATING"
+        ]
       },
       "DocumentMetadataConfigurationList": {
         "type": "array",
@@ -9161,7 +9207,12 @@
       },
       "DocumentAttributeValueType": {
         "type": "string",
-        "enum": ["STRING_VALUE", "STRING_LIST_VALUE", "LONG_VALUE", "DATE_VALUE"]
+        "enum": [
+          "STRING_VALUE",
+          "STRING_LIST_VALUE",
+          "LONG_VALUE",
+          "DATE_VALUE"
+        ]
       },
       "DocumentMetadataBoolean": {
         "type": "boolean"
@@ -13131,7 +13182,14 @@
       },
       "QuerySuggestionsBlockListStatus": {
         "type": "string",
-        "enum": ["ACTIVE", "CREATING", "DELETING", "UPDATING", "ACTIVE_BUT_UPDATE_FAILED", "FAILED"]
+        "enum": [
+          "ACTIVE",
+          "CREATING",
+          "DELETING",
+          "UPDATING",
+          "ACTIVE_BUT_UPDATE_FAILED",
+          "FAILED"
+        ]
       },
       "Mode": {
         "type": "string",
@@ -13156,7 +13214,14 @@
       },
       "ThesaurusStatus": {
         "type": "string",
-        "enum": ["CREATING", "ACTIVE", "DELETING", "UPDATING", "ACTIVE_BUT_UPDATE_FAILED", "FAILED"]
+        "enum": [
+          "CREATING",
+          "ACTIVE",
+          "DELETING",
+          "UPDATING",
+          "ACTIVE_BUT_UPDATE_FAILED",
+          "FAILED"
+        ]
       },
       "HierarchicalPrincipalList": {
         "type": "array",
@@ -13224,7 +13289,14 @@
       },
       "DocumentStatus": {
         "type": "string",
-        "enum": ["NOT_FOUND", "PROCESSING", "INDEXED", "UPDATED", "FAILED", "UPDATE_FAILED"]
+        "enum": [
+          "NOT_FOUND",
+          "PROCESSING",
+          "INDEXED",
+          "UPDATED",
+          "FAILED",
+          "UPDATE_FAILED"
+        ]
       },
       "Status": {
         "type": "object",

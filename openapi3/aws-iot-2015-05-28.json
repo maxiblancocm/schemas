@@ -7,7 +7,7 @@
     "description": "AWS IoT provides secure, bi-directional communication between Internet-connected devices (such as sensors, actuators, embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate with, configure rules for data processing and integration with other services, organize resources associated with each device (Registry), configure logging, and create and manage policies and credentials to authenticate devices. The service endpoints that expose this API are listed in AWS IoT Core Endpoints and Quotas. You must use the endpoint for the region that has the resources you want to access. The service name used by AWS Signature Version 4 to sign the request is: execute-api. For more information about how AWS IoT works, see the Developer Guide. For information about how to use the credentials provider for AWS IoT, see Authorizing Direct Calls to AWS Services.",
     "x-categories": ["iot"],
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-Core_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-Core_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2600,7 +2600,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["checkName", "resourceIdentifier", "clientRequestToken"],
+                "required": [
+                  "checkName",
+                  "resourceIdentifier",
+                  "clientRequestToken"
+                ],
                 "properties": {
                   "checkName": {
                     "description": "An audit check name. Checks must be enabled for your account. (Use <code>DescribeAccountAuditConfiguration</code> to see the list of all checks, including those that are enabled or use <code>UpdateAccountAuditConfiguration</code> to select which checks are enabled.)",
@@ -7672,7 +7676,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["templateName", "templateBody", "provisioningRoleArn"],
+                "required": [
+                  "templateName",
+                  "templateBody",
+                  "provisioningRoleArn"
+                ],
                 "properties": {
                   "templateName": {
                     "description": "The name of the fleet provisioning template.",
@@ -11996,7 +12004,13 @@
                   "status": {
                     "description": "<p>The status of the topic rule destination. Valid values are:</p> <dl> <dt>IN_PROGRESS</dt> <dd> <p>A topic rule destination was created but has not been confirmed. You can set <code>status</code> to <code>IN_PROGRESS</code> by calling <code>UpdateTopicRuleDestination</code>. Calling <code>UpdateTopicRuleDestination</code> causes a new confirmation challenge to be sent to your confirmation endpoint.</p> </dd> <dt>ENABLED</dt> <dd> <p>Confirmation was completed, and traffic to this destination is allowed. You can set <code>status</code> to <code>DISABLED</code> by calling <code>UpdateTopicRuleDestination</code>.</p> </dd> <dt>DISABLED</dt> <dd> <p>Confirmation was completed, and traffic to this destination is not allowed. You can set <code>status</code> to <code>ENABLED</code> by calling <code>UpdateTopicRuleDestination</code>.</p> </dd> <dt>ERROR</dt> <dd> <p>Confirmation could not be completed, for example if the confirmation timed out. You can call <code>GetTopicRuleDestination</code> for details about the error. You can set <code>status</code> to <code>IN_PROGRESS</code> by calling <code>UpdateTopicRuleDestination</code>. Calling <code>UpdateTopicRuleDestination</code> causes a new confirmation challenge to be sent to your confirmation endpoint.</p> </dd> </dl>",
                     "type": "string",
-                    "enum": ["ENABLED", "IN_PROGRESS", "DISABLED", "ERROR", "DELETING"]
+                    "enum": [
+                      "ENABLED",
+                      "IN_PROGRESS",
+                      "DISABLED",
+                      "ERROR",
+                      "DELETING"
+                    ]
                   }
                 }
               }
@@ -14852,7 +14866,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["target", "auditCheckToActionsMapping", "clientRequestToken"],
+                "required": [
+                  "target",
+                  "auditCheckToActionsMapping",
+                  "clientRequestToken"
+                ],
                 "properties": {
                   "target": {
                     "description": "Used in MitigationActionParams, this information identifies the target findings to which the mitigation actions are applied. Only one entry appears.",
@@ -17843,7 +17861,14 @@
             "description": "Specify this filter to limit results to those with a specific status.",
             "schema": {
               "type": "string",
-              "enum": ["IN_PROGRESS", "COMPLETED", "FAILED", "CANCELED", "SKIPPED", "PENDING"]
+              "enum": [
+                "IN_PROGRESS",
+                "COMPLETED",
+                "FAILED",
+                "CANCELED",
+                "SKIPPED",
+                "PENDING"
+              ]
             }
           },
           {
@@ -19318,7 +19343,16 @@
             "description": "The status of the job.",
             "schema": {
               "type": "string",
-              "enum": ["QUEUED", "IN_PROGRESS", "SUCCEEDED", "FAILED", "TIMED_OUT", "REJECTED", "REMOVED", "CANCELED"]
+              "enum": [
+                "QUEUED",
+                "IN_PROGRESS",
+                "SUCCEEDED",
+                "FAILED",
+                "TIMED_OUT",
+                "REJECTED",
+                "REMOVED",
+                "CANCELED"
+              ]
             }
           },
           {
@@ -19444,7 +19478,16 @@
             "description": "An optional filter that lets you search for jobs that have the specified status.",
             "schema": {
               "type": "string",
-              "enum": ["QUEUED", "IN_PROGRESS", "SUCCEEDED", "FAILED", "TIMED_OUT", "REJECTED", "REMOVED", "CANCELED"]
+              "enum": [
+                "QUEUED",
+                "IN_PROGRESS",
+                "SUCCEEDED",
+                "FAILED",
+                "TIMED_OUT",
+                "REJECTED",
+                "REMOVED",
+                "CANCELED"
+              ]
             }
           },
           {
@@ -19572,7 +19615,12 @@
             "description": "An optional filter that lets you search for jobs that have the specified status.",
             "schema": {
               "type": "string",
-              "enum": ["IN_PROGRESS", "CANCELED", "COMPLETED", "DELETION_IN_PROGRESS"]
+              "enum": [
+                "IN_PROGRESS",
+                "CANCELED",
+                "COMPLETED",
+                "DELETION_IN_PROGRESS"
+              ]
             }
           },
           {
@@ -19873,7 +19921,12 @@
             "description": "The OTA update job status.",
             "schema": {
               "type": "string",
-              "enum": ["CREATE_PENDING", "CREATE_IN_PROGRESS", "CREATE_COMPLETE", "CREATE_FAILED"]
+              "enum": [
+                "CREATE_PENDING",
+                "CREATE_IN_PROGRESS",
+                "CREATE_COMPLETE",
+                "CREATE_FAILED"
+              ]
             }
           }
         ],
@@ -22137,7 +22190,13 @@
             "description": "The status of the bulk thing provisioning task.",
             "schema": {
               "type": "string",
-              "enum": ["InProgress", "Completed", "Failed", "Cancelled", "Cancelling"]
+              "enum": [
+                "InProgress",
+                "Completed",
+                "Failed",
+                "Cancelled",
+                "Cancelling"
+              ]
             }
           }
         ],
@@ -22228,7 +22287,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["templateBody", "inputFileBucket", "inputFileKey", "roleArn"],
+                "required": [
+                  "templateBody",
+                  "inputFileBucket",
+                  "inputFileKey",
+                  "roleArn"
+                ],
                 "properties": {
                   "templateBody": {
                     "description": "The provisioning template.",
@@ -25755,7 +25819,14 @@
             "description": "<p>The new status.</p> <p> <b>Note:</b> Setting the status to PENDING_TRANSFER or PENDING_ACTIVATION will result in an exception being thrown. PENDING_TRANSFER and PENDING_ACTIVATION are statuses used internally by AWS IoT. They are not intended for developer use.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>",
             "schema": {
               "type": "string",
-              "enum": ["ACTIVE", "INACTIVE", "REVOKED", "PENDING_TRANSFER", "REGISTER_INACTIVE", "PENDING_ACTIVATION"]
+              "enum": [
+                "ACTIVE",
+                "INACTIVE",
+                "REVOKED",
+                "PENDING_TRANSFER",
+                "REGISTER_INACTIVE",
+                "PENDING_ACTIVATION"
+              ]
             }
           }
         ],
@@ -26192,7 +26263,12 @@
                   "metricType": {
                     "description": " The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>, <code>number-list</code>, and <code>number</code>. ",
                     "type": "string",
-                    "enum": ["string-list", "ip-address-list", "number-list", "number"]
+                    "enum": [
+                      "string-list",
+                      "ip-address-list",
+                      "number-list",
+                      "number"
+                    ]
                   },
                   "tags": {
                     "description": " Metadata that can be used to manage the custom metric. ",
@@ -26607,7 +26683,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["queryString", "aggregationType", "period", "aggregationField"],
+                "required": [
+                  "queryString",
+                  "aggregationType",
+                  "period",
+                  "aggregationField"
+                ],
                 "properties": {
                   "queryString": {
                     "description": "The search query string.",
@@ -28037,7 +28118,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["queryString", "aggregationField", "bucketsAggregationType"],
+                "required": [
+                  "queryString",
+                  "aggregationField",
+                  "bucketsAggregationType"
+                ],
                 "properties": {
                   "indexName": {
                     "description": "The name of the index to search.",
@@ -29280,7 +29365,11 @@
       },
       "ExponentialRolloutRate": {
         "type": "object",
-        "required": ["baseRatePerMinute", "incrementFactor", "rateIncreaseCriteria"],
+        "required": [
+          "baseRatePerMinute",
+          "incrementFactor",
+          "rateIncreaseCriteria"
+        ],
         "properties": {
           "baseRatePerMinute": {
             "allOf": [
@@ -29587,7 +29676,11 @@
       },
       "AwsJobExponentialRolloutRate": {
         "type": "object",
-        "required": ["baseRatePerMinute", "incrementFactor", "rateIncreaseCriteria"],
+        "required": [
+          "baseRatePerMinute",
+          "incrementFactor",
+          "rateIncreaseCriteria"
+        ],
         "properties": {
           "baseRatePerMinute": {
             "allOf": [
@@ -34786,7 +34879,12 @@
       },
       "AbortCriteria": {
         "type": "object",
-        "required": ["failureType", "action", "thresholdPercentage", "minNumberOfExecutedThings"],
+        "required": [
+          "failureType",
+          "action",
+          "thresholdPercentage",
+          "minNumberOfExecutedThings"
+        ],
         "properties": {
           "failureType": {
             "allOf": [
@@ -35226,7 +35324,13 @@
       },
       "CloudwatchMetricAction": {
         "type": "object",
-        "required": ["roleArn", "metricNamespace", "metricName", "metricValue", "metricUnit"],
+        "required": [
+          "roleArn",
+          "metricNamespace",
+          "metricName",
+          "metricValue",
+          "metricUnit"
+        ],
         "properties": {
           "roleArn": {
             "allOf": [
@@ -36472,7 +36576,14 @@
       },
       "AuditMitigationActionsExecutionStatus": {
         "type": "string",
-        "enum": ["IN_PROGRESS", "COMPLETED", "FAILED", "CANCELED", "SKIPPED", "PENDING"]
+        "enum": [
+          "IN_PROGRESS",
+          "COMPLETED",
+          "FAILED",
+          "CANCELED",
+          "SKIPPED",
+          "PENDING"
+        ]
       },
       "AuditMitigationActionExecutionMetadata": {
         "type": "object",
@@ -37236,7 +37347,12 @@
       },
       "AwsJobAbortCriteria": {
         "type": "object",
-        "required": ["failureType", "action", "thresholdPercentage", "minNumberOfExecutedThings"],
+        "required": [
+          "failureType",
+          "action",
+          "thresholdPercentage",
+          "minNumberOfExecutedThings"
+        ],
         "properties": {
           "failureType": {
             "allOf": [
@@ -37855,7 +37971,14 @@
       },
       "CertificateStatus": {
         "type": "string",
-        "enum": ["ACTIVE", "INACTIVE", "REVOKED", "PENDING_TRANSFER", "REGISTER_INACTIVE", "PENDING_ACTIVATION"]
+        "enum": [
+          "ACTIVE",
+          "INACTIVE",
+          "REVOKED",
+          "PENDING_TRANSFER",
+          "REGISTER_INACTIVE",
+          "PENDING_ACTIVATION"
+        ]
       },
       "CertificateMode": {
         "type": "string",
@@ -38644,7 +38767,12 @@
       },
       "OTAUpdateStatus": {
         "type": "string",
-        "enum": ["CREATE_PENDING", "CREATE_IN_PROGRESS", "CREATE_COMPLETE", "CREATE_FAILED"]
+        "enum": [
+          "CREATE_PENDING",
+          "CREATE_IN_PROGRESS",
+          "CREATE_COMPLETE",
+          "CREATE_FAILED"
+        ]
       },
       "PolicyDocument": {
         "type": "string"
@@ -40811,7 +40939,16 @@
       },
       "JobExecutionStatus": {
         "type": "string",
-        "enum": ["QUEUED", "IN_PROGRESS", "SUCCEEDED", "FAILED", "TIMED_OUT", "REJECTED", "REMOVED", "CANCELED"]
+        "enum": [
+          "QUEUED",
+          "IN_PROGRESS",
+          "SUCCEEDED",
+          "FAILED",
+          "TIMED_OUT",
+          "REJECTED",
+          "REMOVED",
+          "CANCELED"
+        ]
       },
       "JobExecutionStatusDetails": {
         "type": "object",

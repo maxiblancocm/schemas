@@ -6,7 +6,7 @@
     "title": "Amazon FSx",
     "description": "Amazon FSx is a fully managed service that makes it easy for storage and application administrators to launch and use shared file storage.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-FSx_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-FSx_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -813,7 +813,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.CreateFileSystemFromBackup"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.CreateFileSystemFromBackup"
+              ]
             }
           }
         ],
@@ -1311,7 +1313,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.DescribeDataRepositoryTasks"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.DescribeDataRepositoryTasks"
+              ]
             }
           }
         ],
@@ -2006,7 +2010,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.AssociateFileSystemAliases"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases"
+              ]
             }
           }
         ],
@@ -2210,7 +2216,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.DisassociateFileSystemAliases"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.DisassociateFileSystemAliases"
+              ]
             }
           }
         ],
@@ -2516,7 +2524,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.CreateStorageVirtualMachine"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.CreateStorageVirtualMachine"
+              ]
             }
           }
         ],
@@ -2905,7 +2915,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.DeleteStorageVirtualMachine"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.DeleteStorageVirtualMachine"
+              ]
             }
           }
         ],
@@ -3119,7 +3131,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.DescribeStorageVirtualMachines"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.DescribeStorageVirtualMachines"
+              ]
             }
           }
         ],
@@ -3343,7 +3357,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSSimbaAPIService_v20180301.UpdateStorageVirtualMachine"]
+              "enum": [
+                "AWSSimbaAPIService_v20180301.UpdateStorageVirtualMachine"
+              ]
             }
           }
         ],
@@ -4722,7 +4738,13 @@
       },
       "Status": {
         "type": "string",
-        "enum": ["FAILED", "IN_PROGRESS", "PENDING", "COMPLETED", "UPDATED_OPTIMIZING"]
+        "enum": [
+          "FAILED",
+          "IN_PROGRESS",
+          "PENDING",
+          "COMPLETED",
+          "UPDATED_OPTIMIZING"
+        ]
       },
       "FileSystem": {
         "type": "object",
@@ -5015,7 +5037,15 @@
       },
       "BackupLifecycle": {
         "type": "string",
-        "enum": ["AVAILABLE", "CREATING", "TRANSFERRING", "DELETED", "FAILED", "PENDING", "COPYING"],
+        "enum": [
+          "AVAILABLE",
+          "CREATING",
+          "TRANSFERRING",
+          "DELETED",
+          "FAILED",
+          "PENDING",
+          "COPYING"
+        ],
         "description": "<p>The lifecycle status of the backup.</p> <ul> <li> <p> <code>AVAILABLE</code> - The backup is fully available.</p> </li> <li> <p> <code>CREATING</code> - FSx is creating the new user-intiated backup</p> </li> <li> <p> <code>TRANSFERRING</code> - For user-initiated backups on Lustre file systems only; FSx is backing up the file system.</p> </li> <li> <p> <code>DELETED</code> - The backup was deleted is no longer available.</p> </li> <li> <p> <code>FAILED</code> - Amazon FSx could not complete the backup.</p> </li> </ul>"
       },
       "BackupFailureDetails": {
@@ -5069,7 +5099,13 @@
       },
       "Backup": {
         "type": "object",
-        "required": ["BackupId", "Lifecycle", "Type", "CreationTime", "FileSystem"],
+        "required": [
+          "BackupId",
+          "Lifecycle",
+          "Type",
+          "CreationTime",
+          "FileSystem"
+        ],
         "properties": {
           "BackupId": {
             "allOf": [
@@ -5230,7 +5266,14 @@
       },
       "DataRepositoryTaskLifecycle": {
         "type": "string",
-        "enum": ["PENDING", "EXECUTING", "FAILED", "SUCCEEDED", "CANCELED", "CANCELING"]
+        "enum": [
+          "PENDING",
+          "EXECUTING",
+          "FAILED",
+          "SUCCEEDED",
+          "CANCELED",
+          "CANCELING"
+        ]
       },
       "ClientRequestToken": {
         "type": "string",
@@ -5317,7 +5360,13 @@
       },
       "DataRepositoryTask": {
         "type": "object",
-        "required": ["TaskId", "Lifecycle", "Type", "CreationTime", "FileSystemId"],
+        "required": [
+          "TaskId",
+          "Lifecycle",
+          "Type",
+          "CreationTime",
+          "FileSystemId"
+        ],
         "properties": {
           "TaskId": {
             "allOf": [
@@ -5796,7 +5845,13 @@
       },
       "DataRepositoryLifecycle": {
         "type": "string",
-        "enum": ["CREATING", "AVAILABLE", "MISCONFIGURED", "UPDATING", "DELETING"]
+        "enum": [
+          "CREATING",
+          "AVAILABLE",
+          "MISCONFIGURED",
+          "UPDATING",
+          "DELETING"
+        ]
       },
       "DataRepositoryFailureDetails": {
         "type": "object",
@@ -6085,7 +6140,14 @@
       },
       "FileSystemLifecycle": {
         "type": "string",
-        "enum": ["AVAILABLE", "CREATING", "FAILED", "DELETING", "MISCONFIGURED", "UPDATING"],
+        "enum": [
+          "AVAILABLE",
+          "CREATING",
+          "FAILED",
+          "DELETING",
+          "MISCONFIGURED",
+          "UPDATING"
+        ],
         "description": "The lifecycle status of the file system."
       },
       "DeleteFileSystemWindowsResponse": {
@@ -6454,7 +6516,12 @@
       },
       "FilterName": {
         "type": "string",
-        "enum": ["file-system-id", "backup-type", "file-system-type", "volume-id"],
+        "enum": [
+          "file-system-id",
+          "backup-type",
+          "file-system-type",
+          "volume-id"
+        ],
         "description": "The name for a filter."
       },
       "FilterValues": {
@@ -6943,7 +7010,13 @@
       },
       "AliasLifecycle": {
         "type": "string",
-        "enum": ["AVAILABLE", "CREATING", "DELETING", "CREATE_FAILED", "DELETE_FAILED"]
+        "enum": [
+          "AVAILABLE",
+          "CREATING",
+          "DELETING",
+          "CREATE_FAILED",
+          "DELETE_FAILED"
+        ]
       },
       "Alias": {
         "type": "object",
@@ -7872,7 +7945,12 @@
       },
       "CreateOntapVolumeConfiguration": {
         "type": "object",
-        "required": ["JunctionPath", "SizeInMegabytes", "StorageEfficiencyEnabled", "StorageVirtualMachineId"],
+        "required": [
+          "JunctionPath",
+          "SizeInMegabytes",
+          "StorageEfficiencyEnabled",
+          "StorageVirtualMachineId"
+        ],
         "properties": {
           "JunctionPath": {
             "allOf": [
@@ -8086,7 +8164,14 @@
       },
       "StorageVirtualMachineLifecycle": {
         "type": "string",
-        "enum": ["CREATED", "CREATING", "DELETING", "FAILED", "MISCONFIGURED", "PENDING"]
+        "enum": [
+          "CREATED",
+          "CREATING",
+          "DELETING",
+          "FAILED",
+          "MISCONFIGURED",
+          "PENDING"
+        ]
       },
       "DeleteVolumeOntapConfiguration": {
         "type": "object",
@@ -8121,7 +8206,14 @@
       },
       "VolumeLifecycle": {
         "type": "string",
-        "enum": ["CREATING", "CREATED", "DELETING", "FAILED", "MISCONFIGURED", "PENDING"]
+        "enum": [
+          "CREATING",
+          "CREATED",
+          "DELETING",
+          "FAILED",
+          "MISCONFIGURED",
+          "PENDING"
+        ]
       },
       "StorageVirtualMachineIds": {
         "type": "array",
@@ -8708,7 +8800,12 @@
       },
       "WindowsAccessAuditLogLevel": {
         "type": "string",
-        "enum": ["DISABLED", "SUCCESS_ONLY", "FAILURE_ONLY", "SUCCESS_AND_FAILURE"]
+        "enum": [
+          "DISABLED",
+          "SUCCESS_ONLY",
+          "FAILURE_ONLY",
+          "SUCCESS_AND_FAILURE"
+        ]
       },
       "WindowsAuditLogConfiguration": {
         "type": "object",

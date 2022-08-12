@@ -6,7 +6,7 @@
     "title": "AWS Greengrass",
     "description": "AWS IoT Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable storage. AWS IoT Greengrass ensures your devices can respond quickly to local events and operate with intermittent connectivity. AWS IoT Greengrass minimizes the cost of transmitting data to the cloud by allowing you to author AWS Lambda functions that execute locally.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-Greengrass-Core_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-Greengrass-Core_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1094,7 +1094,12 @@
                   "DeploymentType": {
                     "description": "The type of deployment. When used for ''CreateDeployment'', only ''NewDeployment'' and ''Redeployment'' are valid.",
                     "type": "string",
-                    "enum": ["NewDeployment", "Redeployment", "ResetDeployment", "ForceResetDeployment"]
+                    "enum": [
+                      "NewDeployment",
+                      "Redeployment",
+                      "ResetDeployment",
+                      "ForceResetDeployment"
+                    ]
                   },
                   "GroupVersionId": {
                     "description": "The ID of the group version to be deployed.",
@@ -2921,7 +2926,16 @@
                   "UpdateAgentLogLevel": {
                     "description": "The minimum level of log statements that should be logged by the OTA Agent during an update.",
                     "type": "string",
-                    "enum": ["NONE", "TRACE", "DEBUG", "VERBOSE", "INFO", "WARN", "ERROR", "FATAL"]
+                    "enum": [
+                      "NONE",
+                      "TRACE",
+                      "DEBUG",
+                      "VERBOSE",
+                      "INFO",
+                      "WARN",
+                      "ERROR",
+                      "FATAL"
+                    ]
                   },
                   "UpdateTargets": {
                     "description": "The ARNs of the targets (IoT things or IoT thing groups) that this update will be applied to.",
@@ -10101,7 +10115,12 @@
       },
       "DeploymentType": {
         "type": "string",
-        "enum": ["NewDeployment", "Redeployment", "ResetDeployment", "ForceResetDeployment"],
+        "enum": [
+          "NewDeployment",
+          "Redeployment",
+          "ResetDeployment",
+          "ForceResetDeployment"
+        ],
         "description": "The type of deployment. When used for ''CreateDeployment'', only ''NewDeployment'' and ''Redeployment'' are valid."
       },
       "ErrorDetails": {
@@ -10205,7 +10224,14 @@
       },
       "BulkDeploymentStatus": {
         "type": "string",
-        "enum": ["Initializing", "Running", "Completed", "Stopping", "Stopped", "Failed"],
+        "enum": [
+          "Initializing",
+          "Running",
+          "Completed",
+          "Stopping",
+          "Stopped",
+          "Failed"
+        ],
         "description": "The current status of the bulk deployment."
       },
       "BulkDeployments": {

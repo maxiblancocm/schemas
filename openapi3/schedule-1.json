@@ -6,7 +6,7 @@
     "description": "Run the workflow based on a schedule",
     "x-categories": ["chainjet"],
     "x-logo": {
-      "url": "/logos/schedule.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/schedule.svg"
     }
   },
   "paths": {

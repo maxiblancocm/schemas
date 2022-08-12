@@ -6,7 +6,7 @@
     "x-categories": ["software-development"],
     "description": "The platform for modern developers\nGitLab unifies issues, code review, CI and CD into a single UI",
     "x-logo": {
-      "url": "/logos/gitlab.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/gitlab.svg"
     }
   },
   "security": [
@@ -178,7 +178,15 @@
                   "import_sources": {
                     "description": "Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com",
                     "type": "array",
-                    "enum": ["github", "bitbucket", "gitlab", "google_code", "fogbugz", "git", "gitlab_project"],
+                    "enum": [
+                      "github",
+                      "bitbucket",
+                      "gitlab",
+                      "google_code",
+                      "fogbugz",
+                      "git",
+                      "gitlab_project"
+                    ],
                     "items": {
                       "type": "string"
                     }
@@ -1653,7 +1661,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -2332,7 +2347,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -2543,7 +2565,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -2699,7 +2728,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -2818,7 +2854,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -2882,7 +2925,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -3107,7 +3157,14 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": ["id", "name", "path", "created_at", "updated_at", "last_activity_at"],
+              "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+              ],
               "default": "created_at"
             }
           },
@@ -12989,7 +13046,13 @@
                     "type": "string"
                   }
                 },
-                "required": ["api_key", "user_key", "priority", "device", "sound"]
+                "required": [
+                  "api_key",
+                  "user_key",
+                  "priority",
+                  "device",
+                  "sound"
+                ]
               }
             }
           },
@@ -13241,7 +13304,12 @@
                     "type": "string"
                   }
                 },
-                "required": ["teamcity_url", "build_type", "username", "password"]
+                "required": [
+                  "teamcity_url",
+                  "build_type",
+                  "username",
+                  "password"
+                ]
               }
             }
           },
@@ -14546,7 +14614,13 @@
                   "state": {
                     "description": "The state of the status",
                     "type": "string",
-                    "enum": ["pending", "running", "success", "failed", "canceled"]
+                    "enum": [
+                      "pending",
+                      "running",
+                      "success",
+                      "failed",
+                      "canceled"
+                    ]
                   },
                   "ref": {
                     "description": "The ref",
@@ -17053,7 +17127,12 @@
                   "enum": ["base64"]
                 }
               },
-              "required": ["file_path", "branch_name", "commit_message", "content"]
+              "required": [
+                "file_path",
+                "branch_name",
+                "commit_message",
+                "content"
+              ]
             }
           }
         },

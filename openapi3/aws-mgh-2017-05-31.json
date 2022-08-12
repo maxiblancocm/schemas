@@ -5,7 +5,7 @@
     "title": "AWS Migration Hub",
     "description": "The AWS Migration Hub API methods help to obtain server and application migration status and integrate your resource-specific migration tool by providing a programmatic interface to Migration Hub. Remember that you must set your AWS Migration Hub home region before you call any of these APIs, or a HomeRegionNotSetException error will be returned. Also, you must make the API calls while in your home region.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Migration-Hub_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Migration-Hub_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2763,7 +2763,11 @@
       },
       "AssociateCreatedArtifactRequest": {
         "type": "object",
-        "required": ["ProgressUpdateStream", "MigrationTaskName", "CreatedArtifact"],
+        "required": [
+          "ProgressUpdateStream",
+          "MigrationTaskName",
+          "CreatedArtifact"
+        ],
         "title": "AssociateCreatedArtifactRequest",
         "properties": {
           "ProgressUpdateStream": {
@@ -2823,7 +2827,11 @@
       },
       "AssociateDiscoveredResourceRequest": {
         "type": "object",
-        "required": ["ProgressUpdateStream", "MigrationTaskName", "DiscoveredResource"],
+        "required": [
+          "ProgressUpdateStream",
+          "MigrationTaskName",
+          "DiscoveredResource"
+        ],
         "title": "AssociateDiscoveredResourceRequest",
         "properties": {
           "ProgressUpdateStream": {
@@ -3021,7 +3029,11 @@
       },
       "DisassociateCreatedArtifactRequest": {
         "type": "object",
-        "required": ["ProgressUpdateStream", "MigrationTaskName", "CreatedArtifactName"],
+        "required": [
+          "ProgressUpdateStream",
+          "MigrationTaskName",
+          "CreatedArtifactName"
+        ],
         "title": "DisassociateCreatedArtifactRequest",
         "properties": {
           "ProgressUpdateStream": {
@@ -3072,7 +3084,11 @@
       },
       "DisassociateDiscoveredResourceRequest": {
         "type": "object",
-        "required": ["ProgressUpdateStream", "MigrationTaskName", "ConfigurationId"],
+        "required": [
+          "ProgressUpdateStream",
+          "MigrationTaskName",
+          "ConfigurationId"
+        ],
         "title": "DisassociateDiscoveredResourceRequest",
         "properties": {
           "ProgressUpdateStream": {
@@ -3532,7 +3548,13 @@
       },
       "NotifyMigrationTaskStateRequest": {
         "type": "object",
-        "required": ["ProgressUpdateStream", "MigrationTaskName", "Task", "UpdateDateTime", "NextUpdateSeconds"],
+        "required": [
+          "ProgressUpdateStream",
+          "MigrationTaskName",
+          "Task",
+          "UpdateDateTime",
+          "NextUpdateSeconds"
+        ],
         "title": "NotifyMigrationTaskStateRequest",
         "properties": {
           "ProgressUpdateStream": {
@@ -3603,7 +3625,11 @@
       },
       "PutResourceAttributesRequest": {
         "type": "object",
-        "required": ["ProgressUpdateStream", "MigrationTaskName", "ResourceAttributeList"],
+        "required": [
+          "ProgressUpdateStream",
+          "MigrationTaskName",
+          "ResourceAttributeList"
+        ],
         "title": "PutResourceAttributesRequest",
         "properties": {
           "ProgressUpdateStream": {

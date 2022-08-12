@@ -4,7 +4,9 @@
     "title": "Blockchain",
     "version": "1",
     "x-categories": ["chainjet", "blockchain"],
-    "x-logo": { "url": "/logos/http.svg" }
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/http.svg"
+    }
   },
   "paths": {
     "/readContract": {

@@ -6,7 +6,7 @@
     "title": "Amazon Elasticsearch Service",
     "description": "Use the Amazon Elasticsearch Configuration API to create, configure, and manage Elasticsearch domains. For sample code that uses the Configuration API, see the Amazon Elasticsearch Service Developer Guide. The guide also contains sample code for sending signed HTTP requests to the Elasticsearch APIs. The endpoint for configuration service requests is region-specific: es.region.amazonaws.com. For example, es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see Regions and Endpoints.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Elasticsearch-Service_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Elasticsearch-Service_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1196,7 +1196,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["SourceDomainInfo", "DestinationDomainInfo", "ConnectionAlias"],
+                "required": [
+                  "SourceDomainInfo",
+                  "DestinationDomainInfo",
+                  "ConnectionAlias"
+                ],
                 "properties": {
                   "SourceDomainInfo": {
                     "description": "Specifies the <code><a>DomainInformation</a></code> for the source Elasticsearch domain.",
@@ -4784,7 +4788,10 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["ReservedElasticsearchInstanceOfferingId", "ReservationName"],
+                "required": [
+                  "ReservedElasticsearchInstanceOfferingId",
+                  "ReservationName"
+                ],
                 "properties": {
                   "ReservedElasticsearchInstanceOfferingId": {
                     "description": "The ID of the reserved Elasticsearch instance offering to purchase.",
@@ -5928,7 +5935,10 @@
       },
       "ESWarmPartitionInstanceType": {
         "type": "string",
-        "enum": ["ultrawarm1.medium.elasticsearch", "ultrawarm1.large.elasticsearch"]
+        "enum": [
+          "ultrawarm1.medium.elasticsearch",
+          "ultrawarm1.large.elasticsearch"
+        ]
       },
       "VolumeType": {
         "type": "string",
@@ -7600,7 +7610,12 @@
       },
       "ElasticsearchDomainStatus": {
         "type": "object",
-        "required": ["DomainId", "DomainName", "ARN", "ElasticsearchClusterConfig"],
+        "required": [
+          "DomainId",
+          "DomainName",
+          "ARN",
+          "ElasticsearchClusterConfig"
+        ],
         "properties": {
           "DomainId": {
             "allOf": [
@@ -8044,7 +8059,13 @@
       },
       "DeploymentStatus": {
         "type": "string",
-        "enum": ["PENDING_UPDATE", "IN_PROGRESS", "COMPLETED", "NOT_ELIGIBLE", "ELIGIBLE"]
+        "enum": [
+          "PENDING_UPDATE",
+          "IN_PROGRESS",
+          "COMPLETED",
+          "NOT_ELIGIBLE",
+          "ELIGIBLE"
+        ]
       },
       "ElasticsearchDomainConfig": {
         "type": "object",
@@ -8329,7 +8350,13 @@
       },
       "DomainPackageStatus": {
         "type": "string",
-        "enum": ["ASSOCIATING", "ASSOCIATION_FAILED", "ACTIVE", "DISSOCIATING", "DISSOCIATION_FAILED"]
+        "enum": [
+          "ASSOCIATING",
+          "ASSOCIATION_FAILED",
+          "ACTIVE",
+          "DISSOCIATING",
+          "DISSOCIATION_FAILED"
+        ]
       },
       "ReferencePath": {
         "type": "string"
@@ -8695,7 +8722,14 @@
       },
       "InboundCrossClusterSearchConnectionStatusCode": {
         "type": "string",
-        "enum": ["PENDING_ACCEPTANCE", "APPROVED", "REJECTING", "REJECTED", "DELETING", "DELETED"]
+        "enum": [
+          "PENDING_ACCEPTANCE",
+          "APPROVED",
+          "REJECTING",
+          "REJECTED",
+          "DELETING",
+          "DELETED"
+        ]
       },
       "MinimumInstanceCount": {
         "type": "integer",

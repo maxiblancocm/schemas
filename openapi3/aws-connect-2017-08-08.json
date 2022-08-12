@@ -6,7 +6,7 @@
     "title": "Amazon Connect Service",
     "description": "Amazon Connect is a cloud-based contact center solution that makes it easy to set up and manage a customer contact center and provide reliable customer engagement at any scale. Amazon Connect provides rich metrics and real-time reporting that allow you to optimize contact routing. You can also resolve customer issues more efficiently by putting customers in touch with the right agents. There are limits to the number of Amazon Connect resources that you can create and limits to the number of requests that you can make per second. For more information, see Amazon Connect Service Limits in the Amazon Connect Administrator Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Connect_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Connect_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -243,7 +243,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["Username", "PhoneConfig", "SecurityProfileIds", "RoutingProfileId"],
+                "required": [
+                  "Username",
+                  "PhoneConfig",
+                  "SecurityProfileIds",
+                  "RoutingProfileId"
+                ],
                 "properties": {
                   "Username": {
                     "description": "The user name for the account. For instances not using SAML for identity management, the user name can include up to 20 characters. If you are using SAML for identity management, the user name can include up to 64 characters from [a-zA-Z0-9_-.\\@]+.",
@@ -1559,7 +1564,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["StartTime", "EndTime", "Filters", "HistoricalMetrics"],
+                "required": [
+                  "StartTime",
+                  "EndTime",
+                  "Filters",
+                  "HistoricalMetrics"
+                ],
                 "properties": {
                   "StartTime": {
                     "description": "<p>The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of historical metrics data. The time must be specified using a multiple of 5 minutes, such as 10:05, 10:10, 10:15.</p> <p>The start time cannot be earlier than 24 hours before the time of the request. Historical metrics are available only for 24 hours.</p>",
@@ -3222,7 +3232,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["InstanceId", "ContactFlowId", "ParticipantDetails"],
+                "required": [
+                  "InstanceId",
+                  "ContactFlowId",
+                  "ParticipantDetails"
+                ],
                 "properties": {
                   "InstanceId": {
                     "description": "The identifier of the Amazon Connect instance.",
@@ -3383,7 +3397,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["InstanceId", "ContactId", "InitialContactId", "VoiceRecordingConfiguration"],
+                "required": [
+                  "InstanceId",
+                  "ContactId",
+                  "InitialContactId",
+                  "VoiceRecordingConfiguration"
+                ],
                 "properties": {
                   "InstanceId": {
                     "description": "The identifier of the Amazon Connect instance.",
@@ -3543,7 +3562,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["DestinationPhoneNumber", "ContactFlowId", "InstanceId"],
+                "required": [
+                  "DestinationPhoneNumber",
+                  "ContactFlowId",
+                  "InstanceId"
+                ],
                 "properties": {
                   "DestinationPhoneNumber": {
                     "description": "The phone number of the customer, in E.164 format.",
@@ -5279,7 +5302,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["Name", "Description", "DefaultOutboundQueueId", "MediaConcurrencies"],
+                "required": [
+                  "Name",
+                  "Description",
+                  "DefaultOutboundQueueId",
+                  "MediaConcurrencies"
+                ],
                 "properties": {
                   "Name": {
                     "description": "The name of the routing profile. Must not be more than 127 characters.",
@@ -7637,7 +7665,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["IdentityManagementType", "InboundCallsEnabled", "OutboundCallsEnabled"],
+                "required": [
+                  "IdentityManagementType",
+                  "InboundCallsEnabled",
+                  "OutboundCallsEnabled"
+                ],
                 "properties": {
                   "ClientToken": {
                     "description": "The idempotency token.",
@@ -17441,7 +17473,14 @@
       },
       "RoutingProfileQueueConfigSummary": {
         "type": "object",
-        "required": ["QueueId", "QueueArn", "QueueName", "Priority", "Delay", "Channel"],
+        "required": [
+          "QueueId",
+          "QueueArn",
+          "QueueName",
+          "Priority",
+          "Delay",
+          "Channel"
+        ],
         "properties": {
           "QueueId": {
             "allOf": [
@@ -17530,7 +17569,12 @@
       },
       "StorageType": {
         "type": "string",
-        "enum": ["S3", "KINESIS_VIDEO_STREAM", "KINESIS_STREAM", "KINESIS_FIREHOSE"]
+        "enum": [
+          "S3",
+          "KINESIS_VIDEO_STREAM",
+          "KINESIS_STREAM",
+          "KINESIS_FIREHOSE"
+        ]
       },
       "S3Config": {
         "type": "object",
@@ -19584,7 +19628,15 @@
       },
       "HoursOfOperationDays": {
         "type": "string",
-        "enum": ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
+        "enum": [
+          "SUNDAY",
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY",
+          "SATURDAY"
+        ]
       },
       "HoursOfOperationTimeSlice": {
         "type": "object",

@@ -6,7 +6,7 @@
     "title": "AWS AppSync",
     "description": "AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your application.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-AppSync_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-AppSync_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1471,7 +1471,13 @@
                   "authenticationType": {
                     "description": "The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.",
                     "type": "string",
-                    "enum": ["API_KEY", "AWS_IAM", "AMAZON_COGNITO_USER_POOLS", "OPENID_CONNECT", "AWS_LAMBDA"]
+                    "enum": [
+                      "API_KEY",
+                      "AWS_IAM",
+                      "AMAZON_COGNITO_USER_POOLS",
+                      "OPENID_CONNECT",
+                      "AWS_LAMBDA"
+                    ]
                   },
                   "userPoolConfig": {
                     "description": "Describes an Amazon Cognito user pool configuration.",
@@ -3538,7 +3544,13 @@
                   "authenticationType": {
                     "description": "The new authentication type for the <code>GraphqlApi</code> object.",
                     "type": "string",
-                    "enum": ["API_KEY", "AWS_IAM", "AMAZON_COGNITO_USER_POOLS", "OPENID_CONNECT", "AWS_LAMBDA"]
+                    "enum": [
+                      "API_KEY",
+                      "AWS_IAM",
+                      "AMAZON_COGNITO_USER_POOLS",
+                      "OPENID_CONNECT",
+                      "AWS_LAMBDA"
+                    ]
                   },
                   "userPoolConfig": {
                     "description": "Describes an Amazon Cognito user pool configuration.",
@@ -6527,7 +6539,13 @@
       },
       "AuthenticationType": {
         "type": "string",
-        "enum": ["API_KEY", "AWS_IAM", "AMAZON_COGNITO_USER_POOLS", "OPENID_CONNECT", "AWS_LAMBDA"]
+        "enum": [
+          "API_KEY",
+          "AWS_IAM",
+          "AMAZON_COGNITO_USER_POOLS",
+          "OPENID_CONNECT",
+          "AWS_LAMBDA"
+        ]
       },
       "OpenIDConnectConfig": {
         "type": "object",
@@ -6832,7 +6850,14 @@
       },
       "DataSourceType": {
         "type": "string",
-        "enum": ["AWS_LAMBDA", "AMAZON_DYNAMODB", "AMAZON_ELASTICSEARCH", "NONE", "HTTP", "RELATIONAL_DATABASE"]
+        "enum": [
+          "AWS_LAMBDA",
+          "AMAZON_DYNAMODB",
+          "AMAZON_ELASTICSEARCH",
+          "NONE",
+          "HTTP",
+          "RELATIONAL_DATABASE"
+        ]
       },
       "DynamodbDataSourceConfig": {
         "type": "object",
@@ -7652,7 +7677,14 @@
       },
       "SchemaStatus": {
         "type": "string",
-        "enum": ["PROCESSING", "ACTIVE", "DELETING", "FAILED", "SUCCESS", "NOT_APPLICABLE"]
+        "enum": [
+          "PROCESSING",
+          "ACTIVE",
+          "DELETING",
+          "FAILED",
+          "SUCCESS",
+          "NOT_APPLICABLE"
+        ]
       },
       "MapOfStringToString": {
         "type": "object",

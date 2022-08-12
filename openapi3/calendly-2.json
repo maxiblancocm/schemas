@@ -11,7 +11,7 @@
     "version": "2.0.0",
     "x-categories": ["events"],
     "x-logo": {
-      "url": "/logos/calendly.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/calendly.svg"
     },
     "contact": {
       "email": "support+developer@calendly.com",
@@ -2544,7 +2544,14 @@
             "description": "The moment when the membership record was created (e.g. \"2020-01-02T03:04:05.678Z\")"
           }
         },
-        "required": ["uri", "role", "user", "organization", "updated_at", "created_at"]
+        "required": [
+          "uri",
+          "role",
+          "user",
+          "organization",
+          "updated_at",
+          "created_at"
+        ]
       },
       "InviteeQuestionAndAnswer": {
         "title": "Invitee Question and Answer",
@@ -2602,7 +2609,14 @@
             "description": "The Salesforce record unique identifier"
           }
         },
-        "required": ["utm_campaign", "utm_source", "utm_medium", "utm_content", "utm_term", "salesforce_uuid"]
+        "required": [
+          "utm_campaign",
+          "utm_source",
+          "utm_medium",
+          "utm_content",
+          "utm_term",
+          "salesforce_uuid"
+        ]
       }
     },
     "responses": {
@@ -2716,7 +2730,9 @@
                     },
                     "message": {
                       "type": "string",
-                      "enum": ["The server could not find the requested resource."]
+                      "enum": [
+                        "The server could not find the requested resource."
+                      ]
                     }
                   }
                 }

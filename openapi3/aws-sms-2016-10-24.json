@@ -6,7 +6,7 @@
     "title": "AWS SMS (Server Migration Service)",
     "description": "AWS Server Migration Service (AWS SMS) makes it easier and faster for you to migrate your on-premises workloads to AWS. To learn more about AWS SMS, see the following resources:    AWS Server Migration Service product page     AWS Server Migration Service User Guide",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Server-Migration-Service_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Server-Migration-Service_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -374,7 +374,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.CreateReplicationJob"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.CreateReplicationJob"
+              ]
             }
           }
         ],
@@ -600,7 +602,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.DeleteAppLaunchConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.DeleteAppLaunchConfiguration"
+              ]
             }
           }
         ],
@@ -713,7 +717,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.DeleteAppReplicationConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.DeleteAppReplicationConfiguration"
+              ]
             }
           }
         ],
@@ -826,7 +832,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.DeleteAppValidationConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.DeleteAppValidationConfiguration"
+              ]
             }
           }
         ],
@@ -939,7 +947,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.DeleteReplicationJob"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.DeleteReplicationJob"
+              ]
             }
           }
         ],
@@ -1042,7 +1052,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.DeleteServerCatalog"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.DeleteServerCatalog"
+              ]
             }
           }
         ],
@@ -1145,7 +1157,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.DisassociateConnector"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.DisassociateConnector"
+              ]
             }
           }
         ],
@@ -1258,7 +1272,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GenerateChangeSet"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GenerateChangeSet"
+              ]
             }
           }
         ],
@@ -1597,7 +1613,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GetAppLaunchConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GetAppLaunchConfiguration"
+              ]
             }
           }
         ],
@@ -1710,7 +1728,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GetAppReplicationConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GetAppReplicationConfiguration"
+              ]
             }
           }
         ],
@@ -1823,7 +1843,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GetAppValidationConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GetAppValidationConfiguration"
+              ]
             }
           }
         ],
@@ -1936,7 +1958,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GetAppValidationOutput"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GetAppValidationOutput"
+              ]
             }
           }
         ],
@@ -2138,7 +2162,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GetReplicationJobs"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GetReplicationJobs"
+              ]
             }
           }
         ],
@@ -2249,7 +2275,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.GetReplicationRuns"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.GetReplicationRuns"
+              ]
             }
           }
         ],
@@ -2596,7 +2624,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.ImportServerCatalog"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.ImportServerCatalog"
+              ]
             }
           }
         ],
@@ -2935,7 +2965,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.NotifyAppValidationOutput"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.NotifyAppValidationOutput"
+              ]
             }
           }
         ],
@@ -3048,7 +3080,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.PutAppLaunchConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.PutAppLaunchConfiguration"
+              ]
             }
           }
         ],
@@ -3161,7 +3195,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.PutAppReplicationConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.PutAppReplicationConfiguration"
+              ]
             }
           }
         ],
@@ -3274,7 +3310,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.PutAppValidationConfiguration"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.PutAppValidationConfiguration"
+              ]
             }
           }
         ],
@@ -3387,7 +3425,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.StartAppReplication"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.StartAppReplication"
+              ]
             }
           }
         ],
@@ -3500,7 +3540,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.StartOnDemandAppReplication"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.StartOnDemandAppReplication"
+              ]
             }
           }
         ],
@@ -3623,7 +3665,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.StartOnDemandReplicationRun"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.StartOnDemandReplicationRun"
+              ]
             }
           }
         ],
@@ -3736,7 +3780,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.StopAppReplication"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.StopAppReplication"
+              ]
             }
           }
         ],
@@ -4105,7 +4151,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSServerMigrationService_V2016_10_24.UpdateReplicationJob"]
+              "enum": [
+                "AWSServerMigrationService_V2016_10_24.UpdateReplicationJob"
+              ]
             }
           }
         ],
@@ -5839,7 +5887,14 @@
       },
       "AppStatus": {
         "type": "string",
-        "enum": ["CREATING", "ACTIVE", "UPDATING", "DELETING", "DELETED", "DELETE_FAILED"]
+        "enum": [
+          "CREATING",
+          "ACTIVE",
+          "UPDATING",
+          "DELETING",
+          "DELETED",
+          "DELETE_FAILED"
+        ]
       },
       "AppStatusMessage": {
         "type": "string"
@@ -6412,7 +6467,13 @@
       },
       "ConnectorCapability": {
         "type": "string",
-        "enum": ["VSPHERE", "SCVMM", "HYPERV-MANAGER", "SNAPSHOT_BATCHING", "SMS_OPTIMIZED"]
+        "enum": [
+          "VSPHERE",
+          "SCVMM",
+          "HYPERV-MANAGER",
+          "SNAPSHOT_BATCHING",
+          "SMS_OPTIMIZED"
+        ]
       },
       "ConnectorList": {
         "type": "array",
@@ -6769,7 +6830,13 @@
       },
       "ValidationStatus": {
         "type": "string",
-        "enum": ["READY_FOR_VALIDATION", "PENDING", "IN_PROGRESS", "SUCCEEDED", "FAILED"]
+        "enum": [
+          "READY_FOR_VALIDATION",
+          "PENDING",
+          "IN_PROGRESS",
+          "SUCCEEDED",
+          "FAILED"
+        ]
       },
       "ValidationStatusMessage": {
         "type": "string",
@@ -6873,7 +6940,16 @@
       },
       "ReplicationJobState": {
         "type": "string",
-        "enum": ["PENDING", "ACTIVE", "FAILED", "DELETING", "DELETED", "COMPLETED", "PAUSED_ON_FAILURE", "FAILING"]
+        "enum": [
+          "PENDING",
+          "ACTIVE",
+          "FAILED",
+          "DELETING",
+          "DELETED",
+          "COMPLETED",
+          "PAUSED_ON_FAILURE",
+          "FAILING"
+        ]
       },
       "ReplicationJobStatusMessage": {
         "type": "string"
@@ -6886,7 +6962,15 @@
       },
       "ReplicationRunState": {
         "type": "string",
-        "enum": ["PENDING", "MISSED", "ACTIVE", "FAILED", "COMPLETED", "DELETING", "DELETED"]
+        "enum": [
+          "PENDING",
+          "MISSED",
+          "ACTIVE",
+          "FAILED",
+          "COMPLETED",
+          "DELETING",
+          "DELETED"
+        ]
       },
       "ReplicationRunType": {
         "type": "string",

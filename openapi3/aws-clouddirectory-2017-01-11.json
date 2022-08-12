@@ -6,7 +6,7 @@
     "title": "Amazon CloudDirectory",
     "description": "Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call programmatically and includes detailed information on data types and errors. For information about Cloud Directory features, see AWS Directory Service and the Amazon Cloud Directory Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Cloud-Directory_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Cloud-Directory_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1276,7 +1276,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["SourceObjectReference", "TargetObjectReference", "TypedLinkFacet", "Attributes"],
+                "required": [
+                  "SourceObjectReference",
+                  "TargetObjectReference",
+                  "TypedLinkFacet",
+                  "Attributes"
+                ],
                 "properties": {
                   "SourceObjectReference": {
                     "description": "The reference that identifies an object.",
@@ -5492,7 +5497,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["ObjectReference", "SchemaFacet", "AttributeNames"],
+                "required": [
+                  "ObjectReference",
+                  "SchemaFacet",
+                  "AttributeNames"
+                ],
                 "properties": {
                   "ObjectReference": {
                     "description": "The reference that identifies an object.",
@@ -11611,7 +11620,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["Name", "AttributeUpdates", "IdentityAttributeOrder"],
+                "required": [
+                  "Name",
+                  "AttributeUpdates",
+                  "IdentityAttributeOrder"
+                ],
                 "properties": {
                   "Name": {
                     "description": "The unique name of the typed link facet.",
@@ -11934,7 +11947,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["DevelopmentSchemaArn", "PublishedSchemaArn", "MinorVersion"],
+                "required": [
+                  "DevelopmentSchemaArn",
+                  "PublishedSchemaArn",
+                  "MinorVersion"
+                ],
                 "properties": {
                   "DevelopmentSchemaArn": {
                     "description": "The ARN of the development schema with the changes used for the upgrade.",
@@ -12562,7 +12579,12 @@
       "BatchWriteException": {},
       "CreateDirectoryResponse": {
         "type": "object",
-        "required": ["DirectoryArn", "Name", "ObjectIdentifier", "AppliedSchemaArn"],
+        "required": [
+          "DirectoryArn",
+          "Name",
+          "ObjectIdentifier",
+          "AppliedSchemaArn"
+        ],
         "properties": {
           "DirectoryArn": {
             "allOf": [
@@ -13975,7 +13997,12 @@
       },
       "TypedLinkSpecifier": {
         "type": "object",
-        "required": ["TypedLinkFacet", "SourceObjectReference", "TargetObjectReference", "IdentityAttributeValues"],
+        "required": [
+          "TypedLinkFacet",
+          "SourceObjectReference",
+          "TargetObjectReference",
+          "IdentityAttributeValues"
+        ],
         "properties": {
           "TypedLinkFacet": {
             "allOf": [
@@ -14254,7 +14281,12 @@
       },
       "BatchAttachTypedLink": {
         "type": "object",
-        "required": ["SourceObjectReference", "TargetObjectReference", "TypedLinkFacet", "Attributes"],
+        "required": [
+          "SourceObjectReference",
+          "TargetObjectReference",
+          "TypedLinkFacet",
+          "Attributes"
+        ],
         "properties": {
           "SourceObjectReference": {
             "allOf": [
@@ -16612,11 +16644,22 @@
       },
       "RangeMode": {
         "type": "string",
-        "enum": ["FIRST", "LAST", "LAST_BEFORE_MISSING_VALUES", "INCLUSIVE", "EXCLUSIVE"]
+        "enum": [
+          "FIRST",
+          "LAST",
+          "LAST_BEFORE_MISSING_VALUES",
+          "INCLUSIVE",
+          "EXCLUSIVE"
+        ]
       },
       "RuleType": {
         "type": "string",
-        "enum": ["BINARY_LENGTH", "NUMBER_COMPARISON", "STRING_FROM_SET", "STRING_LENGTH"]
+        "enum": [
+          "BINARY_LENGTH",
+          "NUMBER_COMPARISON",
+          "STRING_FROM_SET",
+          "STRING_LENGTH"
+        ]
       },
       "RuleParameterMap": {
         "type": "object",

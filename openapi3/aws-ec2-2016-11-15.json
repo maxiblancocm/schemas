@@ -6,7 +6,7 @@
     "title": "Amazon EC2 (Elastic Compute Cloud)",
     "description": "Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. To learn more, see the following resources:   Amazon EC2: AmazonEC2 product page, Amazon EC2 documentation    Amazon EBS: Amazon EBS product page, Amazon EBS documentation    Amazon VPC: Amazon VPC product page, Amazon VPC documentation    AWS VPN: AWS VPN product page, AWS VPN documentation",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-EC2_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-EC2_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -15218,7 +15218,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations"]
+              "enum": [
+                "DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations"
+              ]
             }
           },
           {
@@ -36721,7 +36723,12 @@
       },
       "SpotAllocationStrategy": {
         "type": "string",
-        "enum": ["lowest-price", "diversified", "capacity-optimized", "capacity-optimized-prioritized"]
+        "enum": [
+          "lowest-price",
+          "diversified",
+          "capacity-optimized",
+          "capacity-optimized-prioritized"
+        ]
       },
       "SpotInstanceInterruptionBehavior": {
         "type": "string",
@@ -47824,7 +47831,12 @@
       },
       "TrafficMirrorFilterRuleField": {
         "type": "string",
-        "enum": ["destination-port-range", "source-port-range", "protocol", "description"]
+        "enum": [
+          "destination-port-range",
+          "source-port-range",
+          "protocol",
+          "description"
+        ]
       },
       "ModifyTrafficMirrorSessionResult": {
         "type": "object",
@@ -48753,7 +48765,12 @@
       },
       "AllocationStrategy": {
         "type": "string",
-        "enum": ["lowestPrice", "diversified", "capacityOptimized", "capacityOptimizedPrioritized"]
+        "enum": [
+          "lowestPrice",
+          "diversified",
+          "capacityOptimized",
+          "capacityOptimizedPrioritized"
+        ]
       },
       "OnDemandAllocationStrategy": {
         "type": "string",
@@ -50789,7 +50806,12 @@
       },
       "ActivityStatus": {
         "type": "string",
-        "enum": ["error", "pending_fulfillment", "pending_termination", "fulfilled"]
+        "enum": [
+          "error",
+          "pending_fulfillment",
+          "pending_termination",
+          "fulfilled"
+        ]
       },
       "AddPrefixListEntries": {
         "type": "array",
@@ -51351,7 +51373,14 @@
       },
       "PrincipalType": {
         "type": "string",
-        "enum": ["All", "Service", "OrganizationUnit", "Account", "User", "Role"]
+        "enum": [
+          "All",
+          "Service",
+          "OrganizationUnit",
+          "Account",
+          "User",
+          "Role"
+        ]
       },
       "AllowedPrincipal": {
         "type": "object",
@@ -52313,7 +52342,10 @@
       },
       "AssociateTransitGatewayRouteTableRequest": {
         "type": "object",
-        "required": ["TransitGatewayRouteTableId", "TransitGatewayAttachmentId"],
+        "required": [
+          "TransitGatewayRouteTableId",
+          "TransitGatewayAttachmentId"
+        ],
         "title": "AssociateTransitGatewayRouteTableRequest",
         "properties": {
           "TransitGatewayRouteTableId": {
@@ -52676,7 +52708,13 @@
       },
       "AssociationStatusCode": {
         "type": "string",
-        "enum": ["associating", "associated", "association-failed", "disassociating", "disassociated"]
+        "enum": [
+          "associating",
+          "associated",
+          "association-failed",
+          "disassociating",
+          "disassociated"
+        ]
       },
       "GroupIdStringList": {
         "type": "array",
@@ -54239,7 +54277,15 @@
       },
       "BundleTaskState": {
         "type": "string",
-        "enum": ["pending", "waiting-for-shutdown", "bundling", "storing", "cancelling", "complete", "failed"]
+        "enum": [
+          "pending",
+          "waiting-for-shutdown",
+          "bundling",
+          "storing",
+          "cancelling",
+          "complete",
+          "failed"
+        ]
       },
       "BundleTaskList": {
         "type": "array",
@@ -55764,7 +55810,11 @@
       },
       "ClientVpnAuthenticationType": {
         "type": "string",
-        "enum": ["certificate-authentication", "directory-service-authentication", "federated-authentication"]
+        "enum": [
+          "certificate-authentication",
+          "directory-service-authentication",
+          "federated-authentication"
+        ]
       },
       "DirectoryServiceAuthentication": {
         "type": "object",
@@ -57935,7 +57985,12 @@
       },
       "CreateClientVpnEndpointRequest": {
         "type": "object",
-        "required": ["ClientCidrBlock", "ServerCertificateArn", "AuthenticationOptions", "ConnectionLogOptions"],
+        "required": [
+          "ClientCidrBlock",
+          "ServerCertificateArn",
+          "AuthenticationOptions",
+          "ConnectionLogOptions"
+        ],
         "title": "CreateClientVpnEndpointRequest",
         "properties": {
           "ClientCidrBlock": {
@@ -58111,7 +58166,11 @@
       },
       "CreateClientVpnRouteRequest": {
         "type": "object",
-        "required": ["ClientVpnEndpointId", "DestinationCidrBlock", "TargetVpcSubnetId"],
+        "required": [
+          "ClientVpnEndpointId",
+          "DestinationCidrBlock",
+          "TargetVpcSubnetId"
+        ],
         "title": "CreateClientVpnRouteRequest",
         "properties": {
           "ClientVpnEndpointId": {
@@ -60999,7 +61058,11 @@
       },
       "CreateLocalGatewayRouteRequest": {
         "type": "object",
-        "required": ["DestinationCidrBlock", "LocalGatewayRouteTableId", "LocalGatewayVirtualInterfaceGroupId"],
+        "required": [
+          "DestinationCidrBlock",
+          "LocalGatewayRouteTableId",
+          "LocalGatewayVirtualInterfaceGroupId"
+        ],
         "title": "CreateLocalGatewayRouteRequest",
         "properties": {
           "DestinationCidrBlock": {
@@ -61822,7 +61885,13 @@
       },
       "CreateNetworkAclEntryRequest": {
         "type": "object",
-        "required": ["Egress", "NetworkAclId", "Protocol", "RuleAction", "RuleNumber"],
+        "required": [
+          "Egress",
+          "NetworkAclId",
+          "Protocol",
+          "RuleAction",
+          "RuleNumber"
+        ],
         "title": "CreateNetworkAclEntryRequest",
         "properties": {
           "CidrBlock": {
@@ -62962,7 +63031,12 @@
       },
       "CreateReservedInstancesListingRequest": {
         "type": "object",
-        "required": ["ClientToken", "InstanceCount", "PriceSchedules", "ReservedInstancesId"],
+        "required": [
+          "ClientToken",
+          "InstanceCount",
+          "PriceSchedules",
+          "ReservedInstancesId"
+        ],
         "title": "CreateReservedInstancesListingRequest",
         "properties": {
           "ClientToken": {
@@ -64305,7 +64379,12 @@
       },
       "CreateTrafficMirrorSessionRequest": {
         "type": "object",
-        "required": ["NetworkInterfaceId", "TrafficMirrorTargetId", "TrafficMirrorFilterId", "SessionNumber"],
+        "required": [
+          "NetworkInterfaceId",
+          "TrafficMirrorTargetId",
+          "TrafficMirrorFilterId",
+          "SessionNumber"
+        ],
         "title": "CreateTrafficMirrorSessionRequest",
         "properties": {
           "NetworkInterfaceId": {
@@ -64880,7 +64959,12 @@
       },
       "CreateTransitGatewayPeeringAttachmentRequest": {
         "type": "object",
-        "required": ["TransitGatewayId", "PeerTransitGatewayId", "PeerAccountId", "PeerRegion"],
+        "required": [
+          "TransitGatewayId",
+          "PeerTransitGatewayId",
+          "PeerAccountId",
+          "PeerRegion"
+        ],
         "title": "CreateTransitGatewayPeeringAttachmentRequest",
         "properties": {
           "TransitGatewayId": {
@@ -67627,7 +67711,12 @@
       },
       "DeleteFleetErrorCode": {
         "type": "string",
-        "enum": ["fleetIdDoesNotExist", "fleetIdMalformed", "fleetNotInDeletableState", "unexpectedError"]
+        "enum": [
+          "fleetIdDoesNotExist",
+          "fleetIdMalformed",
+          "fleetNotInDeletableState",
+          "unexpectedError"
+        ]
       },
       "DeleteFleetError": {
         "type": "object",
@@ -67710,7 +67799,15 @@
       },
       "FleetStateCode": {
         "type": "string",
-        "enum": ["submitted", "active", "deleted", "failed", "deleted_running", "deleted_terminating", "modifying"]
+        "enum": [
+          "submitted",
+          "active",
+          "deleted",
+          "failed",
+          "deleted_running",
+          "deleted_terminating",
+          "modifying"
+        ]
       },
       "DeleteFleetSuccessItem": {
         "type": "object",
@@ -68545,7 +68642,11 @@
       },
       "DeleteQueuedReservedInstancesErrorCode": {
         "type": "string",
-        "enum": ["reserved-instances-id-invalid", "reserved-instances-not-in-queued-state", "unexpected-error"]
+        "enum": [
+          "reserved-instances-id-invalid",
+          "reserved-instances-not-in-queued-state",
+          "unexpected-error"
+        ]
       },
       "DeleteQueuedReservedInstancesError": {
         "type": "object",
@@ -75942,7 +76043,12 @@
       },
       "RIProductDescription": {
         "type": "string",
-        "enum": ["Linux/UNIX", "Linux/UNIX (Amazon VPC)", "Windows", "Windows (Amazon VPC)"]
+        "enum": [
+          "Linux/UNIX",
+          "Linux/UNIX (Amazon VPC)",
+          "Windows",
+          "Windows (Amazon VPC)"
+        ]
       },
       "ReservedInstancesOfferingIdStringList": {
         "type": "array",
@@ -80460,7 +80566,10 @@
       },
       "DisableTransitGatewayRouteTablePropagationRequest": {
         "type": "object",
-        "required": ["TransitGatewayRouteTableId", "TransitGatewayAttachmentId"],
+        "required": [
+          "TransitGatewayRouteTableId",
+          "TransitGatewayAttachmentId"
+        ],
         "title": "DisableTransitGatewayRouteTablePropagationRequest",
         "properties": {
           "TransitGatewayRouteTableId": {
@@ -80856,7 +80965,10 @@
       },
       "DisassociateTransitGatewayRouteTableRequest": {
         "type": "object",
-        "required": ["TransitGatewayRouteTableId", "TransitGatewayAttachmentId"],
+        "required": [
+          "TransitGatewayRouteTableId",
+          "TransitGatewayAttachmentId"
+        ],
         "title": "DisassociateTransitGatewayRouteTableRequest",
         "properties": {
           "TransitGatewayRouteTableId": {
@@ -82188,7 +82300,10 @@
       },
       "EnableTransitGatewayRouteTablePropagationRequest": {
         "type": "object",
-        "required": ["TransitGatewayRouteTableId", "TransitGatewayAttachmentId"],
+        "required": [
+          "TransitGatewayRouteTableId",
+          "TransitGatewayAttachmentId"
+        ],
         "title": "EnableTransitGatewayRouteTablePropagationRequest",
         "properties": {
           "TransitGatewayRouteTableId": {
@@ -82392,7 +82507,13 @@
       },
       "EventCode": {
         "type": "string",
-        "enum": ["instance-reboot", "system-reboot", "system-maintenance", "instance-retirement", "instance-stop"]
+        "enum": [
+          "instance-reboot",
+          "system-reboot",
+          "system-maintenance",
+          "instance-retirement",
+          "instance-stop"
+        ]
       },
       "EventInformation": {
         "type": "object",
@@ -82930,7 +83051,12 @@
       },
       "FleetActivityStatus": {
         "type": "string",
-        "enum": ["error", "pending_fulfillment", "pending_termination", "fulfilled"]
+        "enum": [
+          "error",
+          "pending_fulfillment",
+          "pending_termination",
+          "fulfilled"
+        ]
       },
       "FleetLaunchTemplateConfigList": {
         "type": "array",
@@ -87119,7 +87245,15 @@
       },
       "ImageState": {
         "type": "string",
-        "enum": ["pending", "available", "invalid", "deregistered", "transient", "failed", "error"]
+        "enum": [
+          "pending",
+          "available",
+          "invalid",
+          "deregistered",
+          "transient",
+          "failed",
+          "error"
+        ]
       },
       "StateReason": {
         "type": "object",
@@ -90544,7 +90678,14 @@
       },
       "InstanceStateName": {
         "type": "string",
-        "enum": ["pending", "running", "shutting-down", "terminated", "stopping", "stopped"]
+        "enum": [
+          "pending",
+          "running",
+          "shutting-down",
+          "terminated",
+          "stopping",
+          "stopped"
+        ]
       },
       "InstanceStateChange": {
         "type": "object",
@@ -90904,7 +91045,13 @@
       },
       "SummaryStatus": {
         "type": "string",
-        "enum": ["ok", "impaired", "insufficient-data", "not-applicable", "initializing"]
+        "enum": [
+          "ok",
+          "impaired",
+          "insufficient-data",
+          "not-applicable",
+          "initializing"
+        ]
       },
       "InstanceStorageFlag": {
         "type": "boolean"
@@ -98730,7 +98877,11 @@
       },
       "ModifyVpnTunnelOptionsRequest": {
         "type": "object",
-        "required": ["VpnConnectionId", "VpnTunnelOutsideIpAddress", "TunnelOptions"],
+        "required": [
+          "VpnConnectionId",
+          "VpnTunnelOutsideIpAddress",
+          "TunnelOptions"
+        ],
         "title": "ModifyVpnTunnelOptionsRequest",
         "properties": {
           "VpnConnectionId": {
@@ -102018,7 +102169,13 @@
       },
       "ReplaceNetworkAclEntryRequest": {
         "type": "object",
-        "required": ["Egress", "NetworkAclId", "Protocol", "RuleAction", "RuleNumber"],
+        "required": [
+          "Egress",
+          "NetworkAclId",
+          "Protocol",
+          "RuleAction",
+          "RuleNumber"
+        ],
         "title": "ReplaceNetworkAclEntryRequest",
         "properties": {
           "CidrBlock": {
@@ -103339,7 +103496,14 @@
       },
       "ReservedInstanceState": {
         "type": "string",
-        "enum": ["payment-pending", "active", "payment-failed", "retired", "queued", "queued-deleted"]
+        "enum": [
+          "payment-pending",
+          "active",
+          "payment-failed",
+          "retired",
+          "queued",
+          "queued-deleted"
+        ]
       },
       "scope": {
         "type": "string",
@@ -105086,7 +105250,13 @@
       },
       "RouteTableAssociationStateCode": {
         "type": "string",
-        "enum": ["associating", "associated", "disassociating", "disassociated", "failed"]
+        "enum": [
+          "associating",
+          "associated",
+          "disassociating",
+          "disassociated",
+          "failed"
+        ]
       },
       "RunInstancesRequest": {
         "type": "object",
@@ -107998,7 +108168,16 @@
       },
       "State": {
         "type": "string",
-        "enum": ["PendingAcceptance", "Pending", "Available", "Deleting", "Deleted", "Rejected", "Failed", "Expired"]
+        "enum": [
+          "PendingAcceptance",
+          "Pending",
+          "Available",
+          "Deleting",
+          "Deleted",
+          "Rejected",
+          "Failed",
+          "Expired"
+        ]
       },
       "StopInstancesRequest": {
         "type": "object",
@@ -108077,7 +108256,15 @@
       },
       "TransitGatewayMulitcastDomainAssociationState": {
         "type": "string",
-        "enum": ["associating", "associated", "disassociating", "disassociated", "disassociated", "rejected", "failed"]
+        "enum": [
+          "associating",
+          "associated",
+          "disassociating",
+          "disassociated",
+          "disassociated",
+          "rejected",
+          "failed"
+        ]
       },
       "SubnetAssociation": {
         "type": "object",
@@ -108128,7 +108315,14 @@
       },
       "SubnetCidrBlockStateCode": {
         "type": "string",
-        "enum": ["associating", "associated", "disassociating", "disassociated", "failing", "failed"]
+        "enum": [
+          "associating",
+          "associated",
+          "disassociating",
+          "disassociated",
+          "failing",
+          "failed"
+        ]
       },
       "SubnetCidrBlockState": {
         "type": "object",
@@ -108797,7 +108991,14 @@
       },
       "TransitGatewayAttachmentResourceType": {
         "type": "string",
-        "enum": ["vpc", "vpn", "direct-connect-gateway", "peering", "tgw-peering", "tgw-peering"]
+        "enum": [
+          "vpc",
+          "vpn",
+          "direct-connect-gateway",
+          "peering",
+          "tgw-peering",
+          "tgw-peering"
+        ]
       },
       "TransitGatewayAssociationState": {
         "type": "string",
@@ -110402,7 +110603,14 @@
       },
       "VolumeState": {
         "type": "string",
-        "enum": ["creating", "available", "in-use", "deleting", "deleted", "error"]
+        "enum": [
+          "creating",
+          "available",
+          "in-use",
+          "deleting",
+          "deleted",
+          "error"
+        ]
       },
       "VolumeAttachmentState": {
         "type": "string",
@@ -110898,7 +111106,14 @@
       },
       "VpcCidrBlockStateCode": {
         "type": "string",
-        "enum": ["associating", "associated", "disassociating", "disassociated", "failing", "failed"]
+        "enum": [
+          "associating",
+          "associated",
+          "disassociating",
+          "disassociated",
+          "failing",
+          "failed"
+        ]
       },
       "VpcClassicLink": {
         "type": "object",
@@ -114818,7 +115033,10 @@
       },
       "AthenaIntegration": {
         "type": "object",
-        "required": ["IntegrationResultS3DestinationArn", "PartitionLoadFrequency"],
+        "required": [
+          "IntegrationResultS3DestinationArn",
+          "PartitionLoadFrequency"
+        ],
         "properties": {
           "IntegrationResultS3DestinationArn": {
             "allOf": [
@@ -115731,7 +115949,11 @@
       },
       "CreateTransitGatewayConnectPeerRequest": {
         "type": "object",
-        "required": ["TransitGatewayAttachmentId", "PeerAddress", "InsideCidrBlocks"],
+        "required": [
+          "TransitGatewayAttachmentId",
+          "PeerAddress",
+          "InsideCidrBlocks"
+        ],
         "title": "CreateTransitGatewayConnectPeerRequest",
         "properties": {
           "TransitGatewayAttachmentId": {
@@ -118094,7 +118316,11 @@
       },
       "GetFlowLogsIntegrationTemplateRequest": {
         "type": "object",
-        "required": ["FlowLogId", "ConfigDeliveryS3DestinationArn", "IntegrateServices"],
+        "required": [
+          "FlowLogId",
+          "ConfigDeliveryS3DestinationArn",
+          "IntegrateServices"
+        ],
         "title": "GetFlowLogsIntegrationTemplateRequest",
         "properties": {
           "DryRun": {
@@ -118309,7 +118535,15 @@
       },
       "WeekDay": {
         "type": "string",
-        "enum": ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+        "enum": [
+          "sunday",
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday"
+        ]
       },
       "InstanceEventWindowTimeRange": {
         "type": "object",
@@ -119176,7 +119410,14 @@
       },
       "ReplaceRootVolumeTaskState": {
         "type": "string",
-        "enum": ["pending", "in-progress", "failing", "succeeded", "failed", "failed-detached"]
+        "enum": [
+          "pending",
+          "in-progress",
+          "failing",
+          "succeeded",
+          "failed",
+          "failed-detached"
+        ]
       },
       "ResetAddressAttributeRequest": {
         "type": "object",

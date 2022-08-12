@@ -6,7 +6,7 @@
     "title": "Amazon Kinesis Analytics",
     "description": "Overview This is the Amazon Kinesis Analytics v1 API Reference. The Amazon Kinesis Analytics Developer Guide provides additional information.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Kinesis-Data-Analytics_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Kinesis-Data-Analytics_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -222,7 +222,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption"]
+              "enum": [
+                "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption"
+              ]
             }
           }
         ],
@@ -458,7 +460,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20150814.AddApplicationInputProcessingConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20150814.AddApplicationInputProcessingConfiguration"
+              ]
             }
           }
         ],
@@ -684,7 +688,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20150814.AddApplicationReferenceDataSource"]
+              "enum": [
+                "KinesisAnalytics_20150814.AddApplicationReferenceDataSource"
+              ]
             }
           }
         ],
@@ -1023,7 +1029,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20150814.DeleteApplicationCloudWatchLoggingOption"]
+              "enum": [
+                "KinesisAnalytics_20150814.DeleteApplicationCloudWatchLoggingOption"
+              ]
             }
           }
         ],
@@ -1136,7 +1144,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20150814.DeleteApplicationInputProcessingConfiguration"]
+              "enum": [
+                "KinesisAnalytics_20150814.DeleteApplicationInputProcessingConfiguration"
+              ]
             }
           }
         ],
@@ -1362,7 +1372,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["KinesisAnalytics_20150814.DeleteApplicationReferenceDataSource"]
+              "enum": [
+                "KinesisAnalytics_20150814.DeleteApplicationReferenceDataSource"
+              ]
             }
           }
         ],
@@ -2372,7 +2384,11 @@
       },
       "AddApplicationCloudWatchLoggingOptionRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "CloudWatchLoggingOption"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "CloudWatchLoggingOption"
+        ],
         "title": "AddApplicationCloudWatchLoggingOptionRequest",
         "properties": {
           "ApplicationName": {
@@ -2462,7 +2478,12 @@
       },
       "AddApplicationInputProcessingConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "InputId", "InputProcessingConfiguration"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "InputId",
+          "InputProcessingConfiguration"
+        ],
         "title": "AddApplicationInputProcessingConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -2514,7 +2535,11 @@
       },
       "AddApplicationOutputRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "Output"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "Output"
+        ],
         "title": "AddApplicationOutputRequest",
         "properties": {
           "ApplicationName": {
@@ -2557,7 +2582,11 @@
       },
       "AddApplicationReferenceDataSourceRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "ReferenceDataSource"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "ReferenceDataSource"
+        ],
         "title": "AddApplicationReferenceDataSourceRequest",
         "properties": {
           "ApplicationName": {
@@ -2729,7 +2758,11 @@
       },
       "DeleteApplicationCloudWatchLoggingOptionRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "CloudWatchLoggingOptionId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "CloudWatchLoggingOptionId"
+        ],
         "title": "DeleteApplicationCloudWatchLoggingOptionRequest",
         "properties": {
           "ApplicationName": {
@@ -2770,7 +2803,11 @@
       },
       "DeleteApplicationInputProcessingConfigurationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "InputId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "InputId"
+        ],
         "title": "DeleteApplicationInputProcessingConfigurationRequest",
         "properties": {
           "ApplicationName": {
@@ -2812,7 +2849,11 @@
       },
       "DeleteApplicationOutputRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "OutputId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "OutputId"
+        ],
         "title": "DeleteApplicationOutputRequest",
         "properties": {
           "ApplicationName": {
@@ -2854,7 +2895,11 @@
       },
       "DeleteApplicationReferenceDataSourceRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "ReferenceId"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "ReferenceId"
+        ],
         "title": "DeleteApplicationReferenceDataSourceRequest",
         "properties": {
           "ApplicationName": {
@@ -3240,7 +3285,11 @@
       },
       "UpdateApplicationRequest": {
         "type": "object",
-        "required": ["ApplicationName", "CurrentApplicationVersionId", "ApplicationUpdate"],
+        "required": [
+          "ApplicationName",
+          "CurrentApplicationVersionId",
+          "ApplicationUpdate"
+        ],
         "title": "UpdateApplicationRequest",
         "properties": {
           "ApplicationName": {
@@ -3515,7 +3564,14 @@
       },
       "ApplicationStatus": {
         "type": "string",
-        "enum": ["DELETING", "STARTING", "STOPPING", "READY", "RUNNING", "UPDATING"]
+        "enum": [
+          "DELETING",
+          "STARTING",
+          "STOPPING",
+          "READY",
+          "RUNNING",
+          "UPDATING"
+        ]
       },
       "Timestamp": {
         "type": "string",
@@ -3547,7 +3603,12 @@
       },
       "ApplicationDetail": {
         "type": "object",
-        "required": ["ApplicationName", "ApplicationARN", "ApplicationStatus", "ApplicationVersionId"],
+        "required": [
+          "ApplicationName",
+          "ApplicationARN",
+          "ApplicationStatus",
+          "ApplicationVersionId"
+        ],
         "properties": {
           "ApplicationName": {
             "allOf": [
@@ -5259,7 +5320,11 @@
       },
       "ReferenceDataSourceDescription": {
         "type": "object",
-        "required": ["ReferenceId", "TableName", "S3ReferenceDataSourceDescription"],
+        "required": [
+          "ReferenceId",
+          "TableName",
+          "S3ReferenceDataSourceDescription"
+        ],
         "properties": {
           "ReferenceId": {
             "allOf": [

@@ -7,7 +7,7 @@
     "description": "AWS IoT Things Graph provides an integrated set of tools that enable developers to connect devices and services that use different standards, such as units of measure and communication protocols. AWS IoT Things Graph makes it possible to build IoT applications with little to no code by connecting devices and services and defining how they interact at an abstract level. For more information about how AWS IoT Things Graph works, see the User Guide.",
     "x-categories": ["iot"],
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-Things-Graph_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-Things-Graph_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1458,7 +1458,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["IotThingsGraphFrontEndService.DissociateEntityFromThing"]
+              "enum": [
+                "IotThingsGraphFrontEndService.DissociateEntityFromThing"
+              ]
             }
           }
         ],
@@ -1878,7 +1880,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["IotThingsGraphFrontEndService.GetNamespaceDeletionStatus"]
+              "enum": [
+                "IotThingsGraphFrontEndService.GetNamespaceDeletionStatus"
+              ]
             }
           }
         ],
@@ -2205,7 +2209,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["IotThingsGraphFrontEndService.GetSystemTemplateRevisions"]
+              "enum": [
+                "IotThingsGraphFrontEndService.GetSystemTemplateRevisions"
+              ]
             }
           }
         ],
@@ -2429,7 +2435,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["IotThingsGraphFrontEndService.ListFlowExecutionMessages"]
+              "enum": [
+                "IotThingsGraphFrontEndService.ListFlowExecutionMessages"
+              ]
             }
           }
         ],
@@ -6103,7 +6111,12 @@
       },
       "EntityFilterName": {
         "type": "string",
-        "enum": ["NAME", "NAMESPACE", "SEMANTIC_TYPE_PATH", "REFERENCED_ENTITY_ID"]
+        "enum": [
+          "NAME",
+          "NAMESPACE",
+          "SEMANTIC_TYPE_PATH",
+          "REFERENCED_ENTITY_ID"
+        ]
       },
       "EntityFilterValues": {
         "type": "array",

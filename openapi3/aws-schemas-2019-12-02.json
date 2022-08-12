@@ -6,7 +6,7 @@
     "title": "Amazon EventBridge Schema Registry",
     "description": "Amazon EventBridge Schema Registry",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-EventBridge_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-EventBridge_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {

@@ -6,7 +6,7 @@
     "title": "Amazon Cognito Identity Provider",
     "description": "Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can authenticate a user to obtain tokens related to user identity and access policies. This API reference provides information about user pools in Amazon Cognito User Pools. For more information, see the Amazon Cognito Documentation.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Cognito_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Cognito_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -982,7 +982,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminDeleteUserAttributes"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminDeleteUserAttributes"
+              ]
             }
           }
         ],
@@ -1115,7 +1117,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminDisableProviderForUser"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminDisableProviderForUser"
+              ]
             }
           }
         ],
@@ -2089,7 +2093,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminLinkProviderForUser"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminLinkProviderForUser"
+              ]
             }
           }
         ],
@@ -2353,7 +2359,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminListGroupsForUser"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminListGroupsForUser"
+              ]
             }
           }
         ],
@@ -2504,7 +2512,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminListUserAuthEvents"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminListUserAuthEvents"
+              ]
             }
           }
         ],
@@ -2620,7 +2630,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminRemoveUserFromGroup"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminRemoveUserFromGroup"
+              ]
             }
           }
         ],
@@ -2813,7 +2825,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminResetUserPassword"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminResetUserPassword"
+              ]
             }
           }
         ],
@@ -3076,7 +3090,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminRespondToAuthChallenge"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminRespondToAuthChallenge"
+              ]
             }
           }
         ],
@@ -3209,7 +3225,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminSetUserMFAPreference"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminSetUserMFAPreference"
+              ]
             }
           }
         ],
@@ -3588,7 +3606,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminUpdateAuthEventFeedback"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminUpdateAuthEventFeedback"
+              ]
             }
           }
         ],
@@ -3721,7 +3741,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminUpdateDeviceStatus"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminUpdateDeviceStatus"
+              ]
             }
           }
         ],
@@ -3914,7 +3936,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminUpdateUserAttributes"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminUpdateUserAttributes"
+              ]
             }
           }
         ],
@@ -4037,7 +4061,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AdminUserGlobalSignOut"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AdminUserGlobalSignOut"
+              ]
             }
           }
         ],
@@ -4160,7 +4186,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.AssociateSoftwareToken"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.AssociateSoftwareToken"
+              ]
             }
           }
         ],
@@ -4719,7 +4747,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.ConfirmForgotPassword"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.ConfirmForgotPassword"
+              ]
             }
           }
         ],
@@ -5188,7 +5218,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.CreateIdentityProvider"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.CreateIdentityProvider"
+              ]
             }
           }
         ],
@@ -6075,7 +6107,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DeleteIdentityProvider"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DeleteIdentityProvider"
+              ]
             }
           }
         ],
@@ -6898,7 +6932,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DescribeIdentityProvider"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DescribeIdentityProvider"
+              ]
             }
           }
         ],
@@ -7011,7 +7047,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DescribeResourceServer"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DescribeResourceServer"
+              ]
             }
           }
         ],
@@ -7134,7 +7172,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DescribeRiskConfiguration"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DescribeRiskConfiguration"
+              ]
             }
           }
         ],
@@ -7247,7 +7287,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DescribeUserImportJob"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DescribeUserImportJob"
+              ]
             }
           }
         ],
@@ -7483,7 +7525,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DescribeUserPoolClient"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DescribeUserPoolClient"
+              ]
             }
           }
         ],
@@ -7586,7 +7630,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.DescribeUserPoolDomain"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.DescribeUserPoolDomain"
+              ]
             }
           }
         ],
@@ -8437,7 +8483,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.GetIdentityProviderByIdentifier"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.GetIdentityProviderByIdentifier"
+              ]
             }
           }
         ],
@@ -8530,7 +8578,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.GetSigningCertificate"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.GetSigningCertificate"
+              ]
             }
           }
         ],
@@ -9009,7 +9059,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.GetUserAttributeVerificationCode"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.GetUserAttributeVerificationCode"
+              ]
             }
           }
         ],
@@ -9873,7 +9925,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.ListIdentityProviders"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.ListIdentityProviders"
+              ]
             }
           }
         ],
@@ -10947,7 +11001,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.ResendConfirmationCode"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.ResendConfirmationCode"
+              ]
             }
           }
         ],
@@ -11210,7 +11266,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.RespondToAuthChallenge"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.RespondToAuthChallenge"
+              ]
             }
           }
         ],
@@ -12673,7 +12731,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.UpdateAuthEventFeedback"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.UpdateAuthEventFeedback"
+              ]
             }
           }
         ],
@@ -13062,7 +13122,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCognitoIdentityProviderService.UpdateIdentityProvider"]
+              "enum": [
+                "AWSCognitoIdentityProviderService.UpdateIdentityProvider"
+              ]
             }
           }
         ],
@@ -16453,7 +16515,12 @@
       },
       "CreateIdentityProviderRequest": {
         "type": "object",
-        "required": ["UserPoolId", "ProviderName", "ProviderType", "ProviderDetails"],
+        "required": [
+          "UserPoolId",
+          "ProviderName",
+          "ProviderType",
+          "ProviderDetails"
+        ],
         "title": "CreateIdentityProviderRequest",
         "properties": {
           "UserPoolId": {
@@ -19736,7 +19803,13 @@
       },
       "UpdateAuthEventFeedbackRequest": {
         "type": "object",
-        "required": ["UserPoolId", "Username", "EventId", "FeedbackToken", "FeedbackValue"],
+        "required": [
+          "UserPoolId",
+          "Username",
+          "EventId",
+          "FeedbackToken",
+          "FeedbackValue"
+        ],
         "title": "UpdateAuthEventFeedbackRequest",
         "properties": {
           "UserPoolId": {
@@ -22260,7 +22333,14 @@
       },
       "IdentityProviderTypeType": {
         "type": "string",
-        "enum": ["SAML", "Facebook", "Google", "LoginWithAmazon", "SignInWithApple", "OIDC"]
+        "enum": [
+          "SAML",
+          "Facebook",
+          "Google",
+          "LoginWithAmazon",
+          "SignInWithApple",
+          "OIDC"
+        ]
       },
       "ProviderDetailsType": {
         "type": "object",
@@ -24609,7 +24689,16 @@
       },
       "UserImportJobStatusType": {
         "type": "string",
-        "enum": ["Created", "Pending", "InProgress", "Stopping", "Expired", "Stopped", "Failed", "Succeeded"]
+        "enum": [
+          "Created",
+          "Pending",
+          "InProgress",
+          "Stopping",
+          "Expired",
+          "Stopped",
+          "Failed",
+          "Succeeded"
+        ]
       },
       "UserPoolClientDescription": {
         "type": "object",

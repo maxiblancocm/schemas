@@ -6,7 +6,7 @@
     "title": "AWS Cloud Map",
     "description": "AWS Cloud Map lets you configure public DNS, private DNS, or HTTP namespaces that your microservice applications run in. When an instance of the service becomes available, you can call the AWS Cloud Map API to register the instance with AWS Cloud Map. For public or private DNS namespaces, AWS Cloud Map automatically creates DNS records and an optional health check. Clients that submit public or private DNS queries, or HTTP requests, for the service receive an answer that contains up to eight healthy records.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-CloudMap_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-CloudMap_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2267,7 +2267,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Route53AutoNaming_v20170314.UpdateInstanceCustomHealthStatus"]
+              "enum": [
+                "Route53AutoNaming_v20170314.UpdateInstanceCustomHealthStatus"
+              ]
             }
           }
         ],

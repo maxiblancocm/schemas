@@ -6,7 +6,7 @@
     "title": "AWS CodeStar connections",
     "description": "This AWS CodeStar Connections API Reference provides descriptions and usage examples of the operations and data types for the AWS CodeStar Connections API. You can use the connections API to work with connections and installations.  Connections are configurations that you use to connect AWS resources to external code repositories. Each connection is a resource that can be given to services such as CodePipeline to connect to a third-party repository such as Bitbucket. For example, you can add the connection in CodePipeline so that it triggers your pipeline when a code change is made to your third-party code repository. Each connection is named and associated with a unique ARN that is used to reference the connection. When you create a connection, the console initiates a third-party connection handshake. Installations are the apps that are used to conduct this handshake. For example, the installation for the Bitbucket provider type is the Bitbucket Cloud app. When you create a connection, you can choose an existing installation or create one. When you want to create a connection to an installed provider type such as GitHub Enterprise Server, you create a host for your connections. You can work with connections by calling:    CreateConnection, which creates a uniquely named connection that can be referenced by services such as CodePipeline.    DeleteConnection, which deletes the specified connection.    GetConnection, which returns information about the connection, including the connection status.    ListConnections, which lists the connections associated with your account.   You can work with hosts by calling:    CreateHost, which creates a host that represents the infrastructure where your provider is installed.    DeleteHost, which deletes the specified host.    GetHost, which returns information about the host, including the setup status.    ListHosts, which lists the hosts associated with your account.   You can work with tags in AWS CodeStar Connections by calling the following:    ListTagsForResource, which gets information about AWS tags for a specified Amazon Resource Name (ARN) in AWS CodeStar Connections.    TagResource, which adds or updates tags for a resource in AWS CodeStar Connections.    UntagResource, which removes tags for a resource in AWS CodeStar Connections.   For information about how to use AWS CodeStar Connections, see the Developer Tools User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Codestar_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Codestar_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -201,7 +201,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection"
+              ]
             }
           }
         ],
@@ -274,7 +276,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateHost"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateHost"
+              ]
             }
           }
         ],
@@ -347,7 +351,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.DeleteConnection"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.DeleteConnection"
+              ]
             }
           }
         ],
@@ -430,7 +436,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.DeleteHost"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.DeleteHost"
+              ]
             }
           }
         ],
@@ -513,7 +521,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.GetConnection"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.GetConnection"
+              ]
             }
           }
         ],
@@ -596,7 +606,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.GetHost"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.GetHost"
+              ]
             }
           }
         ],
@@ -677,7 +689,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListConnections"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListConnections"
+              ]
             }
           }
         ],
@@ -758,7 +772,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListHosts"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListHosts"
+              ]
             }
           }
         ],
@@ -831,7 +847,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListTagsForResource"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListTagsForResource"
+              ]
             }
           }
         ],
@@ -914,7 +932,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.TagResource"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.TagResource"
+              ]
             }
           }
         ],
@@ -987,7 +1007,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.UntagResource"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.UntagResource"
+              ]
             }
           }
         ],
@@ -1090,7 +1112,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.codestar.connections.CodeStar_connections_20191201.UpdateHost"]
+              "enum": [
+                "com.amazonaws.codestar.connections.CodeStar_connections_20191201.UpdateHost"
+              ]
             }
           }
         ],
@@ -1729,7 +1753,11 @@
       },
       "ProviderType": {
         "type": "string",
-        "enum": ["Bitbucket", "GitHubEnterpriseServer", "GitHubEnterpriseServer"]
+        "enum": [
+          "Bitbucket",
+          "GitHubEnterpriseServer",
+          "GitHubEnterpriseServer"
+        ]
       },
       "ConnectionStatus": {
         "type": "string",

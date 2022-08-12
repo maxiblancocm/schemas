@@ -6,7 +6,7 @@
     "title": "Amazon Pinpoint",
     "description": "Doc Engage API - Amazon Pinpoint API",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Pinpoint_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Pinpoint_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -17618,7 +17618,14 @@
       },
       "State": {
         "type": "string",
-        "enum": ["DRAFT", "ACTIVE", "COMPLETED", "CANCELLED", "CLOSED", "PAUSED"]
+        "enum": [
+          "DRAFT",
+          "ACTIVE",
+          "COMPLETED",
+          "CANCELLED",
+          "CLOSED",
+          "PAUSED"
+        ]
       },
       "CreatePushTemplateResponse": {
         "type": "object",
@@ -20901,7 +20908,13 @@
       },
       "ApplicationDateRangeKpiResponse": {
         "type": "object",
-        "required": ["KpiResult", "KpiName", "EndTime", "StartTime", "ApplicationId"],
+        "required": [
+          "KpiResult",
+          "KpiName",
+          "EndTime",
+          "StartTime",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -21104,7 +21117,15 @@
       },
       "AttributeType": {
         "type": "string",
-        "enum": ["INCLUSIVE", "EXCLUSIVE", "CONTAINS", "BEFORE", "AFTER", "ON", "BETWEEN"]
+        "enum": [
+          "INCLUSIVE",
+          "EXCLUSIVE",
+          "CONTAINS",
+          "BEFORE",
+          "AFTER",
+          "ON",
+          "BETWEEN"
+        ]
       },
       "AttributeDimension": {
         "type": "object",
@@ -21457,7 +21478,14 @@
       },
       "CampaignDateRangeKpiResponse": {
         "type": "object",
-        "required": ["KpiResult", "KpiName", "EndTime", "CampaignId", "StartTime", "ApplicationId"],
+        "required": [
+          "KpiResult",
+          "KpiName",
+          "EndTime",
+          "CampaignId",
+          "StartTime",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -21673,7 +21701,15 @@
       },
       "CampaignResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "SegmentId", "SegmentVersion", "Id", "Arn", "ApplicationId"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "SegmentId",
+          "SegmentVersion",
+          "Id",
+          "Arn",
+          "ApplicationId"
+        ],
         "properties": {
           "AdditionalTreatments": {
             "allOf": [
@@ -22000,7 +22036,15 @@
       },
       "CampaignStatus": {
         "type": "string",
-        "enum": ["SCHEDULED", "EXECUTING", "PENDING_NEXT_RUN", "COMPLETED", "PAUSED", "DELETED", "INVALID"]
+        "enum": [
+          "SCHEDULED",
+          "EXECUTING",
+          "PENDING_NEXT_RUN",
+          "COMPLETED",
+          "PAUSED",
+          "DELETED",
+          "INVALID"
+        ]
       },
       "ListOfCampaignResponse": {
         "type": "array",
@@ -22254,7 +22298,14 @@
       },
       "ExportJobResponse": {
         "type": "object",
-        "required": ["JobStatus", "CreationDate", "Type", "Definition", "Id", "ApplicationId"],
+        "required": [
+          "JobStatus",
+          "CreationDate",
+          "Type",
+          "Definition",
+          "Id",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -22391,7 +22442,14 @@
       },
       "ImportJobResponse": {
         "type": "object",
-        "required": ["JobStatus", "CreationDate", "Type", "Definition", "Id", "ApplicationId"],
+        "required": [
+          "JobStatus",
+          "CreationDate",
+          "Type",
+          "Definition",
+          "Id",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -22838,7 +22896,13 @@
       },
       "SegmentResponse": {
         "type": "object",
-        "required": ["SegmentType", "CreationDate", "Id", "Arn", "ApplicationId"],
+        "required": [
+          "SegmentType",
+          "CreationDate",
+          "Id",
+          "Arn",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -24379,7 +24443,12 @@
       },
       "EmailTemplateResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateName", "TemplateType"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateName",
+          "TemplateType"
+        ],
         "properties": {
           "Arn": {
             "allOf": [
@@ -25311,7 +25380,15 @@
       },
       "Frequency": {
         "type": "string",
-        "enum": ["ONCE", "HOURLY", "DAILY", "WEEKLY", "MONTHLY", "EVENT", "IN_APP_EVENT"]
+        "enum": [
+          "ONCE",
+          "HOURLY",
+          "DAILY",
+          "WEEKLY",
+          "MONTHLY",
+          "EVENT",
+          "IN_APP_EVENT"
+        ]
       },
       "GPSCoordinates": {
         "type": "object",
@@ -25396,7 +25473,14 @@
       },
       "JourneyDateRangeKpiResponse": {
         "type": "object",
-        "required": ["KpiResult", "KpiName", "JourneyId", "EndTime", "StartTime", "ApplicationId"],
+        "required": [
+          "KpiResult",
+          "KpiName",
+          "JourneyId",
+          "EndTime",
+          "StartTime",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -25473,7 +25557,14 @@
       },
       "JourneyExecutionActivityMetricsResponse": {
         "type": "object",
-        "required": ["Metrics", "JourneyId", "LastEvaluatedTime", "JourneyActivityId", "ActivityType", "ApplicationId"],
+        "required": [
+          "Metrics",
+          "JourneyId",
+          "LastEvaluatedTime",
+          "JourneyActivityId",
+          "ActivityType",
+          "ApplicationId"
+        ],
         "properties": {
           "ActivityType": {
             "allOf": [
@@ -25540,7 +25631,12 @@
       },
       "JourneyExecutionMetricsResponse": {
         "type": "object",
-        "required": ["Metrics", "JourneyId", "LastEvaluatedTime", "ApplicationId"],
+        "required": [
+          "Metrics",
+          "JourneyId",
+          "LastEvaluatedTime",
+          "ApplicationId"
+        ],
         "properties": {
           "ApplicationId": {
             "allOf": [
@@ -25587,7 +25683,12 @@
       },
       "PushNotificationTemplateResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateType", "TemplateName"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateType",
+          "TemplateName"
+        ],
         "properties": {
           "ADM": {
             "allOf": [
@@ -25798,7 +25899,12 @@
       },
       "SMSTemplateResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateName", "TemplateType"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateName",
+          "TemplateType"
+        ],
         "properties": {
           "Arn": {
             "allOf": [
@@ -25915,7 +26021,12 @@
       },
       "VoiceTemplateResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateName", "TemplateType"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateName",
+          "TemplateType"
+        ],
         "properties": {
           "Arn": {
             "allOf": [
@@ -27397,7 +27508,12 @@
       },
       "TemplateResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateName", "TemplateType"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateName",
+          "TemplateType"
+        ],
         "properties": {
           "Arn": {
             "allOf": [
@@ -27494,7 +27610,12 @@
       },
       "TemplateVersionResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateName", "TemplateType"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateName",
+          "TemplateType"
+        ],
         "properties": {
           "CreationDate": {
             "allOf": [
@@ -27830,7 +27951,14 @@
       },
       "Layout": {
         "type": "string",
-        "enum": ["BOTTOM_BANNER", "TOP_BANNER", "OVERLAYS", "MOBILE_FEED", "MIDDLE_BANNER", "CAROUSEL"]
+        "enum": [
+          "BOTTOM_BANNER",
+          "TOP_BANNER",
+          "OVERLAYS",
+          "MOBILE_FEED",
+          "MIDDLE_BANNER",
+          "CAROUSEL"
+        ]
       },
       "DeleteInAppTemplateResponse": {
         "type": "object",
@@ -28043,7 +28171,12 @@
       },
       "InAppTemplateResponse": {
         "type": "object",
-        "required": ["LastModifiedDate", "CreationDate", "TemplateName", "TemplateType"],
+        "required": [
+          "LastModifiedDate",
+          "CreationDate",
+          "TemplateName",
+          "TemplateType"
+        ],
         "properties": {
           "Arn": {
             "allOf": [

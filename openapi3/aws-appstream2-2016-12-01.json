@@ -6,7 +6,7 @@
     "title": "Amazon AppStream",
     "description": "This is the Amazon AppStream 2.0 API Reference. This documentation provides descriptions and syntax for each of the actions and data types in AppStream 2.0. AppStream 2.0 is a fully managed, secure application streaming service that lets you stream desktop applications to users without rewriting applications. AppStream 2.0 manages the AWS resources that are required to host and run your applications, scales automatically, and provides access to your users on demand.   You can call the AppStream 2.0 API operations by using an interface VPC endpoint (interface endpoint). For more information, see Access AppStream 2.0 API Operations and CLI Commands Through an Interface VPC Endpoint in the Amazon AppStream 2.0 Administration Guide.  To learn more about AppStream 2.0, see the following resources:    Amazon AppStream 2.0 product page     Amazon AppStream 2.0 documentation",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-App-Stream_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-App-Stream_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2858,7 +2858,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["PhotonAdminProxyService.DescribeUsageReportSubscriptions"]
+              "enum": [
+                "PhotonAdminProxyService.DescribeUsageReportSubscriptions"
+              ]
             }
           }
         ],
@@ -5034,7 +5036,11 @@
       },
       "CopyImageRequest": {
         "type": "object",
-        "required": ["SourceImageName", "DestinationImageName", "DestinationRegion"],
+        "required": [
+          "SourceImageName",
+          "DestinationImageName",
+          "DestinationRegion"
+        ],
         "title": "CopyImageRequest",
         "properties": {
           "SourceImageName": {
@@ -8083,7 +8089,13 @@
       },
       "Fleet": {
         "type": "object",
-        "required": ["Arn", "Name", "InstanceType", "ComputeCapacityStatus", "State"],
+        "required": [
+          "Arn",
+          "Name",
+          "InstanceType",
+          "ComputeCapacityStatus",
+          "State"
+        ],
         "properties": {
           "Arn": {
             "allOf": [
@@ -8969,7 +8981,12 @@
       },
       "FleetAttribute": {
         "type": "string",
-        "enum": ["VPC_CONFIGURATION", "VPC_CONFIGURATION_SECURITY_GROUP_IDS", "DOMAIN_JOIN_INFO", "IAM_ROLE_ARN"],
+        "enum": [
+          "VPC_CONFIGURATION",
+          "VPC_CONFIGURATION_SECURITY_GROUP_IDS",
+          "DOMAIN_JOIN_INFO",
+          "IAM_ROLE_ARN"
+        ],
         "description": "The fleet attribute."
       },
       "FleetAttributes": {
@@ -9042,7 +9059,15 @@
       },
       "ImageState": {
         "type": "string",
-        "enum": ["PENDING", "AVAILABLE", "FAILED", "COPYING", "DELETING", "CREATING", "IMPORTING"]
+        "enum": [
+          "PENDING",
+          "AVAILABLE",
+          "FAILED",
+          "COPYING",
+          "DELETING",
+          "CREATING",
+          "IMPORTING"
+        ]
       },
       "PlatformType": {
         "type": "string",
@@ -9180,11 +9205,19 @@
       },
       "ImageStateChangeReasonCode": {
         "type": "string",
-        "enum": ["INTERNAL_ERROR", "IMAGE_BUILDER_NOT_AVAILABLE", "IMAGE_COPY_FAILURE"]
+        "enum": [
+          "INTERNAL_ERROR",
+          "IMAGE_BUILDER_NOT_AVAILABLE",
+          "IMAGE_COPY_FAILURE"
+        ]
       },
       "UsageReportExecutionErrorCode": {
         "type": "string",
-        "enum": ["RESOURCE_NOT_FOUND", "ACCESS_DENIED", "INTERNAL_SERVICE_ERROR"]
+        "enum": [
+          "RESOURCE_NOT_FOUND",
+          "ACCESS_DENIED",
+          "INTERNAL_SERVICE_ERROR"
+        ]
       },
       "LastReportGenerationExecutionError": {
         "type": "object",
@@ -9752,7 +9785,12 @@
       },
       "UserStackAssociationErrorCode": {
         "type": "string",
-        "enum": ["STACK_NOT_FOUND", "USER_NAME_NOT_FOUND", "DIRECTORY_NOT_FOUND", "INTERNAL_ERROR"]
+        "enum": [
+          "STACK_NOT_FOUND",
+          "USER_NAME_NOT_FOUND",
+          "DIRECTORY_NOT_FOUND",
+          "INTERNAL_ERROR"
+        ]
       },
       "UserStackAssociationError": {
         "type": "object",

@@ -6,7 +6,7 @@
     "title": "AWS Elastic Beanstalk",
     "description": "AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running on the Amazon Web Services cloud. For more information about this product, go to the AWS Elastic Beanstalk details page. The location of the latest AWS Elastic Beanstalk WSDL is https&#x3A;//elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl. To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that enable you to access the API, go to Tools for Amazon Web Services.  Endpoints  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to Regions and Endpoints in the Amazon Web Services Glossary.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Elastic-Beanstalk_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Elastic-Beanstalk_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4489,7 +4489,11 @@
       },
       "ComputeType": {
         "type": "string",
-        "enum": ["BUILD_GENERAL1_SMALL", "BUILD_GENERAL1_MEDIUM", "BUILD_GENERAL1_LARGE"]
+        "enum": [
+          "BUILD_GENERAL1_SMALL",
+          "BUILD_GENERAL1_MEDIUM",
+          "BUILD_GENERAL1_LARGE"
+        ]
       },
       "BoxedInt": {
         "type": "integer"
@@ -7653,7 +7657,11 @@
       },
       "CreatePlatformVersionRequest": {
         "type": "object",
-        "required": ["PlatformName", "PlatformVersion", "PlatformDefinitionBundle"],
+        "required": [
+          "PlatformName",
+          "PlatformVersion",
+          "PlatformDefinitionBundle"
+        ],
         "title": "CreatePlatformVersionRequest",
         "properties": {
           "PlatformName": {
@@ -9150,11 +9158,30 @@
       },
       "EnvironmentStatus": {
         "type": "string",
-        "enum": ["Launching", "Updating", "Ready", "Terminating", "Terminated", "Ready", "Terminating", "Terminated"]
+        "enum": [
+          "Launching",
+          "Updating",
+          "Ready",
+          "Terminating",
+          "Terminated",
+          "Ready",
+          "Terminating",
+          "Terminated"
+        ]
       },
       "EnvironmentHealthStatus": {
         "type": "string",
-        "enum": ["NoData", "Unknown", "Pending", "Ok", "Info", "Warning", "Degraded", "Severe", "Suspended"]
+        "enum": [
+          "NoData",
+          "Unknown",
+          "Pending",
+          "Ok",
+          "Info",
+          "Warning",
+          "Degraded",
+          "Severe",
+          "Suspended"
+        ]
       },
       "EnvironmentResourcesDescription": {
         "type": "object",

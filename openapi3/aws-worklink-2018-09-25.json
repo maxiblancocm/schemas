@@ -6,7 +6,7 @@
     "title": "Amazon WorkLink",
     "description": "Amazon WorkLink is a cloud-based service that provides secure access to internal websites and web apps from iOS and Android phones. In a single step, your users, such as employees, can access internal websites as efficiently as they access any other public website. They enter a URL in their web browser, or choose a link to an internal website in an email. Amazon WorkLink authenticates the user's access and securely renders authorized internal web content in a secure rendering service in the AWS cloud. Amazon WorkLink doesn't download or store any internal web content on mobile devices.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-WorkLink_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-WorkLink_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3518,7 +3518,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["FleetArn", "VpcId", "SubnetIds", "SecurityGroupIds"],
+                "required": [
+                  "FleetArn",
+                  "VpcId",
+                  "SubnetIds",
+                  "SecurityGroupIds"
+                ],
                 "properties": {
                   "FleetArn": {
                     "description": "The ARN of the fleet.",
@@ -4914,7 +4919,14 @@
       },
       "FleetStatus": {
         "type": "string",
-        "enum": ["CREATING", "ACTIVE", "DELETING", "DELETED", "FAILED_TO_CREATE", "FAILED_TO_DELETE"]
+        "enum": [
+          "CREATING",
+          "ACTIVE",
+          "DELETING",
+          "DELETED",
+          "FAILED_TO_CREATE",
+          "FAILED_TO_DELETE"
+        ]
       },
       "IdentityProviderType": {
         "type": "string",

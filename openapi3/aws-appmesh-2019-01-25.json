@@ -6,7 +6,7 @@
     "title": "AWS App Mesh",
     "description": "AWS App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and\n         control microservices. App Mesh standardizes how your microservices communicate, giving you\n         end-to-end visibility and helping to ensure high availability for your applications.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-App-Mesh_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-App-Mesh_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -7261,7 +7261,13 @@
       },
       "VirtualNodeData": {
         "type": "object",
-        "required": ["meshName", "metadata", "spec", "status", "virtualNodeName"],
+        "required": [
+          "meshName",
+          "metadata",
+          "spec",
+          "status",
+          "virtualNodeName"
+        ],
         "properties": {
           "meshName": {
             "allOf": [
@@ -7337,7 +7343,13 @@
       },
       "VirtualRouterData": {
         "type": "object",
-        "required": ["meshName", "metadata", "spec", "status", "virtualRouterName"],
+        "required": [
+          "meshName",
+          "metadata",
+          "spec",
+          "status",
+          "virtualRouterName"
+        ],
         "properties": {
           "meshName": {
             "allOf": [
@@ -7458,7 +7470,15 @@
       },
       "ResourceMetadata": {
         "type": "object",
-        "required": ["arn", "createdAt", "lastUpdatedAt", "meshOwner", "resourceOwner", "uid", "version"],
+        "required": [
+          "arn",
+          "createdAt",
+          "lastUpdatedAt",
+          "meshOwner",
+          "resourceOwner",
+          "uid",
+          "version"
+        ],
         "properties": {
           "arn": {
             "allOf": [
@@ -7727,7 +7747,13 @@
       },
       "HealthCheckPolicy": {
         "type": "object",
-        "required": ["healthyThreshold", "intervalMillis", "protocol", "timeoutMillis", "unhealthyThreshold"],
+        "required": [
+          "healthyThreshold",
+          "intervalMillis",
+          "protocol",
+          "timeoutMillis",
+          "unhealthyThreshold"
+        ],
         "properties": {
           "healthyThreshold": {
             "allOf": [
@@ -7997,7 +8023,13 @@
       },
       "VirtualServiceData": {
         "type": "object",
-        "required": ["meshName", "metadata", "spec", "status", "virtualServiceName"],
+        "required": [
+          "meshName",
+          "metadata",
+          "spec",
+          "status",
+          "virtualServiceName"
+        ],
         "properties": {
           "meshName": {
             "allOf": [
@@ -8124,7 +8156,13 @@
       },
       "VirtualGatewayData": {
         "type": "object",
-        "required": ["meshName", "metadata", "spec", "status", "virtualGatewayName"],
+        "required": [
+          "meshName",
+          "metadata",
+          "spec",
+          "status",
+          "virtualGatewayName"
+        ],
         "properties": {
           "meshName": {
             "allOf": [
@@ -8174,7 +8212,14 @@
       },
       "RouteData": {
         "type": "object",
-        "required": ["meshName", "metadata", "routeName", "spec", "status", "virtualRouterName"],
+        "required": [
+          "meshName",
+          "metadata",
+          "routeName",
+          "spec",
+          "status",
+          "virtualRouterName"
+        ],
         "properties": {
           "meshName": {
             "allOf": [
@@ -8241,7 +8286,13 @@
       },
       "VirtualGatewayHealthCheckPolicy": {
         "type": "object",
-        "required": ["healthyThreshold", "intervalMillis", "protocol", "timeoutMillis", "unhealthyThreshold"],
+        "required": [
+          "healthyThreshold",
+          "intervalMillis",
+          "protocol",
+          "timeoutMillis",
+          "unhealthyThreshold"
+        ],
         "properties": {
           "healthyThreshold": {
             "allOf": [
@@ -8877,7 +8928,17 @@
       },
       "HttpMethod": {
         "type": "string",
-        "enum": ["CONNECT", "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT", "TRACE"]
+        "enum": [
+          "CONNECT",
+          "DELETE",
+          "GET",
+          "HEAD",
+          "OPTIONS",
+          "PATCH",
+          "POST",
+          "PUT",
+          "TRACE"
+        ]
       },
       "VirtualGatewayClientPolicy": {
         "type": "object",
@@ -9015,7 +9076,15 @@
       },
       "MeshRef": {
         "type": "object",
-        "required": ["arn", "createdAt", "lastUpdatedAt", "meshName", "meshOwner", "resourceOwner", "version"],
+        "required": [
+          "arn",
+          "createdAt",
+          "lastUpdatedAt",
+          "meshName",
+          "meshOwner",
+          "resourceOwner",
+          "version"
+        ],
         "properties": {
           "arn": {
             "allOf": [
@@ -9280,7 +9349,14 @@
       },
       "GatewayRouteData": {
         "type": "object",
-        "required": ["gatewayRouteName", "meshName", "metadata", "spec", "status", "virtualGatewayName"],
+        "required": [
+          "gatewayRouteName",
+          "meshName",
+          "metadata",
+          "spec",
+          "status",
+          "virtualGatewayName"
+        ],
         "properties": {
           "gatewayRouteName": {
             "allOf": [
@@ -9529,7 +9605,13 @@
       },
       "GrpcRetryPolicyEvent": {
         "type": "string",
-        "enum": ["cancelled", "deadline-exceeded", "internal", "resource-exhausted", "unavailable"]
+        "enum": [
+          "cancelled",
+          "deadline-exceeded",
+          "internal",
+          "resource-exhausted",
+          "unavailable"
+        ]
       },
       "HeaderMatch": {
         "type": "string",
@@ -10924,7 +11006,12 @@
       },
       "OutlierDetection": {
         "type": "object",
-        "required": ["baseEjectionDuration", "interval", "maxEjectionPercent", "maxServerErrors"],
+        "required": [
+          "baseEjectionDuration",
+          "interval",
+          "maxEjectionPercent",
+          "maxServerErrors"
+        ],
         "properties": {
           "baseEjectionDuration": {
             "allOf": [

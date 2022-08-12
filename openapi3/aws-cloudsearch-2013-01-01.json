@@ -6,7 +6,7 @@
     "title": "Amazon CloudSearch",
     "description": "You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via HTTP GET or POST with a query parameter named Action. The endpoint for configuration service requests is region-specific: cloudsearch.region.amazonaws.com. For example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see Regions and Endpoints.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-CloudSearch_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-CloudSearch_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -5414,7 +5414,12 @@
       },
       "OptionState": {
         "type": "string",
-        "enum": ["RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"],
+        "enum": [
+          "RequiresIndexDocuments",
+          "Processing",
+          "Active",
+          "FailedToValidate"
+        ],
         "description": "<p>The state of processing a change to an option. One of:</p> <ul> <li>RequiresIndexDocuments: The option's latest value will not be deployed until <a>IndexDocuments</a> has been called and indexing is complete.</li> <li>Processing: The option's latest value is in the process of being activated.</li> <li>Active: The option's latest value is fully deployed. </li> <li>FailedToValidate: The option value is not compatible with the domain's data and cannot be used to index the data. You must either modify the option value or update or remove the incompatible documents.</li> </ul>"
       },
       "UpdateTimestamp": {

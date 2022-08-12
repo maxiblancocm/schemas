@@ -6,7 +6,7 @@
     "title": "Amazon Elastic Inference",
     "description": "Elastic Inference public APIs.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Elastic-Inference_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Elastic-Inference_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -196,7 +196,11 @@
                   "locationType": {
                     "description": " The location type that you want to describe accelerator type offerings for. It can assume the following values: region: will return the accelerator type offering at the regional level. availability-zone: will return the accelerator type offering at the availability zone level. availability-zone-id: will return the accelerator type offering at the availability zone level returning the availability zone id. ",
                     "type": "string",
-                    "enum": ["region", "availability-zone", "availability-zone-id"],
+                    "enum": [
+                      "region",
+                      "availability-zone",
+                      "availability-zone-id"
+                    ],
                     "minLength": 1,
                     "maxLength": 256
                   },

@@ -6,7 +6,7 @@
     "title": "AWS Cost Explorer Service",
     "description": "The Cost Explorer API enables you to programmatically query your cost and usage data. You can query for aggregated data such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily write operations for Amazon DynamoDB database tables in your production environment.  Service Endpoint The Cost Explorer API provides the following endpoint:    https&#x3A;//ce.us-east-1.amazonaws.com    For information about costs associated with the Cost Explorer API, see AWS Cost Management Pricing.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Cost-Explorer_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Cost-Explorer_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -965,7 +965,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSInsightsIndexService.GetReservationPurchaseRecommendation"]
+              "enum": [
+                "AWSInsightsIndexService.GetReservationPurchaseRecommendation"
+              ]
             }
           }
         ],
@@ -1335,7 +1337,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSInsightsIndexService.GetSavingsPlansPurchaseRecommendation"]
+              "enum": [
+                "AWSInsightsIndexService.GetSavingsPlansPurchaseRecommendation"
+              ]
             }
           }
         ],
@@ -1529,7 +1533,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSInsightsIndexService.GetSavingsPlansUtilizationDetails"]
+              "enum": [
+                "AWSInsightsIndexService.GetSavingsPlansUtilizationDetails"
+              ]
             }
           }
         ],
@@ -4183,7 +4189,12 @@
       },
       "GetSavingsPlansPurchaseRecommendationRequest": {
         "type": "object",
-        "required": ["SavingsPlansType", "TermInYears", "PaymentOption", "LookbackPeriodInDays"],
+        "required": [
+          "SavingsPlansType",
+          "TermInYears",
+          "PaymentOption",
+          "LookbackPeriodInDays"
+        ],
         "title": "GetSavingsPlansPurchaseRecommendationRequest",
         "properties": {
           "SavingsPlansType": {
@@ -4833,7 +4844,13 @@
       },
       "CostCategory": {
         "type": "object",
-        "required": ["CostCategoryArn", "EffectiveStart", "Name", "RuleVersion", "Rules"],
+        "required": [
+          "CostCategoryArn",
+          "EffectiveStart",
+          "Name",
+          "RuleVersion",
+          "Rules"
+        ],
         "properties": {
           "CostCategoryArn": {
             "allOf": [
@@ -9264,7 +9281,13 @@
       },
       "AnomalySubscription": {
         "type": "object",
-        "required": ["MonitorArnList", "Subscribers", "Threshold", "Frequency", "SubscriptionName"],
+        "required": [
+          "MonitorArnList",
+          "Subscribers",
+          "Threshold",
+          "Frequency",
+          "SubscriptionName"
+        ],
         "properties": {
           "SubscriptionArn": {
             "allOf": [
@@ -9384,7 +9407,14 @@
       },
       "NumericOperator": {
         "type": "string",
-        "enum": ["EQUAL", "GREATER_THAN_OR_EQUAL", "LESS_THAN_OR_EQUAL", "GREATER_THAN", "LESS_THAN", "BETWEEN"]
+        "enum": [
+          "EQUAL",
+          "GREATER_THAN_OR_EQUAL",
+          "LESS_THAN_OR_EQUAL",
+          "GREATER_THAN",
+          "LESS_THAN",
+          "BETWEEN"
+        ]
       },
       "RootCause": {
         "type": "object",

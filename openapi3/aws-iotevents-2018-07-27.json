@@ -7,7 +7,7 @@
     "description": "AWS IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when such events occur. You can use AWS IoT Events API operations to create, read, update, and delete inputs and detector models, and to list their versions.",
     "x-categories": ["iot"],
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-Events_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-Events_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -232,7 +232,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["detectorModelName", "detectorModelDefinition", "roleArn"],
+                "required": [
+                  "detectorModelName",
+                  "detectorModelDefinition",
+                  "roleArn"
+                ],
                 "properties": {
                   "detectorModelName": {
                     "description": "The name of the detector model.",
@@ -4667,7 +4671,13 @@
       },
       "InputConfiguration": {
         "type": "object",
-        "required": ["inputName", "inputArn", "creationTime", "lastUpdateTime", "status"],
+        "required": [
+          "inputName",
+          "inputArn",
+          "creationTime",
+          "lastUpdateTime",
+          "status"
+        ],
         "properties": {
           "inputName": {
             "allOf": [
@@ -4881,7 +4891,15 @@
       },
       "DetectorModelVersionStatus": {
         "type": "string",
-        "enum": ["ACTIVE", "ACTIVATING", "INACTIVE", "DEPRECATED", "DRAFT", "PAUSED", "FAILED"]
+        "enum": [
+          "ACTIVE",
+          "ACTIVATING",
+          "INACTIVE",
+          "DEPRECATED",
+          "DRAFT",
+          "PAUSED",
+          "FAILED"
+        ]
       },
       "DetectorModelSummary": {
         "type": "object",
@@ -6270,7 +6288,14 @@
       },
       "ComparisonOperator": {
         "type": "string",
-        "enum": ["GREATER", "GREATER_OR_EQUAL", "LESS", "LESS_OR_EQUAL", "EQUAL", "NOT_EQUAL"]
+        "enum": [
+          "GREATER",
+          "GREATER_OR_EQUAL",
+          "LESS",
+          "LESS_OR_EQUAL",
+          "EQUAL",
+          "NOT_EQUAL"
+        ]
       },
       "Severity": {
         "type": "integer",

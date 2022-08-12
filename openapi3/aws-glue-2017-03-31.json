@@ -6,7 +6,7 @@
     "title": "AWS Glue",
     "description": "Defines the public endpoint for the AWS Glue service.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Glue_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Glue_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -20607,7 +20607,12 @@
       },
       "DeleteColumnStatisticsForPartitionRequest": {
         "type": "object",
-        "required": ["DatabaseName", "TableName", "PartitionValues", "ColumnName"],
+        "required": [
+          "DatabaseName",
+          "TableName",
+          "PartitionValues",
+          "ColumnName"
+        ],
         "title": "DeleteColumnStatisticsForPartitionRequest",
         "properties": {
           "CatalogId": {
@@ -21324,7 +21329,12 @@
       },
       "GetColumnStatisticsForPartitionRequest": {
         "type": "object",
-        "required": ["DatabaseName", "TableName", "PartitionValues", "ColumnNames"],
+        "required": [
+          "DatabaseName",
+          "TableName",
+          "PartitionValues",
+          "ColumnNames"
+        ],
         "title": "GetColumnStatisticsForPartitionRequest",
         "properties": {
           "CatalogId": {
@@ -25455,7 +25465,12 @@
       },
       "UpdateColumnStatisticsForPartitionRequest": {
         "type": "object",
-        "required": ["DatabaseName", "TableName", "PartitionValues", "ColumnStatisticsList"],
+        "required": [
+          "DatabaseName",
+          "TableName",
+          "PartitionValues",
+          "ColumnStatisticsList"
+        ],
         "title": "UpdateColumnStatisticsForPartitionRequest",
         "properties": {
           "CatalogId": {
@@ -26097,7 +26112,12 @@
       },
       "UpdatePartitionRequest": {
         "type": "object",
-        "required": ["DatabaseName", "TableName", "PartitionValueList", "PartitionInput"],
+        "required": [
+          "DatabaseName",
+          "TableName",
+          "PartitionValueList",
+          "PartitionInput"
+        ],
         "title": "UpdatePartitionRequest",
         "properties": {
           "CatalogId": {
@@ -26878,7 +26898,15 @@
       },
       "TaskStatusType": {
         "type": "string",
-        "enum": ["STARTING", "RUNNING", "STOPPING", "STOPPED", "SUCCEEDED", "FAILED", "TIMEOUT"]
+        "enum": [
+          "STARTING",
+          "RUNNING",
+          "STOPPING",
+          "STOPPED",
+          "SUCCEEDED",
+          "FAILED",
+          "TIMEOUT"
+        ]
       },
       "CatalogEncryptionMode": {
         "type": "string",
@@ -27751,7 +27779,12 @@
       },
       "ColumnStatistics": {
         "type": "object",
-        "required": ["ColumnName", "ColumnType", "AnalyzedTime", "StatisticsData"],
+        "required": [
+          "ColumnName",
+          "ColumnType",
+          "AnalyzedTime",
+          "StatisticsData"
+        ],
         "properties": {
           "ColumnName": {
             "allOf": [
@@ -27798,7 +27831,15 @@
       },
       "ColumnStatisticsType": {
         "type": "string",
-        "enum": ["BOOLEAN", "DATE", "DECIMAL", "DOUBLE", "LONG", "STRING", "BINARY"]
+        "enum": [
+          "BOOLEAN",
+          "DATE",
+          "DECIMAL",
+          "DOUBLE",
+          "LONG",
+          "STRING",
+          "BINARY"
+        ]
       },
       "DateColumnStatisticsData": {
         "type": "object",
@@ -27990,7 +28031,12 @@
       },
       "StringColumnStatisticsData": {
         "type": "object",
-        "required": ["MaximumLength", "AverageLength", "NumberOfNulls", "NumberOfDistinctValues"],
+        "required": [
+          "MaximumLength",
+          "AverageLength",
+          "NumberOfNulls",
+          "NumberOfDistinctValues"
+        ],
         "properties": {
           "MaximumLength": {
             "allOf": [
@@ -28084,7 +28130,13 @@
       },
       "Comparator": {
         "type": "string",
-        "enum": ["EQUALS", "GREATER_THAN", "LESS_THAN", "GREATER_THAN_EQUALS", "LESS_THAN_EQUALS"]
+        "enum": [
+          "EQUALS",
+          "GREATER_THAN",
+          "LESS_THAN",
+          "GREATER_THAN_EQUALS",
+          "LESS_THAN_EQUALS"
+        ]
       },
       "LogicalOperator": {
         "type": "string",
@@ -28092,7 +28144,15 @@
       },
       "JobRunState": {
         "type": "string",
-        "enum": ["STARTING", "RUNNING", "STOPPING", "STOPPED", "SUCCEEDED", "FAILED", "TIMEOUT"]
+        "enum": [
+          "STARTING",
+          "RUNNING",
+          "STOPPING",
+          "STOPPED",
+          "SUCCEEDED",
+          "FAILED",
+          "TIMEOUT"
+        ]
       },
       "CrawlState": {
         "type": "string",
@@ -28217,7 +28277,15 @@
       },
       "ConnectionType": {
         "type": "string",
-        "enum": ["JDBC", "SFTP", "MONGODB", "KAFKA", "NETWORK", "MARKETPLACE", "CUSTOM"]
+        "enum": [
+          "JDBC",
+          "SFTP",
+          "MONGODB",
+          "KAFKA",
+          "NETWORK",
+          "MARKETPLACE",
+          "CUSTOM"
+        ]
       },
       "MatchCriteria": {
         "type": "array",
@@ -34267,7 +34335,13 @@
       },
       "TaskType": {
         "type": "string",
-        "enum": ["EVALUATION", "LABELING_SET_GENERATION", "IMPORT_LABELS", "EXPORT_LABELS", "FIND_MATCHES"]
+        "enum": [
+          "EVALUATION",
+          "LABELING_SET_GENERATION",
+          "IMPORT_LABELS",
+          "EXPORT_LABELS",
+          "FIND_MATCHES"
+        ]
       },
       "TaskRunSortColumnType": {
         "type": "string",
@@ -35950,7 +36024,12 @@
       },
       "GetSchemaVersionsDiffInput": {
         "type": "object",
-        "required": ["SchemaId", "FirstSchemaVersionNumber", "SecondSchemaVersionNumber", "SchemaDiffType"],
+        "required": [
+          "SchemaId",
+          "FirstSchemaVersionNumber",
+          "SecondSchemaVersionNumber",
+          "SchemaDiffType"
+        ],
         "title": "GetSchemaVersionsDiffInput",
         "properties": {
           "SchemaId": {
@@ -36798,7 +36877,16 @@
       },
       "Compatibility": {
         "type": "string",
-        "enum": ["NONE", "DISABLED", "BACKWARD", "BACKWARD_ALL", "FORWARD", "FORWARD_ALL", "FULL", "FULL_ALL"]
+        "enum": [
+          "NONE",
+          "DISABLED",
+          "BACKWARD",
+          "BACKWARD_ALL",
+          "FORWARD",
+          "FORWARD_ALL",
+          "FULL",
+          "FULL_ALL"
+        ]
       },
       "LineageConfiguration": {
         "type": "object",

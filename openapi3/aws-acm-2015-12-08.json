@@ -6,7 +6,7 @@
     "title": "AWS Certificate Manager",
     "description": "Welcome to the AWS Certificate Manager (ACM) API documentation. You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information about using ACM, see the  AWS Certificate Manager User Guide .",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Certificate-Manager_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Certificate-Manager_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2333,7 +2333,15 @@
       },
       "CertificateStatus": {
         "type": "string",
-        "enum": ["PENDING_VALIDATION", "ISSUED", "INACTIVE", "EXPIRED", "VALIDATION_TIMED_OUT", "REVOKED", "FAILED"]
+        "enum": [
+          "PENDING_VALIDATION",
+          "ISSUED",
+          "INACTIVE",
+          "EXPIRED",
+          "VALIDATION_TIMED_OUT",
+          "REVOKED",
+          "FAILED"
+        ]
       },
       "RevocationReason": {
         "type": "string",
@@ -2352,7 +2360,15 @@
       },
       "KeyAlgorithm": {
         "type": "string",
-        "enum": ["RSA_2048", "RSA_1024", "RSA_4096", "EC_prime256v1", "EC_secp384r1", "EC_secp521r1", "EC_secp521r1"]
+        "enum": [
+          "RSA_2048",
+          "RSA_1024",
+          "RSA_4096",
+          "EC_prime256v1",
+          "EC_secp384r1",
+          "EC_secp521r1",
+          "EC_secp521r1"
+        ]
       },
       "InUseList": {
         "type": "array",
@@ -3097,7 +3113,12 @@
       },
       "RenewalStatus": {
         "type": "string",
-        "enum": ["PENDING_AUTO_RENEWAL", "PENDING_VALIDATION", "SUCCESS", "FAILED"]
+        "enum": [
+          "PENDING_AUTO_RENEWAL",
+          "PENDING_VALIDATION",
+          "SUCCESS",
+          "FAILED"
+        ]
       },
       "TagKey": {
         "type": "string",

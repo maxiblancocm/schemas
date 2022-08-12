@@ -6,7 +6,7 @@
     "title": "Amazon API Gateway",
     "description": "Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or other publicly addressable web services that are hosted outside of AWS.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-API-Gateway_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-API-Gateway_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -995,7 +995,16 @@
                   "cacheClusterSize": {
                     "description": "Returns the size of the <b>CacheCluster</b>.",
                     "type": "string",
-                    "enum": ["0.5", "1.6", "6.1", "13.5", "28.4", "58.2", "118", "237"]
+                    "enum": [
+                      "0.5",
+                      "1.6",
+                      "6.1",
+                      "13.5",
+                      "28.4",
+                      "58.2",
+                      "118",
+                      "237"
+                    ]
                   },
                   "variables": {
                     "description": "A map that defines the stage variables for the <a>Stage</a> resource that is associated with the new deployment. Variable names can have alphanumeric and underscore characters, and the values must match <code>[A-Za-z0-9-._~:/?#&amp;=,]+</code>.",
@@ -3085,7 +3094,16 @@
                   "cacheClusterSize": {
                     "description": "Returns the size of the <b>CacheCluster</b>.",
                     "type": "string",
-                    "enum": ["0.5", "1.6", "6.1", "13.5", "28.4", "58.2", "118", "237"]
+                    "enum": [
+                      "0.5",
+                      "1.6",
+                      "6.1",
+                      "13.5",
+                      "28.4",
+                      "58.2",
+                      "118",
+                      "237"
+                    ]
                   },
                   "variables": {
                     "description": "A map that defines the stage variables for the new <a>Stage</a> resource. Variable names can have alphanumeric and underscore characters, and the values must match <code>[A-Za-z0-9-._~:/?#&amp;=,]+</code>.",
@@ -16677,7 +16695,13 @@
       },
       "CacheClusterStatus": {
         "type": "string",
-        "enum": ["CREATE_IN_PROGRESS", "AVAILABLE", "DELETE_IN_PROGRESS", "NOT_AVAILABLE", "FLUSH_IN_PROGRESS"],
+        "enum": [
+          "CREATE_IN_PROGRESS",
+          "AVAILABLE",
+          "DELETE_IN_PROGRESS",
+          "NOT_AVAILABLE",
+          "FLUSH_IN_PROGRESS"
+        ],
         "description": "Returns the status of the <b>CacheCluster</b>."
       },
       "CanarySettings": {
@@ -16926,7 +16950,13 @@
       },
       "DomainNameStatus": {
         "type": "string",
-        "enum": ["AVAILABLE", "UPDATING", "PENDING", "PENDING_CERTIFICATE_REIMPORT", "PENDING_OWNERSHIP_VERIFICATION"]
+        "enum": [
+          "AVAILABLE",
+          "UPDATING",
+          "PENDING",
+          "PENDING_CERTIFICATE_REIMPORT",
+          "PENDING_OWNERSHIP_VERIFICATION"
+        ]
       },
       "ListOfDomainName": {
         "type": "array",
@@ -17278,7 +17308,11 @@
       },
       "UnauthorizedCacheControlHeaderStrategy": {
         "type": "string",
-        "enum": ["FAIL_WITH_403", "SUCCEED_WITH_RESPONSE_HEADER", "SUCCEED_WITHOUT_RESPONSE_HEADER"]
+        "enum": [
+          "FAIL_WITH_403",
+          "SUCCEED_WITH_RESPONSE_HEADER",
+          "SUCCEED_WITHOUT_RESPONSE_HEADER"
+        ]
       },
       "Op": {
         "type": "string",

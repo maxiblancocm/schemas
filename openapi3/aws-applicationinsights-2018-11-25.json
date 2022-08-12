@@ -6,7 +6,7 @@
     "title": "Amazon CloudWatch Application Insights",
     "description": "Amazon CloudWatch Application Insights for .NET and SQL Server is a service that helps you detect common problems with your .NET and SQL Server-based applications. It enables you to pinpoint the source of issues in your applications (built with technologies such as Microsoft IIS, .NET, and Microsoft SQL Server), by providing key insights into detected problems. After you onboard your application, CloudWatch Application Insights for .NET and SQL Server identifies, recommends, and sets up metrics and logs. It continuously analyzes and correlates your metrics and logs for unusual behavior to surface actionable problems with your application. For example, if your application is slow and unresponsive and leading to HTTP 500 errors in your Application Load Balancer (ALB), Application Insights informs you that a memory pressure problem with your SQL Server database is occurring. It bases this analysis on impactful metrics and log errors.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-CloudWatch_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-CloudWatch_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1108,7 +1108,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["EC2WindowsBarleyService.DescribeComponentConfigurationRecommendation"]
+              "enum": [
+                "EC2WindowsBarleyService.DescribeComponentConfigurationRecommendation"
+              ]
             }
           }
         ],
@@ -3039,7 +3041,13 @@
       },
       "CreateLogPatternRequest": {
         "type": "object",
-        "required": ["ResourceGroupName", "PatternSetName", "PatternName", "Pattern", "Rank"],
+        "required": [
+          "ResourceGroupName",
+          "PatternSetName",
+          "PatternName",
+          "Pattern",
+          "Rank"
+        ],
         "title": "CreateLogPatternRequest",
         "properties": {
           "ResourceGroupName": {
@@ -4598,7 +4606,12 @@
       },
       "ConfigurationEventResourceType": {
         "type": "string",
-        "enum": ["CLOUDWATCH_ALARM", "CLOUDFORMATION", "SSM_ASSOCIATION", "SSM_ASSOCIATION"]
+        "enum": [
+          "CLOUDWATCH_ALARM",
+          "CLOUDFORMATION",
+          "SSM_ASSOCIATION",
+          "SSM_ASSOCIATION"
+        ]
       },
       "ConfigurationEventTime": {
         "type": "string",

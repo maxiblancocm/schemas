@@ -7,7 +7,7 @@
     "description": "Amazon Personalize can consume real-time user event data, such as stream or click data, and use it for model training either alone or combined with historical data. For more information see recording-events.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Personalize_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Personalize_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {

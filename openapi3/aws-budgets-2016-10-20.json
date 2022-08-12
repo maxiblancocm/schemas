@@ -6,7 +6,7 @@
     "title": "AWS Budgets",
     "description": "The AWS Budgets API enables you to use AWS Budgets to plan your service usage, service costs, and instance reservations. The API reference provides descriptions, syntax, and usage examples for each of the actions and data types for AWS Budgets.  Budgets provide you with a way to see the following information:   How close your plan is to your budgeted amount or to the free tier limits   Your usage-to-date, including how much you've used of your Reserved Instances (RIs)   Your current estimated charges from AWS, and how much your predicted usage will accrue in charges by the end of the month   How much of your budget has been used   AWS updates your budget status several times a day. Budgets track your unblended costs, subscriptions, refunds, and RIs. You can create the following types of budgets:    Cost budgets - Plan how much you want to spend on a service.    Usage budgets - Plan how much you want to use one or more services.    RI utilization budgets - Define a utilization threshold, and receive alerts when your RI usage falls below that threshold. This lets you see if your RIs are unused or under-utilized.    RI coverage budgets - Define a coverage threshold, and receive alerts when the number of your instance hours that are covered by RIs fall below that threshold. This lets you see how much of your instance usage is covered by a reservation.   Service Endpoint The AWS Budgets API provides the following endpoint:   https&#x3A;//budgets.amazonaws.com   For information about costs that are associated with the AWS Budgets API, see AWS Cost Management Pricing.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Budgets_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Budgets_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -937,7 +937,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSBudgetServiceGateway.DescribeBudgetPerformanceHistory"]
+              "enum": [
+                "AWSBudgetServiceGateway.DescribeBudgetPerformanceHistory"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -956,7 +958,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSBudgetServiceGateway.DescribeBudgetPerformanceHistory"]
+              "enum": [
+                "AWSBudgetServiceGateway.DescribeBudgetPerformanceHistory"
+              ]
             }
           }
         ],
@@ -1363,7 +1367,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSBudgetServiceGateway.DescribeSubscribersForNotification"]
+              "enum": [
+                "AWSBudgetServiceGateway.DescribeSubscribersForNotification"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -1382,7 +1388,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSBudgetServiceGateway.DescribeSubscribersForNotification"]
+              "enum": [
+                "AWSBudgetServiceGateway.DescribeSubscribersForNotification"
+              ]
             }
           }
         ],
@@ -2302,7 +2310,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSBudgetServiceGateway.DescribeBudgetActionsForAccount"]
+              "enum": [
+                "AWSBudgetServiceGateway.DescribeBudgetActionsForAccount"
+              ]
             }
           }
         ],
@@ -3405,7 +3415,12 @@
       },
       "UpdateNotificationRequest": {
         "type": "object",
-        "required": ["AccountId", "BudgetName", "OldNotification", "NewNotification"],
+        "required": [
+          "AccountId",
+          "BudgetName",
+          "OldNotification",
+          "NewNotification"
+        ],
         "title": "UpdateNotificationRequest",
         "properties": {
           "AccountId": {
@@ -3458,7 +3473,13 @@
       },
       "UpdateSubscriberRequest": {
         "type": "object",
-        "required": ["AccountId", "BudgetName", "Notification", "OldSubscriber", "NewSubscriber"],
+        "required": [
+          "AccountId",
+          "BudgetName",
+          "Notification",
+          "OldSubscriber",
+          "NewSubscriber"
+        ],
         "title": "UpdateSubscriberRequest",
         "properties": {
           "AccountId": {
@@ -4800,7 +4821,12 @@
       },
       "ActionHistory": {
         "type": "object",
-        "required": ["Timestamp", "Status", "EventType", "ActionHistoryDetails"],
+        "required": [
+          "Timestamp",
+          "Status",
+          "EventType",
+          "ActionHistoryDetails"
+        ],
         "properties": {
           "Timestamp": {
             "$ref": "#/components/schemas/GenericTimestamp"
@@ -4848,7 +4874,13 @@
       },
       "EventType": {
         "type": "string",
-        "enum": ["SYSTEM", "CREATE_ACTION", "DELETE_ACTION", "UPDATE_ACTION", "EXECUTE_ACTION"]
+        "enum": [
+          "SYSTEM",
+          "CREATE_ACTION",
+          "DELETE_ACTION",
+          "UPDATE_ACTION",
+          "EXECUTE_ACTION"
+        ]
       },
       "ActionHistoryDetails": {
         "type": "object",
@@ -4995,7 +5027,12 @@
       },
       "ExecutionType": {
         "type": "string",
-        "enum": ["APPROVE_BUDGET_ACTION", "RETRY_BUDGET_ACTION", "REVERSE_BUDGET_ACTION", "RESET_BUDGET_ACTION"]
+        "enum": [
+          "APPROVE_BUDGET_ACTION",
+          "RETRY_BUDGET_ACTION",
+          "REVERSE_BUDGET_ACTION",
+          "RESET_BUDGET_ACTION"
+        ]
       },
       "Group": {
         "type": "string",

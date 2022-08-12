@@ -6,7 +6,7 @@
     "title": "Amazon WorkDocs",
     "description": "The WorkDocs API is designed for the following use cases:   File Migration: File migration applications are supported for users who want to migrate their files from an on-premises or off-premises file system or service. Users can insert files into a user directory structure, as well as allow for basic metadata changes, such as modifications to the permissions of files.   Security: Support security applications are supported for users who have additional security needs, such as antivirus or data loss prevention. The API actions, along with AWS CloudTrail, allow these applications to detect when changes occur in Amazon WorkDocs. Then, the application can take the necessary actions and replace the target file. If the target file violates the policy, the application can also choose to email the user.   eDiscovery/Analytics: General administrative applications are supported, such as eDiscovery and analytics. These applications can choose to mimic or record the actions in an Amazon WorkDocs site, along with AWS CloudTrail, to replicate data for eDiscovery, backup, or analytical applications.   All Amazon WorkDocs API actions are Amazon authenticated and certificate-signed. They not only require the use of the AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission policies. By creating a role and allowing an IAM user to access the Amazon WorkDocs site, the IAM user gains full administrative visibility into the entire Amazon WorkDocs site (or as set in the IAM policy). This includes, but is not limited to, the ability to modify file permissions and upload any file to any user. This allows developers to perform the three use cases above, as well as give users the ability to grant access on a selective basis using the IAM model.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-WorkDocs_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-WorkDocs_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2612,7 +2612,13 @@
             "description": "The sorting criteria.",
             "schema": {
               "type": "string",
-              "enum": ["USER_NAME", "FULL_NAME", "STORAGE_LIMIT", "USER_STATUS", "STORAGE_USED"]
+              "enum": [
+                "USER_NAME",
+                "FULL_NAME",
+                "STORAGE_LIMIT",
+                "USER_STATUS",
+                "STORAGE_USED"
+              ]
             }
           },
           {
@@ -4356,7 +4362,13 @@
                   "Type": {
                     "description": "The type of the user.",
                     "type": "string",
-                    "enum": ["USER", "ADMIN", "POWERUSER", "MINIMALUSER", "WORKSPACESUSER"]
+                    "enum": [
+                      "USER",
+                      "ADMIN",
+                      "POWERUSER",
+                      "MINIMALUSER",
+                      "WORKSPACESUSER"
+                    ]
                   },
                   "StorageRule": {
                     "description": "Describes the storage for a user.",
@@ -4393,7 +4405,19 @@
                   "Locale": {
                     "description": "The locale of the user.",
                     "type": "string",
-                    "enum": ["en", "fr", "ko", "de", "es", "ja", "ru", "zh_CN", "zh_TW", "pt_BR", "default"]
+                    "enum": [
+                      "en",
+                      "fr",
+                      "ko",
+                      "de",
+                      "es",
+                      "ja",
+                      "ru",
+                      "zh_CN",
+                      "zh_TW",
+                      "pt_BR",
+                      "default"
+                    ]
                   },
                   "GrantPoweruserPrivileges": {
                     "description": "Boolean value to determine whether the user is granted Poweruser privileges.",
@@ -8159,7 +8183,19 @@
       },
       "LocaleType": {
         "type": "string",
-        "enum": ["en", "fr", "ko", "de", "es", "ja", "ru", "zh_CN", "zh_TW", "pt_BR", "default"]
+        "enum": [
+          "en",
+          "fr",
+          "ko",
+          "de",
+          "es",
+          "ja",
+          "ru",
+          "zh_CN",
+          "zh_TW",
+          "pt_BR",
+          "default"
+        ]
       },
       "UserMetadataList": {
         "type": "array",

@@ -6,7 +6,7 @@
     "title": "AWS License Manager",
     "description": "AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and on-premises servers.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-License-Manager_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-License-Manager_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -683,7 +683,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSLicenseManager.ListAssociationsForLicenseConfiguration"]
+              "enum": [
+                "AWSLicenseManager.ListAssociationsForLicenseConfiguration"
+              ]
             }
           }
         ],
@@ -796,7 +798,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSLicenseManager.ListFailuresForLicenseConfigurationOperations"]
+              "enum": [
+                "AWSLicenseManager.ListFailuresForLicenseConfigurationOperations"
+              ]
             }
           }
         ],
@@ -1883,7 +1887,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSLicenseManager.UpdateLicenseSpecificationsForResource"]
+              "enum": [
+                "AWSLicenseManager.UpdateLicenseSpecificationsForResource"
+              ]
             }
           }
         ],
@@ -7135,7 +7141,13 @@
       },
       "ResourceType": {
         "type": "string",
-        "enum": ["EC2_INSTANCE", "EC2_HOST", "EC2_AMI", "RDS", "SYSTEMS_MANAGER_MANAGED_INSTANCE"]
+        "enum": [
+          "EC2_INSTANCE",
+          "EC2_HOST",
+          "EC2_AMI",
+          "RDS",
+          "SYSTEMS_MANAGER_MANAGED_INSTANCE"
+        ]
       },
       "ConsumedLicenseSummary": {
         "type": "object",
@@ -8152,7 +8164,12 @@
       },
       "CheckoutBorrowLicenseRequest": {
         "type": "object",
-        "required": ["LicenseArn", "Entitlements", "DigitalSignatureMethod", "ClientToken"],
+        "required": [
+          "LicenseArn",
+          "Entitlements",
+          "DigitalSignatureMethod",
+          "ClientToken"
+        ],
         "title": "CheckoutBorrowLicenseRequest",
         "properties": {
           "LicenseArn": {
@@ -8298,7 +8315,13 @@
       },
       "CheckoutLicenseRequest": {
         "type": "object",
-        "required": ["ProductSKU", "CheckoutType", "KeyFingerprint", "Entitlements", "ClientToken"],
+        "required": [
+          "ProductSKU",
+          "CheckoutType",
+          "KeyFingerprint",
+          "Entitlements",
+          "ClientToken"
+        ],
         "title": "CheckoutLicenseRequest",
         "properties": {
           "ProductSKU": {
@@ -8410,7 +8433,14 @@
       },
       "CreateGrantRequest": {
         "type": "object",
-        "required": ["ClientToken", "GrantName", "LicenseArn", "Principals", "HomeRegion", "AllowedOperations"],
+        "required": [
+          "ClientToken",
+          "GrantName",
+          "LicenseArn",
+          "Principals",
+          "HomeRegion",
+          "AllowedOperations"
+        ],
         "title": "CreateGrantRequest",
         "properties": {
           "ClientToken": {
@@ -8760,7 +8790,13 @@
       },
       "CreateLicenseManagerReportGeneratorRequest": {
         "type": "object",
-        "required": ["ReportGeneratorName", "Type", "ReportContext", "ReportFrequency", "ClientToken"],
+        "required": [
+          "ReportGeneratorName",
+          "Type",
+          "ReportContext",
+          "ReportFrequency",
+          "ClientToken"
+        ],
         "title": "CreateLicenseManagerReportGeneratorRequest",
         "properties": {
           "ReportGeneratorName": {
@@ -10410,7 +10446,15 @@
       },
       "LicenseStatus": {
         "type": "string",
-        "enum": ["AVAILABLE", "PENDING_AVAILABLE", "DEACTIVATED", "SUSPENDED", "EXPIRED", "PENDING_DELETE", "DELETED"]
+        "enum": [
+          "AVAILABLE",
+          "PENDING_AVAILABLE",
+          "DEACTIVATED",
+          "SUSPENDED",
+          "EXPIRED",
+          "PENDING_DELETE",
+          "DELETED"
+        ]
       },
       "Integer": {
         "type": "integer"
@@ -11381,7 +11425,10 @@
       },
       "ReportType": {
         "type": "string",
-        "enum": ["LicenseConfigurationSummaryReport", "LicenseConfigurationUsageReport"]
+        "enum": [
+          "LicenseConfigurationSummaryReport",
+          "LicenseConfigurationUsageReport"
+        ]
       },
       "TokenData": {
         "type": "object",

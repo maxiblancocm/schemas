@@ -6,7 +6,7 @@
     "title": "Amazon Macie",
     "description": "Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS. Macie automates the discovery of sensitive data, such as PII and intellectual property, to provide you with insight into the data that your organization stores in AWS. Macie also provides an inventory of your Amazon S3 buckets, which it continually monitors for you. If Macie detects sensitive data or potential data access issues, it generates detailed findings for you to review and act upon as necessary.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Macie_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Macie_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -501,7 +501,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["clientToken", "jobType", "name", "s3JobDefinition"],
+                "required": [
+                  "clientToken",
+                  "jobType",
+                  "name",
+                  "s3JobDefinition"
+                ],
                 "properties": {
                   "clientToken": {
                     "description": "A unique, case-sensitive token that you provide to ensure the idempotency of the request.",
@@ -3251,7 +3256,14 @@
                   "jobStatus": {
                     "description": "The current status of a classification job. Possible values are:",
                     "type": "string",
-                    "enum": ["RUNNING", "PAUSED", "CANCELLED", "COMPLETE", "IDLE", "USER_PAUSED"]
+                    "enum": [
+                      "RUNNING",
+                      "PAUSED",
+                      "CANCELLED",
+                      "COMPLETE",
+                      "IDLE",
+                      "USER_PAUSED"
+                    ]
                   }
                 }
               }
@@ -8832,7 +8844,12 @@
       },
       "UsageStatisticsSortKey": {
         "type": "string",
-        "enum": ["accountId", "total", "serviceLimitValue", "freeTrialStartDate"],
+        "enum": [
+          "accountId",
+          "total",
+          "serviceLimitValue",
+          "freeTrialStartDate"
+        ],
         "description": "The field to use to sort the results of a query for account quotas and usage data. Valid values are:"
       },
       "GetUsageTotalsResponse": {
@@ -10667,7 +10684,15 @@
       },
       "DayOfWeek": {
         "type": "string",
-        "enum": ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
+        "enum": [
+          "SUNDAY",
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY",
+          "SATURDAY"
+        ]
       },
       "DefaultDetection": {
         "type": "object",
@@ -10720,7 +10745,14 @@
       },
       "JobStatus": {
         "type": "string",
-        "enum": ["RUNNING", "PAUSED", "CANCELLED", "COMPLETE", "IDLE", "USER_PAUSED"],
+        "enum": [
+          "RUNNING",
+          "PAUSED",
+          "CANCELLED",
+          "COMPLETE",
+          "IDLE",
+          "USER_PAUSED"
+        ],
         "description": "The current status of a classification job. Possible values are:"
       },
       "Statistics": {
@@ -11643,7 +11675,16 @@
       },
       "JobComparator": {
         "type": "string",
-        "enum": ["EQ", "GT", "GTE", "LT", "LTE", "NE", "CONTAINS", "STARTS_WITH"],
+        "enum": [
+          "EQ",
+          "GT",
+          "GTE",
+          "LT",
+          "LTE",
+          "NE",
+          "CONTAINS",
+          "STARTS_WITH"
+        ],
         "description": "The operator to use in a condition. Valid values are:"
       },
       "SimpleScopeTerm": {
@@ -12384,7 +12425,13 @@
       },
       "ScopeFilterKey": {
         "type": "string",
-        "enum": ["BUCKET_CREATION_DATE", "OBJECT_EXTENSION", "OBJECT_LAST_MODIFIED_DATE", "OBJECT_SIZE", "TAG"],
+        "enum": [
+          "BUCKET_CREATION_DATE",
+          "OBJECT_EXTENSION",
+          "OBJECT_LAST_MODIFIED_DATE",
+          "OBJECT_SIZE",
+          "TAG"
+        ],
         "description": "The property to use in a condition that determines which objects are analyzed by a classification job. Valid values are:"
       },
       "SensitiveDataItem": {
@@ -12425,7 +12472,12 @@
       },
       "SensitiveDataItemCategory": {
         "type": "string",
-        "enum": ["FINANCIAL_INFORMATION", "PERSONAL_INFORMATION", "CREDENTIALS", "CUSTOM_IDENTIFIER"],
+        "enum": [
+          "FINANCIAL_INFORMATION",
+          "PERSONAL_INFORMATION",
+          "CREDENTIALS",
+          "CUSTOM_IDENTIFIER"
+        ],
         "description": "The category of sensitive data that was detected and produced the finding. Possible values are:"
       },
       "Unit": {
@@ -12805,7 +12857,14 @@
       },
       "UserIdentityType": {
         "type": "string",
-        "enum": ["AssumedRole", "IAMUser", "FederatedUser", "Root", "AWSAccount", "AWSService"],
+        "enum": [
+          "AssumedRole",
+          "IAMUser",
+          "FederatedUser",
+          "Root",
+          "AWSAccount",
+          "AWSService"
+        ],
         "description": "The type of entity that performed the action on the affected resource. Possible values are:"
       },
       "Cell": {
@@ -13279,7 +13338,12 @@
       },
       "SearchResourcesSortAttributeName": {
         "type": "string",
-        "enum": ["ACCOUNT_ID", "RESOURCE_NAME", "S3_CLASSIFIABLE_OBJECT_COUNT", "S3_CLASSIFIABLE_SIZE_IN_BYTES"],
+        "enum": [
+          "ACCOUNT_ID",
+          "RESOURCE_NAME",
+          "S3_CLASSIFIABLE_OBJECT_COUNT",
+          "S3_CLASSIFIABLE_SIZE_IN_BYTES"
+        ],
         "description": "The property to sort the query results by. Valid values are:"
       },
       "AllowsUnencryptedObjectUploads": {
@@ -13770,7 +13834,12 @@
       },
       "SearchResourcesSimpleCriterionKey": {
         "type": "string",
-        "enum": ["ACCOUNT_ID", "S3_BUCKET_NAME", "S3_BUCKET_EFFECTIVE_PERMISSION", "S3_BUCKET_SHARED_ACCESS"],
+        "enum": [
+          "ACCOUNT_ID",
+          "S3_BUCKET_NAME",
+          "S3_BUCKET_EFFECTIVE_PERMISSION",
+          "S3_BUCKET_SHARED_ACCESS"
+        ],
         "description": "The property to use in a condition that filters the query results. Valid values are:"
       },
       "__listOfSearchResourcesTagCriterionPair": {
@@ -13807,7 +13876,12 @@
       },
       "SimpleCriterionKeyForJob": {
         "type": "string",
-        "enum": ["ACCOUNT_ID", "S3_BUCKET_NAME", "S3_BUCKET_EFFECTIVE_PERMISSION", "S3_BUCKET_SHARED_ACCESS"],
+        "enum": [
+          "ACCOUNT_ID",
+          "S3_BUCKET_NAME",
+          "S3_BUCKET_EFFECTIVE_PERMISSION",
+          "S3_BUCKET_SHARED_ACCESS"
+        ],
         "description": "The property to use in a condition that determines whether an S3 bucket is included or excluded from a classification job. Valid values are:"
       },
       "__listOfTagCriterionPairForJob": {

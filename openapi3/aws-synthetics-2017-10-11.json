@@ -6,7 +6,7 @@
     "title": "Amazon CloudWatch Synthetics",
     "description": "You can use Amazon CloudWatch Synthetics to continually monitor your services. You can create and manage canaries, which are modular, lightweight scripts that monitor your endpoints and APIs from the outside-in. You can set up your canaries to run 24 hours a day, once per minute. The canaries help you check the availability and latency of your web services and troubleshoot anomalies by investigating load time data, screenshots of the UI, logs, and metrics. The canaries seamlessly integrate with CloudWatch ServiceLens to help you trace the causes of impacted nodes in your applications. For more information, see Using ServiceLens to Monitor the Health of Your Applications in the Amazon CloudWatch User Guide. Before you create and manage canaries, be aware of the security considerations. For more information, see Security Considerations for Synthetics Canaries.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-CloudWatch_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-CloudWatch_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -181,7 +181,14 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["Name", "Code", "ArtifactS3Location", "ExecutionRoleArn", "Schedule", "RuntimeVersion"],
+                "required": [
+                  "Name",
+                  "Code",
+                  "ArtifactS3Location",
+                  "ExecutionRoleArn",
+                  "Schedule",
+                  "RuntimeVersion"
+                ],
                 "properties": {
                   "Name": {
                     "description": "<p>The name for this canary. Be sure to give it a descriptive name that distinguishes it from other canaries in your account.</p> <p>Do not include secrets or proprietary information in your canary names. The canary name makes up part of the canary ARN, and the ARN is included in outbound calls over the internet. For more information, see <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/servicelens_canaries_security.html\">Security Considerations for Synthetics Canaries</a>.</p>",
@@ -2616,7 +2623,17 @@
       },
       "CanaryState": {
         "type": "string",
-        "enum": ["CREATING", "READY", "STARTING", "RUNNING", "UPDATING", "STOPPING", "STOPPED", "ERROR", "DELETING"]
+        "enum": [
+          "CREATING",
+          "READY",
+          "STARTING",
+          "RUNNING",
+          "UPDATING",
+          "STOPPING",
+          "STOPPED",
+          "ERROR",
+          "DELETING"
+        ]
       },
       "CanaryStateReasonCode": {
         "type": "string",

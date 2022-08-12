@@ -6,7 +6,7 @@
     "title": "Amazon WorkSpaces",
     "description": "Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your users.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-WorkSpaces_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-WorkSpaces_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -6755,7 +6755,12 @@
       },
       "ImportWorkspaceImageRequest": {
         "type": "object",
-        "required": ["Ec2ImageId", "IngestionProcess", "ImageName", "ImageDescription"],
+        "required": [
+          "Ec2ImageId",
+          "IngestionProcess",
+          "ImageName",
+          "ImageDescription"
+        ],
         "title": "ImportWorkspaceImageRequest",
         "properties": {
           "Ec2ImageId": {
@@ -7893,7 +7898,15 @@
       },
       "Compute": {
         "type": "string",
-        "enum": ["VALUE", "STANDARD", "PERFORMANCE", "POWER", "GRAPHICS", "POWERPRO", "GRAPHICSPRO"]
+        "enum": [
+          "VALUE",
+          "STANDARD",
+          "PERFORMANCE",
+          "POWER",
+          "GRAPHICS",
+          "POWERPRO",
+          "GRAPHICSPRO"
+        ]
       },
       "ComputeType": {
         "type": "object",
@@ -8717,7 +8730,12 @@
       },
       "WorkspaceImageIngestionProcess": {
         "type": "string",
-        "enum": ["BYOL_REGULAR", "BYOL_GRAPHICS", "BYOL_GRAPHICSPRO", "BYOL_REGULAR_WSP"]
+        "enum": [
+          "BYOL_REGULAR",
+          "BYOL_GRAPHICS",
+          "BYOL_GRAPHICSPRO",
+          "BYOL_REGULAR_WSP"
+        ]
       },
       "IpRule": {
         "type": "string"
@@ -9569,7 +9587,13 @@
       },
       "WorkspaceDirectoryState": {
         "type": "string",
-        "enum": ["REGISTERING", "REGISTERED", "DEREGISTERING", "DEREGISTERED", "ERROR"]
+        "enum": [
+          "REGISTERING",
+          "REGISTERED",
+          "DEREGISTERING",
+          "DEREGISTERED",
+          "ERROR"
+        ]
       },
       "WorkspaceImageState": {
         "type": "string",
@@ -9744,7 +9768,13 @@
       },
       "CreateWorkspaceBundleRequest": {
         "type": "object",
-        "required": ["BundleName", "BundleDescription", "ImageId", "ComputeType", "UserStorage"],
+        "required": [
+          "BundleName",
+          "BundleDescription",
+          "ImageId",
+          "ComputeType",
+          "UserStorage"
+        ],
         "title": "CreateWorkspaceBundleRequest",
         "properties": {
           "BundleName": {

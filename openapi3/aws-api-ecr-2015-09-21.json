@@ -6,7 +6,7 @@
     "title": "Amazon EC2 Container Registry",
     "description": "Amazon Elastic Container Registry (Amazon ECR) is a managed container image registry service. Customers can use the familiar Docker CLI, or their preferred client, to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access repositories and images.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Elastic-Container-Registry_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Elastic-Container-Registry_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -201,7 +201,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability"
+              ]
             }
           }
         ],
@@ -540,7 +542,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.CompleteLayerUpload"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.CompleteLayerUpload"
+              ]
             }
           }
         ],
@@ -776,7 +780,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.DeleteLifecyclePolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.DeleteLifecyclePolicy"
+              ]
             }
           }
         ],
@@ -992,7 +998,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.DeleteRepositoryPolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.DeleteRepositoryPolicy"
+              ]
             }
           }
         ],
@@ -1123,7 +1131,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.DescribeImageScanFindings"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.DescribeImageScanFindings"
+              ]
             }
           }
         ],
@@ -1355,7 +1365,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.DescribeRepositories"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.DescribeRepositories"
+              ]
             }
           }
         ],
@@ -1438,7 +1450,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.GetAuthorizationToken"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.GetAuthorizationToken"
+              ]
             }
           }
         ],
@@ -1551,7 +1565,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.GetDownloadUrlForLayer"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.GetDownloadUrlForLayer"
+              ]
             }
           }
         ],
@@ -1654,7 +1670,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicy"
+              ]
             }
           }
         ],
@@ -1775,7 +1793,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicyPreview"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicyPreview"
+              ]
             }
           }
         ],
@@ -1878,7 +1898,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.GetRepositoryPolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.GetRepositoryPolicy"
+              ]
             }
           }
         ],
@@ -1981,7 +2003,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.InitiateLayerUpload"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.InitiateLayerUpload"
+              ]
             }
           }
         ],
@@ -2185,7 +2209,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.ListTagsForResource"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.ListTagsForResource"
+              ]
             }
           }
         ],
@@ -2441,7 +2467,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.PutImageScanningConfiguration"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.PutImageScanningConfiguration"
+              ]
             }
           }
         ],
@@ -2534,7 +2562,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.PutImageTagMutability"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.PutImageTagMutability"
+              ]
             }
           }
         ],
@@ -2627,7 +2657,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.PutLifecyclePolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.PutLifecyclePolicy"
+              ]
             }
           }
         ],
@@ -2720,7 +2752,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.SetRepositoryPolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.SetRepositoryPolicy"
+              ]
             }
           }
         ],
@@ -2956,7 +2990,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.StartLifecyclePolicyPreview"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.StartLifecyclePolicyPreview"
+              ]
             }
           }
         ],
@@ -3408,7 +3444,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.DeleteRegistryPolicy"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.DeleteRegistryPolicy"
+              ]
             }
           }
         ],
@@ -3770,7 +3808,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerRegistry_V20150921.PutReplicationConfiguration"]
+              "enum": [
+                "AmazonEC2ContainerRegistry_V20150921.PutReplicationConfiguration"
+              ]
             }
           }
         ],
@@ -5975,7 +6015,13 @@
       },
       "UploadLayerPartRequest": {
         "type": "object",
-        "required": ["repositoryName", "uploadId", "partFirstByte", "partLastByte", "layerPartBlob"],
+        "required": [
+          "repositoryName",
+          "uploadId",
+          "partFirstByte",
+          "partLastByte",
+          "layerPartBlob"
+        ],
         "title": "UploadLayerPartRequest",
         "properties": {
           "registryId": {
@@ -6537,7 +6583,14 @@
       },
       "FindingSeverity": {
         "type": "string",
-        "enum": ["INFORMATIONAL", "LOW", "MEDIUM", "HIGH", "CRITICAL", "UNDEFINED"]
+        "enum": [
+          "INFORMATIONAL",
+          "LOW",
+          "MEDIUM",
+          "HIGH",
+          "CRITICAL",
+          "UNDEFINED"
+        ]
       },
       "SeverityCount": {
         "type": "integer",

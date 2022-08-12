@@ -6,7 +6,7 @@
     "title": "AWS Amplify",
     "description": "Amplify enables developers to develop and deploy cloud-powered mobile and web apps. The Amplify Console provides a continuous delivery and hosting service for web applications. For more information, see the Amplify Console User Guide. The Amplify Framework is a comprehensive set of SDKs, libraries, tools, and documentation for client app development. For more information, see the Amplify Framework.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Amplify-Console_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Amplify-Console_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -866,7 +866,13 @@
                   "stage": {
                     "description": " Describes the current stage for the branch. ",
                     "type": "string",
-                    "enum": ["PRODUCTION", "BETA", "DEVELOPMENT", "EXPERIMENTAL", "PULL_REQUEST"]
+                    "enum": [
+                      "PRODUCTION",
+                      "BETA",
+                      "DEVELOPMENT",
+                      "EXPERIMENTAL",
+                      "PULL_REQUEST"
+                    ]
                   },
                   "framework": {
                     "description": " The framework for the branch. ",
@@ -2621,7 +2627,13 @@
                   "stage": {
                     "description": " Describes the current stage for the branch. ",
                     "type": "string",
-                    "enum": ["PRODUCTION", "BETA", "DEVELOPMENT", "EXPERIMENTAL", "PULL_REQUEST"]
+                    "enum": [
+                      "PRODUCTION",
+                      "BETA",
+                      "DEVELOPMENT",
+                      "EXPERIMENTAL",
+                      "PULL_REQUEST"
+                    ]
                   },
                   "enableNotification": {
                     "description": " Enables notifications for the branch. ",
@@ -4837,7 +4849,13 @@
       },
       "Stage": {
         "type": "string",
-        "enum": ["PRODUCTION", "BETA", "DEVELOPMENT", "EXPERIMENTAL", "PULL_REQUEST"]
+        "enum": [
+          "PRODUCTION",
+          "BETA",
+          "DEVELOPMENT",
+          "EXPERIMENTAL",
+          "PULL_REQUEST"
+        ]
       },
       "Framework": {
         "type": "string",
@@ -6141,7 +6159,12 @@
       },
       "BackendEnvironment": {
         "type": "object",
-        "required": ["backendEnvironmentArn", "environmentName", "createTime", "updateTime"],
+        "required": [
+          "backendEnvironmentArn",
+          "environmentName",
+          "createTime",
+          "updateTime"
+        ],
         "properties": {
           "backendEnvironmentArn": {
             "allOf": [
@@ -6701,7 +6724,15 @@
       },
       "Webhook": {
         "type": "object",
-        "required": ["webhookArn", "webhookId", "webhookUrl", "branchName", "description", "createTime", "updateTime"],
+        "required": [
+          "webhookArn",
+          "webhookId",
+          "webhookUrl",
+          "branchName",
+          "description",
+          "createTime",
+          "updateTime"
+        ],
         "properties": {
           "webhookArn": {
             "allOf": [
@@ -6801,7 +6832,16 @@
       },
       "JobSummary": {
         "type": "object",
-        "required": ["jobArn", "jobId", "commitId", "commitMessage", "commitTime", "startTime", "status", "jobType"],
+        "required": [
+          "jobArn",
+          "jobId",
+          "commitId",
+          "commitMessage",
+          "commitTime",
+          "startTime",
+          "status",
+          "jobType"
+        ],
         "properties": {
           "jobArn": {
             "allOf": [
@@ -6990,7 +7030,15 @@
       },
       "JobStatus": {
         "type": "string",
-        "enum": ["PENDING", "PROVISIONING", "RUNNING", "FAILED", "SUCCEED", "CANCELLING", "CANCELLED"]
+        "enum": [
+          "PENDING",
+          "PROVISIONING",
+          "RUNNING",
+          "FAILED",
+          "SUCCEED",
+          "CANCELLING",
+          "CANCELLED"
+        ]
       },
       "JobSummaries": {
         "type": "array",

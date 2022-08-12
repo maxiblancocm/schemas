@@ -6,7 +6,7 @@
     "title": "Amazon QuickSight",
     "description": "Amazon QuickSight is a fully managed, serverless business intelligence service for the AWS Cloud that makes it easy to extend data and insights to every user in your organization. This API reference contains documentation for a programming interface that you can use to manage Amazon QuickSight.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-QuickSight_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-QuickSight_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2584,7 +2584,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["DataSetId", "Name", "PhysicalTableMap", "ImportMode"],
+                "required": [
+                  "DataSetId",
+                  "Name",
+                  "PhysicalTableMap",
+                  "ImportMode"
+                ],
                 "properties": {
                   "DataSetId": {
                     "description": "An ID for the dataset that you want to create. This ID is unique per AWS Region for each AWS account.",
@@ -9201,7 +9206,13 @@
                   "Role": {
                     "description": "<p>The Amazon QuickSight role of the user. The role can be one of the following default security cohorts:</p> <ul> <li> <p> <code>READER</code>: A user who has read-only access to dashboards.</p> </li> <li> <p> <code>AUTHOR</code>: A user who can create data sources, datasets, analyses, and dashboards.</p> </li> <li> <p> <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.</p> </li> </ul> <p>The name of the QuickSight role is invisible to the user except for the console screens dealing with permissions.</p>",
                     "type": "string",
-                    "enum": ["ADMIN", "AUTHOR", "READER", "RESTRICTED_AUTHOR", "RESTRICTED_READER"]
+                    "enum": [
+                      "ADMIN",
+                      "AUTHOR",
+                      "READER",
+                      "RESTRICTED_AUTHOR",
+                      "RESTRICTED_READER"
+                    ]
                   },
                   "CustomPermissionsName": {
                     "description": "<p>(Enterprise edition only) The name of the custom permissions profile that you want to assign to this user. Customized permissions allows you to control a user's access by restricting access the following operations:</p> <ul> <li> <p>Create and update data sources</p> </li> <li> <p>Create and update datasets</p> </li> <li> <p>Create and update email reports</p> </li> <li> <p>Subscribe to email reports</p> </li> </ul> <p>A set of custom permissions includes any combination of these restrictions. Currently, you need to create the profile names for custom permission sets by using the QuickSight console. Then, you use the <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user. </p> <p>QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions typically granted by assigning QuickSight users to one of the default security cohorts in QuickSight (admin, author, reader).</p> <p>This feature is available only to QuickSight Enterprise edition subscriptions that use SAML 2.0-Based Federation for Single Sign-On (SSO).</p>",
@@ -14824,7 +14835,13 @@
                   "UserRole": {
                     "description": "<p>The Amazon QuickSight role for the user. The user role can be one of the following:</p> <ul> <li> <p> <code>READER</code>: A user who has read-only access to dashboards.</p> </li> <li> <p> <code>AUTHOR</code>: A user who can create data sources, datasets, analyses, and dashboards.</p> </li> <li> <p> <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.</p> </li> <li> <p> <code>RESTRICTED_READER</code>: This role isn't currently available for use.</p> </li> <li> <p> <code>RESTRICTED_AUTHOR</code>: This role isn't currently available for use.</p> </li> </ul>",
                     "type": "string",
-                    "enum": ["ADMIN", "AUTHOR", "READER", "RESTRICTED_AUTHOR", "RESTRICTED_READER"]
+                    "enum": [
+                      "ADMIN",
+                      "AUTHOR",
+                      "READER",
+                      "RESTRICTED_AUTHOR",
+                      "RESTRICTED_READER"
+                    ]
                   },
                   "IamArn": {
                     "description": "The ARN of the IAM user or role that you are registering with Amazon QuickSight. ",
@@ -16966,7 +16983,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["Namespace", "AuthorizedResourceArns", "ExperienceConfiguration"],
+                "required": [
+                  "Namespace",
+                  "AuthorizedResourceArns",
+                  "ExperienceConfiguration"
+                ],
                 "properties": {
                   "SessionLifetimeInMinutes": {
                     "description": "How many minutes the session is valid. The session lifetime must be in [15-600] minutes range.",
@@ -24307,7 +24328,15 @@
       },
       "GeoSpatialDataRole": {
         "type": "string",
-        "enum": ["COUNTRY", "STATE", "COUNTY", "CITY", "POSTCODE", "LONGITUDE", "LATITUDE"]
+        "enum": [
+          "COUNTRY",
+          "STATE",
+          "COUNTY",
+          "CITY",
+          "POSTCODE",
+          "LONGITUDE",
+          "LATITUDE"
+        ]
       },
       "ColumnTag": {
         "type": "object",
@@ -24839,7 +24868,14 @@
       },
       "IngestionStatus": {
         "type": "string",
-        "enum": ["INITIALIZED", "QUEUED", "RUNNING", "FAILED", "COMPLETED", "CANCELLED"]
+        "enum": [
+          "INITIALIZED",
+          "QUEUED",
+          "RUNNING",
+          "FAILED",
+          "COMPLETED",
+          "CANCELLED"
+        ]
       },
       "IdentityStore": {
         "type": "string",
@@ -24847,7 +24883,13 @@
       },
       "NamespaceStatus": {
         "type": "string",
-        "enum": ["CREATED", "CREATING", "DELETING", "RETRYABLE_FAILURE", "NON_RETRYABLE_FAILURE"]
+        "enum": [
+          "CREATED",
+          "CREATING",
+          "DELETING",
+          "RETRYABLE_FAILURE",
+          "NON_RETRYABLE_FAILURE"
+        ]
       },
       "VersionNumber": {
         "type": "integer",
@@ -26784,7 +26826,12 @@
       },
       "IngestionRequestType": {
         "type": "string",
-        "enum": ["INITIAL_INGESTION", "EDIT", "INCREMENTAL_REFRESH", "FULL_REFRESH"]
+        "enum": [
+          "INITIAL_INGESTION",
+          "EDIT",
+          "INCREMENTAL_REFRESH",
+          "FULL_REFRESH"
+        ]
       },
       "Ingestions": {
         "type": "array",
@@ -26794,7 +26841,15 @@
       },
       "InputColumnDataType": {
         "type": "string",
-        "enum": ["STRING", "INTEGER", "DECIMAL", "DATETIME", "BIT", "BOOLEAN", "JSON"]
+        "enum": [
+          "STRING",
+          "INTEGER",
+          "DECIMAL",
+          "DATETIME",
+          "BIT",
+          "BOOLEAN",
+          "JSON"
+        ]
       },
       "InputColumn": {
         "type": "object",
@@ -27320,7 +27375,13 @@
       },
       "UserRole": {
         "type": "string",
-        "enum": ["ADMIN", "AUTHOR", "READER", "RESTRICTED_AUTHOR", "RESTRICTED_READER"]
+        "enum": [
+          "ADMIN",
+          "AUTHOR",
+          "READER",
+          "RESTRICTED_AUTHOR",
+          "RESTRICTED_READER"
+        ]
       },
       "RoleName": {
         "type": "string",
@@ -27629,7 +27690,12 @@
       },
       "TemplateErrorType": {
         "type": "string",
-        "enum": ["SOURCE_NOT_FOUND", "DATA_SET_NOT_FOUND", "INTERNAL_FAILURE", "ACCESS_DENIED"]
+        "enum": [
+          "SOURCE_NOT_FOUND",
+          "DATA_SET_NOT_FOUND",
+          "INTERNAL_FAILURE",
+          "ACCESS_DENIED"
+        ]
       },
       "TemplateError": {
         "type": "object",

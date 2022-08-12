@@ -6,7 +6,7 @@
     "title": "Amazon Lightsail",
     "description": "Amazon Lightsail is the easiest way to get started with Amazon Web Services (AWS) for developers who need to build websites or web applications. It includes everything you need to launch your project quickly – instances (virtual private servers), managed databases, SSD-based block storage, static IP addresses, load balancers, content delivery network (CDN) distributions, DNS management of registered domains, and snapshots (backups) – for a low, predictable monthly price. You can manage your Lightsail resources using the Lightsail console, Lightsail API, AWS Command Line Interface (AWS CLI), or SDKs. For more information about Lightsail concepts and tasks, see the Lightsail Dev Guide. This API Reference provides detailed information about the actions, data types, parameters, and errors of the Lightsail service. For more information about the supported AWS Regions, endpoints, and service quotas for the Lightsail service, see Amazon Lightsail Endpoints and Quotas in the AWS General Reference.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Lightsail_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Lightsail_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3383,7 +3383,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Lightsail_20161128.CreateRelationalDatabaseFromSnapshot"]
+              "enum": [
+                "Lightsail_20161128.CreateRelationalDatabaseFromSnapshot"
+              ]
             }
           }
         ],
@@ -12513,7 +12515,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Lightsail_20161128.GetRelationalDatabaseMasterUserPassword"]
+              "enum": [
+                "Lightsail_20161128.GetRelationalDatabaseMasterUserPassword"
+              ]
             }
           }
         ],
@@ -20536,7 +20540,12 @@
       },
       "CreateDistributionRequest": {
         "type": "object",
-        "required": ["distributionName", "origin", "defaultCacheBehavior", "bundleId"],
+        "required": [
+          "distributionName",
+          "origin",
+          "defaultCacheBehavior",
+          "bundleId"
+        ],
         "title": "CreateDistributionRequest",
         "properties": {
           "distributionName": {
@@ -20774,7 +20783,12 @@
       },
       "CreateInstancesRequest": {
         "type": "object",
-        "required": ["instanceNames", "availabilityZone", "blueprintId", "bundleId"],
+        "required": [
+          "instanceNames",
+          "availabilityZone",
+          "blueprintId",
+          "bundleId"
+        ],
         "title": "CreateInstancesRequest",
         "properties": {
           "instanceNames": {
@@ -21223,7 +21237,11 @@
       },
       "CreateLoadBalancerTlsCertificateRequest": {
         "type": "object",
-        "required": ["loadBalancerName", "certificateName", "certificateDomainName"],
+        "required": [
+          "loadBalancerName",
+          "certificateName",
+          "certificateDomainName"
+        ],
         "title": "CreateLoadBalancerTlsCertificateRequest",
         "properties": {
           "loadBalancerName": {
@@ -21545,7 +21563,10 @@
       },
       "CreateRelationalDatabaseSnapshotRequest": {
         "type": "object",
-        "required": ["relationalDatabaseName", "relationalDatabaseSnapshotName"],
+        "required": [
+          "relationalDatabaseName",
+          "relationalDatabaseSnapshotName"
+        ],
         "title": "CreateRelationalDatabaseSnapshotRequest",
         "properties": {
           "relationalDatabaseName": {
@@ -23100,7 +23121,15 @@
       },
       "GetDistributionMetricDataRequest": {
         "type": "object",
-        "required": ["distributionName", "metricName", "startTime", "endTime", "period", "unit", "statistics"],
+        "required": [
+          "distributionName",
+          "metricName",
+          "startTime",
+          "endTime",
+          "period",
+          "unit",
+          "statistics"
+        ],
         "title": "GetDistributionMetricDataRequest",
         "properties": {
           "distributionName": {
@@ -23441,7 +23470,15 @@
       },
       "GetInstanceMetricDataRequest": {
         "type": "object",
-        "required": ["instanceName", "metricName", "period", "startTime", "endTime", "unit", "statistics"],
+        "required": [
+          "instanceName",
+          "metricName",
+          "period",
+          "startTime",
+          "endTime",
+          "unit",
+          "statistics"
+        ],
         "title": "GetInstanceMetricDataRequest",
         "properties": {
           "instanceName": {
@@ -23826,7 +23863,15 @@
       },
       "GetLoadBalancerMetricDataRequest": {
         "type": "object",
-        "required": ["loadBalancerName", "metricName", "period", "startTime", "endTime", "unit", "statistics"],
+        "required": [
+          "loadBalancerName",
+          "metricName",
+          "period",
+          "startTime",
+          "endTime",
+          "unit",
+          "statistics"
+        ],
         "title": "GetLoadBalancerMetricDataRequest",
         "properties": {
           "loadBalancerName": {
@@ -24540,7 +24585,15 @@
       },
       "GetRelationalDatabaseMetricDataRequest": {
         "type": "object",
-        "required": ["relationalDatabaseName", "metricName", "period", "startTime", "endTime", "unit", "statistics"],
+        "required": [
+          "relationalDatabaseName",
+          "metricName",
+          "period",
+          "startTime",
+          "endTime",
+          "unit",
+          "statistics"
+        ],
         "title": "GetRelationalDatabaseMetricDataRequest",
         "properties": {
           "relationalDatabaseName": {
@@ -27339,7 +27392,15 @@
       },
       "CertificateStatus": {
         "type": "string",
-        "enum": ["PENDING_VALIDATION", "ISSUED", "INACTIVE", "EXPIRED", "VALIDATION_TIMED_OUT", "REVOKED", "FAILED"]
+        "enum": [
+          "PENDING_VALIDATION",
+          "ISSUED",
+          "INACTIVE",
+          "EXPIRED",
+          "VALIDATION_TIMED_OUT",
+          "REVOKED",
+          "FAILED"
+        ]
       },
       "SerialNumber": {
         "type": "string"
@@ -31006,7 +31067,12 @@
       },
       "InstanceEntry": {
         "type": "object",
-        "required": ["sourceName", "instanceType", "portInfoSource", "availabilityZone"],
+        "required": [
+          "sourceName",
+          "instanceType",
+          "portInfoSource",
+          "availabilityZone"
+        ],
         "properties": {
           "sourceName": {
             "allOf": [
@@ -31079,7 +31145,14 @@
       },
       "InstanceHealthState": {
         "type": "string",
-        "enum": ["initial", "healthy", "unhealthy", "unused", "draining", "unavailable"]
+        "enum": [
+          "initial",
+          "healthy",
+          "unhealthy",
+          "unused",
+          "draining",
+          "unavailable"
+        ]
       },
       "InstanceHealthSummary": {
         "type": "object",
@@ -31391,7 +31464,13 @@
       },
       "LoadBalancerState": {
         "type": "string",
-        "enum": ["active", "provisioning", "active_impaired", "failed", "unknown"]
+        "enum": [
+          "active",
+          "provisioning",
+          "active_impaired",
+          "failed",
+          "unknown"
+        ]
       },
       "LoadBalancerProtocol": {
         "type": "string",
@@ -31417,7 +31496,11 @@
       },
       "LoadBalancerAttributeName": {
         "type": "string",
-        "enum": ["HealthCheckPath", "SessionStickinessEnabled", "SessionStickiness_LB_CookieDurationSeconds"]
+        "enum": [
+          "HealthCheckPath",
+          "SessionStickinessEnabled",
+          "SessionStickiness_LB_CookieDurationSeconds"
+        ]
       },
       "LoadBalancerTlsCertificateStatus": {
         "type": "string",
@@ -31839,7 +31922,12 @@
       },
       "LoadBalancerTlsCertificateRenewalStatus": {
         "type": "string",
-        "enum": ["PENDING_AUTO_RENEWAL", "PENDING_VALIDATION", "SUCCESS", "FAILED"]
+        "enum": [
+          "PENDING_AUTO_RENEWAL",
+          "PENDING_VALIDATION",
+          "SUCCESS",
+          "FAILED"
+        ]
       },
       "LoadBalancerTlsCertificateSummary": {
         "type": "object",
@@ -33025,7 +33113,14 @@
       },
       "GetContainerServiceMetricDataRequest": {
         "type": "object",
-        "required": ["serviceName", "metricName", "startTime", "endTime", "period", "statistics"],
+        "required": [
+          "serviceName",
+          "metricName",
+          "startTime",
+          "endTime",
+          "period",
+          "statistics"
+        ],
         "title": "GetContainerServiceMetricDataRequest",
         "properties": {
           "serviceName": {
@@ -33382,7 +33477,15 @@
       },
       "ContainerServiceState": {
         "type": "string",
-        "enum": ["PENDING", "READY", "RUNNING", "UPDATING", "DELETING", "DISABLED", "DEPLOYING"]
+        "enum": [
+          "PENDING",
+          "READY",
+          "RUNNING",
+          "UPDATING",
+          "DELETING",
+          "DISABLED",
+          "DEPLOYING"
+        ]
       },
       "ContainerServiceScale": {
         "type": "integer",
@@ -34282,7 +34385,15 @@
       },
       "GetBucketMetricDataRequest": {
         "type": "object",
-        "required": ["bucketName", "metricName", "startTime", "endTime", "period", "statistics", "unit"],
+        "required": [
+          "bucketName",
+          "metricName",
+          "startTime",
+          "endTime",
+          "period",
+          "statistics",
+          "unit"
+        ],
         "title": "GetBucketMetricDataRequest",
         "properties": {
           "bucketName": {

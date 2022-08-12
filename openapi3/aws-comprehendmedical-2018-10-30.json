@@ -7,7 +7,7 @@
     "description": "Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain insight in your documents.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Comprehend_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Comprehend_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -212,7 +212,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job"]
+              "enum": [
+                "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job"
+              ]
             }
           }
         ],
@@ -3122,7 +3124,12 @@
       },
       "StartEntitiesDetectionV2JobRequest": {
         "type": "object",
-        "required": ["InputDataConfig", "OutputDataConfig", "DataAccessRoleArn", "LanguageCode"],
+        "required": [
+          "InputDataConfig",
+          "OutputDataConfig",
+          "DataAccessRoleArn",
+          "LanguageCode"
+        ],
         "title": "StartEntitiesDetectionV2JobRequest",
         "properties": {
           "InputDataConfig": {
@@ -3214,7 +3221,12 @@
       },
       "StartICD10CMInferenceJobRequest": {
         "type": "object",
-        "required": ["InputDataConfig", "OutputDataConfig", "DataAccessRoleArn", "LanguageCode"],
+        "required": [
+          "InputDataConfig",
+          "OutputDataConfig",
+          "DataAccessRoleArn",
+          "LanguageCode"
+        ],
         "title": "StartICD10CMInferenceJobRequest",
         "properties": {
           "InputDataConfig": {
@@ -3306,7 +3318,12 @@
       },
       "StartPHIDetectionJobRequest": {
         "type": "object",
-        "required": ["InputDataConfig", "OutputDataConfig", "DataAccessRoleArn", "LanguageCode"],
+        "required": [
+          "InputDataConfig",
+          "OutputDataConfig",
+          "DataAccessRoleArn",
+          "LanguageCode"
+        ],
         "title": "StartPHIDetectionJobRequest",
         "properties": {
           "InputDataConfig": {
@@ -3398,7 +3415,12 @@
       },
       "StartRxNormInferenceJobRequest": {
         "type": "object",
-        "required": ["InputDataConfig", "OutputDataConfig", "DataAccessRoleArn", "LanguageCode"],
+        "required": [
+          "InputDataConfig",
+          "OutputDataConfig",
+          "DataAccessRoleArn",
+          "LanguageCode"
+        ],
         "title": "StartRxNormInferenceJobRequest",
         "properties": {
           "InputDataConfig": {
@@ -3829,7 +3851,15 @@
       },
       "JobStatus": {
         "type": "string",
-        "enum": ["SUBMITTED", "IN_PROGRESS", "COMPLETED", "PARTIAL_SUCCESS", "FAILED", "STOP_REQUESTED", "STOPPED"]
+        "enum": [
+          "SUBMITTED",
+          "IN_PROGRESS",
+          "COMPLETED",
+          "PARTIAL_SUCCESS",
+          "FAILED",
+          "STOP_REQUESTED",
+          "STOPPED"
+        ]
       },
       "Timestamp": {
         "type": "string",
@@ -4576,7 +4606,15 @@
       },
       "RxNormAttributeType": {
         "type": "string",
-        "enum": ["DOSAGE", "DURATION", "FORM", "FREQUENCY", "RATE", "ROUTE_OR_MODE", "STRENGTH"]
+        "enum": [
+          "DOSAGE",
+          "DURATION",
+          "FORM",
+          "FREQUENCY",
+          "RATE",
+          "ROUTE_OR_MODE",
+          "STRENGTH"
+        ]
       },
       "RxNormTraitList": {
         "type": "array",

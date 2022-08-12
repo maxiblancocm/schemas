@@ -6,7 +6,7 @@
     "title": "AWS Config",
     "description": "AWS Config provides a way to keep track of the configurations of all the AWS resources associated with your AWS account. You can use AWS Config to get the current and historical configurations of each AWS resource and also to get information about the relationship between the resources. An AWS resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by AWS Config, see Supported AWS Resources. You can access and manage AWS Config through the AWS Management Console, the AWS Command Line Interface (AWS CLI), the AWS Config API, or the AWS SDKs for AWS Config. This reference guide contains documentation for the AWS Config API and the AWS CLI commands that you can use to manage AWS Config. The AWS Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see Signature Version 4 Signing Process. For detailed information about AWS Config features and their associated actions or commands, as well as how to work with AWS Management Console, see What Is AWS Config in the AWS Config Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Config_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Config_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1545,7 +1545,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeAggregateComplianceByConfigRules"]
+              "enum": [
+                "StarlingDoveService.DescribeAggregateComplianceByConfigRules"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -1564,7 +1566,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeAggregateComplianceByConfigRules"]
+              "enum": [
+                "StarlingDoveService.DescribeAggregateComplianceByConfigRules"
+              ]
             }
           }
         ],
@@ -2189,7 +2193,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus"]
+              "enum": [
+                "StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -2208,7 +2214,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus"]
+              "enum": [
+                "StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus"
+              ]
             }
           }
         ],
@@ -2403,7 +2411,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeConfigurationRecorderStatus"]
+              "enum": [
+                "StarlingDoveService.DescribeConfigurationRecorderStatus"
+              ]
             }
           }
         ],
@@ -3091,7 +3101,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeOrganizationConfigRuleStatuses"]
+              "enum": [
+                "StarlingDoveService.DescribeOrganizationConfigRuleStatuses"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -3110,7 +3122,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeOrganizationConfigRuleStatuses"]
+              "enum": [
+                "StarlingDoveService.DescribeOrganizationConfigRuleStatuses"
+              ]
             }
           }
         ],
@@ -3335,7 +3349,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeOrganizationConformancePackStatuses"]
+              "enum": [
+                "StarlingDoveService.DescribeOrganizationConformancePackStatuses"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -3354,7 +3370,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeOrganizationConformancePackStatuses"]
+              "enum": [
+                "StarlingDoveService.DescribeOrganizationConformancePackStatuses"
+              ]
             }
           }
         ],
@@ -3457,7 +3475,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeOrganizationConformancePacks"]
+              "enum": [
+                "StarlingDoveService.DescribeOrganizationConformancePacks"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -3476,7 +3496,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeOrganizationConformancePacks"]
+              "enum": [
+                "StarlingDoveService.DescribeOrganizationConformancePacks"
+              ]
             }
           }
         ],
@@ -4069,7 +4091,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateComplianceDetailsByConfigRule"]
+              "enum": [
+                "StarlingDoveService.GetAggregateComplianceDetailsByConfigRule"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -4088,7 +4112,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateComplianceDetailsByConfigRule"]
+              "enum": [
+                "StarlingDoveService.GetAggregateComplianceDetailsByConfigRule"
+              ]
             }
           }
         ],
@@ -4191,7 +4217,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateConfigRuleComplianceSummary"]
+              "enum": [
+                "StarlingDoveService.GetAggregateConfigRuleComplianceSummary"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -4210,7 +4238,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateConfigRuleComplianceSummary"]
+              "enum": [
+                "StarlingDoveService.GetAggregateConfigRuleComplianceSummary"
+              ]
             }
           }
         ],
@@ -4313,7 +4343,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateDiscoveredResourceCounts"]
+              "enum": [
+                "StarlingDoveService.GetAggregateDiscoveredResourceCounts"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -4332,7 +4364,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateDiscoveredResourceCounts"]
+              "enum": [
+                "StarlingDoveService.GetAggregateDiscoveredResourceCounts"
+              ]
             }
           }
         ],
@@ -4869,7 +4903,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetConformancePackComplianceDetails"]
+              "enum": [
+                "StarlingDoveService.GetConformancePackComplianceDetails"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -4888,7 +4924,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetConformancePackComplianceDetails"]
+              "enum": [
+                "StarlingDoveService.GetConformancePackComplianceDetails"
+              ]
             }
           }
         ],
@@ -4981,7 +5019,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetConformancePackComplianceSummary"]
+              "enum": [
+                "StarlingDoveService.GetConformancePackComplianceSummary"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -5000,7 +5040,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetConformancePackComplianceSummary"]
+              "enum": [
+                "StarlingDoveService.GetConformancePackComplianceSummary"
+              ]
             }
           }
         ],
@@ -5215,7 +5257,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetOrganizationConfigRuleDetailedStatus"]
+              "enum": [
+                "StarlingDoveService.GetOrganizationConfigRuleDetailedStatus"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -5234,7 +5278,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetOrganizationConfigRuleDetailedStatus"]
+              "enum": [
+                "StarlingDoveService.GetOrganizationConfigRuleDetailedStatus"
+              ]
             }
           }
         ],
@@ -5337,7 +5383,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetOrganizationConformancePackDetailedStatus"]
+              "enum": [
+                "StarlingDoveService.GetOrganizationConformancePackDetailedStatus"
+              ]
             },
             "description": "Pagination limit"
           },
@@ -5356,7 +5404,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetOrganizationConformancePackDetailedStatus"]
+              "enum": [
+                "StarlingDoveService.GetOrganizationConformancePackDetailedStatus"
+              ]
             }
           }
         ],
@@ -8171,7 +8221,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.DescribeAggregateComplianceByConformancePacks"]
+              "enum": [
+                "StarlingDoveService.DescribeAggregateComplianceByConformancePacks"
+              ]
             }
           }
         ],
@@ -8292,7 +8344,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["StarlingDoveService.GetAggregateConformancePackComplianceSummary"]
+              "enum": [
+                "StarlingDoveService.GetAggregateConformancePackComplianceSummary"
+              ]
             }
           }
         ],
@@ -9810,7 +9864,10 @@
       },
       "DescribeConformancePackComplianceResponse": {
         "type": "object",
-        "required": ["ConformancePackName", "ConformancePackRuleComplianceList"],
+        "required": [
+          "ConformancePackName",
+          "ConformancePackRuleComplianceList"
+        ],
         "properties": {
           "ConformancePackName": {
             "allOf": [
@@ -10629,7 +10686,12 @@
       },
       "GetAggregateComplianceDetailsByConfigRuleRequest": {
         "type": "object",
-        "required": ["ConfigurationAggregatorName", "ConfigRuleName", "AccountId", "AwsRegion"],
+        "required": [
+          "ConfigurationAggregatorName",
+          "ConfigRuleName",
+          "AccountId",
+          "AwsRegion"
+        ],
         "title": "GetAggregateComplianceDetailsByConfigRuleRequest",
         "properties": {
           "ConfigurationAggregatorName": {
@@ -12427,7 +12489,12 @@
       },
       "PutResourceConfigRequest": {
         "type": "object",
-        "required": ["ResourceType", "SchemaVersionId", "ResourceId", "Configuration"],
+        "required": [
+          "ResourceType",
+          "SchemaVersionId",
+          "ResourceId",
+          "Configuration"
+        ],
         "title": "PutResourceConfigRequest",
         "properties": {
           "ResourceType": {
@@ -13109,7 +13176,12 @@
       },
       "ComplianceType": {
         "type": "string",
-        "enum": ["COMPLIANT", "NON_COMPLIANT", "NOT_APPLICABLE", "INSUFFICIENT_DATA"]
+        "enum": [
+          "COMPLIANT",
+          "NON_COMPLIANT",
+          "NOT_APPLICABLE",
+          "INSUFFICIENT_DATA"
+        ]
       },
       "Date": {
         "type": "string",
@@ -13320,7 +13392,12 @@
       },
       "AggregateResourceIdentifier": {
         "type": "object",
-        "required": ["SourceAccountId", "SourceRegion", "ResourceId", "ResourceType"],
+        "required": [
+          "SourceAccountId",
+          "SourceRegion",
+          "ResourceId",
+          "ResourceType"
+        ],
         "properties": {
           "SourceAccountId": {
             "allOf": [
@@ -13562,7 +13639,13 @@
       },
       "ConfigurationItemStatus": {
         "type": "string",
-        "enum": ["OK", "ResourceDiscovered", "ResourceNotRecorded", "ResourceDeleted", "ResourceDeletedNotRecorded"]
+        "enum": [
+          "OK",
+          "ResourceDiscovered",
+          "ResourceNotRecorded",
+          "ResourceDeleted",
+          "ResourceDeletedNotRecorded"
+        ]
       },
       "ConfigurationStateId": {
         "type": "string"
@@ -14095,7 +14178,13 @@
       },
       "MaximumExecutionFrequency": {
         "type": "string",
-        "enum": ["One_Hour", "Three_Hours", "Six_Hours", "Twelve_Hours", "TwentyFour_Hours"]
+        "enum": [
+          "One_Hour",
+          "Three_Hours",
+          "Six_Hours",
+          "Twelve_Hours",
+          "TwentyFour_Hours"
+        ]
       },
       "ConfigRuleState": {
         "type": "string",
@@ -15138,7 +15227,12 @@
       },
       "ConformancePackDetail": {
         "type": "object",
-        "required": ["ConformancePackName", "ConformancePackArn", "ConformancePackId", "DeliveryS3Bucket"],
+        "required": [
+          "ConformancePackName",
+          "ConformancePackArn",
+          "ConformancePackId",
+          "DeliveryS3Bucket"
+        ],
         "properties": {
           "ConformancePackName": {
             "allOf": [
@@ -15279,7 +15373,12 @@
       },
       "ConformancePackEvaluationResult": {
         "type": "object",
-        "required": ["ComplianceType", "EvaluationResultIdentifier", "ConfigRuleInvokedTime", "ResultRecordedTime"],
+        "required": [
+          "ComplianceType",
+          "EvaluationResultIdentifier",
+          "ConfigRuleInvokedTime",
+          "ResultRecordedTime"
+        ],
         "properties": {
           "ComplianceType": {
             "allOf": [
@@ -15434,7 +15533,13 @@
       },
       "ConformancePackState": {
         "type": "string",
-        "enum": ["CREATE_IN_PROGRESS", "CREATE_COMPLETE", "CREATE_FAILED", "DELETE_IN_PROGRESS", "DELETE_FAILED"]
+        "enum": [
+          "CREATE_IN_PROGRESS",
+          "CREATE_COMPLETE",
+          "CREATE_FAILED",
+          "DELETE_IN_PROGRESS",
+          "DELETE_FAILED"
+        ]
       },
       "StackArn": {
         "type": "string",
@@ -15851,7 +15956,12 @@
       },
       "Evaluation": {
         "type": "object",
-        "required": ["ComplianceResourceType", "ComplianceResourceId", "ComplianceType", "OrderingTimestamp"],
+        "required": [
+          "ComplianceResourceType",
+          "ComplianceResourceId",
+          "ComplianceType",
+          "OrderingTimestamp"
+        ],
         "properties": {
           "ComplianceResourceType": {
             "allOf": [
@@ -18496,7 +18606,12 @@
       },
       "ExternalEvaluation": {
         "type": "object",
-        "required": ["ComplianceResourceType", "ComplianceResourceId", "ComplianceType", "OrderingTimestamp"],
+        "required": [
+          "ComplianceResourceType",
+          "ComplianceResourceId",
+          "ComplianceType",
+          "OrderingTimestamp"
+        ],
         "properties": {
           "ComplianceResourceType": {
             "allOf": [

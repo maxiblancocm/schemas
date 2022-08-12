@@ -6,7 +6,7 @@
     "title": "Amazon CodeGuru Reviewer",
     "description": "This section provides documentation for the Amazon CodeGuru Reviewer API operations. CodeGuru Reviewer is a service that uses program analysis and machine learning to detect potential defects that are difficult for developers to find and recommends fixes in your Java code. By proactively detecting and providing recommendations for addressing code defects and implementing best practices, CodeGuru Reviewer improves the overall quality and maintainability of your code base during the code review stage. For more information about CodeGuru Reviewer, see the  Amazon CodeGuru Reviewer User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-CodeGuru_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-CodeGuru_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2183,7 +2183,13 @@
       },
       "ProviderType": {
         "type": "string",
-        "enum": ["CodeCommit", "GitHub", "Bitbucket", "GitHubEnterpriseServer", "S3Bucket"]
+        "enum": [
+          "CodeCommit",
+          "GitHub",
+          "Bitbucket",
+          "GitHubEnterpriseServer",
+          "S3Bucket"
+        ]
       },
       "JobState": {
         "type": "string",
@@ -2282,7 +2288,13 @@
       },
       "RepositoryAssociationState": {
         "type": "string",
-        "enum": ["Associated", "Associating", "Failed", "Disassociating", "Disassociated"]
+        "enum": [
+          "Associated",
+          "Associating",
+          "Failed",
+          "Disassociating",
+          "Disassociated"
+        ]
       },
       "Owner": {
         "type": "string",

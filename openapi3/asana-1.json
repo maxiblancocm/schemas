@@ -5,7 +5,7 @@
     "description": "Work anytime, anywhere with Asana. Keep remote and distributed teams, and your entire organization, focused on their goals, projects, and tasks with Asana.",
     "x-categories": ["project-management", "productivity"],
     "x-logo": {
-      "url": "/logos/asana.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/asana.svg"
     },
     "termsOfService": "https://asana.com/terms",
     "contact": {
@@ -532,7 +532,13 @@
         "required": false,
         "schema": {
           "type": "string",
-          "enum": ["user", "asana", "asana_support", "anonymous", "external_administrator"]
+          "enum": [
+            "user",
+            "asana",
+            "asana_support",
+            "anonymous",
+            "external_administrator"
+          ]
         }
       },
       "audit_log_actor_gid": {
@@ -1011,7 +1017,13 @@
               "format": {
                 "description": "The format of this custom field.",
                 "type": "string",
-                "enum": ["currency", "identifier", "percentage", "custom", "none"],
+                "enum": [
+                  "currency",
+                  "identifier",
+                  "percentage",
+                  "custom",
+                  "none"
+                ],
                 "example": "custom"
               },
               "currency_code": {
@@ -3245,7 +3257,12 @@
               "approval_status": {
                 "type": "string",
                 "description": "*Conditional* Reflects the approval status of this task. This field is kept in sync with `completed`, meaning `pending` translates to false while `approved`, `rejected`, and `changes_requested` translate to true. If you set completed to true, this field will be set to `approved`.",
-                "enum": ["pending", "approved", "rejected", "changes_requested"],
+                "enum": [
+                  "pending",
+                  "approved",
+                  "rejected",
+                  "changes_requested"
+                ],
                 "example": "pending"
               },
               "assignee_status": {
@@ -4248,7 +4265,13 @@
           "actor_type": {
             "description": "The type of actor.\nCan be one of `user`, `asana`, `asana_support`, `anonymous`, or `external_administrator`.",
             "type": "string",
-            "enum": ["user", "asana", "asana_support", "anonymous", "external_administrator"],
+            "enum": [
+              "user",
+              "asana",
+              "asana_support",
+              "anonymous",
+              "external_administrator"
+            ],
             "example": "user"
           },
           "gid": {
@@ -4275,13 +4298,26 @@
           "context_type": {
             "description": "The type of context.\nCan be one of `web`, `desktop`, `mobile`, `asana_support`, `asana`, `email`, or `api`.",
             "type": "string",
-            "enum": ["web", "desktop", "mobile", "asana_support", "asana", "email", "api"],
+            "enum": [
+              "web",
+              "desktop",
+              "mobile",
+              "asana_support",
+              "asana",
+              "email",
+              "api"
+            ],
             "example": "web"
           },
           "api_authentication_method": {
             "description": "The authentication method used in the context of an API request.\nOnly present if the `context_type` is `api`. Can be one of `cookie`, `oauth`, `personal_access_token`, or `service_account`.",
             "type": "string",
-            "enum": ["cookie", "oauth", "personal_access_token", "service_account"]
+            "enum": [
+              "cookie",
+              "oauth",
+              "personal_access_token",
+              "service_account"
+            ]
           },
           "client_ip_address": {
             "description": "The IP address of the client that initiated the event, if applicable.",
@@ -4503,7 +4539,12 @@
               "progress_source": {
                 "description": "This field defines how the progress value of a goal metric is being calculated. A goal's progress can be provided manually by the user, or calculated automatically from contributing subgoals or projects.",
                 "type": "string",
-                "enum": ["manual", "subgoal_progress", "project_task_completion", "project_milestone_completion"],
+                "enum": [
+                  "manual",
+                  "subgoal_progress",
+                  "project_task_completion",
+                  "project_milestone_completion"
+                ],
                 "example": "manual"
               }
             }
@@ -5026,7 +5067,11 @@
               "resource_subtype": {
                 "type": "string",
                 "description": "The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.\nThe `resource_subtype`s for `status` objects represent the type of their parent.",
-                "enum": ["project_status_update", "portfolio_status_update", "goal_status_update"],
+                "enum": [
+                  "project_status_update",
+                  "portfolio_status_update",
+                  "goal_status_update"
+                ],
                 "example": "project_status_update",
                 "readOnly": true
               }
@@ -12064,7 +12109,13 @@
           "description": "Filter to tasks with incomplete dependencies",
           "schema": {
             "type": "boolean",
-            "enum": ["due_date", "created_at", "completed_at", "likes", "modified_at"],
+            "enum": [
+              "due_date",
+              "created_at",
+              "completed_at",
+              "likes",
+              "modified_at"
+            ],
             "default": "modified_at"
           },
           "example": false
@@ -12103,7 +12154,13 @@
           "description": "One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at`",
           "schema": {
             "type": "string",
-            "enum": ["due_date", "created_at", "completed_at", "likes", "modified_at"],
+            "enum": [
+              "due_date",
+              "created_at",
+              "completed_at",
+              "likes",
+              "modified_at"
+            ],
             "default": "modified_at"
           },
           "example": "likes"
@@ -12763,7 +12820,15 @@
           "required": true,
           "schema": {
             "type": "string",
-            "enum": ["custom_field", "portfolio", "project", "tag", "task", "user", "user"],
+            "enum": [
+              "custom_field",
+              "portfolio",
+              "project",
+              "tag",
+              "task",
+              "user",
+              "user"
+            ],
             "default": "user"
           }
         },
@@ -12774,7 +12839,14 @@
           "required": false,
           "schema": {
             "type": "string",
-            "enum": ["custom_field", "portfolio", "project", "tag", "task", "user"],
+            "enum": [
+              "custom_field",
+              "portfolio",
+              "project",
+              "tag",
+              "task",
+              "user"
+            ],
             "default": "user"
           }
         },
@@ -13103,7 +13175,14 @@
           "description": "The resource type of favorites to be returned.",
           "schema": {
             "type": "string",
-            "enum": ["portfolio", "project", "tag", "task", "user", "project_template"],
+            "enum": [
+              "portfolio",
+              "project",
+              "tag",
+              "task",
+              "user",
+              "project_template"
+            ],
             "default": "project"
           }
         },

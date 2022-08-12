@@ -6,7 +6,7 @@
     "title": "AWS MediaConnect",
     "description": "API for AWS Elemental MediaConnect",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Elemental-MediaConnect_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Elemental-MediaConnect_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2197,7 +2197,16 @@
                   "protocol": {
                     "description": "The protocol to use for the output.",
                     "type": "string",
-                    "enum": ["zixi-push", "rtp-fec", "rtp", "zixi-pull", "rist", "st2110-jpegxs", "cdi", "srt-listener"]
+                    "enum": [
+                      "zixi-push",
+                      "rtp-fec",
+                      "rtp",
+                      "zixi-pull",
+                      "rist",
+                      "st2110-jpegxs",
+                      "cdi",
+                      "srt-listener"
+                    ]
                   },
                   "remoteId": {
                     "description": "The remote ID for the Zixi-pull stream.",
@@ -2618,7 +2627,16 @@
                   "protocol": {
                     "description": "The protocol that is used by the source.",
                     "type": "string",
-                    "enum": ["zixi-push", "rtp-fec", "rtp", "zixi-pull", "rist", "st2110-jpegxs", "cdi", "srt-listener"]
+                    "enum": [
+                      "zixi-push",
+                      "rtp-fec",
+                      "rtp",
+                      "zixi-pull",
+                      "rist",
+                      "st2110-jpegxs",
+                      "cdi",
+                      "srt-listener"
+                    ]
                   },
                   "streamId": {
                     "description": "The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.",
@@ -5293,7 +5311,16 @@
       },
       "Protocol": {
         "type": "string",
-        "enum": ["zixi-push", "rtp-fec", "rtp", "zixi-pull", "rist", "st2110-jpegxs", "cdi", "srt-listener"]
+        "enum": [
+          "zixi-push",
+          "rtp-fec",
+          "rtp",
+          "zixi-pull",
+          "rist",
+          "st2110-jpegxs",
+          "cdi",
+          "srt-listener"
+        ]
       },
       "State": {
         "type": "string",
@@ -5891,7 +5918,15 @@
       },
       "Flow": {
         "type": "object",
-        "required": ["Status", "Entitlements", "Outputs", "AvailabilityZone", "FlowArn", "Source", "Name"],
+        "required": [
+          "Status",
+          "Entitlements",
+          "Outputs",
+          "AvailabilityZone",
+          "FlowArn",
+          "Source",
+          "Name"
+        ],
         "properties": {
           "AvailabilityZone": {
             "allOf": [
@@ -6064,7 +6099,15 @@
       },
       "Status": {
         "type": "string",
-        "enum": ["STANDBY", "ACTIVE", "UPDATING", "DELETING", "STARTING", "STOPPING", "ERROR"]
+        "enum": [
+          "STANDBY",
+          "ACTIVE",
+          "UPDATING",
+          "DELETING",
+          "STARTING",
+          "STOPPING",
+          "ERROR"
+        ]
       },
       "Messages": {
         "type": "object",
@@ -6427,7 +6470,14 @@
       },
       "ListedFlow": {
         "type": "object",
-        "required": ["Status", "Description", "SourceType", "AvailabilityZone", "FlowArn", "Name"],
+        "required": [
+          "Status",
+          "Description",
+          "SourceType",
+          "AvailabilityZone",
+          "FlowArn",
+          "Name"
+        ],
         "properties": {
           "AvailabilityZone": {
             "allOf": [
@@ -6812,7 +6862,14 @@
       },
       "VpcInterface": {
         "type": "object",
-        "required": ["NetworkInterfaceIds", "SubnetId", "SecurityGroupIds", "RoleArn", "Name", "Name"],
+        "required": [
+          "NetworkInterfaceIds",
+          "SubnetId",
+          "SecurityGroupIds",
+          "RoleArn",
+          "Name",
+          "Name"
+        ],
         "properties": {
           "Name": {
             "allOf": [
@@ -7851,7 +7908,15 @@
       },
       "Colorimetry": {
         "type": "string",
-        "enum": ["BT601", "BT709", "BT2020", "BT2100", "ST2065-1", "ST2065-3", "XYZ"]
+        "enum": [
+          "BT601",
+          "BT709",
+          "BT2020",
+          "BT2100",
+          "ST2065-1",
+          "ST2065-3",
+          "XYZ"
+        ]
       },
       "Interface": {
         "type": "object",
@@ -7875,7 +7940,12 @@
       },
       "DestinationConfiguration": {
         "type": "object",
-        "required": ["DestinationIp", "DestinationPort", "Interface", "OutboundIp"],
+        "required": [
+          "DestinationIp",
+          "DestinationPort",
+          "Interface",
+          "OutboundIp"
+        ],
         "properties": {
           "DestinationIp": {
             "allOf": [
@@ -8086,7 +8156,17 @@
       },
       "Tcs": {
         "type": "string",
-        "enum": ["SDR", "PQ", "HLG", "LINEAR", "BT2100LINPQ", "BT2100LINHLG", "ST2065-1", "ST428-1", "DENSITY"]
+        "enum": [
+          "SDR",
+          "PQ",
+          "HLG",
+          "LINEAR",
+          "BT2100LINPQ",
+          "BT2100LINHLG",
+          "ST2065-1",
+          "ST428-1",
+          "DENSITY"
+        ]
       },
       "Fmtp": {
         "type": "object",
@@ -8299,7 +8379,12 @@
       },
       "MediaStream": {
         "type": "object",
-        "required": ["MediaStreamType", "MediaStreamId", "MediaStreamName", "Fmt"],
+        "required": [
+          "MediaStreamType",
+          "MediaStreamId",
+          "MediaStreamName",
+          "Fmt"
+        ],
         "properties": {
           "Attributes": {
             "allOf": [

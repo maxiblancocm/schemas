@@ -6,7 +6,7 @@
     "title": "AWS IAM Access Analyzer",
     "description": "AWS IAM Access Analyzer helps identify potential resource-access risks by enabling you to identify any policies that grant access to an external principal. It does this by using logic-based reasoning to analyze resource-based policies in your AWS environment. An external principal can be another AWS account, a root user, an IAM user or role, a federated user, an AWS service, or an anonymous user. This guide describes the AWS IAM Access Analyzer operations that you can call programmatically. For general information about Access Analyzer, see the AWS IAM Access Analyzer section of the IAM User Guide. To start using Access Analyzer, you first need to create an analyzer.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Identity-and-Access-Management_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Identity-and-Access-Management_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -3390,7 +3390,18 @@
                   "locale": {
                     "description": "The locale to use for localizing the findings.",
                     "type": "string",
-                    "enum": ["DE", "EN", "ES", "FR", "IT", "JA", "KO", "PT_BR", "ZH_CN", "ZH_TW"]
+                    "enum": [
+                      "DE",
+                      "EN",
+                      "ES",
+                      "FR",
+                      "IT",
+                      "JA",
+                      "KO",
+                      "PT_BR",
+                      "ZH_CN",
+                      "ZH_TW"
+                    ]
                   },
                   "policyDocument": {
                     "description": "The JSON policy document to use as the content for the policy.",
@@ -3399,7 +3410,11 @@
                   "policyType": {
                     "description": "<p>The type of policy to validate. Identity policies grant permissions to IAM principals. Identity policies include managed and inline policies for IAM roles, users, and groups. They also include service-control policies (SCPs) that are attached to an Amazon Web Services organization, organizational unit (OU), or an account.</p> <p>Resource policies grant permissions on Amazon Web Services resources. Resource policies include trust policies for IAM roles and bucket policies for Amazon S3 buckets. You can provide a generic input such as identity policy or resource policy or a specific input such as managed policy or Amazon S3 bucket policy. </p>",
                     "type": "string",
-                    "enum": ["IDENTITY_POLICY", "RESOURCE_POLICY", "SERVICE_CONTROL_POLICY"]
+                    "enum": [
+                      "IDENTITY_POLICY",
+                      "RESOURCE_POLICY",
+                      "SERVICE_CONTROL_POLICY"
+                    ]
                   }
                 }
               }
@@ -4912,7 +4927,13 @@
       },
       "AccessPreview": {
         "type": "object",
-        "required": ["analyzerArn", "configurations", "createdAt", "id", "status"],
+        "required": [
+          "analyzerArn",
+          "configurations",
+          "createdAt",
+          "id",
+          "status"
+        ],
         "properties": {
           "analyzerArn": {
             "allOf": [
@@ -4986,7 +5007,14 @@
       },
       "AccessPreviewFinding": {
         "type": "object",
-        "required": ["changeType", "createdAt", "id", "resourceOwnerAccount", "resourceType", "status"],
+        "required": [
+          "changeType",
+          "createdAt",
+          "id",
+          "resourceOwnerAccount",
+          "resourceType",
+          "status"
+        ],
         "properties": {
           "action": {
             "allOf": [
@@ -5530,7 +5558,12 @@
       },
       "JobErrorCode": {
         "type": "string",
-        "enum": ["AUTHORIZATION_ERROR", "RESOURCE_NOT_FOUND_ERROR", "SERVICE_QUOTA_EXCEEDED_ERROR", "SERVICE_ERROR"]
+        "enum": [
+          "AUTHORIZATION_ERROR",
+          "RESOURCE_NOT_FOUND_ERROR",
+          "SERVICE_QUOTA_EXCEEDED_ERROR",
+          "SERVICE_ERROR"
+        ]
       },
       "KmsConstraintsValue": {
         "type": "string"
@@ -6108,7 +6141,13 @@
       },
       "ValidatePolicyFinding": {
         "type": "object",
-        "required": ["findingDetails", "findingType", "issueCode", "learnMoreLink", "locations"],
+        "required": [
+          "findingDetails",
+          "findingType",
+          "issueCode",
+          "learnMoreLink",
+          "locations"
+        ],
         "properties": {
           "findingDetails": {
             "allOf": [

@@ -6,7 +6,7 @@
     "title": "AWS Resource Access Manager (RAM)",
     "description": "Use AWS Resource Access Manager to share AWS resources between AWS accounts. To share a resource, you create a resource share, associate the resource with the resource share, and specify the principals that can access the resources associated with the resource share. The following principals are supported: AWS accounts, organizational units (OU) from AWS Organizations, and organizations from AWS Organizations. For more information, see the AWS Resource Access Manager User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Resources-Access-Manager_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Resources-Access-Manager_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1819,7 +1819,13 @@
                   "associationStatus": {
                     "description": "The association status.",
                     "type": "string",
-                    "enum": ["ASSOCIATING", "ASSOCIATED", "FAILED", "DISASSOCIATING", "DISASSOCIATED"]
+                    "enum": [
+                      "ASSOCIATING",
+                      "ASSOCIATED",
+                      "FAILED",
+                      "DISASSOCIATING",
+                      "DISASSOCIATED"
+                    ]
                   },
                   "nextToken": {
                     "description": "The token for the next page of results.",
@@ -2154,7 +2160,13 @@
                   "resourceShareStatus": {
                     "description": "The status of the resource share.",
                     "type": "string",
-                    "enum": ["PENDING", "ACTIVE", "FAILED", "DELETING", "DELETED"]
+                    "enum": [
+                      "PENDING",
+                      "ACTIVE",
+                      "FAILED",
+                      "DELETING",
+                      "DELETED"
+                    ]
                   },
                   "resourceOwner": {
                     "description": "The type of owner.",
@@ -4888,7 +4900,13 @@
       },
       "ResourceShareAssociationStatus": {
         "type": "string",
-        "enum": ["ASSOCIATING", "ASSOCIATED", "FAILED", "DISASSOCIATING", "DISASSOCIATED"]
+        "enum": [
+          "ASSOCIATING",
+          "ASSOCIATED",
+          "FAILED",
+          "DISASSOCIATING",
+          "DISASSOCIATED"
+        ]
       },
       "ResourceShareInvitationList": {
         "type": "array",
@@ -4991,7 +5009,13 @@
       },
       "ResourceStatus": {
         "type": "string",
-        "enum": ["AVAILABLE", "ZONAL_RESOURCE_INACCESSIBLE", "LIMIT_EXCEEDED", "UNAVAILABLE", "PENDING"]
+        "enum": [
+          "AVAILABLE",
+          "ZONAL_RESOURCE_INACCESSIBLE",
+          "LIMIT_EXCEEDED",
+          "UNAVAILABLE",
+          "PENDING"
+        ]
       },
       "Resource": {
         "type": "object",

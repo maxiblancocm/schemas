@@ -6,7 +6,7 @@
     "title": "AWS Batch",
     "description": "AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers, scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional batch computing software. This service can efficiently provision resources in response to jobs submitted in order to eliminate capacity constraints, reduce compute costs, and deliver results quickly. As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software, which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the AWS Cloud.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Batch_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Batch_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -544,7 +544,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["jobQueueName", "priority", "computeEnvironmentOrder"],
+                "required": [
+                  "jobQueueName",
+                  "priority",
+                  "computeEnvironmentOrder"
+                ],
                 "properties": {
                   "jobQueueName": {
                     "description": "The name of the job queue.",
@@ -1342,7 +1346,15 @@
                   "jobStatus": {
                     "description": "The job status with which to filter jobs in the specified queue. If you do not specify a status, only <code>RUNNING</code> jobs are returned.",
                     "type": "string",
-                    "enum": ["SUBMITTED", "PENDING", "RUNNABLE", "STARTING", "RUNNING", "SUCCEEDED", "FAILED"]
+                    "enum": [
+                      "SUBMITTED",
+                      "PENDING",
+                      "RUNNABLE",
+                      "STARTING",
+                      "RUNNING",
+                      "SUCCEEDED",
+                      "FAILED"
+                    ]
                   },
                   "maxResults": {
                     "description": "The maximum number of results returned by <code>ListJobs</code> in paginated output. When this parameter is used, <code>ListJobs</code> only returns <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. The remaining results of the initial request can be seen by sending another <code>ListJobs</code> request with the returned <code>nextToken</code> value. This value can be between 1 and 100. If this parameter is not used, then <code>ListJobs</code> returns up to 100 results and a <code>nextToken</code> value if applicable.",
@@ -2874,7 +2886,11 @@
                 "maxvCpus": 128,
                 "minvCpus": 0,
                 "securityGroupIds": ["sg-cf5093b2"],
-                "subnets": ["subnet-220c0e0a", "subnet-1a95556d", "subnet-978f6dce"],
+                "subnets": [
+                  "subnet-220c0e0a",
+                  "subnet-1a95556d",
+                  "subnet-978f6dce"
+                ],
                 "tags": {
                   "Name": "Batch Instance - P2OnDemand"
                 }
@@ -3562,7 +3578,14 @@
       },
       "CEStatus": {
         "type": "string",
-        "enum": ["CREATING", "UPDATING", "DELETING", "DELETED", "VALID", "INVALID"]
+        "enum": [
+          "CREATING",
+          "UPDATING",
+          "DELETING",
+          "DELETED",
+          "VALID",
+          "INVALID"
+        ]
       },
       "CEType": {
         "type": "string",
@@ -3570,7 +3593,14 @@
       },
       "ComputeResource": {
         "type": "object",
-        "required": ["type", "minvCpus", "maxvCpus", "instanceTypes", "subnets", "instanceRole"],
+        "required": [
+          "type",
+          "minvCpus",
+          "maxvCpus",
+          "instanceTypes",
+          "subnets",
+          "instanceRole"
+        ],
         "properties": {
           "type": {
             "allOf": [
@@ -3748,7 +3778,11 @@
       },
       "ComputeEnvironmentDetail": {
         "type": "object",
-        "required": ["computeEnvironmentName", "computeEnvironmentArn", "ecsClusterArn"],
+        "required": [
+          "computeEnvironmentName",
+          "computeEnvironmentArn",
+          "ecsClusterArn"
+        ],
         "properties": {
           "computeEnvironmentName": {
             "allOf": [
@@ -4552,7 +4586,14 @@
       },
       "JQStatus": {
         "type": "string",
-        "enum": ["CREATING", "UPDATING", "DELETING", "DELETED", "VALID", "INVALID"]
+        "enum": [
+          "CREATING",
+          "UPDATING",
+          "DELETING",
+          "DELETED",
+          "VALID",
+          "INVALID"
+        ]
       },
       "ParametersMap": {
         "type": "object",
@@ -4641,7 +4682,12 @@
       },
       "JobDefinition": {
         "type": "object",
-        "required": ["jobDefinitionName", "jobDefinitionArn", "revision", "type"],
+        "required": [
+          "jobDefinitionName",
+          "jobDefinitionArn",
+          "revision",
+          "type"
+        ],
         "properties": {
           "jobDefinitionName": {
             "allOf": [
@@ -4784,7 +4830,15 @@
       },
       "JobStatus": {
         "type": "string",
-        "enum": ["SUBMITTED", "PENDING", "RUNNABLE", "STARTING", "RUNNING", "SUCCEEDED", "FAILED"]
+        "enum": [
+          "SUBMITTED",
+          "PENDING",
+          "RUNNABLE",
+          "STARTING",
+          "RUNNING",
+          "SUCCEEDED",
+          "FAILED"
+        ]
       },
       "NodeDetails": {
         "type": "object",
@@ -4814,7 +4868,14 @@
       },
       "JobDetail": {
         "type": "object",
-        "required": ["jobName", "jobId", "jobQueue", "status", "startedAt", "jobDefinition"],
+        "required": [
+          "jobName",
+          "jobId",
+          "jobQueue",
+          "status",
+          "startedAt",
+          "jobDefinition"
+        ],
         "properties": {
           "jobName": {
             "allOf": [
@@ -5041,7 +5102,13 @@
       },
       "JobQueueDetail": {
         "type": "object",
-        "required": ["jobQueueName", "jobQueueArn", "state", "priority", "computeEnvironmentOrder"],
+        "required": [
+          "jobQueueName",
+          "jobQueueArn",
+          "state",
+          "priority",
+          "computeEnvironmentOrder"
+        ],
         "properties": {
           "jobQueueName": {
             "allOf": [
@@ -5576,7 +5643,15 @@
       },
       "LogDriver": {
         "type": "string",
-        "enum": ["json-file", "syslog", "journald", "gelf", "fluentd", "awslogs", "splunk"]
+        "enum": [
+          "json-file",
+          "syslog",
+          "journald",
+          "gelf",
+          "fluentd",
+          "awslogs",
+          "splunk"
+        ]
       },
       "LogConfigurationOptionsMap": {
         "type": "object",

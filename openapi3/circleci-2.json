@@ -6,7 +6,7 @@
     "description": "This describes the resources that make up the CircleCI API v2.",
     "x-categories": ["software-development"],
     "x-logo": {
-      "url": "/logos/circleci.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/circleci.svg"
     },
     "license": {
       "name": "MIT"
@@ -768,7 +768,14 @@
                                     "description": "The standard deviation, in seconds, among a group of runs."
                                   }
                                 },
-                                "required": ["min", "mean", "median", "p95", "max", "standard_deviation"],
+                                "required": [
+                                  "min",
+                                  "mean",
+                                  "median",
+                                  "p95",
+                                  "max",
+                                  "standard_deviation"
+                                ],
                                 "description": "Metrics relating to the duration of runs for a workflow."
                               },
                               "total_recoveries": {
@@ -792,7 +799,12 @@
                             "description": "Metrics relating to a workflow's runs."
                           }
                         },
-                        "required": ["name", "window_start", "window_end", "metrics"]
+                        "required": [
+                          "name",
+                          "window_start",
+                          "window_end",
+                          "metrics"
+                        ]
                       },
                       "description": "Workflow summary metrics."
                     },
@@ -862,7 +874,13 @@
             "description": "The time window used to calculate summary metrics.",
             "schema": {
               "type": "string",
-              "enum": ["last-90-days", "last-24-hours", "last-24-hours", "last-30-days", "last-60-days"]
+              "enum": [
+                "last-90-days",
+                "last-24-hours",
+                "last-24-hours",
+                "last-30-days",
+                "last-60-days"
+              ]
             },
             "required": false,
             "example": "last-90-days"
@@ -873,7 +891,13 @@
             "description": "The time window used to calculate summary metrics.",
             "schema": {
               "type": "string",
-              "enum": ["last-7-days", "last-90-days", "last-24-hours", "last-30-days", "last-60-days"]
+              "enum": [
+                "last-7-days",
+                "last-90-days",
+                "last-24-hours",
+                "last-30-days",
+                "last-60-days"
+              ]
             },
             "required": false,
             "example": "last-90-days"
@@ -929,7 +953,13 @@
                             "description": "The number of credits used during execution"
                           },
                           "status": {
-                            "enum": ["success", "failed", "error", "canceled", "unauthorized"],
+                            "enum": [
+                              "success",
+                              "failed",
+                              "error",
+                              "canceled",
+                              "unauthorized"
+                            ],
                             "type": "string",
                             "x-nullable": true,
                             "description": "Workflow status."
@@ -940,7 +970,15 @@
                             "example": "main"
                           }
                         },
-                        "required": ["id", "duration", "created_at", "stopped_at", "credits_used", "status", "status"]
+                        "required": [
+                          "id",
+                          "duration",
+                          "created_at",
+                          "stopped_at",
+                          "credits_used",
+                          "status",
+                          "status"
+                        ]
                       },
                       "description": "Recent workflow runs."
                     },
@@ -1160,7 +1198,14 @@
                                     "description": "The standard deviation, in seconds, among a group of runs."
                                   }
                                 },
-                                "required": ["min", "mean", "median", "p95", "max", "standard_deviation"],
+                                "required": [
+                                  "min",
+                                  "mean",
+                                  "median",
+                                  "p95",
+                                  "max",
+                                  "standard_deviation"
+                                ],
                                 "description": "Metrics relating to the duration of runs for a workflow job."
                               }
                             },
@@ -1176,7 +1221,12 @@
                             "description": "Metrics relating to a workflow job's runs."
                           }
                         },
-                        "required": ["name", "window_start", "window_end", "metrics"]
+                        "required": [
+                          "name",
+                          "window_start",
+                          "window_end",
+                          "metrics"
+                        ]
                       },
                       "description": "Job summary metrics."
                     },
@@ -1256,7 +1306,13 @@
             "description": "The time window used to calculate summary metrics.",
             "schema": {
               "type": "string",
-              "enum": ["last-90-days", "last-24-hours", "last-24-hours", "last-30-days", "last-60-days"]
+              "enum": [
+                "last-90-days",
+                "last-24-hours",
+                "last-24-hours",
+                "last-30-days",
+                "last-60-days"
+              ]
             },
             "required": false,
             "example": "last-90-days"
@@ -1267,7 +1323,13 @@
             "description": "The time window used to calculate summary metrics.",
             "schema": {
               "type": "string",
-              "enum": ["last-7-days", "last-90-days", "last-24-hours", "last-30-days", "last-60-days"]
+              "enum": [
+                "last-7-days",
+                "last-90-days",
+                "last-24-hours",
+                "last-30-days",
+                "last-60-days"
+              ]
             },
             "required": false,
             "example": "last-90-days"
@@ -1311,7 +1373,13 @@
                             "description": "The time when the job stopped."
                           },
                           "status": {
-                            "enum": ["success", "not_run", "failed", "canceled", "unauthorized"],
+                            "enum": [
+                              "success",
+                              "not_run",
+                              "failed",
+                              "canceled",
+                              "unauthorized"
+                            ],
                             "type": "string",
                             "x-nullable": true,
                             "description": "Job status."
@@ -1323,7 +1391,13 @@
                             "description": "The number of credits used during execution"
                           }
                         },
-                        "required": ["id", "started_at", "stopped_at", "status", "credits_used"]
+                        "required": [
+                          "id",
+                          "started_at",
+                          "stopped_at",
+                          "status",
+                          "credits_used"
+                        ]
                       },
                       "description": "Recent job runs."
                     },
@@ -1523,7 +1597,13 @@
                         "description": "The slug of the organization"
                       }
                     },
-                    "required": ["vcs-type", "name", "avatar_url", "avatar_url", "slug"],
+                    "required": [
+                      "vcs-type",
+                      "name",
+                      "avatar_url",
+                      "avatar_url",
+                      "slug"
+                    ],
                     "title": "Collaboration"
                   }
                 }
@@ -1587,7 +1667,14 @@
                               "type": "object",
                               "properties": {
                                 "type": {
-                                  "enum": ["config", "plan", "timeout", "permission", "other", "plan"],
+                                  "enum": [
+                                    "config",
+                                    "plan",
+                                    "timeout",
+                                    "permission",
+                                    "other",
+                                    "plan"
+                                  ],
                                   "type": "string",
                                   "description": "The type of error."
                                 },
@@ -1618,7 +1705,13 @@
                             "example": "25"
                           },
                           "state": {
-                            "enum": ["created", "errored", "pending", "setup", "pending"],
+                            "enum": [
+                              "created",
+                              "errored",
+                              "pending",
+                              "setup",
+                              "pending"
+                            ],
                             "type": "string",
                             "description": "The current state of the pipeline."
                           },
@@ -1631,7 +1724,12 @@
                             "type": "object",
                             "properties": {
                               "type": {
-                                "enum": ["explicit", "api", "webhook", "webhook"],
+                                "enum": [
+                                  "explicit",
+                                  "api",
+                                  "webhook",
+                                  "webhook"
+                                ],
                                 "type": "string",
                                 "description": "The type of trigger."
                               },
@@ -1722,7 +1820,12 @@
                                 "example": "https://github.com/CircleCI-Public/api-preview-docs/pull/123"
                               }
                             },
-                            "required": ["provider_name", "origin_repository_url", "target_repository_url", "revision"],
+                            "required": [
+                              "provider_name",
+                              "origin_repository_url",
+                              "target_repository_url",
+                              "revision"
+                            ],
                             "description": "VCS information for the pipeline."
                           },
                           "trigger_parameters": {
@@ -1746,7 +1849,15 @@
                             }
                           }
                         },
-                        "required": ["id", "number", "project_slug", "created_at", "errors", "state", "trigger"],
+                        "required": [
+                          "id",
+                          "number",
+                          "project_slug",
+                          "created_at",
+                          "errors",
+                          "state",
+                          "trigger"
+                        ],
                         "description": "A pipeline response.",
                         "title": "Pipeline"
                       }
@@ -1847,7 +1958,14 @@
                         "type": "object",
                         "properties": {
                           "type": {
-                            "enum": ["config", "plan", "timeout", "permission", "other", "plan"],
+                            "enum": [
+                              "config",
+                              "plan",
+                              "timeout",
+                              "permission",
+                              "other",
+                              "plan"
+                            ],
                             "type": "string",
                             "description": "The type of error."
                           },
@@ -1878,7 +1996,13 @@
                       "example": "25"
                     },
                     "state": {
-                      "enum": ["created", "errored", "pending", "setup", "pending"],
+                      "enum": [
+                        "created",
+                        "errored",
+                        "pending",
+                        "setup",
+                        "pending"
+                      ],
                       "type": "string",
                       "description": "The current state of the pipeline."
                     },
@@ -1982,7 +2106,12 @@
                           "example": "https://github.com/CircleCI-Public/api-preview-docs/pull/123"
                         }
                       },
-                      "required": ["provider_name", "origin_repository_url", "target_repository_url", "revision"],
+                      "required": [
+                        "provider_name",
+                        "origin_repository_url",
+                        "target_repository_url",
+                        "revision"
+                      ],
                       "description": "VCS information for the pipeline."
                     },
                     "trigger_parameters": {
@@ -2006,7 +2135,15 @@
                       }
                     }
                   },
-                  "required": ["id", "number", "project_slug", "created_at", "errors", "state", "trigger"],
+                  "required": [
+                    "id",
+                    "number",
+                    "project_slug",
+                    "created_at",
+                    "errors",
+                    "state",
+                    "trigger"
+                  ],
                   "description": "A pipeline response.",
                   "title": "Pipeline"
                 }
@@ -2444,7 +2581,13 @@
                             "example": "2015-09-21T17:29:21.042Z"
                           }
                         },
-                        "required": ["public-key", "type", "fingerprint", "preferred", "created-at"],
+                        "required": [
+                          "public-key",
+                          "type",
+                          "fingerprint",
+                          "preferred",
+                          "created-at"
+                        ],
                         "title": "CheckoutKey"
                       }
                     },
@@ -2532,7 +2675,13 @@
                       "example": "2015-09-21T17:29:21.042Z"
                     }
                   },
-                  "required": ["public-key", "type", "fingerprint", "preferred", "created-at"],
+                  "required": [
+                    "public-key",
+                    "type",
+                    "fingerprint",
+                    "preferred",
+                    "created-at"
+                  ],
                   "title": "CheckoutKey"
                 }
               }
@@ -2697,7 +2846,13 @@
                       "example": "2015-09-21T17:29:21.042Z"
                     }
                   },
-                  "required": ["public-key", "type", "fingerprint", "preferred", "created-at"],
+                  "required": [
+                    "public-key",
+                    "type",
+                    "fingerprint",
+                    "preferred",
+                    "created-at"
+                  ],
                   "title": "CheckoutKey"
                 }
               }
@@ -3082,7 +3237,12 @@
                           "format": "uuid"
                         }
                       },
-                      "required": ["slug", "name", "external_url", "external_url"],
+                      "required": [
+                        "slug",
+                        "name",
+                        "external_url",
+                        "external_url"
+                      ],
                       "description": "Information about a project."
                     },
                     "parallel_runs": {
@@ -3411,7 +3571,13 @@
                       "example": "5034460f-c7c4-4c43-9457-de07e2029e7b"
                     },
                     "state": {
-                      "enum": ["created", "errored", "pending", "setup", "pending"],
+                      "enum": [
+                        "created",
+                        "errored",
+                        "pending",
+                        "setup",
+                        "pending"
+                      ],
                       "type": "string",
                       "description": "The current state of the pipeline."
                     },
@@ -3565,7 +3731,14 @@
                               "type": "object",
                               "properties": {
                                 "type": {
-                                  "enum": ["config", "plan", "timeout", "permission", "other", "plan"],
+                                  "enum": [
+                                    "config",
+                                    "plan",
+                                    "timeout",
+                                    "permission",
+                                    "other",
+                                    "plan"
+                                  ],
                                   "type": "string",
                                   "description": "The type of error."
                                 },
@@ -3596,7 +3769,13 @@
                             "example": "25"
                           },
                           "state": {
-                            "enum": ["created", "errored", "pending", "setup", "pending"],
+                            "enum": [
+                              "created",
+                              "errored",
+                              "pending",
+                              "setup",
+                              "pending"
+                            ],
                             "type": "string",
                             "description": "The current state of the pipeline."
                           },
@@ -3609,7 +3788,12 @@
                             "type": "object",
                             "properties": {
                               "type": {
-                                "enum": ["explicit", "api", "webhook", "webhook"],
+                                "enum": [
+                                  "explicit",
+                                  "api",
+                                  "webhook",
+                                  "webhook"
+                                ],
                                 "type": "string",
                                 "description": "The type of trigger."
                               },
@@ -3700,7 +3884,12 @@
                                 "example": "https://github.com/CircleCI-Public/api-preview-docs/pull/123"
                               }
                             },
-                            "required": ["provider_name", "origin_repository_url", "target_repository_url", "revision"],
+                            "required": [
+                              "provider_name",
+                              "origin_repository_url",
+                              "target_repository_url",
+                              "revision"
+                            ],
                             "description": "VCS information for the pipeline."
                           },
                           "trigger_parameters": {
@@ -3724,7 +3913,15 @@
                             }
                           }
                         },
-                        "required": ["id", "number", "project_slug", "created_at", "errors", "state", "trigger"],
+                        "required": [
+                          "id",
+                          "number",
+                          "project_slug",
+                          "created_at",
+                          "errors",
+                          "state",
+                          "trigger"
+                        ],
                         "description": "A pipeline response.",
                         "title": "Pipeline"
                       }
@@ -3833,7 +4030,14 @@
                               "type": "object",
                               "properties": {
                                 "type": {
-                                  "enum": ["config", "plan", "timeout", "permission", "other", "plan"],
+                                  "enum": [
+                                    "config",
+                                    "plan",
+                                    "timeout",
+                                    "permission",
+                                    "other",
+                                    "plan"
+                                  ],
                                   "type": "string",
                                   "description": "The type of error."
                                 },
@@ -3864,7 +4068,13 @@
                             "example": "25"
                           },
                           "state": {
-                            "enum": ["created", "errored", "pending", "setup", "pending"],
+                            "enum": [
+                              "created",
+                              "errored",
+                              "pending",
+                              "setup",
+                              "pending"
+                            ],
                             "type": "string",
                             "description": "The current state of the pipeline."
                           },
@@ -3877,7 +4087,12 @@
                             "type": "object",
                             "properties": {
                               "type": {
-                                "enum": ["explicit", "api", "webhook", "webhook"],
+                                "enum": [
+                                  "explicit",
+                                  "api",
+                                  "webhook",
+                                  "webhook"
+                                ],
                                 "type": "string",
                                 "description": "The type of trigger."
                               },
@@ -3968,7 +4183,12 @@
                                 "example": "https://github.com/CircleCI-Public/api-preview-docs/pull/123"
                               }
                             },
-                            "required": ["provider_name", "origin_repository_url", "target_repository_url", "revision"],
+                            "required": [
+                              "provider_name",
+                              "origin_repository_url",
+                              "target_repository_url",
+                              "revision"
+                            ],
                             "description": "VCS information for the pipeline."
                           },
                           "trigger_parameters": {
@@ -3992,7 +4212,15 @@
                             }
                           }
                         },
-                        "required": ["id", "number", "project_slug", "created_at", "errors", "state", "trigger"],
+                        "required": [
+                          "id",
+                          "number",
+                          "project_slug",
+                          "created_at",
+                          "errors",
+                          "state",
+                          "trigger"
+                        ],
                         "description": "A pipeline response.",
                         "title": "Pipeline"
                       }
@@ -4085,7 +4313,14 @@
                         "type": "object",
                         "properties": {
                           "type": {
-                            "enum": ["config", "plan", "timeout", "permission", "other", "plan"],
+                            "enum": [
+                              "config",
+                              "plan",
+                              "timeout",
+                              "permission",
+                              "other",
+                              "plan"
+                            ],
                             "type": "string",
                             "description": "The type of error."
                           },
@@ -4116,7 +4351,13 @@
                       "example": "25"
                     },
                     "state": {
-                      "enum": ["created", "errored", "pending", "setup", "pending"],
+                      "enum": [
+                        "created",
+                        "errored",
+                        "pending",
+                        "setup",
+                        "pending"
+                      ],
                       "type": "string",
                       "description": "The current state of the pipeline."
                     },
@@ -4220,7 +4461,12 @@
                           "example": "https://github.com/CircleCI-Public/api-preview-docs/pull/123"
                         }
                       },
-                      "required": ["provider_name", "origin_repository_url", "target_repository_url", "revision"],
+                      "required": [
+                        "provider_name",
+                        "origin_repository_url",
+                        "target_repository_url",
+                        "revision"
+                      ],
                       "description": "VCS information for the pipeline."
                     },
                     "trigger_parameters": {
@@ -4244,7 +4490,15 @@
                       }
                     }
                   },
-                  "required": ["id", "number", "project_slug", "created_at", "errors", "state", "trigger"],
+                  "required": [
+                    "id",
+                    "number",
+                    "project_slug",
+                    "created_at",
+                    "errors",
+                    "state",
+                    "trigger"
+                  ],
                   "description": "A pipeline response.",
                   "title": "Pipeline"
                 }
@@ -4437,7 +4691,15 @@
                             "example": ""
                           }
                         },
-                        "required": ["message", "source", "run_time", "file", "result", "name", "classname"]
+                        "required": [
+                          "message",
+                          "source",
+                          "run_time",
+                          "file",
+                          "result",
+                          "name",
+                          "classname"
+                        ]
                       },
                       "title": "TestsResponse"
                     },
@@ -4943,7 +5205,15 @@
                             "description": "The unique ID of the job."
                           }
                         },
-                        "required": ["id", "name", "started_at", "dependencies", "project_slug", "status", "type"],
+                        "required": [
+                          "id",
+                          "name",
+                          "started_at",
+                          "dependencies",
+                          "project_slug",
+                          "status",
+                          "type"
+                        ],
                         "description": "Job",
                         "title": "Job"
                       }
@@ -5065,7 +5335,10 @@
                       "format": "uuid"
                     },
                     "description": "A list of job IDs to rerun.",
-                    "example": ["c65b68ef-e73b-4bf2-be9a-7a322a9df150", "5e957edd-5e8c-4985-9178-5d0d69561822"]
+                    "example": [
+                      "c65b68ef-e73b-4bf2-be9a-7a322a9df150",
+                      "5e957edd-5e8c-4985-9178-5d0d69561822"
+                    ]
                   },
                   "from_failed": {
                     "type": "boolean",
@@ -5232,7 +5505,12 @@
                                 "format": "float"
                               }
                             },
-                            "required": ["total_credits_used", "p95_duration_secs", "total_runs", "success_rate"],
+                            "required": [
+                              "total_credits_used",
+                              "p95_duration_secs",
+                              "total_runs",
+                              "success_rate"
+                            ],
                             "description": "Metrics aggregated across a workflow or branchfor a project."
                           },
                           "trends": {
@@ -5259,7 +5537,12 @@
                                 "description": "The trend value for the success rate."
                               }
                             },
-                            "required": ["total_credits_used", "p95_duration_secs", "total_runs", "success_rate"],
+                            "required": [
+                              "total_credits_used",
+                              "p95_duration_secs",
+                              "total_runs",
+                              "success_rate"
+                            ],
                             "description": "Trends aggregated across a workflow or branch for a project."
                           }
                         },
@@ -5307,7 +5590,12 @@
                                 "format": "float"
                               }
                             },
-                            "required": ["total_credits_used", "p95_duration_secs", "total_runs", "success_rate"],
+                            "required": [
+                              "total_credits_used",
+                              "p95_duration_secs",
+                              "total_runs",
+                              "success_rate"
+                            ],
                             "description": "Metrics aggregated across a workflow or branchfor a project."
                           },
                           "trends": {
@@ -5334,11 +5622,21 @@
                                 "description": "The trend value for the success rate."
                               }
                             },
-                            "required": ["total_credits_used", "p95_duration_secs", "total_runs", "success_rate"],
+                            "required": [
+                              "total_credits_used",
+                              "p95_duration_secs",
+                              "total_runs",
+                              "success_rate"
+                            ],
                             "description": "Trends aggregated across a workflow or branch for a project."
                           }
                         },
-                        "required": ["workflow_name", "branch", "metrics", "trends"]
+                        "required": [
+                          "workflow_name",
+                          "branch",
+                          "metrics",
+                          "trends"
+                        ]
                       },
                       "description": "A list of metrics and trends data for branches for a given project."
                     },
@@ -5399,7 +5697,13 @@
             "description": "The time window used to calculate summary metrics.",
             "schema": {
               "type": "string",
-              "enum": ["last-7-days", "last-90-days", "last-24-hours", "last-30-days", "last-60-days"]
+              "enum": [
+                "last-7-days",
+                "last-90-days",
+                "last-24-hours",
+                "last-30-days",
+                "last-60-days"
+              ]
             },
             "required": false,
             "example": "last-90-days"
@@ -5542,7 +5846,13 @@
                                     "description": "The total duration, in seconds, added across a group of runs."
                                   }
                                 },
-                                "required": ["min", "median", "max", "p95", "total"],
+                                "required": [
+                                  "min",
+                                  "median",
+                                  "max",
+                                  "p95",
+                                  "total"
+                                ],
                                 "description": "Metrics relating to the duration of runs for a workflow."
                               }
                             },
@@ -5558,7 +5868,13 @@
                             "description": "Metrics relating to a workflow's runs."
                           }
                         },
-                        "required": ["name", "min_started_at", "max_ended_at", "timestamp", "metrics"]
+                        "required": [
+                          "name",
+                          "min_started_at",
+                          "max_ended_at",
+                          "timestamp",
+                          "metrics"
+                        ]
                       },
                       "description": "Aggregate metrics for a workflow at a time granularity"
                     }
@@ -5787,7 +6103,12 @@
                                 "format": "float"
                               }
                             },
-                            "required": ["total_credits_used", "total_duration_secs", "total_runs", "success_rate"],
+                            "required": [
+                              "total_credits_used",
+                              "total_duration_secs",
+                              "total_runs",
+                              "success_rate"
+                            ],
                             "description": "Metrics for a single project, across all branches."
                           },
                           "trends": {
@@ -5814,7 +6135,12 @@
                                 "description": "The trend value for the success rate."
                               }
                             },
-                            "required": ["total_credits_used", "total_duration_secs", "total_runs", "success_rate"],
+                            "required": [
+                              "total_credits_used",
+                              "total_duration_secs",
+                              "total_runs",
+                              "success_rate"
+                            ],
                             "description": "Trends for a single project, across all branches."
                           }
                         },
@@ -5869,7 +6195,13 @@
             "description": "The time window used to calculate summary metrics.",
             "schema": {
               "type": "string",
-              "enum": ["last-7-days", "last-90-days", "last-24-hours", "last-30-days", "last-60-days"]
+              "enum": [
+                "last-7-days",
+                "last-90-days",
+                "last-24-hours",
+                "last-30-days",
+                "last-60-days"
+              ]
             },
             "required": false,
             "example": "last-90-days"
@@ -6189,7 +6521,14 @@
                               "description": "The standard deviation, in seconds, among a group of runs."
                             }
                           },
-                          "required": ["min", "mean", "median", "p95", "max", "standard_deviation"],
+                          "required": [
+                            "min",
+                            "mean",
+                            "median",
+                            "p95",
+                            "max",
+                            "standard_deviation"
+                          ],
                           "description": "Metrics relating to the duration of runs for a workflow."
                         },
                         "window_end": {
@@ -6560,11 +6899,22 @@
                                 "description": "The total number of tests"
                               }
                             },
-                            "required": ["error", "failure", "skipped", "success", "total"],
+                            "required": [
+                              "error",
+                              "failure",
+                              "skipped",
+                              "success",
+                              "total"
+                            ],
                             "description": "Test counts for a given pipeline number"
                           }
                         },
-                        "required": ["pipeline_number", "workflow_id", "success_rate", "test_counts"]
+                        "required": [
+                          "pipeline_number",
+                          "workflow_id",
+                          "success_rate",
+                          "test_counts"
+                        ]
                       },
                       "description": "Test counts grouped by pipeline number and workflow id"
                     }
@@ -6768,7 +7118,15 @@
                             "days-of-week": {
                               "type": "array",
                               "items": {
-                                "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                "enum": [
+                                  "TUE",
+                                  "SAT",
+                                  "SUN",
+                                  "MON",
+                                  "THU",
+                                  "WED",
+                                  "FRI"
+                                ],
                                 "type": "string",
                                 "description": "Day in a week, in three letters format"
                               },
@@ -6806,7 +7164,11 @@
                               "description": "Months in which the schedule triggers."
                             }
                           },
-                          "required": ["per-hour", "hours-of-day", "days-of-week"]
+                          "required": [
+                            "per-hour",
+                            "hours-of-day",
+                            "days-of-week"
+                          ]
                         },
                         {
                           "type": "object",
@@ -6837,7 +7199,15 @@
                             "days-of-week": {
                               "type": "array",
                               "items": {
-                                "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                "enum": [
+                                  "TUE",
+                                  "SAT",
+                                  "SUN",
+                                  "MON",
+                                  "THU",
+                                  "WED",
+                                  "FRI"
+                                ],
                                 "type": "string",
                                 "description": "Day in a week, in three letters format"
                               },
@@ -6866,7 +7236,11 @@
                               "description": "Months in which the schedule triggers."
                             }
                           },
-                          "required": ["per-hour", "hours-of-day", "days-of-month"]
+                          "required": [
+                            "per-hour",
+                            "hours-of-day",
+                            "days-of-month"
+                          ]
                         }
                       ],
                       "description": "Timetable that specifies when a schedule triggers."
@@ -7016,7 +7390,15 @@
                           "days-of-week": {
                             "type": "array",
                             "items": {
-                              "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                              "enum": [
+                                "TUE",
+                                "SAT",
+                                "SUN",
+                                "MON",
+                                "THU",
+                                "WED",
+                                "FRI"
+                              ],
                               "type": "string",
                               "description": "Day in a week, in three letters format"
                             },
@@ -7085,7 +7467,15 @@
                           "days-of-week": {
                             "type": "array",
                             "items": {
-                              "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                              "enum": [
+                                "TUE",
+                                "SAT",
+                                "SUN",
+                                "MON",
+                                "THU",
+                                "WED",
+                                "FRI"
+                              ],
                               "type": "string",
                               "description": "Day in a week, in three letters format"
                             },
@@ -7114,7 +7504,11 @@
                             "description": "Months in which the schedule triggers."
                           }
                         },
-                        "required": ["per-hour", "hours-of-day", "days-of-month"]
+                        "required": [
+                          "per-hour",
+                          "hours-of-day",
+                          "days-of-month"
+                        ]
                       }
                     ],
                     "description": "Timetable that specifies when a schedule triggers."
@@ -7151,7 +7545,12 @@
                     "description": "Description of the schedule."
                   }
                 },
-                "required": ["name", "timetable", "attribution-actor", "parameters"],
+                "required": [
+                  "name",
+                  "timetable",
+                  "attribution-actor",
+                  "parameters"
+                ],
                 "description": "The parameters for a create schedule request",
                 "title": "CreateScheduleParameters"
               }
@@ -7204,7 +7603,15 @@
                                   "days-of-week": {
                                     "type": "array",
                                     "items": {
-                                      "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                      "enum": [
+                                        "TUE",
+                                        "SAT",
+                                        "SUN",
+                                        "MON",
+                                        "THU",
+                                        "WED",
+                                        "FRI"
+                                      ],
                                       "type": "string",
                                       "description": "Day in a week, in three letters format"
                                     },
@@ -7242,7 +7649,11 @@
                                     "description": "Months in which the schedule triggers."
                                   }
                                 },
-                                "required": ["per-hour", "hours-of-day", "days-of-week"]
+                                "required": [
+                                  "per-hour",
+                                  "hours-of-day",
+                                  "days-of-week"
+                                ]
                               },
                               {
                                 "type": "object",
@@ -7273,7 +7684,15 @@
                                   "days-of-week": {
                                     "type": "array",
                                     "items": {
-                                      "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                      "enum": [
+                                        "TUE",
+                                        "SAT",
+                                        "SUN",
+                                        "MON",
+                                        "THU",
+                                        "WED",
+                                        "FRI"
+                                      ],
                                       "type": "string",
                                       "description": "Day in a week, in three letters format"
                                     },
@@ -7302,7 +7721,11 @@
                                     "description": "Months in which the schedule triggers."
                                   }
                                 },
-                                "required": ["per-hour", "hours-of-day", "days-of-month"]
+                                "required": [
+                                  "per-hour",
+                                  "hours-of-day",
+                                  "days-of-month"
+                                ]
                               }
                             ],
                             "description": "Timetable that specifies when a schedule triggers."
@@ -7482,7 +7905,15 @@
                             "days-of-week": {
                               "type": "array",
                               "items": {
-                                "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                "enum": [
+                                  "TUE",
+                                  "SAT",
+                                  "SUN",
+                                  "MON",
+                                  "THU",
+                                  "WED",
+                                  "FRI"
+                                ],
                                 "type": "string",
                                 "description": "Day in a week, in three letters format"
                               },
@@ -7520,7 +7951,11 @@
                               "description": "Months in which the schedule triggers."
                             }
                           },
-                          "required": ["per-hour", "hours-of-day", "days-of-week"]
+                          "required": [
+                            "per-hour",
+                            "hours-of-day",
+                            "days-of-week"
+                          ]
                         },
                         {
                           "type": "object",
@@ -7551,7 +7986,15 @@
                             "days-of-week": {
                               "type": "array",
                               "items": {
-                                "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                "enum": [
+                                  "TUE",
+                                  "SAT",
+                                  "SUN",
+                                  "MON",
+                                  "THU",
+                                  "WED",
+                                  "FRI"
+                                ],
                                 "type": "string",
                                 "description": "Day in a week, in three letters format"
                               },
@@ -7580,7 +8023,11 @@
                               "description": "Months in which the schedule triggers."
                             }
                           },
-                          "required": ["per-hour", "hours-of-day", "days-of-month"]
+                          "required": [
+                            "per-hour",
+                            "hours-of-day",
+                            "days-of-month"
+                          ]
                         }
                       ],
                       "description": "Timetable that specifies when a schedule triggers."
@@ -7792,7 +8239,15 @@
                             "days-of-week": {
                               "type": "array",
                               "items": {
-                                "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                "enum": [
+                                  "TUE",
+                                  "SAT",
+                                  "SUN",
+                                  "MON",
+                                  "THU",
+                                  "WED",
+                                  "FRI"
+                                ],
                                 "type": "string",
                                 "description": "Day in a week, in three letters format"
                               },
@@ -7830,7 +8285,11 @@
                               "description": "Months in which the schedule triggers."
                             }
                           },
-                          "required": ["per-hour", "hours-of-day", "days-of-week"]
+                          "required": [
+                            "per-hour",
+                            "hours-of-day",
+                            "days-of-week"
+                          ]
                         },
                         {
                           "type": "object",
@@ -7861,7 +8320,15 @@
                             "days-of-week": {
                               "type": "array",
                               "items": {
-                                "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                                "enum": [
+                                  "TUE",
+                                  "SAT",
+                                  "SUN",
+                                  "MON",
+                                  "THU",
+                                  "WED",
+                                  "FRI"
+                                ],
                                 "type": "string",
                                 "description": "Day in a week, in three letters format"
                               },
@@ -7890,7 +8357,11 @@
                               "description": "Months in which the schedule triggers."
                             }
                           },
-                          "required": ["per-hour", "hours-of-day", "days-of-month"]
+                          "required": [
+                            "per-hour",
+                            "hours-of-day",
+                            "days-of-month"
+                          ]
                         }
                       ],
                       "description": "Timetable that specifies when a schedule triggers."
@@ -8041,7 +8512,15 @@
                       "days-of-week": {
                         "type": "array",
                         "items": {
-                          "enum": ["TUE", "SAT", "SUN", "MON", "THU", "WED", "FRI"],
+                          "enum": [
+                            "TUE",
+                            "SAT",
+                            "SUN",
+                            "MON",
+                            "THU",
+                            "WED",
+                            "FRI"
+                          ],
                           "type": "string",
                           "description": "Day in a week, in three letters format"
                         },
@@ -8059,7 +8538,20 @@
                       "months": {
                         "type": "array",
                         "items": {
-                          "enum": ["MAR", "NOV", "DEC", "JUN", "MAY", "OCT", "FEB", "APR", "SEP", "AUG", "JAN", "JUL"],
+                          "enum": [
+                            "MAR",
+                            "NOV",
+                            "DEC",
+                            "JUN",
+                            "MAY",
+                            "OCT",
+                            "FEB",
+                            "APR",
+                            "SEP",
+                            "AUG",
+                            "JAN",
+                            "JUL"
+                          ],
                           "type": "string",
                           "description": "Month, in three letters format."
                         },
@@ -8395,7 +8887,14 @@
                     "description": "The scope in which the relevant events that will trigger webhooks"
                   }
                 },
-                "required": ["name", "events", "url", "verify-tls", "signing-secret", "scope"],
+                "required": [
+                  "name",
+                  "events",
+                  "url",
+                  "verify-tls",
+                  "signing-secret",
+                  "scope"
+                ],
                 "description": "The parameters for a create webhook request"
               }
             }

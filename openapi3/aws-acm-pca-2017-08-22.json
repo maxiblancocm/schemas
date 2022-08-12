@@ -6,7 +6,7 @@
     "title": "AWS Certificate Manager Private Certificate Authority",
     "description": "This is the ACM Private CA API Reference. It provides descriptions, syntax, and usage examples for each of the actions and data types involved in creating and managing private certificate authorities (CA) for your organization. The documentation for each action shows the Query API request parameters and the XML response. Alternatively, you can use one of the AWS SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see AWS SDKs.  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For more information, see API Rate Quotas in ACM Private CA in the ACM Private CA user guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Certificate-Manager_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Certificate-Manager_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -2758,7 +2758,10 @@
       },
       "CreateCertificateAuthorityRequest": {
         "type": "object",
-        "required": ["CertificateAuthorityConfiguration", "CertificateAuthorityType"],
+        "required": [
+          "CertificateAuthorityConfiguration",
+          "CertificateAuthorityType"
+        ],
         "title": "CreateCertificateAuthorityRequest",
         "properties": {
           "CertificateAuthorityConfiguration": {
@@ -2854,7 +2857,11 @@
       },
       "CreateCertificateAuthorityAuditReportRequest": {
         "type": "object",
-        "required": ["CertificateAuthorityArn", "S3BucketName", "AuditReportResponseFormat"],
+        "required": [
+          "CertificateAuthorityArn",
+          "S3BucketName",
+          "AuditReportResponseFormat"
+        ],
         "title": "CreateCertificateAuthorityAuditReportRequest",
         "properties": {
           "CertificateAuthorityArn": {
@@ -3344,7 +3351,12 @@
       },
       "IssueCertificateRequest": {
         "type": "object",
-        "required": ["CertificateAuthorityArn", "Csr", "SigningAlgorithm", "Validity"],
+        "required": [
+          "CertificateAuthorityArn",
+          "Csr",
+          "SigningAlgorithm",
+          "Validity"
+        ],
         "title": "IssueCertificateRequest",
         "properties": {
           "CertificateAuthorityArn": {
@@ -3662,7 +3674,11 @@
       },
       "RevokeCertificateRequest": {
         "type": "object",
-        "required": ["CertificateAuthorityArn", "CertificateSerial", "RevocationReason"],
+        "required": [
+          "CertificateAuthorityArn",
+          "CertificateSerial",
+          "RevocationReason"
+        ],
         "title": "RevokeCertificateRequest",
         "properties": {
           "CertificateAuthorityArn": {
@@ -4190,7 +4206,15 @@
       },
       "CertificateAuthorityStatus": {
         "type": "string",
-        "enum": ["CREATING", "PENDING_CERTIFICATE", "ACTIVE", "DELETED", "DISABLED", "EXPIRED", "FAILED"]
+        "enum": [
+          "CREATING",
+          "PENDING_CERTIFICATE",
+          "ACTIVE",
+          "DELETED",
+          "DISABLED",
+          "EXPIRED",
+          "FAILED"
+        ]
       },
       "FailureReason": {
         "type": "string",
@@ -4734,7 +4758,11 @@
       },
       "AccessMethodType": {
         "type": "string",
-        "enum": ["CA_REPOSITORY", "RESOURCE_PKI_MANIFEST", "RESOURCE_PKI_NOTIFY"]
+        "enum": [
+          "CA_REPOSITORY",
+          "RESOURCE_PKI_MANIFEST",
+          "RESOURCE_PKI_NOTIFY"
+        ]
       },
       "Extensions": {
         "type": "object",

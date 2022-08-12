@@ -6,7 +6,7 @@
     "description": "PagerDuty is a leader in digital operations management. In an always-on world, organizations of all sizes trust PagerDuty to help them deliver a perfect digital experience to their customers, every time. Teams use PagerDuty to identify issues and opportunities in real time and bring together the right people to fix problems faster and prevent them in the future.",
     "x-categories": ["monitoring", "project-management"],
     "x-logo": {
-      "url": "/logos/pagerduty.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/pagerduty.svg"
     },
     "contact": {
       "name": "PagerDuty Support",
@@ -477,7 +477,13 @@
         "schema": {
           "type": "string",
           "description": "Describes the method used to perform the action:\n\n`browser` -- authenticated user session. Session value is not returned in the `truncated_token` field.\n\n`oauth` -- access token obtained via the OAuth flow. Truncated token value is returned in the `truncated_token` field.\n\n`api_token` -- Pagerduty API token. Truncated token value is returned in the `truncated_token` field.\n\n`identity_provider` -- action performed by an Identity provider on behalf of a user. No value is returned in the `truncated_token` field.\n\n`other` -- Method that does not fall in the predefined categories. Truncated token value MAY be returned in the `truncated_token` field.\n",
-          "enum": ["browser", "oauth", "api_token", "identity_provider", "other"]
+          "enum": [
+            "browser",
+            "oauth",
+            "api_token",
+            "identity_provider",
+            "other"
+          ]
         }
       },
       "audit_method_truncated_token": {
@@ -615,7 +621,10 @@
         "explode": true,
         "schema": {
           "type": "string",
-          "enum": ["services.highest_impacting_priority", "total_impacted_count"]
+          "enum": [
+            "services.highest_impacting_priority",
+            "total_impacted_count"
+          ]
         }
       },
       "include_addon": {
@@ -647,7 +656,12 @@
         "explode": true,
         "schema": {
           "type": "string",
-          "enum": ["contact_methods", "notification_rules", "teams", "subdomains"],
+          "enum": [
+            "contact_methods",
+            "notification_rules",
+            "teams",
+            "subdomains"
+          ],
           "uniqueItems": true
         }
       },
@@ -912,7 +926,11 @@
         "explode": true,
         "schema": {
           "type": "string",
-          "enum": ["extension_schemas", "extension_objects", "temporarily_disabled"],
+          "enum": [
+            "extension_schemas",
+            "extension_objects",
+            "temporarily_disabled"
+          ],
           "uniqueItems": true
         }
       },
@@ -1018,7 +1036,12 @@
         "description": "Return notification of this type only.",
         "schema": {
           "type": "string",
-          "enum": ["sms_notification", "email_notification", "phone_notification", "push_notification"]
+          "enum": [
+            "sms_notification",
+            "email_notification",
+            "phone_notification",
+            "push_notification"
+          ]
         }
       },
       "include_notifications": {
@@ -1168,7 +1191,12 @@
         "explode": true,
         "schema": {
           "type": "string",
-          "enum": ["escalation_policies", "teams", "integrations", "auto_pause_notifications_parameters"],
+          "enum": [
+            "escalation_policies",
+            "teams",
+            "integrations",
+            "auto_pause_notifications_parameters"
+          ],
           "uniqueItems": true
         }
       },
@@ -1179,7 +1207,12 @@
         "explode": true,
         "schema": {
           "type": "string",
-          "enum": ["escalation_policies", "teams", "auto_pause_notifications_parameters", "integrations"],
+          "enum": [
+            "escalation_policies",
+            "teams",
+            "auto_pause_notifications_parameters",
+            "integrations"
+          ],
           "uniqueItems": true
         }
       },
@@ -1242,7 +1275,14 @@
         "description": "Used to specify the field you wish to sort the results on.",
         "schema": {
           "type": "string",
-          "enum": ["name:asc", "name:desc", "routes:asc", "routes:desc", "created_at:asc", "created_at:desc"],
+          "enum": [
+            "name:asc",
+            "name:desc",
+            "routes:asc",
+            "routes:desc",
+            "created_at:asc",
+            "created_at:desc"
+          ],
           "default": "name:asc"
         }
       },
@@ -1782,7 +1822,10 @@
               },
               "type": {
                 "type": "string",
-                "enum": ["full_page_addon_reference", "incident_show_addon_reference"]
+                "enum": [
+                  "full_page_addon_reference",
+                  "incident_show_addon_reference"
+                ]
               }
             }
           }
@@ -1949,7 +1992,11 @@
             "properties": {
               "type": {
                 "type": "string",
-                "enum": ["user_reference", "team_reference", "escalation_policy_reference"]
+                "enum": [
+                  "user_reference",
+                  "team_reference",
+                  "escalation_policy_reference"
+                ]
               }
             }
           }
@@ -2122,7 +2169,12 @@
             "type": "string",
             "readOnly": true,
             "description": "The type of notification.",
-            "enum": ["sms_notification", "email_notification", "phone_notification", "push_notification"]
+            "enum": [
+              "sms_notification",
+              "email_notification",
+              "phone_notification",
+              "push_notification"
+            ]
           },
           "started_at": {
             "type": "string",
@@ -2373,7 +2425,11 @@
             "description": "The agent (user, service or integration) that created or modified the Incident Log Entry.",
             "properties": {
               "type": {
-                "enum": ["user_reference", "service_reference", "integration_reference"],
+                "enum": [
+                  "user_reference",
+                  "service_reference",
+                  "integration_reference"
+                ],
                 "type": "string"
               }
             },
@@ -2426,7 +2482,12 @@
                 "description": "Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule."
               }
             },
-            "required": ["start_delay_in_minutes", "urgency", "contact_method", "type"],
+            "required": [
+              "start_delay_in_minutes",
+              "urgency",
+              "contact_method",
+              "type"
+            ],
             "example": {
               "type": "assignment_notification_rule",
               "start_delay_in_minutes": 0,
@@ -3166,7 +3227,12 @@
             "description": "The escalation target is the entity that will be assigned an incident upon escalation.",
             "properties": {
               "type": {
-                "enum": ["user", "schedule", "user_reference", "schedule_reference"],
+                "enum": [
+                  "user",
+                  "schedule",
+                  "user_reference",
+                  "schedule_reference"
+                ],
                 "type": "string"
               }
             }
@@ -3298,7 +3364,13 @@
               "status": {
                 "type": "string",
                 "description": "The current state of the Service. Valid statuses are:\n\n\n- `active`: The service is enabled and has no open incidents. This is the only status a service can be created with.\n- `warning`: The service is enabled and has one or more acknowledged incidents.\n- `critical`: The service is enabled and has one or more triggered incidents.\n- `maintenance`: The service is under maintenance, no new incidents will be triggered during maintenance mode.\n- `disabled`: The service is disabled and will not have any new triggered incidents.\n",
-                "enum": ["active", "warning", "critical", "maintenance", "disabled"],
+                "enum": [
+                  "active",
+                  "warning",
+                  "critical",
+                  "maintenance",
+                  "disabled"
+                ],
                 "default": "active"
               },
               "last_incident_timestamp": {
@@ -3533,7 +3605,12 @@
               "email_incident_creation": {
                 "type": "string",
                 "description": "Specify for generic_email_inbound_integration",
-                "enum": ["on_new_email", "on_new_email_subject", "only_if_no_open_incidents", "use_rules"]
+                "enum": [
+                  "on_new_email",
+                  "on_new_email_subject",
+                  "only_if_no_open_incidents",
+                  "use_rules"
+                ]
               },
               "email_filter_mode": {
                 "type": "string",
@@ -3887,7 +3964,12 @@
             "description": "The percentage of the time range covered by this layer. Returns null unless since or until are set."
           }
         },
-        "required": ["start", "users", "rotation_virtual_start", "rotation_turn_length_seconds"]
+        "required": [
+          "start",
+          "users",
+          "rotation_virtual_start",
+          "rotation_turn_length_seconds"
+        ]
       },
       "ScheduleLayerEntry": {
         "type": "object",
@@ -4242,7 +4324,16 @@
             "uniqueItems": true,
             "items": {
               "type": "string",
-              "enum": ["trigger", "acknowledge", "resolve", "delegate", "escalate", "unacknowledge", "assign", "custom"]
+              "enum": [
+                "trigger",
+                "acknowledge",
+                "resolve",
+                "delegate",
+                "escalate",
+                "unacknowledge",
+                "assign",
+                "custom"
+              ]
             }
           },
           "url": {
@@ -5421,7 +5512,11 @@
               "type": {
                 "type": "string",
                 "description": "The type of object being used as the filter.",
-                "enum": ["account_reference", "service_reference", "team_reference"]
+                "enum": [
+                  "account_reference",
+                  "service_reference",
+                  "team_reference"
+                ]
               }
             },
             "required": ["type"]
@@ -5463,7 +5558,11 @@
                   "type": {
                     "type": "string",
                     "description": "The type of object being used as the filter.",
-                    "enum": ["account_reference", "service_reference", "team_reference"]
+                    "enum": [
+                      "account_reference",
+                      "service_reference",
+                      "team_reference"
+                    ]
                   }
                 }
               },
@@ -5916,7 +6015,13 @@
             "required": ["resource"]
           }
         },
-        "required": ["id", "execution_time", "method", "root_resource", "action"]
+        "required": [
+          "id",
+          "execution_time",
+          "method",
+          "root_resource",
+          "action"
+        ]
       },
       "AuditRecordResponseSchema": {
         "allOf": [
@@ -6223,7 +6328,12 @@
                   },
                   "scheduled_weekly": {
                     "type": "object",
-                    "required": ["start_time", "duration", "timezone", "weekdays"],
+                    "required": [
+                      "start_time",
+                      "duration",
+                      "timezone",
+                      "weekdays"
+                    ],
                     "description": "A reccuring window of time based on the day of the week, during which the rule is active.",
                     "properties": {
                       "start_time": {
@@ -6768,7 +6878,10 @@
           "type": {
             "type": "string",
             "description": "The type of the related Service.",
-            "enum": ["business_service_reference", "technical_service_reference"]
+            "enum": [
+              "business_service_reference",
+              "technical_service_reference"
+            ]
           },
           "self": {
             "type": "string",
@@ -7815,7 +7928,9 @@
                       {
                         "label": "If the API endpoints return HTTP 502 run an Automation Action that restarts the service",
                         "id": "8a874630",
-                        "conditions": ["event.custom_details.http_status_code equals '502'"],
+                        "conditions": [
+                          "event.custom_details.http_status_code equals '502'"
+                        ],
                         "actions": {
                           "pagerduty_automation_actions": [
                             {
@@ -7827,7 +7942,9 @@
                       {
                         "label": "If there's something wrong on the canary let the team know about it in our deployments Slack channel",
                         "id": "1f6d9a33",
-                        "conditions": ["event.custom_details.hostname matches part 'canary'"],
+                        "conditions": [
+                          "event.custom_details.hostname matches part 'canary'"
+                        ],
                         "actions": {
                           "automation_actions": [
                             {
@@ -8547,7 +8664,12 @@
                   "response": {
                     "summary": "Example Response",
                     "value": {
-                      "abilities": ["teams", "read_only_users", "service_support_hours", "urgencies"]
+                      "abilities": [
+                        "teams",
+                        "read_only_users",
+                        "service_support_hours",
+                        "urgencies"
+                      ]
                     }
                   }
                 }
@@ -9696,7 +9818,16 @@
                       "enum": ["created_at", "seconds_to_resolve"]
                     }
                   },
-                  "required": ["first", "last", "limit", "more", "time_zone", "data", "time_zone", "data"]
+                  "required": [
+                    "first",
+                    "last",
+                    "limit",
+                    "more",
+                    "time_zone",
+                    "data",
+                    "time_zone",
+                    "data"
+                  ]
                 },
                 "examples": {
                   "Example Response": {
@@ -10148,7 +10279,13 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "enum": ["users", "teams", "schedules", "escalation_policies", "services"],
+                "enum": [
+                  "users",
+                  "teams",
+                  "schedules",
+                  "escalation_policies",
+                  "services"
+                ],
                 "example": "users"
               }
             },
@@ -10181,7 +10318,13 @@
             "schema": {
               "type": "string",
               "description": "Describes the method used to perform the action:\n\n`browser` -- authenticated user session. Session value is not returned in the `truncated_token` field.\n\n`oauth` -- access token obtained via the OAuth flow. Truncated token value is returned in the `truncated_token` field.\n\n`api_token` -- Pagerduty API token. Truncated token value is returned in the `truncated_token` field.\n\n`identity_provider` -- action performed by an Identity provider on behalf of a user. No value is returned in the `truncated_token` field.\n\n`other` -- Method that does not fall in the predefined categories. Truncated token value MAY be returned in the `truncated_token` field.\n",
-              "enum": ["browser", "oauth", "api_token", "identity_provider", "other"]
+              "enum": [
+                "browser",
+                "oauth",
+                "api_token",
+                "identity_provider",
+                "other"
+              ]
             },
             "$ref": "#/components/parameters/audit_method_truncated_token"
           },
@@ -10374,7 +10517,13 @@
                                 "required": ["resource"]
                               }
                             },
-                            "required": ["id", "execution_time", "method", "root_resource", "action"]
+                            "required": [
+                              "id",
+                              "execution_time",
+                              "method",
+                              "root_resource",
+                              "action"
+                            ]
                           }
                         },
                         "response_metadata": {
@@ -12405,7 +12554,11 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "enum": ["extension_schemas", "extension_objects", "temporarily_disabled"]
+                "enum": [
+                  "extension_schemas",
+                  "extension_objects",
+                  "temporarily_disabled"
+                ]
               },
               "uniqueItems": true
             },
@@ -15037,7 +15190,11 @@
                     }
                   }
                 },
-                "required": ["requester_id", "message", "responder_request_targets"]
+                "required": [
+                  "requester_id",
+                  "message",
+                  "responder_request_targets"
+                ]
               },
               "examples": {
                 "request": {
@@ -16414,7 +16571,12 @@
             "description": "Return notification of this type only.",
             "schema": {
               "type": "string",
-              "enum": ["sms_notification", "email_notification", "phone_notification", "push_notification"]
+              "enum": [
+                "sms_notification",
+                "email_notification",
+                "phone_notification",
+                "push_notification"
+              ]
             },
             "$ref": "#/components/parameters/filter_notifications"
           },
@@ -18251,7 +18413,12 @@
                               },
                               "scheduled_weekly": {
                                 "type": "object",
-                                "required": ["start_time", "duration", "timezone", "weekdays"],
+                                "required": [
+                                  "start_time",
+                                  "duration",
+                                  "timezone",
+                                  "weekdays"
+                                ],
                                 "description": "A reccuring window of time based on the day of the week, during which the rule is active.",
                                 "properties": {
                                   "start_time": {
@@ -22600,7 +22767,12 @@
                                 "properties": {
                                   "value": {
                                     "type": "string",
-                                    "enum": ["info", "warning", "error", "critical"]
+                                    "enum": [
+                                      "info",
+                                      "warning",
+                                      "error",
+                                      "critical"
+                                    ]
                                   }
                                 }
                               },
@@ -23282,7 +23454,11 @@
                           "type": {
                             "type": "string",
                             "description": "The type of object being used as the filter.",
-                            "enum": ["account_reference", "service_reference", "team_reference"]
+                            "enum": [
+                              "account_reference",
+                              "service_reference",
+                              "team_reference"
+                            ]
                           }
                         },
                         "required": ["type"]
@@ -23498,7 +23674,11 @@
                           "type": {
                             "type": "string",
                             "description": "The type of object being used as the filter.",
-                            "enum": ["account_reference", "service_reference", "team_reference"]
+                            "enum": [
+                              "account_reference",
+                              "service_reference",
+                              "team_reference"
+                            ]
                           }
                         }
                       }
@@ -28875,7 +29055,11 @@
                       "type": "number"
                     }
                   },
-                  "required": ["deleted_count", "unauthorized_count", "non_existent_count"]
+                  "required": [
+                    "deleted_count",
+                    "unauthorized_count",
+                    "non_existent_count"
+                  ]
                 },
                 "examples": {
                   "response": {
@@ -30869,7 +31053,11 @@
                                 "properties": {
                                   "reason": {
                                     "type": "string",
-                                    "enum": ["most_recent", "related_service", "intelligent"],
+                                    "enum": [
+                                      "most_recent",
+                                      "related_service",
+                                      "intelligent"
+                                    ],
                                     "readOnly": true,
                                     "description": "The reason a change event was determined to be related to the given incident."
                                   }
@@ -31021,7 +31209,10 @@
                                 "type": {
                                   "type": "string",
                                   "description": "The type of relationship. A relationship outlines the reason why two Incidents are considered related.",
-                                  "enum": ["machine_learning_inferred", "service_dependency"]
+                                  "enum": [
+                                    "machine_learning_inferred",
+                                    "service_dependency"
+                                  ]
                                 },
                                 "metadata": {
                                   "anyOf": [
@@ -31347,7 +31538,11 @@
                       "type": "number"
                     }
                   },
-                  "required": ["deleted_count", "unauthorized_count", "non_existent_count"]
+                  "required": [
+                    "deleted_count",
+                    "unauthorized_count",
+                    "non_existent_count"
+                  ]
                 },
                 "examples": {
                   "resonse": {
@@ -32330,7 +32525,11 @@
                       "type": "number"
                     }
                   },
-                  "required": ["deleted_count", "unauthorized_count", "non_existent_count"]
+                  "required": [
+                    "deleted_count",
+                    "unauthorized_count",
+                    "non_existent_count"
+                  ]
                 },
                 "examples": {
                   "response": {
@@ -32652,7 +32851,11 @@
                       "type": "number"
                     }
                   },
-                  "required": ["deleted_count", "unauthorized_count", "non_existent_count"]
+                  "required": [
+                    "deleted_count",
+                    "unauthorized_count",
+                    "non_existent_count"
+                  ]
                 },
                 "examples": {
                   "response": {

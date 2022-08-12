@@ -6,7 +6,7 @@
     "title": "Amazon EC2 Auto Scaling",
     "description": "Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined scaling policies, scheduled actions, and health checks. Use this service with AWS Auto Scaling, Amazon CloudWatch, and Elastic Load Balancing. For more information, including information about granting IAM users required permissions for Amazon EC2 Auto Scaling actions, see the Amazon EC2 Auto Scaling User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-EC2-Auto-Scaling_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-EC2-Auto-Scaling_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -6476,7 +6476,10 @@
       "DescribeLifecycleHookTypesAnswer": {
         "type": "object",
         "example": {
-          "LifecycleHookTypes": ["autoscaling:EC2_INSTANCE_LAUNCHING", "autoscaling:EC2_INSTANCE_TERMINATING"]
+          "LifecycleHookTypes": [
+            "autoscaling:EC2_INSTANCE_LAUNCHING",
+            "autoscaling:EC2_INSTANCE_TERMINATING"
+          ]
         },
         "properties": {
           "LifecycleHookTypes": {
@@ -7279,7 +7282,13 @@
       },
       "Activity": {
         "type": "object",
-        "required": ["ActivityId", "AutoScalingGroupName", "Cause", "StartTime", "StatusCode"],
+        "required": [
+          "ActivityId",
+          "AutoScalingGroupName",
+          "Cause",
+          "StartTime",
+          "StatusCode"
+        ],
         "properties": {
           "ActivityId": {
             "allOf": [
@@ -8448,7 +8457,11 @@
       },
       "CompleteLifecycleActionType": {
         "type": "object",
-        "required": ["LifecycleHookName", "AutoScalingGroupName", "LifecycleActionResult"],
+        "required": [
+          "LifecycleHookName",
+          "AutoScalingGroupName",
+          "LifecycleActionResult"
+        ],
         "title": "CompleteLifecycleActionType",
         "properties": {
           "LifecycleHookName": {
@@ -10135,7 +10148,13 @@
       },
       "Instance": {
         "type": "object",
-        "required": ["InstanceId", "AvailabilityZone", "LifecycleState", "HealthStatus", "ProtectedFromScaleIn"],
+        "required": [
+          "InstanceId",
+          "AvailabilityZone",
+          "LifecycleState",
+          "HealthStatus",
+          "ProtectedFromScaleIn"
+        ],
         "properties": {
           "InstanceId": {
             "allOf": [
@@ -10232,7 +10251,14 @@
       },
       "InstanceRefreshStatus": {
         "type": "string",
-        "enum": ["Pending", "InProgress", "Successful", "Failed", "Cancelling", "Cancelled"]
+        "enum": [
+          "Pending",
+          "InProgress",
+          "Successful",
+          "Failed",
+          "Cancelling",
+          "Cancelled"
+        ]
       },
       "InstancesToUpdate": {
         "type": "integer",
@@ -10363,7 +10389,12 @@
       },
       "LaunchConfiguration": {
         "type": "object",
-        "required": ["LaunchConfigurationName", "ImageId", "InstanceType", "CreatedTime"],
+        "required": [
+          "LaunchConfigurationName",
+          "ImageId",
+          "InstanceType",
+          "CreatedTime"
+        ],
         "properties": {
           "LaunchConfigurationName": {
             "allOf": [
@@ -10899,7 +10930,12 @@
       },
       "MetricType": {
         "type": "string",
-        "enum": ["ASGAverageCPUUtilization", "ASGAverageNetworkIn", "ASGAverageNetworkOut", "ALBRequestCountPerTarget"]
+        "enum": [
+          "ASGAverageCPUUtilization",
+          "ASGAverageNetworkIn",
+          "ASGAverageNetworkOut",
+          "ALBRequestCountPerTarget"
+        ]
       },
       "MinAdjustmentMagnitude": {
         "type": "integer"
@@ -11923,7 +11959,11 @@
       },
       "SetInstanceProtectionQuery": {
         "type": "object",
-        "required": ["InstanceIds", "AutoScalingGroupName", "ProtectedFromScaleIn"],
+        "required": [
+          "InstanceIds",
+          "AutoScalingGroupName",
+          "ProtectedFromScaleIn"
+        ],
         "title": "SetInstanceProtectionQuery",
         "properties": {
           "InstanceIds": {
@@ -12638,7 +12678,12 @@
       },
       "GetPredictiveScalingForecastType": {
         "type": "object",
-        "required": ["AutoScalingGroupName", "PolicyName", "StartTime", "EndTime"],
+        "required": [
+          "AutoScalingGroupName",
+          "PolicyName",
+          "StartTime",
+          "EndTime"
+        ],
         "title": "GetPredictiveScalingForecastType",
         "properties": {
           "AutoScalingGroupName": {
@@ -12851,15 +12896,30 @@
       },
       "PredefinedLoadMetricType": {
         "type": "string",
-        "enum": ["ASGTotalCPUUtilization", "ASGTotalNetworkIn", "ASGTotalNetworkOut", "ALBTargetGroupRequestCount"]
+        "enum": [
+          "ASGTotalCPUUtilization",
+          "ASGTotalNetworkIn",
+          "ASGTotalNetworkOut",
+          "ALBTargetGroupRequestCount"
+        ]
       },
       "PredefinedMetricPairType": {
         "type": "string",
-        "enum": ["ASGCPUUtilization", "ASGNetworkIn", "ASGNetworkOut", "ALBRequestCount"]
+        "enum": [
+          "ASGCPUUtilization",
+          "ASGNetworkIn",
+          "ASGNetworkOut",
+          "ALBRequestCount"
+        ]
       },
       "PredefinedScalingMetricType": {
         "type": "string",
-        "enum": ["ASGAverageCPUUtilization", "ASGAverageNetworkIn", "ASGAverageNetworkOut", "ALBRequestCountPerTarget"]
+        "enum": [
+          "ASGAverageCPUUtilization",
+          "ASGAverageNetworkIn",
+          "ASGAverageNetworkOut",
+          "ALBRequestCountPerTarget"
+        ]
       },
       "PredictiveScalingConfiguration": {
         "type": "object",

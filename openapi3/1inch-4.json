@@ -5,7 +5,10 @@
     "version": "4",
     "description": "",
     "contact": {},
-    "x-categories": ["exchanges"]
+    "x-categories": ["exchanges"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/dapps/app.1inch.io.png"
+    }
   },
   "paths": {
     "/v4.0/{network}/healthcheck": {

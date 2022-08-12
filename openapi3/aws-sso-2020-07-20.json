@@ -5,7 +5,7 @@
     "x-release": "v4",
     "title": "AWS Single Sign-On (SSO) Admin",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Single-Sign-On_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Single-Sign-On_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -989,7 +989,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.DescribeAccountAssignmentCreationStatus"]
+              "enum": [
+                "SWBExternalService.DescribeAccountAssignmentCreationStatus"
+              ]
             }
           }
         ],
@@ -1102,7 +1104,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.DescribeAccountAssignmentDeletionStatus"]
+              "enum": [
+                "SWBExternalService.DescribeAccountAssignmentDeletionStatus"
+              ]
             }
           }
         ],
@@ -1328,7 +1332,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.DescribePermissionSetProvisioningStatus"]
+              "enum": [
+                "SWBExternalService.DescribePermissionSetProvisioningStatus"
+              ]
             }
           }
         ],
@@ -1451,7 +1457,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.DetachManagedPolicyFromPermissionSet"]
+              "enum": [
+                "SWBExternalService.DetachManagedPolicyFromPermissionSet"
+              ]
             }
           }
         ],
@@ -2088,7 +2096,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.ListAccountsForProvisionedPermissionSet"]
+              "enum": [
+                "SWBExternalService.ListAccountsForProvisionedPermissionSet"
+              ]
             }
           }
         ],
@@ -2733,7 +2743,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.ListPermissionSetsProvisionedToAccount"]
+              "enum": [
+                "SWBExternalService.ListPermissionSetsProvisionedToAccount"
+              ]
             }
           }
         ],
@@ -3613,7 +3625,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.CreateInstanceAccessControlAttributeConfiguration"]
+              "enum": [
+                "SWBExternalService.CreateInstanceAccessControlAttributeConfiguration"
+              ]
             }
           }
         ],
@@ -3736,7 +3750,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.DeleteInstanceAccessControlAttributeConfiguration"]
+              "enum": [
+                "SWBExternalService.DeleteInstanceAccessControlAttributeConfiguration"
+              ]
             }
           }
         ],
@@ -3849,7 +3865,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.DescribeInstanceAccessControlAttributeConfiguration"]
+              "enum": [
+                "SWBExternalService.DescribeInstanceAccessControlAttributeConfiguration"
+              ]
             }
           }
         ],
@@ -3972,7 +3990,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["SWBExternalService.UpdateInstanceAccessControlAttributeConfiguration"]
+              "enum": [
+                "SWBExternalService.UpdateInstanceAccessControlAttributeConfiguration"
+              ]
             }
           }
         ],
@@ -4144,7 +4164,14 @@
       },
       "CreateAccountAssignmentRequest": {
         "type": "object",
-        "required": ["InstanceArn", "TargetId", "TargetType", "PermissionSetArn", "PrincipalType", "PrincipalId"],
+        "required": [
+          "InstanceArn",
+          "TargetId",
+          "TargetType",
+          "PermissionSetArn",
+          "PrincipalType",
+          "PrincipalId"
+        ],
         "title": "CreateAccountAssignmentRequest",
         "properties": {
           "InstanceArn": {
@@ -4308,7 +4335,14 @@
       },
       "DeleteAccountAssignmentRequest": {
         "type": "object",
-        "required": ["InstanceArn", "TargetId", "TargetType", "PermissionSetArn", "PrincipalType", "PrincipalId"],
+        "required": [
+          "InstanceArn",
+          "TargetId",
+          "TargetType",
+          "PermissionSetArn",
+          "PrincipalType",
+          "PrincipalId"
+        ],
         "title": "DeleteAccountAssignmentRequest",
         "properties": {
           "InstanceArn": {
@@ -6172,7 +6206,10 @@
       },
       "ProvisioningStatus": {
         "type": "string",
-        "enum": ["LATEST_PERMISSION_SET_PROVISIONED", "LATEST_PERMISSION_SET_NOT_PROVISIONED"]
+        "enum": [
+          "LATEST_PERMISSION_SET_PROVISIONED",
+          "LATEST_PERMISSION_SET_NOT_PROVISIONED"
+        ]
       },
       "PermissionSetProvisioningStatusList": {
         "type": "array",
@@ -6278,7 +6315,10 @@
       },
       "CreateInstanceAccessControlAttributeConfigurationRequest": {
         "type": "object",
-        "required": ["InstanceArn", "InstanceAccessControlAttributeConfiguration"],
+        "required": [
+          "InstanceArn",
+          "InstanceAccessControlAttributeConfiguration"
+        ],
         "title": "CreateInstanceAccessControlAttributeConfigurationRequest",
         "properties": {
           "InstanceArn": {
@@ -6382,7 +6422,10 @@
       },
       "UpdateInstanceAccessControlAttributeConfigurationRequest": {
         "type": "object",
-        "required": ["InstanceArn", "InstanceAccessControlAttributeConfiguration"],
+        "required": [
+          "InstanceArn",
+          "InstanceAccessControlAttributeConfiguration"
+        ],
         "title": "UpdateInstanceAccessControlAttributeConfigurationRequest",
         "properties": {
           "InstanceArn": {

@@ -6,7 +6,7 @@
     "description": "The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.",
     "x-categories": ["project-management"],
     "x-logo": {
-      "url": "/logos/docusign.png"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/docusign.png"
     },
     "termsOfService": "https://www.docusign.com/company/terms-and-conditions/web",
     "contact": {

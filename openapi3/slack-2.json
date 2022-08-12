@@ -6,7 +6,7 @@
     "description": "One way to interact with the Slack platform is its HTTP RPC-based Web API, a collection of methods requiring OAuth 2.0-based user, bot, or workspace tokens blessed with related OAuth scopes.",
     "x-categories": ["chat"],
     "x-logo": {
-      "url": "/logos/slack.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/slack.svg"
     },
     "contact": {
       "name": "Slack developer relations",
@@ -1047,7 +1047,12 @@
                       "cache_ts": "1575283387.000000",
                       "categories": [
                         {
-                          "emoji_names": ["grinning", "grin", "joy", "etc etc ..."],
+                          "emoji_names": [
+                            "grinning",
+                            "grin",
+                            "joy",
+                            "etc etc ..."
+                          ],
                           "name": "Smileys & People"
                         }
                       ],
@@ -3923,7 +3928,14 @@
                           "type": "object"
                         }
                       },
-                      "required": ["team", "channel", "group", "mpim", "im", "app_home"],
+                      "required": [
+                        "team",
+                        "channel",
+                        "group",
+                        "mpim",
+                        "im",
+                        "app_home"
+                      ],
                       "type": "object"
                     },
                     "ok": {
@@ -5006,7 +5018,14 @@
                       "$ref": "#/components/schemas/defs_user_id"
                     }
                   },
-                  "required": ["ok", "url", "team", "user", "team_id", "user_id"],
+                  "required": [
+                    "ok",
+                    "url",
+                    "team",
+                    "user",
+                    "team_id",
+                    "user_id"
+                  ],
                   "title": "auth.test success schema",
                   "type": "object"
                 },
@@ -5161,7 +5180,14 @@
                           "$ref": "#/components/schemas/defs_user_id"
                         }
                       },
-                      "required": ["id", "deleted", "name", "updated", "app_id", "icons"],
+                      "required": [
+                        "id",
+                        "deleted",
+                        "name",
+                        "updated",
+                        "app_id",
+                        "icons"
+                      ],
                       "type": "object"
                     },
                     "ok": {
@@ -5363,7 +5389,13 @@
                       "$ref": "#/components/schemas/defs_ok_true"
                     }
                   },
-                  "required": ["ok", "messages", "has_more", "channel_actions_ts", "channel_actions_count"],
+                  "required": [
+                    "ok",
+                    "messages",
+                    "has_more",
+                    "channel_actions_ts",
+                    "channel_actions_count"
+                  ],
                   "title": "channels.history success schema",
                   "type": "object"
                 },
@@ -6008,7 +6040,14 @@
                                   "$ref": "#/components/schemas/defs_team"
                                 }
                               },
-                              "required": ["type", "user", "text", "thread_ts", "parent_user_id", "ts"],
+                              "required": [
+                                "type",
+                                "user",
+                                "text",
+                                "thread_ts",
+                                "parent_user_id",
+                                "ts"
+                              ],
                               "type": "object"
                             }
                           ]
@@ -7169,7 +7208,13 @@
                       "type": "string"
                     }
                   },
-                  "required": ["ok", "channel", "post_at", "scheduled_message_id", "message"],
+                  "required": [
+                    "ok",
+                    "channel",
+                    "post_at",
+                    "scheduled_message_id",
+                    "message"
+                  ],
                   "title": "chat.scheduleMessage success schema",
                   "type": "object"
                 },
@@ -7383,7 +7428,12 @@
                             "type": "string"
                           }
                         },
-                        "required": ["id", "channel_id", "post_at", "date_created"],
+                        "required": [
+                          "id",
+                          "channel_id",
+                          "post_at",
+                          "date_created"
+                        ],
                         "type": "object"
                       },
                       "type": "array"
@@ -7934,7 +7984,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -8062,7 +8117,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -8242,7 +8302,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -8459,7 +8524,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:history", "groups:history", "im:history", "mpim:history"]
+            "slackAuth": [
+              "channels:history",
+              "groups:history",
+              "im:history",
+              "mpim:history"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -8635,7 +8705,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:read", "groups:read", "im:read", "mpim:read"]
+            "slackAuth": [
+              "channels:read",
+              "groups:read",
+              "im:read",
+              "mpim:read"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -8868,7 +8943,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -9183,7 +9263,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -9316,7 +9401,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -9547,7 +9637,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:read", "groups:read", "im:read", "mpim:read"]
+            "slackAuth": [
+              "channels:read",
+              "groups:read",
+              "im:read",
+              "mpim:read"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -9702,7 +9797,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:read", "groups:read", "im:read", "mpim:read"]
+            "slackAuth": [
+              "channels:read",
+              "groups:read",
+              "im:read",
+              "mpim:read"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -9883,7 +9983,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -10055,7 +10160,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -10273,7 +10383,14 @@
                                   "$ref": "#/components/schemas/defs_team"
                                 }
                               },
-                              "required": ["type", "user", "text", "thread_ts", "parent_user_id", "ts"],
+                              "required": [
+                                "type",
+                                "user",
+                                "text",
+                                "thread_ts",
+                                "parent_user_id",
+                                "ts"
+                              ],
                               "type": "object"
                             }
                           ]
@@ -10416,7 +10533,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:history", "groups:history", "im:history", "mpim:history"]
+            "slackAuth": [
+              "channels:history",
+              "groups:history",
+              "im:history",
+              "mpim:history"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -10548,7 +10670,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -10680,7 +10807,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -10807,7 +10939,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -11089,7 +11226,13 @@
                       "type": "boolean"
                     }
                   },
-                  "required": ["ok", "dnd_enabled", "next_dnd_start_ts", "next_dnd_end_ts", "snooze_enabled"],
+                  "required": [
+                    "ok",
+                    "dnd_enabled",
+                    "next_dnd_start_ts",
+                    "next_dnd_end_ts",
+                    "snooze_enabled"
+                  ],
                   "title": "dnd.endSnooze schema",
                   "type": "object"
                 },
@@ -11366,7 +11509,12 @@
                       "type": "integer"
                     }
                   },
-                  "required": ["ok", "snooze_enabled", "snooze_endtime", "snooze_remaining"],
+                  "required": [
+                    "ok",
+                    "snooze_enabled",
+                    "snooze_endtime",
+                    "snooze_remaining"
+                  ],
                   "title": "dnd.setSnooze schema",
                   "type": "object"
                 },
@@ -13943,7 +14091,13 @@
                       "$ref": "#/components/schemas/defs_ok_true"
                     }
                   },
-                  "required": ["ok", "messages", "has_more", "channel_actions_ts", "channel_actions_count"],
+                  "required": [
+                    "ok",
+                    "messages",
+                    "has_more",
+                    "channel_actions_ts",
+                    "channel_actions_count"
+                  ],
                   "title": "groups.history success schema",
                   "type": "object"
                 },
@@ -15740,7 +15894,13 @@
                       "$ref": "#/components/schemas/defs_ok_true"
                     }
                   },
-                  "required": ["ok", "messages", "has_more", "channel_actions_ts", "channel_actions_count"],
+                  "required": [
+                    "ok",
+                    "messages",
+                    "has_more",
+                    "channel_actions_ts",
+                    "channel_actions_count"
+                  ],
                   "title": "im.history success schema",
                   "type": "object"
                 },
@@ -16462,7 +16622,14 @@
                                   "$ref": "#/components/schemas/defs_team"
                                 }
                               },
-                              "required": ["type", "user", "text", "thread_ts", "parent_user_id", "ts"],
+                              "required": [
+                                "type",
+                                "user",
+                                "text",
+                                "thread_ts",
+                                "parent_user_id",
+                                "ts"
+                              ],
                               "type": "object"
                             }
                           ]
@@ -16948,7 +17115,13 @@
                       "$ref": "#/components/schemas/defs_ok_true"
                     }
                   },
-                  "required": ["ok", "messages", "has_more", "channel_actions_ts", "channel_actions_count"],
+                  "required": [
+                    "ok",
+                    "messages",
+                    "has_more",
+                    "channel_actions_ts",
+                    "channel_actions_count"
+                  ],
                   "title": "mpim.history schema",
                   "type": "object"
                 },
@@ -17568,7 +17741,14 @@
                                   "$ref": "#/components/schemas/defs_team"
                                 }
                               },
-                              "required": ["type", "user", "text", "thread_ts", "parent_user_id", "ts"],
+                              "required": [
+                                "type",
+                                "user",
+                                "text",
+                                "thread_ts",
+                                "parent_user_id",
+                                "ts"
+                              ],
                               "type": "object"
                             }
                           ]
@@ -20495,7 +20675,12 @@
                                   "type": "string"
                                 }
                               },
-                              "required": ["type", "channel", "message", "date_create"],
+                              "required": [
+                                "type",
+                                "channel",
+                                "message",
+                                "date_create"
+                              ],
                               "type": "object"
                             },
                             {
@@ -20532,7 +20717,12 @@
                                   "type": "string"
                                 }
                               },
-                              "required": ["type", "file", "comment", "date_create"],
+                              "required": [
+                                "type",
+                                "file",
+                                "comment",
+                                "date_create"
+                              ],
                               "type": "object"
                             },
                             {
@@ -21395,7 +21585,15 @@
                             "type": "string"
                           }
                         },
-                        "required": ["user_id", "user_name", "date", "change_type", "app_type", "app_id", "scope"],
+                        "required": [
+                          "user_id",
+                          "user_name",
+                          "date",
+                          "change_type",
+                          "app_type",
+                          "app_id",
+                          "scope"
+                        ],
                         "type": "object"
                       },
                       "minItems": 1,
@@ -21586,7 +21784,12 @@
                             "label": "House",
                             "options": null,
                             "ordering": 3,
-                            "possible_values": ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
+                            "possible_values": [
+                              "Gryffindor",
+                              "Hufflepuff",
+                              "Ravenclaw",
+                              "Slytherin"
+                            ],
                             "type": "options_list"
                           },
                           {
@@ -22969,7 +23172,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:read", "groups:read", "im:read", "mpim:read"]
+            "slackAuth": [
+              "channels:read",
+              "groups:read",
+              "im:read",
+              "mpim:read"
+            ]
           }
         ],
         "tags": ["users"],
@@ -28661,7 +28869,12 @@
         },
         "security": [
           {
-            "slackAuth": ["channels:write", "groups:write", "im:write", "mpim:write"]
+            "slackAuth": [
+              "channels:write",
+              "groups:write",
+              "im:write",
+              "mpim:write"
+            ]
           }
         ],
         "tags": ["conversations"],
@@ -29246,7 +29459,15 @@
             "type": "integer"
           }
         },
-        "required": ["id", "deleted", "name", "updated", "app_id", "icons", "team_id"],
+        "required": [
+          "id",
+          "deleted",
+          "name",
+          "updated",
+          "app_id",
+          "icons",
+          "team_id"
+        ],
         "title": "Bot Profile Object",
         "type": "object"
       },
@@ -29462,7 +29683,14 @@
             "$ref": "#/components/schemas/defs_user_id"
           }
         },
-        "required": ["id", "created", "timestamp", "user", "is_intro", "comment"],
+        "required": [
+          "id",
+          "created",
+          "timestamp",
+          "user",
+          "is_intro",
+          "comment"
+        ],
         "title": "File Comment Object",
         "type": "object"
       },
@@ -30156,7 +30384,13 @@
                         "$ref": "#/components/schemas/objs_team"
                       }
                     },
-                    "required": ["id", "name", "team", "date_create", "is_active"],
+                    "required": [
+                      "id",
+                      "name",
+                      "team",
+                      "date_create",
+                      "is_active"
+                    ],
                     "type": "object"
                   },
                   "minItems": 0,
@@ -30176,7 +30410,14 @@
                   "type": "integer"
                 }
               },
-              "required": ["id", "created", "is_im", "is_org_shared", "user", "priority"],
+              "required": [
+                "id",
+                "created",
+                "is_im",
+                "is_org_shared",
+                "user",
+                "priority"
+              ],
               "title": "Conversation IM Channel Object from conversations.* methods",
               "type": "object"
             }
@@ -30210,7 +30451,14 @@
             "uniqueItems": true
           }
         },
-        "required": ["id", "enterprise_id", "enterprise_name", "is_admin", "is_owner", "teams"],
+        "required": [
+          "id",
+          "enterprise_id",
+          "enterprise_name",
+          "is_admin",
+          "is_owner",
+          "teams"
+        ],
         "type": "object"
       },
       "objs_file": {
@@ -30587,7 +30835,16 @@
             "type": "integer"
           }
         },
-        "required": ["id", "name", "is_group", "created", "creator", "name_normalized", "topic", "purpose"],
+        "required": [
+          "id",
+          "name",
+          "is_group",
+          "created",
+          "creator",
+          "name_normalized",
+          "topic",
+          "purpose"
+        ],
         "title": "Group object",
         "type": "object"
       },
@@ -30660,7 +30917,14 @@
             "$ref": "#/components/schemas/defs_user_id"
           }
         },
-        "required": ["id", "is_im", "is_org_shared", "user", "created", "is_user_deleted"],
+        "required": [
+          "id",
+          "is_im",
+          "is_org_shared",
+          "user",
+          "created",
+          "is_user_deleted"
+        ],
         "title": "IM Object",
         "type": "object"
       },
@@ -31485,7 +31749,15 @@
                   "type": "boolean"
                 }
               },
-              "required": ["id", "name", "deleted", "profile", "is_bot", "updated", "is_app_user"],
+              "required": [
+                "id",
+                "name",
+                "deleted",
+                "profile",
+                "is_bot",
+                "updated",
+                "is_app_user"
+              ],
               "type": "object"
             },
             {

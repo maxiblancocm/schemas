@@ -6,7 +6,7 @@
     "title": "Amazon Redshift",
     "description": "This is an interface reference for Amazon Redshift. It contains documentation for one of the programming or command line interfaces you can use to manage Amazon Redshift clusters. Note that Amazon Redshift is asynchronous, which means that some interfaces may require techniques, such as polling or asynchronous callback handlers, to determine when a command has been applied. In this reference, the parameter descriptions indicate whether a change is applied immediately, on the next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster management interfaces, go to Using the Amazon Redshift Management Interfaces. Amazon Redshift manages all the work of setting up, operating, and scaling a data warehouse: provisioning capacity, monitoring and backing up the cluster, and applying patches and upgrades to the Amazon Redshift engine. You can focus on using your data to acquire new insights for your business and customers. If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the Amazon Redshift Getting Started Guide. If you are a database developer, the Amazon Redshift Database Developer Guide explains how to design, build, query, and maintain the databases that make up your data warehouse.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Redshift_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Redshift_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -17971,7 +17971,12 @@
       },
       "CreateClusterMessage": {
         "type": "object",
-        "required": ["ClusterIdentifier", "NodeType", "MasterUsername", "MasterUserPassword"],
+        "required": [
+          "ClusterIdentifier",
+          "NodeType",
+          "MasterUsername",
+          "MasterUserPassword"
+        ],
         "title": "CreateClusterMessage",
         "properties": {
           "DBName": {
@@ -18299,7 +18304,11 @@
       },
       "CreateClusterParameterGroupMessage": {
         "type": "object",
-        "required": ["ParameterGroupName", "ParameterGroupFamily", "Description"],
+        "required": [
+          "ParameterGroupName",
+          "ParameterGroupFamily",
+          "Description"
+        ],
         "title": "CreateClusterParameterGroupMessage",
         "properties": {
           "ParameterGroupName": {
@@ -18971,7 +18980,12 @@
       },
       "CreateScheduledActionMessage": {
         "type": "object",
-        "required": ["ScheduledActionName", "TargetAction", "Schedule", "IamRole"],
+        "required": [
+          "ScheduledActionName",
+          "TargetAction",
+          "Schedule",
+          "IamRole"
+        ],
         "title": "CreateScheduledActionMessage",
         "properties": {
           "ScheduledActionName": {
@@ -20380,7 +20394,13 @@
       },
       "SourceType": {
         "type": "string",
-        "enum": ["cluster", "cluster-parameter-group", "cluster-security-group", "cluster-snapshot", "scheduled-action"]
+        "enum": [
+          "cluster",
+          "cluster-parameter-group",
+          "cluster-security-group",
+          "cluster-snapshot",
+          "scheduled-action"
+        ]
       },
       "DescribeEventsMessage": {
         "type": "object",
@@ -22800,7 +22820,12 @@
       },
       "NodeConfigurationOptionsFilterName": {
         "type": "string",
-        "enum": ["NodeType", "NumberOfNodes", "EstimatedDiskUtilizationPercent", "Mode"]
+        "enum": [
+          "NodeType",
+          "NumberOfNodes",
+          "EstimatedDiskUtilizationPercent",
+          "Mode"
+        ]
       },
       "OperatorType": {
         "type": "string",
@@ -24821,7 +24846,10 @@
       },
       "CreateAuthenticationProfileMessage": {
         "type": "object",
-        "required": ["AuthenticationProfileName", "AuthenticationProfileContent"],
+        "required": [
+          "AuthenticationProfileName",
+          "AuthenticationProfileContent"
+        ],
         "title": "CreateAuthenticationProfileMessage",
         "properties": {
           "AuthenticationProfileName": {
@@ -24911,7 +24939,14 @@
       },
       "DataShareStatus": {
         "type": "string",
-        "enum": ["ACTIVE", "PENDING_AUTHORIZATION", "AUTHORIZED", "DEAUTHORIZED", "REJECTED", "AVAILABLE"]
+        "enum": [
+          "ACTIVE",
+          "PENDING_AUTHORIZATION",
+          "AUTHORIZED",
+          "DEAUTHORIZED",
+          "REJECTED",
+          "AVAILABLE"
+        ]
       },
       "DataShareAssociation": {
         "type": "object",
@@ -24971,7 +25006,13 @@
       },
       "DataShareStatusForProducer": {
         "type": "string",
-        "enum": ["ACTIVE", "AUTHORIZED", "PENDING_AUTHORIZATION", "DEAUTHORIZED", "REJECTED"]
+        "enum": [
+          "ACTIVE",
+          "AUTHORIZED",
+          "PENDING_AUTHORIZATION",
+          "DEAUTHORIZED",
+          "REJECTED"
+        ]
       },
       "DeauthorizeDataShareMessage": {
         "type": "object",
@@ -25512,7 +25553,10 @@
       },
       "ModifyAuthenticationProfileMessage": {
         "type": "object",
-        "required": ["AuthenticationProfileName", "AuthenticationProfileContent"],
+        "required": [
+          "AuthenticationProfileName",
+          "AuthenticationProfileContent"
+        ],
         "title": "ModifyAuthenticationProfileMessage",
         "properties": {
           "AuthenticationProfileName": {
@@ -25702,7 +25746,12 @@
       },
       "PartnerIntegrationInputMessage": {
         "type": "object",
-        "required": ["AccountId", "ClusterIdentifier", "DatabaseName", "PartnerName"],
+        "required": [
+          "AccountId",
+          "ClusterIdentifier",
+          "DatabaseName",
+          "PartnerName"
+        ],
         "title": "PartnerIntegrationInputMessage",
         "properties": {
           "AccountId": {
@@ -25812,7 +25861,13 @@
       },
       "UpdatePartnerStatusInputMessage": {
         "type": "object",
-        "required": ["AccountId", "ClusterIdentifier", "DatabaseName", "PartnerName", "Status"],
+        "required": [
+          "AccountId",
+          "ClusterIdentifier",
+          "DatabaseName",
+          "PartnerName",
+          "Status"
+        ],
         "title": "UpdatePartnerStatusInputMessage",
         "properties": {
           "AccountId": {

@@ -6,7 +6,7 @@
     "title": "AWS Elemental MediaLive",
     "description": "API for AWS Elemental MediaLive",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Elemental-MediaLive_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Elemental-MediaLive_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -1815,7 +1815,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["availabilityZones", "multiplexSettings", "name", "requestId"],
+                "required": [
+                  "availabilityZones",
+                  "multiplexSettings",
+                  "name",
+                  "requestId"
+                ],
                 "properties": {
                   "availabilityZones": {
                     "description": "Placeholder documentation for __listOf__string",
@@ -2161,7 +2166,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["multiplexProgramSettings", "programName", "requestId"],
+                "required": [
+                  "multiplexProgramSettings",
+                  "programName",
+                  "requestId"
+                ],
                 "properties": {
                   "multiplexProgramSettings": {
                     "description": "Multiplex Program settings configuration.",
@@ -12879,7 +12888,13 @@
       },
       "AacCodingMode": {
         "type": "string",
-        "enum": ["AD_RECEIVER_MIX", "CODING_MODE_1_0", "CODING_MODE_1_1", "CODING_MODE_2_0", "CODING_MODE_5_1"],
+        "enum": [
+          "AD_RECEIVER_MIX",
+          "CODING_MODE_1_0",
+          "CODING_MODE_1_1",
+          "CODING_MODE_2_0",
+          "CODING_MODE_5_1"
+        ],
         "description": "Aac Coding Mode"
       },
       "AacInputType": {
@@ -13056,7 +13071,12 @@
       },
       "Ac3CodingMode": {
         "type": "string",
-        "enum": ["CODING_MODE_1_0", "CODING_MODE_1_1", "CODING_MODE_2_0", "CODING_MODE_3_2_LFE"],
+        "enum": [
+          "CODING_MODE_1_0",
+          "CODING_MODE_1_1",
+          "CODING_MODE_2_0",
+          "CODING_MODE_3_2_LFE"
+        ],
         "description": "Ac3 Coding Mode"
       },
       "Ac3DrcProfile": {
@@ -14441,7 +14461,12 @@
       },
       "AudioType": {
         "type": "string",
-        "enum": ["CLEAN_EFFECTS", "HEARING_IMPAIRED", "UNDEFINED", "VISUAL_IMPAIRED_COMMENTARY"],
+        "enum": [
+          "CLEAN_EFFECTS",
+          "HEARING_IMPAIRED",
+          "UNDEFINED",
+          "VISUAL_IMPAIRED_COMMENTARY"
+        ],
         "description": "Audio Type"
       },
       "AudioDescriptionAudioTypeControl": {
@@ -16503,7 +16528,12 @@
       },
       "EncoderSettings": {
         "type": "object",
-        "required": ["VideoDescriptions", "AudioDescriptions", "OutputGroups", "TimecodeConfig"],
+        "required": [
+          "VideoDescriptions",
+          "AudioDescriptions",
+          "OutputGroups",
+          "TimecodeConfig"
+        ],
         "properties": {
           "AudioDescriptions": {
             "allOf": [
@@ -18464,7 +18494,12 @@
       },
       "DvbSdtOutputSdt": {
         "type": "string",
-        "enum": ["SDT_FOLLOW", "SDT_FOLLOW_IF_PRESENT", "SDT_MANUAL", "SDT_NONE"],
+        "enum": [
+          "SDT_FOLLOW",
+          "SDT_FOLLOW_IF_PRESENT",
+          "SDT_MANUAL",
+          "SDT_NONE"
+        ],
         "description": "Dvb Sdt Output Sdt"
       },
       "__integerMin25Max2000": {
@@ -18593,7 +18628,13 @@
       },
       "Eac3BitstreamMode": {
         "type": "string",
-        "enum": ["COMMENTARY", "COMPLETE_MAIN", "EMERGENCY", "HEARING_IMPAIRED", "VISUALLY_IMPAIRED"],
+        "enum": [
+          "COMMENTARY",
+          "COMPLETE_MAIN",
+          "EMERGENCY",
+          "HEARING_IMPAIRED",
+          "VISUALLY_IMPAIRED"
+        ],
         "description": "Eac3 Bitstream Mode"
       },
       "Eac3CodingMode": {
@@ -18608,12 +18649,26 @@
       },
       "Eac3DrcLine": {
         "type": "string",
-        "enum": ["FILM_LIGHT", "FILM_STANDARD", "MUSIC_LIGHT", "MUSIC_STANDARD", "NONE", "SPEECH"],
+        "enum": [
+          "FILM_LIGHT",
+          "FILM_STANDARD",
+          "MUSIC_LIGHT",
+          "MUSIC_STANDARD",
+          "NONE",
+          "SPEECH"
+        ],
         "description": "Eac3 Drc Line"
       },
       "Eac3DrcRf": {
         "type": "string",
-        "enum": ["FILM_LIGHT", "FILM_STANDARD", "MUSIC_LIGHT", "MUSIC_STANDARD", "NONE", "SPEECH"],
+        "enum": [
+          "FILM_LIGHT",
+          "FILM_STANDARD",
+          "MUSIC_LIGHT",
+          "MUSIC_STANDARD",
+          "NONE",
+          "SPEECH"
+        ],
         "description": "Eac3 Drc Rf"
       },
       "Eac3LfeControl": {
@@ -19249,7 +19304,14 @@
       },
       "H264Profile": {
         "type": "string",
-        "enum": ["BASELINE", "HIGH", "HIGH_10BIT", "HIGH_422", "HIGH_422_10BIT", "MAIN"],
+        "enum": [
+          "BASELINE",
+          "HIGH",
+          "HIGH_10BIT",
+          "HIGH_422",
+          "HIGH_422_10BIT",
+          "MAIN"
+        ],
         "description": "H264 Profile"
       },
       "H264QualityLevel": {
@@ -20970,7 +21032,11 @@
       },
       "HlsOutputSelection": {
         "type": "string",
-        "enum": ["MANIFESTS_AND_SEGMENTS", "SEGMENTS_ONLY", "VARIANT_MANIFESTS_AND_SEGMENTS"],
+        "enum": [
+          "MANIFESTS_AND_SEGMENTS",
+          "SEGMENTS_ONLY",
+          "VARIANT_MANIFESTS_AND_SEGMENTS"
+        ],
         "description": "Hls Output Selection"
       },
       "HlsProgramDateTime": {
@@ -22878,7 +22944,14 @@
       },
       "M2tsSegmentationMarkers": {
         "type": "string",
-        "enum": ["EBP", "EBP_LEGACY", "NONE", "PSI_SEGSTART", "RAI_ADAPT", "RAI_SEGSTART"],
+        "enum": [
+          "EBP",
+          "EBP_LEGACY",
+          "NONE",
+          "PSI_SEGSTART",
+          "RAI_ADAPT",
+          "RAI_SEGSTART"
+        ],
         "description": "M2ts Segmentation Markers"
       },
       "M2tsSegmentationStyle": {
@@ -23899,7 +23972,10 @@
       },
       "NetworkInputServerValidation": {
         "type": "string",
-        "enum": ["CHECK_CRYPTOGRAPHY_AND_VALIDATE_NAME", "CHECK_CRYPTOGRAPHY_ONLY"],
+        "enum": [
+          "CHECK_CRYPTOGRAPHY_AND_VALIDATE_NAME",
+          "CHECK_CRYPTOGRAPHY_ONLY"
+        ],
         "description": "Network Input Server Validation"
       },
       "NielsenPcmToId3TaggingState": {
@@ -25364,7 +25440,11 @@
       },
       "ScheduleAction": {
         "type": "object",
-        "required": ["ActionName", "ScheduleActionStartSettings", "ScheduleActionSettings"],
+        "required": [
+          "ActionName",
+          "ScheduleActionStartSettings",
+          "ScheduleActionSettings"
+        ],
         "properties": {
           "ActionName": {
             "allOf": [
@@ -25672,7 +25752,12 @@
       },
       "Scte35DeviceRestrictions": {
         "type": "string",
-        "enum": ["NONE", "RESTRICT_GROUP0", "RESTRICT_GROUP1", "RESTRICT_GROUP2"],
+        "enum": [
+          "NONE",
+          "RESTRICT_GROUP0",
+          "RESTRICT_GROUP1",
+          "RESTRICT_GROUP2"
+        ],
         "description": "Corresponds to the device_restrictions parameter in a segmentation_descriptor. If you include one of the \"restriction\" flags then you must include all four of them."
       },
       "Scte35NoRegionalBlackoutFlag": {
@@ -25687,7 +25772,12 @@
       },
       "Scte35DeliveryRestrictions": {
         "type": "object",
-        "required": ["DeviceRestrictions", "ArchiveAllowedFlag", "WebDeliveryAllowedFlag", "NoRegionalBlackoutFlag"],
+        "required": [
+          "DeviceRestrictions",
+          "ArchiveAllowedFlag",
+          "WebDeliveryAllowedFlag",
+          "NoRegionalBlackoutFlag"
+        ],
         "properties": {
           "ArchiveAllowedFlag": {
             "allOf": [
@@ -25942,7 +26032,10 @@
       },
       "Scte35SegmentationCancelIndicator": {
         "type": "string",
-        "enum": ["SEGMENTATION_EVENT_NOT_CANCELED", "SEGMENTATION_EVENT_CANCELED"],
+        "enum": [
+          "SEGMENTATION_EVENT_NOT_CANCELED",
+          "SEGMENTATION_EVENT_CANCELED"
+        ],
         "description": "Corresponds to SCTE-35 segmentation_event_cancel_indicator. SEGMENTATION_EVENT_NOT_CANCELED corresponds to 0 in the SCTE-35 specification and indicates that this is an insertion request. SEGMENTATION_EVENT_CANCELED corresponds to 1 in the SCTE-35 specification and indicates that this is a cancelation request, in which case complete this field and the existing event ID to cancel."
       },
       "__longMin0Max1099511627775": {
@@ -26913,7 +27006,12 @@
       },
       "WavCodingMode": {
         "type": "string",
-        "enum": ["CODING_MODE_1_0", "CODING_MODE_2_0", "CODING_MODE_4_0", "CODING_MODE_8_0"],
+        "enum": [
+          "CODING_MODE_1_0",
+          "CODING_MODE_2_0",
+          "CODING_MODE_4_0",
+          "CODING_MODE_8_0"
+        ],
         "description": "Wav Coding Mode"
       },
       "AcceptInputDeviceTransferResponse": {
@@ -27249,7 +27347,12 @@
       },
       "S3CannedAcl": {
         "type": "string",
-        "enum": ["AUTHENTICATED_READ", "BUCKET_OWNER_FULL_CONTROL", "BUCKET_OWNER_READ", "PUBLIC_READ"],
+        "enum": [
+          "AUTHENTICATED_READ",
+          "BUCKET_OWNER_FULL_CONTROL",
+          "BUCKET_OWNER_READ",
+          "PUBLIC_READ"
+        ],
         "description": "S3 Canned Acl"
       },
       "AudioHlsRenditionSelection": {

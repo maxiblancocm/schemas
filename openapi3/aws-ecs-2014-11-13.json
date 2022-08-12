@@ -6,7 +6,7 @@
     "title": "Amazon ECS (Elastic Container Service)",
     "description": "Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2 launch type. For more information about launch types, see Amazon ECS Launch Types. Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2 features. You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs, isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster management and configuration management systems or worry about scaling your management infrastructure.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Elastic-Container-Service_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Elastic-Container-Service_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -221,7 +221,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.CreateCapacityProvider"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider"
+              ]
             }
           }
         ],
@@ -713,7 +715,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DeleteAccountSetting"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DeleteAccountSetting"
+              ]
             }
           }
         ],
@@ -899,7 +903,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DeleteCapacityProvider"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DeleteCapacityProvider"
+              ]
             }
           }
         ],
@@ -1411,7 +1417,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DeregisterContainerInstance"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DeregisterContainerInstance"
+              ]
             }
           }
         ],
@@ -1504,7 +1512,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DeregisterTaskDefinition"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DeregisterTaskDefinition"
+              ]
             }
           }
         ],
@@ -1597,7 +1607,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DescribeCapacityProviders"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DescribeCapacityProviders"
+              ]
             }
           }
         ],
@@ -1793,7 +1805,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DescribeContainerInstances"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DescribeContainerInstances"
+              ]
             }
           }
         ],
@@ -1989,7 +2003,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DescribeTaskDefinition"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DescribeTaskDefinition"
+              ]
             }
           }
         ],
@@ -2318,7 +2334,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.DiscoverPollEndpoint"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.DiscoverPollEndpoint"
+              ]
             }
           }
         ],
@@ -2762,7 +2780,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.ListContainerInstances"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.ListContainerInstances"
+              ]
             }
           }
         ],
@@ -3097,7 +3117,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.ListTaskDefinitionFamilies"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.ListTaskDefinitionFamilies"
+              ]
             }
           }
         ],
@@ -3525,7 +3547,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.PutAccountSettingDefault"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.PutAccountSettingDefault"
+              ]
             }
           }
         ],
@@ -3751,7 +3775,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.PutClusterCapacityProviders"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.PutClusterCapacityProviders"
+              ]
             }
           }
         ],
@@ -3844,7 +3870,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.RegisterContainerInstance"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.RegisterContainerInstance"
+              ]
             }
           }
         ],
@@ -3937,7 +3965,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.RegisterTaskDefinition"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.RegisterTaskDefinition"
+              ]
             }
           }
         ],
@@ -4399,7 +4429,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.SubmitAttachmentStateChanges"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.SubmitAttachmentStateChanges"
+              ]
             }
           }
         ],
@@ -4492,7 +4524,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.SubmitContainerStateChange"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.SubmitContainerStateChange"
+              ]
             }
           }
         ],
@@ -4595,7 +4629,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.SubmitTaskStateChange"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.SubmitTaskStateChange"
+              ]
             }
           }
         ],
@@ -4924,7 +4960,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.UpdateClusterSettings"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.UpdateClusterSettings"
+              ]
             }
           }
         ],
@@ -5057,7 +5095,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.UpdateContainerAgent"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.UpdateContainerAgent"
+              ]
             }
           }
         ],
@@ -5160,7 +5200,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.UpdateContainerInstancesState"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.UpdateContainerInstancesState"
+              ]
             }
           }
         ],
@@ -5466,7 +5508,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.UpdateServicePrimaryTaskSet"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.UpdateServicePrimaryTaskSet"
+              ]
             }
           }
         ],
@@ -5712,7 +5756,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AmazonEC2ContainerServiceV20141113.UpdateCapacityProvider"]
+              "enum": [
+                "AmazonEC2ContainerServiceV20141113.UpdateCapacityProvider"
+              ]
             }
           }
         ],
@@ -8041,7 +8087,9 @@
       "ListServicesResponse": {
         "type": "object",
         "example": {
-          "serviceArns": ["arn:aws:ecs:us-east-1:012345678910:service/my-http-service"]
+          "serviceArns": [
+            "arn:aws:ecs:us-east-1:012345678910:service/my-http-service"
+          ]
         },
         "properties": {
           "serviceArns": {
@@ -8328,7 +8376,9 @@
       "ListTasksResponse": {
         "type": "object",
         "example": {
-          "taskArns": ["arn:aws:ecs:us-east-1:012345678910:task/0cc43cdb-3bee-4407-9c26-c0e6ea5bee84"]
+          "taskArns": [
+            "arn:aws:ecs:us-east-1:012345678910:task/0cc43cdb-3bee-4407-9c26-c0e6ea5bee84"
+          ]
         },
         "properties": {
           "taskArns": {
@@ -8619,7 +8669,11 @@
       },
       "PutClusterCapacityProvidersRequest": {
         "type": "object",
-        "required": ["cluster", "capacityProviders", "defaultCapacityProviderStrategy"],
+        "required": [
+          "cluster",
+          "capacityProviders",
+          "defaultCapacityProviderStrategy"
+        ],
         "title": "PutClusterCapacityProvidersRequest",
         "properties": {
           "cluster": {
@@ -10165,7 +10219,14 @@
       },
       "AgentUpdateStatus": {
         "type": "string",
-        "enum": ["PENDING", "STAGING", "STAGED", "UPDATING", "UPDATED", "FAILED"]
+        "enum": [
+          "PENDING",
+          "STAGING",
+          "STAGED",
+          "UPDATING",
+          "UPDATED",
+          "FAILED"
+        ]
       },
       "AssignPublicIp": {
         "type": "string",
@@ -12050,7 +12111,13 @@
       },
       "ContainerInstanceStatus": {
         "type": "string",
-        "enum": ["ACTIVE", "DRAINING", "REGISTERING", "DEREGISTERING", "REGISTRATION_FAILED"]
+        "enum": [
+          "ACTIVE",
+          "DRAINING",
+          "REGISTERING",
+          "DEREGISTERING",
+          "REGISTRATION_FAILED"
+        ]
       },
       "ContainerInstances": {
         "type": "array",
@@ -13912,7 +13979,16 @@
       },
       "LogDriver": {
         "type": "string",
-        "enum": ["json-file", "syslog", "journald", "gelf", "fluentd", "awslogs", "splunk", "awsfirelens"]
+        "enum": [
+          "json-file",
+          "syslog",
+          "journald",
+          "gelf",
+          "fluentd",
+          "awslogs",
+          "splunk",
+          "awsfirelens"
+        ]
       },
       "LogConfigurationOptionsMap": {
         "type": "object",
@@ -14991,7 +15067,11 @@
       },
       "TaskStopCode": {
         "type": "string",
-        "enum": ["TaskFailedToStart", "EssentialContainerExited", "UserInitiated"]
+        "enum": [
+          "TaskFailedToStart",
+          "EssentialContainerExited",
+          "UserInitiated"
+        ]
       },
       "TaskDefinitionField": {
         "type": "string",

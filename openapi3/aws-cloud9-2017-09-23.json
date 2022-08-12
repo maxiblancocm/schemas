@@ -7,7 +7,7 @@
     "description": "AWS Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the cloud. For more information about AWS Cloud9, see the AWS Cloud9 User Guide. AWS Cloud9 supports these operations:    CreateEnvironmentEC2: Creates an AWS Cloud9 development environment, launches an Amazon EC2 instance, and then connects from the instance to the environment.    CreateEnvironmentMembership: Adds an environment member to an environment.    DeleteEnvironment: Deletes an environment. If an Amazon EC2 instance is connected to the environment, also terminates the instance.    DeleteEnvironmentMembership: Deletes an environment member from an environment.    DescribeEnvironmentMemberships: Gets information about environment members for an environment.    DescribeEnvironments: Gets information about environments.    DescribeEnvironmentStatus: Gets status information for an environment.    ListEnvironments: Gets a list of environment identifiers.    ListTagsForResource: Gets the tags for an environment.    TagResource: Adds tags to an environment.    UntagResource: Removes tags from an environment.    UpdateEnvironment: Changes the settings of an existing environment.    UpdateEnvironmentMembership: Changes the settings of an existing environment member for an environment.",
     "x-categories": ["software-development"],
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Cloud9_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Cloud9_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -242,7 +242,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2"
+              ]
             }
           }
         ],
@@ -375,7 +377,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.CreateEnvironmentMembership"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.CreateEnvironmentMembership"
+              ]
             }
           }
         ],
@@ -641,7 +645,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.DeleteEnvironmentMembership"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.DeleteEnvironmentMembership"
+              ]
             }
           }
         ],
@@ -792,7 +798,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.DescribeEnvironmentMemberships"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.DescribeEnvironmentMemberships"
+              ]
             }
           }
         ],
@@ -925,7 +933,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.DescribeEnvironmentStatus"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.DescribeEnvironmentStatus"
+              ]
             }
           }
         ],
@@ -1058,7 +1068,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.DescribeEnvironments"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.DescribeEnvironments"
+              ]
             }
           }
         ],
@@ -1302,7 +1314,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.ListTagsForResource"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.ListTagsForResource"
+              ]
             }
           }
         ],
@@ -1774,7 +1788,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSCloud9WorkspaceManagementService.UpdateEnvironmentMembership"]
+              "enum": [
+                "AWSCloud9WorkspaceManagementService.UpdateEnvironmentMembership"
+              ]
             }
           }
         ],
@@ -2345,7 +2361,10 @@
       "ListEnvironmentsResult": {
         "type": "object",
         "example": {
-          "environmentIds": ["349c86d4579e4e7298d500ff57a6b2EX", "45a3da47af0840f2b0c0824f5ee232EX"]
+          "environmentIds": [
+            "349c86d4579e4e7298d500ff57a6b2EX",
+            "45a3da47af0840f2b0c0824f5ee232EX"
+          ]
         },
         "properties": {
           "nextToken": {
@@ -2744,7 +2763,15 @@
       },
       "EnvironmentStatus": {
         "type": "string",
-        "enum": ["error", "creating", "connecting", "ready", "stopping", "stopped", "deleting"]
+        "enum": [
+          "error",
+          "creating",
+          "connecting",
+          "ready",
+          "stopping",
+          "stopped",
+          "deleting"
+        ]
       },
       "EnvironmentList": {
         "type": "array",
@@ -2901,7 +2928,13 @@
       },
       "EnvironmentLifecycleStatus": {
         "type": "string",
-        "enum": ["CREATING", "CREATED", "CREATE_FAILED", "DELETING", "DELETE_FAILED"]
+        "enum": [
+          "CREATING",
+          "CREATED",
+          "CREATE_FAILED",
+          "DELETING",
+          "DELETE_FAILED"
+        ]
       },
       "Permissions": {
         "type": "string",

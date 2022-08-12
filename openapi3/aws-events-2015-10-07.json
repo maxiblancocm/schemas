@@ -7,7 +7,7 @@
     "description": "Amazon EventBridge helps you to respond to state changes in your AWS resources. When your resources change state, they automatically send events into an event stream. You can create rules that match selected events in the stream and route them to targets to take action. You can also use rules to take action on a predetermined schedule. For example, you can configure rules to:   Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance enters the running state.   Direct specific API records from AWS CloudTrail to an Amazon Kinesis data stream for detailed analysis of potential security or availability risks.   Periodically invoke a built-in target to create a snapshot of an Amazon EBS volume.   For more information about the features of Amazon EventBridge, see the Amazon EventBridge User Guide.",
     "x-categories": ["monitoring"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-EventBridge_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-EventBridge_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -8987,7 +8987,13 @@
       },
       "StartReplayRequest": {
         "type": "object",
-        "required": ["ReplayName", "EventSourceArn", "EventStartTime", "EventEndTime", "Destination"],
+        "required": [
+          "ReplayName",
+          "EventSourceArn",
+          "EventStartTime",
+          "EventEndTime",
+          "Destination"
+        ],
         "title": "StartReplayRequest",
         "properties": {
           "ReplayName": {
@@ -9152,7 +9158,14 @@
       },
       "ArchiveState": {
         "type": "string",
-        "enum": ["ENABLED", "DISABLED", "CREATING", "UPDATING", "CREATE_FAILED", "UPDATE_FAILED"]
+        "enum": [
+          "ENABLED",
+          "DISABLED",
+          "CREATING",
+          "UPDATING",
+          "CREATE_FAILED",
+          "UPDATE_FAILED"
+        ]
       },
       "ArchiveStateReason": {
         "type": "string",
@@ -9283,7 +9296,14 @@
       },
       "ReplayState": {
         "type": "string",
-        "enum": ["STARTING", "RUNNING", "CANCELLING", "COMPLETED", "CANCELLED", "FAILED"]
+        "enum": [
+          "STARTING",
+          "RUNNING",
+          "CANCELLING",
+          "COMPLETED",
+          "CANCELLED",
+          "FAILED"
+        ]
       },
       "ReplayStateReason": {
         "type": "string",
@@ -9482,7 +9502,12 @@
       },
       "CreateApiDestinationRequest": {
         "type": "object",
-        "required": ["Name", "ConnectionArn", "InvocationEndpoint", "HttpMethod"],
+        "required": [
+          "Name",
+          "ConnectionArn",
+          "InvocationEndpoint",
+          "HttpMethod"
+        ],
         "title": "CreateApiDestinationRequest",
         "properties": {
           "Name": {
@@ -10630,7 +10655,15 @@
       },
       "ConnectionState": {
         "type": "string",
-        "enum": ["CREATING", "UPDATING", "DELETING", "AUTHORIZED", "DEAUTHORIZED", "AUTHORIZING", "DEAUTHORIZING"]
+        "enum": [
+          "CREATING",
+          "UPDATING",
+          "DELETING",
+          "AUTHORIZED",
+          "DEAUTHORIZED",
+          "AUTHORIZING",
+          "DEAUTHORIZING"
+        ]
       },
       "ConnectionStateReason": {
         "type": "string",

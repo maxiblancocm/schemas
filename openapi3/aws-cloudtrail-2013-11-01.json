@@ -6,7 +6,7 @@
     "title": "AWS CloudTrail",
     "description": "This is the CloudTrail API Reference. It provides descriptions of actions, data types, common parameters, and common errors for CloudTrail. CloudTrail is a web service that records AWS API calls for your AWS account and delivers log files to an Amazon S3 bucket. The recorded information includes the identity of the user, the start time of the AWS API call, the source IP address, the request parameters, and the response elements returned by the service.  As an alternative to the API, you can use one of the AWS SDKs, which consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWSCloudTrail. For example, the SDKs take care of cryptographically signing requests, managing errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install them, see the Tools for Amazon Web Services page.  See the AWS CloudTrail User Guide for information about the data that is included with each AWS API call listed in the log files.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Cloud-Trail_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Cloud-Trail_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -261,7 +261,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags"
+              ]
             }
           }
         ],
@@ -604,7 +606,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CreateTrail"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CreateTrail"
+              ]
             }
           }
         ],
@@ -747,7 +751,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeleteTrail"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeleteTrail"
+              ]
             }
           }
         ],
@@ -840,7 +846,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DescribeTrails"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DescribeTrails"
+              ]
             }
           }
         ],
@@ -943,7 +951,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetEventSelectors"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetEventSelectors"
+              ]
             }
           }
         ],
@@ -1056,7 +1066,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetInsightSelectors"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetInsightSelectors"
+              ]
             }
           }
         ],
@@ -1159,7 +1171,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetTrail"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetTrail"
+              ]
             }
           }
         ],
@@ -1262,7 +1276,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetTrailStatus"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetTrailStatus"
+              ]
             }
           }
         ],
@@ -1374,7 +1390,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListPublicKeys"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListPublicKeys"
+              ]
             }
           }
         ],
@@ -1516,7 +1534,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListTags"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListTags"
+              ]
             }
           }
         ],
@@ -1608,7 +1628,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListTrails"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListTrails"
+              ]
             }
           }
         ],
@@ -1759,7 +1781,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.LookupEvents"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.LookupEvents"
+              ]
             }
           }
         ],
@@ -1902,7 +1926,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.PutEventSelectors"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.PutEventSelectors"
+              ]
             }
           }
         ],
@@ -2075,7 +2101,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.PutInsightSelectors"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.PutInsightSelectors"
+              ]
             }
           }
         ],
@@ -2218,7 +2246,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.RemoveTags"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.RemoveTags"
+              ]
             }
           }
         ],
@@ -2351,7 +2381,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StartLogging"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StartLogging"
+              ]
             }
           }
         ],
@@ -2484,7 +2516,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StopLogging"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StopLogging"
+              ]
             }
           }
         ],
@@ -2827,7 +2861,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.UpdateTrail"]
+              "enum": [
+                "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.UpdateTrail"
+              ]
             }
           }
         ],

@@ -7,7 +7,7 @@
     "description": "Amazon Personalize is a machine learning service that makes it easy to add individualized recommendations to customers.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Personalize_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Personalize_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4645,7 +4645,13 @@
       },
       "CreateBatchInferenceJobRequest": {
         "type": "object",
-        "required": ["jobName", "solutionVersionArn", "jobInput", "jobOutput", "roleArn"],
+        "required": [
+          "jobName",
+          "solutionVersionArn",
+          "jobInput",
+          "jobOutput",
+          "roleArn"
+        ],
         "title": "CreateBatchInferenceJobRequest",
         "properties": {
           "jobName": {

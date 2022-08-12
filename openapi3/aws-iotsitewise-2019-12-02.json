@@ -7,7 +7,7 @@
     "description": "Welcome to the AWS IoT SiteWise API Reference. AWS IoT SiteWise is an AWS service that connects Industrial Internet of Things (IIoT) devices to the power of the AWS Cloud. For more information, see the AWS IoT SiteWise User Guide. For information about AWS IoT SiteWise quotas, see Quotas in the AWS IoT SiteWise User Guide.",
     "x-categories": ["iot"],
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-IoT-SiteWise_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-IoT-SiteWise_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -748,7 +748,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["accessPolicyIdentity", "accessPolicyResource", "accessPolicyPermission"],
+                "required": [
+                  "accessPolicyIdentity",
+                  "accessPolicyResource",
+                  "accessPolicyPermission"
+                ],
                 "properties": {
                   "accessPolicyIdentity": {
                     "description": "<p>Contains an AWS SSO identity ID for a user or group.</p> <note> <p>Currently, you can't use AWS APIs to retrieve AWS SSO identity IDs. You can find the AWS SSO identity IDs in the URL of user and group pages in the <a href=\"https://console.aws.amazon.com/singlesignon\">AWS SSO console</a>.</p> </note>",
@@ -1586,7 +1590,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["projectId", "dashboardName", "dashboardDefinition"],
+                "required": [
+                  "projectId",
+                  "dashboardName",
+                  "dashboardDefinition"
+                ],
                 "properties": {
                   "projectId": {
                     "description": "The ID of the project in which to create the dashboard.",
@@ -2565,7 +2573,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["accessPolicyIdentity", "accessPolicyResource", "accessPolicyPermission"],
+                "required": [
+                  "accessPolicyIdentity",
+                  "accessPolicyResource",
+                  "accessPolicyPermission"
+                ],
                 "properties": {
                   "accessPolicyIdentity": {
                     "description": "<p>Contains an AWS SSO identity ID for a user or group.</p> <note> <p>Currently, you can't use AWS APIs to retrieve AWS SSO identity IDs. You can find the AWS SSO identity IDs in the URL of user and group pages in the <a href=\"https://console.aws.amazon.com/singlesignon\">AWS SSO console</a>.</p> </note>",
@@ -6956,7 +6968,10 @@
                   "encryptionType": {
                     "description": "The type of encryption used for the encryption configuration.",
                     "type": "string",
-                    "enum": ["SITEWISE_DEFAULT_ENCRYPTION", "KMS_BASED_ENCRYPTION"]
+                    "enum": [
+                      "SITEWISE_DEFAULT_ENCRYPTION",
+                      "KMS_BASED_ENCRYPTION"
+                    ]
                   },
                   "kmsKeyId": {
                     "description": "The Key ID of the customer managed customer master key (CMK) used for AWS KMS encryption. This is required if you use <code>KMS_BASED_ENCRYPTION</code>.",
@@ -8085,7 +8100,13 @@
       },
       "CreatePortalResponse": {
         "type": "object",
-        "required": ["portalId", "portalArn", "portalStartUrl", "portalStatus", "ssoApplicationId"],
+        "required": [
+          "portalId",
+          "portalArn",
+          "portalStartUrl",
+          "portalStatus",
+          "ssoApplicationId"
+        ],
         "properties": {
           "portalId": {
             "allOf": [
@@ -8785,7 +8806,12 @@
       },
       "DescribeGatewayCapabilityConfigurationResponse": {
         "type": "object",
-        "required": ["gatewayId", "capabilityNamespace", "capabilityConfiguration", "capabilitySyncStatus"],
+        "required": [
+          "gatewayId",
+          "capabilityNamespace",
+          "capabilityConfiguration",
+          "capabilitySyncStatus"
+        ],
         "properties": {
           "gatewayId": {
             "allOf": [
@@ -9122,7 +9148,14 @@
       },
       "AggregateType": {
         "type": "string",
-        "enum": ["AVERAGE", "COUNT", "MAXIMUM", "MINIMUM", "SUM", "STANDARD_DEVIATION"]
+        "enum": [
+          "AVERAGE",
+          "COUNT",
+          "MAXIMUM",
+          "MINIMUM",
+          "SUM",
+          "STANDARD_DEVIATION"
+        ]
       },
       "Quality": {
         "type": "string",
@@ -10087,7 +10120,14 @@
       },
       "AssetModelState": {
         "type": "string",
-        "enum": ["CREATING", "ACTIVE", "UPDATING", "PROPAGATING", "DELETING", "FAILED"]
+        "enum": [
+          "CREATING",
+          "ACTIVE",
+          "UPDATING",
+          "PROPAGATING",
+          "DELETING",
+          "FAILED"
+        ]
       },
       "ErrorDetails": {
         "type": "object",
@@ -10155,7 +10195,15 @@
       },
       "AssetModelSummary": {
         "type": "object",
-        "required": ["id", "arn", "name", "description", "creationDate", "lastUpdateDate", "status"],
+        "required": [
+          "id",
+          "arn",
+          "name",
+          "description",
+          "creationDate",
+          "lastUpdateDate",
+          "status"
+        ],
         "properties": {
           "id": {
             "allOf": [
@@ -10518,7 +10566,16 @@
       },
       "AssetSummary": {
         "type": "object",
-        "required": ["id", "arn", "name", "assetModelId", "creationDate", "lastUpdateDate", "status", "hierarchies"],
+        "required": [
+          "id",
+          "arn",
+          "name",
+          "assetModelId",
+          "creationDate",
+          "lastUpdateDate",
+          "status",
+          "hierarchies"
+        ],
         "properties": {
           "id": {
             "allOf": [
@@ -10611,7 +10668,16 @@
       },
       "AssociatedAssetsSummary": {
         "type": "object",
-        "required": ["id", "arn", "name", "assetModelId", "creationDate", "lastUpdateDate", "status", "hierarchies"],
+        "required": [
+          "id",
+          "arn",
+          "name",
+          "assetModelId",
+          "creationDate",
+          "lastUpdateDate",
+          "status",
+          "hierarchies"
+        ],
         "properties": {
           "id": {
             "allOf": [
@@ -11243,7 +11309,12 @@
       },
       "GatewaySummary": {
         "type": "object",
-        "required": ["gatewayId", "gatewayName", "creationDate", "lastUpdateDate"],
+        "required": [
+          "gatewayId",
+          "gatewayName",
+          "creationDate",
+          "lastUpdateDate"
+        ],
         "properties": {
           "gatewayId": {
             "allOf": [
@@ -12330,7 +12401,10 @@
       },
       "DetailedErrorCode": {
         "type": "string",
-        "enum": ["INCOMPATIBLE_COMPUTE_LOCATION", "INCOMPATIBLE_FORWARDING_CONFIGURATION"]
+        "enum": [
+          "INCOMPATIBLE_COMPUTE_LOCATION",
+          "INCOMPATIBLE_FORWARDING_CONFIGURATION"
+        ]
       },
       "DetailedErrorMessage": {
         "type": "string"

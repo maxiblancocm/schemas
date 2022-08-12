@@ -7,7 +7,7 @@
     "description": "This is the Amazon Fraud Detector API Reference. This guide is for developers who need detailed information about Amazon Fraud Detector API actions, data types, and errors. For more information about Amazon Fraud Detector features, see the Amazon Fraud Detector User Guide.",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Fraud-Detector_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Fraud-Detector_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4541,7 +4541,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWSHawksNestServiceFacade.UpdateDetectorVersionMetadata"]
+              "enum": [
+                "AWSHawksNestServiceFacade.UpdateDetectorVersionMetadata"
+              ]
             }
           }
         ],
@@ -7182,7 +7184,12 @@
       },
       "CreateModelVersionRequest": {
         "type": "object",
-        "required": ["modelId", "modelType", "trainingDataSource", "trainingDataSchema"],
+        "required": [
+          "modelId",
+          "modelType",
+          "trainingDataSource",
+          "trainingDataSchema"
+        ],
         "title": "CreateModelVersionRequest",
         "properties": {
           "modelId": {
@@ -7264,7 +7271,13 @@
       },
       "CreateRuleRequest": {
         "type": "object",
-        "required": ["ruleId", "detectorId", "expression", "language", "outcomes"],
+        "required": [
+          "ruleId",
+          "detectorId",
+          "expression",
+          "language",
+          "outcomes"
+        ],
         "title": "CreateRuleRequest",
         "properties": {
           "ruleId": {
@@ -7982,7 +7995,14 @@
       },
       "GetEventPredictionRequest": {
         "type": "object",
-        "required": ["detectorId", "eventId", "eventTypeName", "entities", "eventTimestamp", "eventVariables"],
+        "required": [
+          "detectorId",
+          "eventId",
+          "eventTypeName",
+          "entities",
+          "eventTimestamp",
+          "eventVariables"
+        ],
         "title": "GetEventPredictionRequest",
         "properties": {
           "detectorId": {
@@ -9146,7 +9166,12 @@
       },
       "UpdateDetectorVersionRequest": {
         "type": "object",
-        "required": ["detectorId", "detectorVersionId", "externalModelEndpoints", "rules"],
+        "required": [
+          "detectorId",
+          "detectorVersionId",
+          "externalModelEndpoints",
+          "rules"
+        ],
         "title": "UpdateDetectorVersionRequest",
         "properties": {
           "detectorId": {
@@ -11919,7 +11944,14 @@
       },
       "CreateBatchPredictionJobRequest": {
         "type": "object",
-        "required": ["jobId", "inputPath", "outputPath", "eventTypeName", "detectorName", "iamRoleArn"],
+        "required": [
+          "jobId",
+          "inputPath",
+          "outputPath",
+          "eventTypeName",
+          "detectorName",
+          "iamRoleArn"
+        ],
         "title": "CreateBatchPredictionJobRequest",
         "properties": {
           "jobId": {
@@ -12089,7 +12121,14 @@
       "ResourceUnavailableException": {},
       "AsyncJobStatus": {
         "type": "string",
-        "enum": ["IN_PROGRESS_INITIALIZING", "IN_PROGRESS", "CANCEL_IN_PROGRESS", "CANCELED", "COMPLETE", "FAILED"]
+        "enum": [
+          "IN_PROGRESS_INITIALIZING",
+          "IN_PROGRESS",
+          "CANCEL_IN_PROGRESS",
+          "CANCELED",
+          "COMPLETE",
+          "FAILED"
+        ]
       },
       "Integer": {
         "type": "integer"

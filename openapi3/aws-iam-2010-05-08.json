@@ -6,7 +6,7 @@
     "title": "AWS IAM (Identity and Access Management)",
     "description": "AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources users and applications can access. For more information about IAM, see AWS Identity and Access Management (IAM) and the AWS Identity and Access Management User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Identity-and-Access-Management_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Identity-and-Access-Management_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -17043,7 +17043,13 @@
       },
       "EntityType": {
         "type": "string",
-        "enum": ["User", "Role", "Group", "LocalManagedPolicy", "AWSManagedPolicy"]
+        "enum": [
+          "User",
+          "Role",
+          "Group",
+          "LocalManagedPolicy",
+          "AWSManagedPolicy"
+        ]
       },
       "GetAccountPasswordPolicyResponse": {
         "type": "object",
@@ -17685,7 +17691,12 @@
       },
       "GetServiceLastAccessedDetailsResponse": {
         "type": "object",
-        "required": ["JobStatus", "JobCreationDate", "ServicesLastAccessed", "JobCompletionDate"],
+        "required": [
+          "JobStatus",
+          "JobCreationDate",
+          "ServicesLastAccessed",
+          "JobCompletionDate"
+        ],
         "example": {
           "IsTruncated": false,
           "JobCompletionDate": "2018-10-24T19:47:35.241Z",
@@ -17791,7 +17802,12 @@
       },
       "GetServiceLastAccessedDetailsWithEntitiesResponse": {
         "type": "object",
-        "required": ["JobStatus", "JobCreationDate", "JobCompletionDate", "EntityDetailsList"],
+        "required": [
+          "JobStatus",
+          "JobCreationDate",
+          "JobCompletionDate",
+          "EntityDetailsList"
+        ],
         "example": {
           "EntityDetailsList": [
             {
@@ -20122,7 +20138,14 @@
       },
       "InstanceProfile": {
         "type": "object",
-        "required": ["Path", "InstanceProfileName", "InstanceProfileId", "Arn", "CreateDate", "Roles"],
+        "required": [
+          "Path",
+          "InstanceProfileName",
+          "InstanceProfileId",
+          "Arn",
+          "CreateDate",
+          "Roles"
+        ],
         "properties": {
           "Path": {
             "allOf": [
@@ -21918,7 +21941,12 @@
       },
       "EnableMFADeviceRequest": {
         "type": "object",
-        "required": ["UserName", "SerialNumber", "AuthenticationCode1", "AuthenticationCode2"],
+        "required": [
+          "UserName",
+          "SerialNumber",
+          "AuthenticationCode1",
+          "AuthenticationCode2"
+        ],
         "title": "EnableMFADeviceRequest",
         "properties": {
           "UserName": {
@@ -22900,7 +22928,13 @@
       },
       "SSHPublicKey": {
         "type": "object",
-        "required": ["UserName", "SSHPublicKeyId", "Fingerprint", "SSHPublicKeyBody", "Status"],
+        "required": [
+          "UserName",
+          "SSHPublicKeyId",
+          "Fingerprint",
+          "SSHPublicKeyBody",
+          "Status"
+        ],
         "properties": {
           "UserName": {
             "allOf": [
@@ -24814,7 +24848,15 @@
       },
       "PolicySourceType": {
         "type": "string",
-        "enum": ["user", "group", "role", "aws-managed", "user-managed", "resource", "none"]
+        "enum": [
+          "user",
+          "group",
+          "role",
+          "aws-managed",
+          "user-managed",
+          "resource",
+          "none"
+        ]
       },
       "PolicyUser": {
         "type": "object",
@@ -25226,7 +25268,12 @@
       },
       "ResyncMFADeviceRequest": {
         "type": "object",
-        "required": ["UserName", "SerialNumber", "AuthenticationCode1", "AuthenticationCode2"],
+        "required": [
+          "UserName",
+          "SerialNumber",
+          "AuthenticationCode1",
+          "AuthenticationCode2"
+        ],
         "title": "ResyncMFADeviceRequest",
         "properties": {
           "UserName": {
@@ -25539,7 +25586,12 @@
       },
       "ServerCertificateMetadata": {
         "type": "object",
-        "required": ["Path", "ServerCertificateName", "ServerCertificateId", "Arn"],
+        "required": [
+          "Path",
+          "ServerCertificateName",
+          "ServerCertificateId",
+          "Arn"
+        ],
         "properties": {
           "Path": {
             "allOf": [

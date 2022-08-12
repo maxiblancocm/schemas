@@ -6,7 +6,7 @@
     "title": "Amazon Inspector",
     "description": "Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues. For more information, see  Amazon Inspector User Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-Inspector_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-Inspector_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -4373,7 +4373,12 @@
       },
       "CreateAssessmentTemplateRequest": {
         "type": "object",
-        "required": ["assessmentTargetArn", "assessmentTemplateName", "durationInSeconds", "rulesPackageArns"],
+        "required": [
+          "assessmentTargetArn",
+          "assessmentTemplateName",
+          "durationInSeconds",
+          "rulesPackageArns"
+        ],
         "title": "CreateAssessmentTemplateRequest",
         "properties": {
           "assessmentTargetArn": {
@@ -4571,7 +4576,9 @@
                 "Undefined": 0
               },
               "notifications": [],
-              "rulesPackageArns": ["arn:aws:inspector:us-west-2:758058086616:rulespackage/0-X1KXtawP"],
+              "rulesPackageArns": [
+                "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-X1KXtawP"
+              ],
               "startedAt": "1458680170.161",
               "state": "COMPLETED",
               "stateChangedAt": "1458680301.4",
@@ -4721,7 +4728,9 @@
               "assessmentTargetArn": "arn:aws:inspector:us-west-2:123456789012:target/0-0kFIPusq",
               "createdAt": "1458074191.844",
               "durationInSeconds": 3600,
-              "rulesPackageArns": ["arn:aws:inspector:us-west-2:758058086616:rulespackage/0-X1KXtawP"],
+              "rulesPackageArns": [
+                "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-X1KXtawP"
+              ],
               "userAttributesForFindings": []
             }
           ],
@@ -5714,7 +5723,9 @@
         "type": "object",
         "required": ["assessmentTargetArns"],
         "example": {
-          "assessmentTargetArns": ["arn:aws:inspector:us-west-2:123456789012:target/0-0kFIPusq"],
+          "assessmentTargetArns": [
+            "arn:aws:inspector:us-west-2:123456789012:target/0-0kFIPusq"
+          ],
           "nextToken": "1"
         },
         "properties": {
@@ -6598,7 +6609,14 @@
       },
       "AgentHealthCode": {
         "type": "string",
-        "enum": ["IDLE", "RUNNING", "SHUTDOWN", "UNHEALTHY", "THROTTLED", "UNKNOWN"]
+        "enum": [
+          "IDLE",
+          "RUNNING",
+          "SHUTDOWN",
+          "UNHEALTHY",
+          "THROTTLED",
+          "UNKNOWN"
+        ]
       },
       "AgentId": {
         "type": "string",
@@ -6997,7 +7015,13 @@
       },
       "AssessmentRunAgent": {
         "type": "object",
-        "required": ["agentId", "assessmentRunArn", "agentHealth", "agentHealthCode", "telemetryMetadata"],
+        "required": [
+          "agentId",
+          "assessmentRunArn",
+          "agentHealth",
+          "agentHealthCode",
+          "telemetryMetadata"
+        ],
         "properties": {
           "agentId": {
             "allOf": [
@@ -7252,7 +7276,12 @@
       },
       "AssessmentRunNotificationSnsStatusCode": {
         "type": "string",
-        "enum": ["SUCCESS", "TOPIC_DOES_NOT_EXIST", "ACCESS_DENIED", "INTERNAL_ERROR"]
+        "enum": [
+          "SUCCESS",
+          "TOPIC_DOES_NOT_EXIST",
+          "ACCESS_DENIED",
+          "INTERNAL_ERROR"
+        ]
       },
       "AssessmentRunNotification": {
         "type": "object",
@@ -8110,7 +8139,13 @@
       },
       "Finding": {
         "type": "object",
-        "required": ["arn", "attributes", "userAttributes", "createdAt", "updatedAt"],
+        "required": [
+          "arn",
+          "attributes",
+          "userAttributes",
+          "createdAt",
+          "updatedAt"
+        ],
         "properties": {
           "arn": {
             "allOf": [

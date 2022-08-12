@@ -6,7 +6,7 @@
     "title": "AWS Service Catalog",
     "description": "AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be familiar with the terminology discussed in AWS Service Catalog Concepts.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Service-Catalog_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Service-Catalog_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -304,7 +304,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.AssociateBudgetWithResource"]
+              "enum": [
+                "AWS242ServiceCatalogService.AssociateBudgetWithResource"
+              ]
             }
           }
         ],
@@ -397,7 +399,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.AssociatePrincipalWithPortfolio"]
+              "enum": [
+                "AWS242ServiceCatalogService.AssociatePrincipalWithPortfolio"
+              ]
             }
           }
         ],
@@ -490,7 +494,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.AssociateProductWithPortfolio"]
+              "enum": [
+                "AWS242ServiceCatalogService.AssociateProductWithPortfolio"
+              ]
             }
           }
         ],
@@ -583,7 +589,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.AssociateServiceActionWithProvisioningArtifact"]
+              "enum": [
+                "AWS242ServiceCatalogService.AssociateServiceActionWithProvisioningArtifact"
+              ]
             }
           }
         ],
@@ -706,7 +714,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.AssociateTagOptionWithResource"]
+              "enum": [
+                "AWS242ServiceCatalogService.AssociateTagOptionWithResource"
+              ]
             }
           }
         ],
@@ -779,7 +789,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact"]
+              "enum": [
+                "AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact"
+              ]
             }
           }
         ],
@@ -852,7 +864,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.BatchDisassociateServiceActionFromProvisioningArtifact"]
+              "enum": [
+                "AWS242ServiceCatalogService.BatchDisassociateServiceActionFromProvisioningArtifact"
+              ]
             }
           }
         ],
@@ -1430,7 +1444,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.CreateProvisionedProductPlan"]
+              "enum": [
+                "AWS242ServiceCatalogService.CreateProvisionedProductPlan"
+              ]
             }
           }
         ],
@@ -2174,7 +2190,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DeleteProvisionedProductPlan"]
+              "enum": [
+                "AWS242ServiceCatalogService.DeleteProvisionedProductPlan"
+              ]
             }
           }
         ],
@@ -2755,7 +2773,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DescribePortfolioShareStatus"]
+              "enum": [
+                "AWS242ServiceCatalogService.DescribePortfolioShareStatus"
+              ]
             }
           }
         ],
@@ -3170,7 +3190,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DescribeProvisionedProductPlan"]
+              "enum": [
+                "AWS242ServiceCatalogService.DescribeProvisionedProductPlan"
+              ]
             }
           }
         ],
@@ -3253,7 +3275,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DescribeProvisioningArtifact"]
+              "enum": [
+                "AWS242ServiceCatalogService.DescribeProvisioningArtifact"
+              ]
             }
           }
         ],
@@ -3336,7 +3360,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DescribeProvisioningParameters"]
+              "enum": [
+                "AWS242ServiceCatalogService.DescribeProvisioningParameters"
+              ]
             }
           }
         ],
@@ -3565,7 +3591,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DescribeServiceActionExecutionParameters"]
+              "enum": [
+                "AWS242ServiceCatalogService.DescribeServiceActionExecutionParameters"
+              ]
             }
           }
         ],
@@ -3741,7 +3769,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DisableAWSOrganizationsAccess"]
+              "enum": [
+                "AWS242ServiceCatalogService.DisableAWSOrganizationsAccess"
+              ]
             }
           }
         ],
@@ -3814,7 +3844,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DisassociateBudgetFromResource"]
+              "enum": [
+                "AWS242ServiceCatalogService.DisassociateBudgetFromResource"
+              ]
             }
           }
         ],
@@ -3897,7 +3929,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio"]
+              "enum": [
+                "AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio"
+              ]
             }
           }
         ],
@@ -3990,7 +4024,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DisassociateProductFromPortfolio"]
+              "enum": [
+                "AWS242ServiceCatalogService.DisassociateProductFromPortfolio"
+              ]
             }
           }
         ],
@@ -4063,7 +4099,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DisassociateServiceActionFromProvisioningArtifact"]
+              "enum": [
+                "AWS242ServiceCatalogService.DisassociateServiceActionFromProvisioningArtifact"
+              ]
             }
           }
         ],
@@ -4146,7 +4184,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.DisassociateTagOptionFromResource"]
+              "enum": [
+                "AWS242ServiceCatalogService.DisassociateTagOptionFromResource"
+              ]
             }
           }
         ],
@@ -4239,7 +4279,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.EnableAWSOrganizationsAccess"]
+              "enum": [
+                "AWS242ServiceCatalogService.EnableAWSOrganizationsAccess"
+              ]
             }
           }
         ],
@@ -4332,7 +4374,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ExecuteProvisionedProductPlan"]
+              "enum": [
+                "AWS242ServiceCatalogService.ExecuteProvisionedProductPlan"
+              ]
             }
           }
         ],
@@ -4425,7 +4469,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ExecuteProvisionedProductServiceAction"]
+              "enum": [
+                "AWS242ServiceCatalogService.ExecuteProvisionedProductServiceAction"
+              ]
             }
           }
         ],
@@ -4508,7 +4554,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus"]
+              "enum": [
+                "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus"
+              ]
             }
           }
         ],
@@ -4609,7 +4657,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListAcceptedPortfolioShares"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListAcceptedPortfolioShares"
+              ]
             }
           }
         ],
@@ -4811,7 +4861,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListConstraintsForPortfolio"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListConstraintsForPortfolio"
+              ]
             }
           }
         ],
@@ -5023,7 +5075,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListOrganizationPortfolioAccess"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListOrganizationPortfolioAccess"
+              ]
             }
           }
         ],
@@ -5500,7 +5554,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListProvisionedProductPlans"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListProvisionedProductPlans"
+              ]
             }
           }
         ],
@@ -5684,7 +5740,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListProvisioningArtifactsForServiceAction"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListProvisioningArtifactsForServiceAction"
+              ]
             }
           }
         ],
@@ -6060,7 +6118,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListServiceActionsForProvisioningArtifact"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListServiceActionsForProvisioningArtifact"
+              ]
             }
           }
         ],
@@ -6143,7 +6203,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct"]
+              "enum": [
+                "AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct"
+              ]
             }
           }
         ],
@@ -6839,7 +6901,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.TerminateProvisionedProduct"]
+              "enum": [
+                "AWS242ServiceCatalogService.TerminateProvisionedProduct"
+              ]
             }
           }
         ],
@@ -7294,7 +7358,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.UpdateProvisionedProductProperties"]
+              "enum": [
+                "AWS242ServiceCatalogService.UpdateProvisionedProductProperties"
+              ]
             }
           }
         ],
@@ -7664,7 +7730,9 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["AWS242ServiceCatalogService.GetProvisionedProductOutputs"]
+              "enum": [
+                "AWS242ServiceCatalogService.GetProvisionedProductOutputs"
+              ]
             }
           }
         ],
@@ -8553,7 +8621,13 @@
       },
       "CreateConstraintInput": {
         "type": "object",
-        "required": ["PortfolioId", "ProductId", "Parameters", "Type", "IdempotencyToken"],
+        "required": [
+          "PortfolioId",
+          "ProductId",
+          "Parameters",
+          "Type",
+          "IdempotencyToken"
+        ],
         "title": "CreateConstraintInput",
         "properties": {
           "AcceptLanguage": {
@@ -8830,7 +8904,13 @@
       },
       "CreateProductInput": {
         "type": "object",
-        "required": ["Name", "Owner", "ProductType", "ProvisioningArtifactParameters", "IdempotencyToken"],
+        "required": [
+          "Name",
+          "Owner",
+          "ProductType",
+          "ProvisioningArtifactParameters",
+          "IdempotencyToken"
+        ],
         "title": "CreateProductInput",
         "properties": {
           "AcceptLanguage": {
@@ -9233,7 +9313,12 @@
       },
       "CreateServiceActionInput": {
         "type": "object",
-        "required": ["Name", "DefinitionType", "Definition", "IdempotencyToken"],
+        "required": [
+          "Name",
+          "DefinitionType",
+          "Definition",
+          "IdempotencyToken"
+        ],
         "title": "CreateServiceActionInput",
         "properties": {
           "Name": {
@@ -13578,7 +13663,11 @@
       },
       "UpdateProvisionedProductPropertiesInput": {
         "type": "object",
-        "required": ["ProvisionedProductId", "ProvisionedProductProperties", "IdempotencyToken"],
+        "required": [
+          "ProvisionedProductId",
+          "ProvisionedProductProperties",
+          "IdempotencyToken"
+        ],
         "title": "UpdateProvisionedProductPropertiesInput",
         "properties": {
           "AcceptLanguage": {
@@ -14712,7 +14801,13 @@
       },
       "ShareStatus": {
         "type": "string",
-        "enum": ["NOT_STARTED", "IN_PROGRESS", "COMPLETED", "COMPLETED_WITH_ERRORS", "ERROR"]
+        "enum": [
+          "NOT_STARTED",
+          "IN_PROGRESS",
+          "COMPLETED",
+          "COMPLETED_WITH_ERRORS",
+          "ERROR"
+        ]
       },
       "ShareDetails": {
         "type": "object",
@@ -15496,7 +15591,13 @@
       },
       "ServiceActionAssociationErrorCode": {
         "type": "string",
-        "enum": ["DUPLICATE_RESOURCE", "INTERNAL_FAILURE", "LIMIT_EXCEEDED", "RESOURCE_NOT_FOUND", "THROTTLING"]
+        "enum": [
+          "DUPLICATE_RESOURCE",
+          "INTERNAL_FAILURE",
+          "LIMIT_EXCEEDED",
+          "RESOURCE_NOT_FOUND",
+          "THROTTLING"
+        ]
       },
       "ServiceActionAssociationErrorMessage": {
         "type": "string",
@@ -16118,7 +16219,13 @@
       },
       "ProvisionedProductStatus": {
         "type": "string",
-        "enum": ["AVAILABLE", "UNDER_CHANGE", "TAINTED", "ERROR", "PLAN_IN_PROGRESS"]
+        "enum": [
+          "AVAILABLE",
+          "UNDER_CHANGE",
+          "TAINTED",
+          "ERROR",
+          "PLAN_IN_PROGRESS"
+        ]
       },
       "ProvisionedProductStatusMessage": {
         "type": "string"
@@ -16521,7 +16628,11 @@
       },
       "ProvisioningArtifactType": {
         "type": "string",
-        "enum": ["CLOUD_FORMATION_TEMPLATE", "MARKETPLACE_AMI", "MARKETPLACE_CAR"]
+        "enum": [
+          "CLOUD_FORMATION_TEMPLATE",
+          "MARKETPLACE_AMI",
+          "MARKETPLACE_CAR"
+        ]
       },
       "ProvisioningArtifactInfoValue": {
         "type": "string"
@@ -16767,7 +16878,13 @@
       },
       "RecordStatus": {
         "type": "string",
-        "enum": ["CREATED", "IN_PROGRESS", "IN_PROGRESS_IN_ERROR", "SUCCEEDED", "FAILED"]
+        "enum": [
+          "CREATED",
+          "IN_PROGRESS",
+          "IN_PROGRESS_IN_ERROR",
+          "SUCCEEDED",
+          "FAILED"
+        ]
       },
       "RecordType": {
         "type": "string"
@@ -16898,7 +17015,14 @@
       },
       "ResourceAttribute": {
         "type": "string",
-        "enum": ["PROPERTIES", "METADATA", "CREATIONPOLICY", "UPDATEPOLICY", "DELETIONPOLICY", "TAGS"]
+        "enum": [
+          "PROPERTIES",
+          "METADATA",
+          "CREATIONPOLICY",
+          "UPDATEPOLICY",
+          "DELETIONPOLICY",
+          "TAGS"
+        ]
       },
       "Scope": {
         "type": "array",
@@ -17715,7 +17839,13 @@
       },
       "ImportAsProvisionedProductInput": {
         "type": "object",
-        "required": ["ProductId", "ProvisioningArtifactId", "ProvisionedProductName", "PhysicalId", "IdempotencyToken"],
+        "required": [
+          "ProductId",
+          "ProvisioningArtifactId",
+          "ProvisionedProductName",
+          "PhysicalId",
+          "IdempotencyToken"
+        ],
         "title": "ImportAsProvisionedProductInput",
         "properties": {
           "AcceptLanguage": {
@@ -17863,7 +17993,12 @@
       },
       "DescribePortfolioShareType": {
         "type": "string",
-        "enum": ["ACCOUNT", "ORGANIZATION", "ORGANIZATIONAL_UNIT", "ORGANIZATION_MEMBER_ACCOUNT"]
+        "enum": [
+          "ACCOUNT",
+          "ORGANIZATION",
+          "ORGANIZATIONAL_UNIT",
+          "ORGANIZATION_MEMBER_ACCOUNT"
+        ]
       },
       "PortfolioShareDetails": {
         "type": "array",

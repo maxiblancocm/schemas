@@ -6,7 +6,7 @@
     "title": "AWS S3 Control",
     "description": "AWS S3 Control provides access to Amazon S3 control plane operations.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-S3-Standard_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-S3-Standard_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -434,7 +434,14 @@
             "text/xml": {
               "schema": {
                 "type": "object",
-                "required": ["Operation", "Report", "ClientRequestToken", "Manifest", "Priority", "RoleArn"],
+                "required": [
+                  "Operation",
+                  "Report",
+                  "ClientRequestToken",
+                  "Manifest",
+                  "Priority",
+                  "RoleArn"
+                ],
                 "properties": {
                   "ConfirmationRequired": {
                     "description": "Indicates whether confirmation is required before Amazon S3 runs the job. Confirmation is only required for jobs created through the Amazon S3 console.",
@@ -1941,7 +1948,12 @@
             "description": "<p>The canned ACL to apply to the bucket.</p> <note> <p>This is not supported by Amazon S3 on Outposts buckets.</p> </note>",
             "schema": {
               "type": "string",
-              "enum": ["private", "public-read", "public-read-write", "authenticated-read"]
+              "enum": [
+                "private",
+                "public-read",
+                "public-read-write",
+                "authenticated-read"
+              ]
             }
           },
           {
@@ -6208,7 +6220,10 @@
       },
       "JobManifestFormat": {
         "type": "string",
-        "enum": ["S3BatchOperations_CSV_20180820", "S3InventoryReport_CSV_20161130"]
+        "enum": [
+          "S3BatchOperations_CSV_20180820",
+          "S3InventoryReport_CSV_20161130"
+        ]
       },
       "S3KeyArnString": {
         "type": "string",
@@ -6485,7 +6500,14 @@
       },
       "S3StorageClass": {
         "type": "string",
-        "enum": ["STANDARD", "STANDARD_IA", "ONEZONE_IA", "GLACIER", "INTELLIGENT_TIERING", "DEEP_ARCHIVE"]
+        "enum": [
+          "STANDARD",
+          "STANDARD_IA",
+          "ONEZONE_IA",
+          "GLACIER",
+          "INTELLIGENT_TIERING",
+          "DEEP_ARCHIVE"
+        ]
       },
       "S3ObjectLockLegalHoldStatus": {
         "type": "string",
@@ -7114,7 +7136,13 @@
       },
       "TransitionStorageClass": {
         "type": "string",
-        "enum": ["GLACIER", "STANDARD_IA", "ONEZONE_IA", "INTELLIGENT_TIERING", "DEEP_ARCHIVE"]
+        "enum": [
+          "GLACIER",
+          "STANDARD_IA",
+          "ONEZONE_IA",
+          "INTELLIGENT_TIERING",
+          "DEEP_ARCHIVE"
+        ]
       },
       "NoncurrentVersionTransition": {
         "type": "object",
@@ -7849,7 +7877,11 @@
       },
       "AsyncOperationName": {
         "type": "string",
-        "enum": ["CreateMultiRegionAccessPoint", "DeleteMultiRegionAccessPoint", "PutMultiRegionAccessPointPolicy"]
+        "enum": [
+          "CreateMultiRegionAccessPoint",
+          "DeleteMultiRegionAccessPoint",
+          "PutMultiRegionAccessPointPolicy"
+        ]
       },
       "AsyncRequestTokenARN": {
         "type": "string",

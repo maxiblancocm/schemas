@@ -6,7 +6,7 @@
     "title": "AWS Ground Station",
     "description": "Welcome to the AWS Ground Station API Reference. AWS Ground Station is a fully managed service that enables you to control satellite communications, downlink and process satellite data, and scale your satellite operations efficiently and cost-effectively without having to build or manage your own ground station infrastructure.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Ground-Station_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Ground-Station_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -752,7 +752,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["dataflowEdges", "minimumViableContactDurationSeconds", "name", "trackingConfigArn"],
+                "required": [
+                  "dataflowEdges",
+                  "minimumViableContactDurationSeconds",
+                  "name",
+                  "trackingConfigArn"
+                ],
                 "properties": {
                   "contactPostPassDurationSeconds": {
                     "description": "Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has finished.",
@@ -2358,7 +2363,13 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["endTime", "groundStation", "missionProfileArn", "satelliteArn", "startTime"],
+                "required": [
+                  "endTime",
+                  "groundStation",
+                  "missionProfileArn",
+                  "satelliteArn",
+                  "startTime"
+                ],
                 "properties": {
                   "endTime": {
                     "description": "End time of a contact.",

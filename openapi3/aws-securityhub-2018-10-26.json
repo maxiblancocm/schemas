@@ -6,7 +6,7 @@
     "title": "AWS Security Hub",
     "description": "Security Hub provides you with a comprehensive view of the security state of your AWS environment and resources. It also provides you with the readiness status of your environment based on controls from supported security standards. Security Hub collects security data from AWS accounts, services, and integrated third-party products and helps you analyze security trends in your environment to identify the highest priority security issues. For more information about Security Hub, see the  AWS Security Hub User Guide . When you use operations in the Security Hub API, the requests are executed only in the AWS Region that is currently active or in the specific AWS Region that you specify in your request. Any configuration or settings change that results from the operation is applied only to that Region. To make the same change in other Regions, execute the same command for each Region to apply the change to. For example, if your Region is set to us-west-2, when you use  CreateMembers  to add a member account to Security Hub, the association of the member account with the master account is created only in the us-west-2 Region. Security Hub must be enabled for the member account in the same Region that the invitation was sent from. The following throttling limits apply to using Security Hub API operations.     GetFindings  - RateLimit of 3 requests per second. BurstLimit of 6 requests per second.     UpdateFindings  - RateLimit of 1 request per second. BurstLimit of 5 requests per second.   All other operations - RateLimit of 10 requests per second. BurstLimit of 30 requests per second.",
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-Security-Hub_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-Security-Hub_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -776,7 +776,12 @@
                   "VerificationState": {
                     "description": "<p>Indicates the veracity of a finding.</p> <p>The available values for <code>VerificationState</code> are as follows.</p> <ul> <li> <p> <code>UNKNOWN</code> – The default disposition of a security finding</p> </li> <li> <p> <code>TRUE_POSITIVE</code> – The security finding is confirmed</p> </li> <li> <p> <code>FALSE_POSITIVE</code> – The security finding was determined to be a false alarm</p> </li> <li> <p> <code>BENIGN_POSITIVE</code> – A special case of <code>TRUE_POSITIVE</code> where the finding doesn't pose any threat, is expected, or both</p> </li> </ul>",
                     "type": "string",
-                    "enum": ["UNKNOWN", "TRUE_POSITIVE", "FALSE_POSITIVE", "BENIGN_POSITIVE"]
+                    "enum": [
+                      "UNKNOWN",
+                      "TRUE_POSITIVE",
+                      "FALSE_POSITIVE",
+                      "BENIGN_POSITIVE"
+                    ]
                   },
                   "Confidence": {
                     "description": "<p>The updated value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify.</p> <p>Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence.</p>",
@@ -17105,7 +17110,12 @@
       },
       "VerificationState": {
         "type": "string",
-        "enum": ["UNKNOWN", "TRUE_POSITIVE", "FALSE_POSITIVE", "BENIGN_POSITIVE"]
+        "enum": [
+          "UNKNOWN",
+          "TRUE_POSITIVE",
+          "FALSE_POSITIVE",
+          "BENIGN_POSITIVE"
+        ]
       },
       "WorkflowState": {
         "type": "string",
@@ -20565,7 +20575,12 @@
       },
       "StandardsSubscription": {
         "type": "object",
-        "required": ["StandardsSubscriptionArn", "StandardsArn", "StandardsInput", "StandardsStatus"],
+        "required": [
+          "StandardsSubscriptionArn",
+          "StandardsArn",
+          "StandardsInput",
+          "StandardsStatus"
+        ],
         "properties": {
           "StandardsSubscriptionArn": {
             "allOf": [
@@ -20685,7 +20700,14 @@
       },
       "ThreatIntelIndicatorCategory": {
         "type": "string",
-        "enum": ["BACKDOOR", "CARD_STEALER", "COMMAND_AND_CONTROL", "DROP_SITE", "EXPLOIT_SITE", "KEYLOGGER"]
+        "enum": [
+          "BACKDOOR",
+          "CARD_STEALER",
+          "COMMAND_AND_CONTROL",
+          "DROP_SITE",
+          "EXPLOIT_SITE",
+          "KEYLOGGER"
+        ]
       },
       "ThreatIntelIndicator": {
         "type": "object",

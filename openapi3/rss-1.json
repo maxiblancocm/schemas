@@ -5,7 +5,7 @@
     "version": "1",
     "x-categories": ["chainjet"],
     "x-logo": {
-      "url": "/logos/rss.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/rss.svg"
     }
   },
   "paths": {

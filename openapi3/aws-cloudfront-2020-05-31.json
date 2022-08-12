@@ -6,7 +6,7 @@
     "title": "Amazon CloudFront",
     "description": "This is the Amazon CloudFront API Reference. This guide is for developers who need detailed information about CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the Amazon CloudFront Developer Guide.",
     "x-logo": {
-      "url": "/logos/aws/Arch_Amazon-CloudFront_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_Amazon-CloudFront_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -11141,7 +11141,12 @@
       },
       "ParametersInCacheKeyAndForwardedToOrigin": {
         "type": "object",
-        "required": ["EnableAcceptEncodingGzip", "HeadersConfig", "CookiesConfig", "QueryStringsConfig"],
+        "required": [
+          "EnableAcceptEncodingGzip",
+          "HeadersConfig",
+          "CookiesConfig",
+          "QueryStringsConfig"
+        ],
         "properties": {
           "EnableAcceptEncodingGzip": {
             "allOf": [
@@ -11322,7 +11327,11 @@
       },
       "DefaultCacheBehavior": {
         "type": "object",
-        "required": ["TargetOriginId", "TrustedSigners", "ViewerProtocolPolicy"],
+        "required": [
+          "TargetOriginId",
+          "TrustedSigners",
+          "ViewerProtocolPolicy"
+        ],
         "properties": {
           "TargetOriginId": {
             "allOf": [
@@ -11768,7 +11777,13 @@
       },
       "DistributionConfig": {
         "type": "object",
-        "required": ["CallerReference", "Origins", "DefaultCacheBehavior", "Comment", "Enabled"],
+        "required": [
+          "CallerReference",
+          "Origins",
+          "DefaultCacheBehavior",
+          "Comment",
+          "Enabled"
+        ],
         "properties": {
           "CallerReference": {
             "allOf": [
@@ -12447,7 +12462,13 @@
       },
       "StreamingDistributionConfig": {
         "type": "object",
-        "required": ["CallerReference", "S3Origin", "Comment", "TrustedSigners", "Enabled"],
+        "required": [
+          "CallerReference",
+          "S3Origin",
+          "Comment",
+          "TrustedSigners",
+          "Enabled"
+        ],
         "properties": {
           "CallerReference": {
             "allOf": [
@@ -13522,7 +13543,12 @@
       },
       "CacheBehavior": {
         "type": "object",
-        "required": ["PathPattern", "TargetOriginId", "TrustedSigners", "ViewerProtocolPolicy"],
+        "required": [
+          "PathPattern",
+          "TargetOriginId",
+          "TrustedSigners",
+          "ViewerProtocolPolicy"
+        ],
         "properties": {
           "PathPattern": {
             "allOf": [
@@ -14645,7 +14671,11 @@
       },
       "FieldLevelEncryptionProfile": {
         "type": "object",
-        "required": ["Id", "LastModifiedTime", "FieldLevelEncryptionProfileConfig"],
+        "required": [
+          "Id",
+          "LastModifiedTime",
+          "FieldLevelEncryptionProfileConfig"
+        ],
         "properties": {
           "Id": {
             "allOf": [
@@ -14772,7 +14802,12 @@
       },
       "OriginRequestPolicyConfig": {
         "type": "object",
-        "required": ["Name", "HeadersConfig", "CookiesConfig", "QueryStringsConfig"],
+        "required": [
+          "Name",
+          "HeadersConfig",
+          "CookiesConfig",
+          "QueryStringsConfig"
+        ],
         "properties": {
           "Comment": {
             "allOf": [
@@ -15028,7 +15063,14 @@
       },
       "StreamingDistribution": {
         "type": "object",
-        "required": ["Id", "ARN", "Status", "DomainName", "ActiveTrustedSigners", "StreamingDistributionConfig"],
+        "required": [
+          "Id",
+          "ARN",
+          "Status",
+          "DomainName",
+          "ActiveTrustedSigners",
+          "StreamingDistributionConfig"
+        ],
         "properties": {
           "Id": {
             "allOf": [
@@ -15803,7 +15845,12 @@
       },
       "EventType": {
         "type": "string",
-        "enum": ["viewer-request", "viewer-response", "origin-request", "origin-response"]
+        "enum": [
+          "viewer-request",
+          "viewer-response",
+          "origin-request",
+          "origin-response"
+        ]
       },
       "FieldLevelEncryptionSummaryList": {
         "type": "array",
@@ -16600,7 +16647,15 @@
       },
       "MinimumProtocolVersion": {
         "type": "string",
-        "enum": ["SSLv3", "TLSv1", "TLSv1_2016", "TLSv1.1_2016", "TLSv1.2_2018", "TLSv1.2_2019", "TLSv1.2_2021"]
+        "enum": [
+          "SSLv3",
+          "TLSv1",
+          "TLSv1_2016",
+          "TLSv1.1_2016",
+          "TLSv1.2_2018",
+          "TLSv1.2_2019",
+          "TLSv1.2_2021"
+        ]
       },
       "S3OriginConfig": {
         "type": "object",
@@ -16924,7 +16979,12 @@
       },
       "OriginRequestPolicyHeaderBehavior": {
         "type": "string",
-        "enum": ["none", "whitelist", "allViewer", "allViewerAndWhitelistCloudFront"]
+        "enum": [
+          "none",
+          "whitelist",
+          "allViewer",
+          "allViewerAndWhitelistCloudFront"
+        ]
       },
       "OriginRequestPolicySummaryList": {
         "type": "array",

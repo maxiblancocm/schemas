@@ -7,7 +7,7 @@
     "description": "Provides APIs for creating and managing Amazon SageMaker resources.  Other Resources:    Amazon SageMaker Developer Guide     Amazon Augmented AI Runtime API Reference",
     "x-categories": ["machine-learning"],
     "x-logo": {
-      "url": "/logos/aws/Arch_AWS-SageMaker_64.svg"
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/aws/Arch_AWS-SageMaker_64.svg"
     },
     "termsOfService": "https://aws.amazon.com/service-terms/",
     "contact": {
@@ -18450,7 +18450,12 @@
       },
       "CreateAutoMLJobRequest": {
         "type": "object",
-        "required": ["AutoMLJobName", "InputDataConfig", "OutputDataConfig", "RoleArn"],
+        "required": [
+          "AutoMLJobName",
+          "InputDataConfig",
+          "OutputDataConfig",
+          "RoleArn"
+        ],
         "title": "CreateAutoMLJobRequest",
         "properties": {
           "AutoMLJobName": {
@@ -18626,7 +18631,13 @@
       },
       "CreateCompilationJobRequest": {
         "type": "object",
-        "required": ["CompilationJobName", "RoleArn", "InputConfig", "OutputConfig", "StoppingCondition"],
+        "required": [
+          "CompilationJobName",
+          "RoleArn",
+          "InputConfig",
+          "OutputConfig",
+          "StoppingCondition"
+        ],
         "title": "CreateCompilationJobRequest",
         "properties": {
           "CompilationJobName": {
@@ -18728,7 +18739,13 @@
       },
       "CreateDomainRequest": {
         "type": "object",
-        "required": ["DomainName", "AuthMode", "DefaultUserSettings", "SubnetIds", "VpcId"],
+        "required": [
+          "DomainName",
+          "AuthMode",
+          "DefaultUserSettings",
+          "SubnetIds",
+          "VpcId"
+        ],
         "title": "CreateDomainRequest",
         "properties": {
           "DomainName": {
@@ -19033,7 +19050,12 @@
       },
       "CreateFlowDefinitionRequest": {
         "type": "object",
-        "required": ["FlowDefinitionName", "HumanLoopConfig", "OutputConfig", "RoleArn"],
+        "required": [
+          "FlowDefinitionName",
+          "HumanLoopConfig",
+          "OutputConfig",
+          "RoleArn"
+        ],
         "title": "CreateFlowDefinitionRequest",
         "properties": {
           "FlowDefinitionName": {
@@ -19172,7 +19194,10 @@
       },
       "CreateHyperParameterTuningJobRequest": {
         "type": "object",
-        "required": ["HyperParameterTuningJobName", "HyperParameterTuningJobConfig"],
+        "required": [
+          "HyperParameterTuningJobName",
+          "HyperParameterTuningJobConfig"
+        ],
         "title": "CreateHyperParameterTuningJobRequest",
         "properties": {
           "HyperParameterTuningJobName": {
@@ -20005,7 +20030,12 @@
       },
       "CreateProcessingJobRequest": {
         "type": "object",
-        "required": ["ProcessingJobName", "ProcessingResources", "AppSpecification", "RoleArn"],
+        "required": [
+          "ProcessingJobName",
+          "ProcessingResources",
+          "AppSpecification",
+          "RoleArn"
+        ],
         "title": "CreateProcessingJobRequest",
         "properties": {
           "ProcessingInputs": {
@@ -20353,7 +20383,13 @@
       },
       "CreateTransformJobRequest": {
         "type": "object",
-        "required": ["TransformJobName", "ModelName", "TransformInput", "TransformOutput", "TransformResources"],
+        "required": [
+          "TransformJobName",
+          "ModelName",
+          "TransformInput",
+          "TransformOutput",
+          "TransformResources"
+        ],
         "title": "CreateTransformJobRequest",
         "properties": {
           "TransformJobName": {
@@ -21915,7 +21951,12 @@
       },
       "DescribeCodeRepositoryOutput": {
         "type": "object",
-        "required": ["CodeRepositoryName", "CodeRepositoryArn", "CreationTime", "LastModifiedTime"],
+        "required": [
+          "CodeRepositoryName",
+          "CodeRepositoryArn",
+          "CreationTime",
+          "LastModifiedTime"
+        ],
         "properties": {
           "CodeRepositoryName": {
             "allOf": [
@@ -22509,7 +22550,12 @@
       },
       "DescribeEndpointConfigOutput": {
         "type": "object",
-        "required": ["EndpointConfigName", "EndpointConfigArn", "ProductionVariants", "CreationTime"],
+        "required": [
+          "EndpointConfigName",
+          "EndpointConfigArn",
+          "ProductionVariants",
+          "CreationTime"
+        ],
         "properties": {
           "EndpointConfigName": {
             "allOf": [
@@ -22838,7 +22884,12 @@
       },
       "DescribeHumanTaskUiResponse": {
         "type": "object",
-        "required": ["HumanTaskUiArn", "HumanTaskUiName", "CreationTime", "UiTemplate"],
+        "required": [
+          "HumanTaskUiArn",
+          "HumanTaskUiName",
+          "CreationTime",
+          "UiTemplate"
+        ],
         "properties": {
           "HumanTaskUiArn": {
             "allOf": [
@@ -23300,7 +23351,12 @@
       },
       "DescribeModelOutput": {
         "type": "object",
-        "required": ["ModelName", "ExecutionRoleArn", "CreationTime", "ModelArn"],
+        "required": [
+          "ModelName",
+          "ExecutionRoleArn",
+          "CreationTime",
+          "ModelArn"
+        ],
         "properties": {
           "ModelName": {
             "allOf": [
@@ -30489,7 +30545,12 @@
       },
       "AlgorithmSummary": {
         "type": "object",
-        "required": ["AlgorithmName", "AlgorithmArn", "CreationTime", "AlgorithmStatus"],
+        "required": [
+          "AlgorithmName",
+          "AlgorithmArn",
+          "CreationTime",
+          "AlgorithmStatus"
+        ],
         "properties": {
           "AlgorithmName": {
             "allOf": [
@@ -30552,7 +30613,13 @@
       },
       "TrainingJobDefinition": {
         "type": "object",
-        "required": ["TrainingInputMode", "InputDataConfig", "OutputDataConfig", "ResourceConfig", "StoppingCondition"],
+        "required": [
+          "TrainingInputMode",
+          "InputDataConfig",
+          "OutputDataConfig",
+          "ResourceConfig",
+          "StoppingCondition"
+        ],
         "properties": {
           "TrainingInputMode": {
             "allOf": [
@@ -31236,7 +31303,11 @@
       },
       "CandidateStepType": {
         "type": "string",
-        "enum": ["AWS::SageMaker::TrainingJob", "AWS::SageMaker::TransformJob", "AWS::SageMaker::ProcessingJob"]
+        "enum": [
+          "AWS::SageMaker::TrainingJob",
+          "AWS::SageMaker::TransformJob",
+          "AWS::SageMaker::ProcessingJob"
+        ]
       },
       "CandidateStepArn": {
         "type": "string",
@@ -31251,7 +31322,11 @@
       },
       "AutoMLCandidateStep": {
         "type": "object",
-        "required": ["CandidateStepType", "CandidateStepArn", "CandidateStepName"],
+        "required": [
+          "CandidateStepType",
+          "CandidateStepArn",
+          "CandidateStepName"
+        ],
         "properties": {
           "CandidateStepType": {
             "allOf": [
@@ -31846,7 +31921,10 @@
       },
       "AwsManagedHumanLoopRequestSource": {
         "type": "string",
-        "enum": ["AWS/Rekognition/DetectModerationLabels/Image/V3", "AWS/Textract/AnalyzeDocument/Forms/V1"]
+        "enum": [
+          "AWS/Rekognition/DetectModerationLabels/Image/V3",
+          "AWS/Textract/AnalyzeDocument/Forms/V1"
+        ]
       },
       "BatchStrategy": {
         "type": "string",
@@ -32371,7 +32449,12 @@
       },
       "CodeRepositorySummary": {
         "type": "object",
-        "required": ["CodeRepositoryName", "CodeRepositoryArn", "CreationTime", "LastModifiedTime"],
+        "required": [
+          "CodeRepositoryName",
+          "CodeRepositoryArn",
+          "CreationTime",
+          "LastModifiedTime"
+        ],
         "properties": {
           "CodeRepositoryName": {
             "allOf": [
@@ -32568,11 +32651,23 @@
       },
       "CompilationJobStatus": {
         "type": "string",
-        "enum": ["INPROGRESS", "COMPLETED", "FAILED", "STARTING", "STOPPING", "STOPPED"]
+        "enum": [
+          "INPROGRESS",
+          "COMPLETED",
+          "FAILED",
+          "STARTING",
+          "STOPPING",
+          "STOPPED"
+        ]
       },
       "CompilationJobSummary": {
         "type": "object",
-        "required": ["CompilationJobName", "CompilationJobArn", "CreationTime", "CompilationJobStatus"],
+        "required": [
+          "CompilationJobName",
+          "CompilationJobArn",
+          "CreationTime",
+          "CompilationJobStatus"
+        ],
         "properties": {
           "CompilationJobName": {
             "allOf": [
@@ -32888,7 +32983,10 @@
       },
       "ContentClassifier": {
         "type": "string",
-        "enum": ["FreeOfPersonallyIdentifiableInformation", "FreeOfAdultContent"]
+        "enum": [
+          "FreeOfPersonallyIdentifiableInformation",
+          "FreeOfAdultContent"
+        ]
       },
       "ContentClassifiers": {
         "type": "array",
@@ -32990,7 +33088,11 @@
       },
       "TrainingSpecification": {
         "type": "object",
-        "required": ["TrainingImage", "SupportedTrainingInstanceTypes", "TrainingChannels"],
+        "required": [
+          "TrainingImage",
+          "SupportedTrainingInstanceTypes",
+          "TrainingChannels"
+        ],
         "properties": {
           "TrainingImage": {
             "allOf": [
@@ -33186,7 +33288,11 @@
       },
       "ProblemType": {
         "type": "string",
-        "enum": ["BinaryClassification", "MulticlassClassification", "Regression"]
+        "enum": [
+          "BinaryClassification",
+          "MulticlassClassification",
+          "Regression"
+        ]
       },
       "GenerateCandidateDefinitionsOnly": {
         "type": "boolean"
@@ -33429,7 +33535,11 @@
       },
       "DataCaptureConfig": {
         "type": "object",
-        "required": ["InitialSamplingPercentage", "DestinationS3Uri", "CaptureOptions"],
+        "required": [
+          "InitialSamplingPercentage",
+          "DestinationS3Uri",
+          "CaptureOptions"
+        ],
         "properties": {
           "EnableCapture": {
             "allOf": [
@@ -33563,7 +33673,13 @@
       },
       "HumanLoopConfig": {
         "type": "object",
-        "required": ["WorkteamArn", "HumanTaskUiArn", "TaskTitle", "TaskDescription", "TaskCount"],
+        "required": [
+          "WorkteamArn",
+          "HumanTaskUiArn",
+          "TaskTitle",
+          "TaskDescription",
+          "TaskCount"
+        ],
         "properties": {
           "WorkteamArn": {
             "allOf": [
@@ -33786,7 +33902,13 @@
       },
       "HyperParameterTrainingJobDefinition": {
         "type": "object",
-        "required": ["AlgorithmSpecification", "RoleArn", "OutputDataConfig", "ResourceConfig", "StoppingCondition"],
+        "required": [
+          "AlgorithmSpecification",
+          "RoleArn",
+          "OutputDataConfig",
+          "ResourceConfig",
+          "StoppingCondition"
+        ],
         "properties": {
           "DefinitionName": {
             "allOf": [
@@ -35295,7 +35417,13 @@
       },
       "DataCaptureConfigSummary": {
         "type": "object",
-        "required": ["EnableCapture", "CaptureStatus", "CurrentSamplingPercentage", "DestinationS3Uri", "KmsKeyId"],
+        "required": [
+          "EnableCapture",
+          "CaptureStatus",
+          "CurrentSamplingPercentage",
+          "DestinationS3Uri",
+          "KmsKeyId"
+        ],
         "properties": {
           "EnableCapture": {
             "allOf": [
@@ -35414,7 +35542,12 @@
       },
       "FileSystemDataSource": {
         "type": "object",
-        "required": ["FileSystemId", "FileSystemAccessMode", "FileSystemType", "DirectoryPath"],
+        "required": [
+          "FileSystemId",
+          "FileSystemAccessMode",
+          "FileSystemType",
+          "DirectoryPath"
+        ],
         "properties": {
           "FileSystemId": {
             "allOf": [
@@ -35613,7 +35746,14 @@
       },
       "RuleEvaluationStatus": {
         "type": "string",
-        "enum": ["InProgress", "NoIssuesFound", "IssuesFound", "Error", "Stopping", "Stopped"]
+        "enum": [
+          "InProgress",
+          "NoIssuesFound",
+          "IssuesFound",
+          "Error",
+          "Stopping",
+          "Stopped"
+        ]
       },
       "StatusDetails": {
         "type": "string",
@@ -35807,7 +35947,15 @@
       },
       "DomainStatus": {
         "type": "string",
-        "enum": ["Deleting", "Failed", "InService", "Pending", "Updating", "Update_Failed", "Delete_Failed"]
+        "enum": [
+          "Deleting",
+          "Failed",
+          "InService",
+          "Pending",
+          "Updating",
+          "Update_Failed",
+          "Delete_Failed"
+        ]
       },
       "ProductionVariantSummaryList": {
         "type": "array",
@@ -36024,7 +36172,13 @@
       },
       "HyperParameterTrainingJobSummary": {
         "type": "object",
-        "required": ["TrainingJobName", "TrainingJobArn", "CreationTime", "TrainingJobStatus", "TunedHyperParameters"],
+        "required": [
+          "TrainingJobName",
+          "TrainingJobArn",
+          "CreationTime",
+          "TrainingJobStatus",
+          "TunedHyperParameters"
+        ],
         "properties": {
           "TrainingJobDefinitionName": {
             "allOf": [
@@ -36151,7 +36305,14 @@
       },
       "LabelingJobStatus": {
         "type": "string",
-        "enum": ["Initializing", "InProgress", "Completed", "Failed", "Stopping", "Stopped"]
+        "enum": [
+          "Initializing",
+          "InProgress",
+          "Completed",
+          "Failed",
+          "Stopping",
+          "Stopped"
+        ]
       },
       "LabelCounters": {
         "type": "object",
@@ -36391,7 +36552,15 @@
       },
       "NotebookInstanceStatus": {
         "type": "string",
-        "enum": ["Pending", "InService", "Stopping", "Stopped", "Failed", "Deleting", "Updating"]
+        "enum": [
+          "Pending",
+          "InService",
+          "Stopping",
+          "Stopped",
+          "Failed",
+          "Deleting",
+          "Updating"
+        ]
       },
       "NetworkInterfaceId": {
         "type": "string"
@@ -36576,7 +36745,15 @@
       },
       "UserProfileStatus": {
         "type": "string",
-        "enum": ["Deleting", "Failed", "InService", "Pending", "Updating", "Update_Failed", "Delete_Failed"]
+        "enum": [
+          "Deleting",
+          "Failed",
+          "InService",
+          "Pending",
+          "Updating",
+          "Update_Failed",
+          "Delete_Failed"
+        ]
       },
       "Workforce": {
         "type": "object",
@@ -36667,7 +36844,12 @@
       },
       "Workteam": {
         "type": "object",
-        "required": ["WorkteamName", "MemberDefinitions", "WorkteamArn", "Description"],
+        "required": [
+          "WorkteamName",
+          "MemberDefinitions",
+          "WorkteamArn",
+          "Description"
+        ],
         "properties": {
           "WorkteamName": {
             "allOf": [
@@ -37120,7 +37302,13 @@
       },
       "EndpointSummary": {
         "type": "object",
-        "required": ["EndpointName", "EndpointArn", "CreationTime", "LastModifiedTime", "EndpointStatus"],
+        "required": [
+          "EndpointName",
+          "EndpointArn",
+          "CreationTime",
+          "LastModifiedTime",
+          "EndpointStatus"
+        ],
         "properties": {
           "EndpointName": {
             "allOf": [
@@ -37188,7 +37376,15 @@
       },
       "ExecutionStatus": {
         "type": "string",
-        "enum": ["Pending", "Completed", "CompletedWithViolations", "InProgress", "Failed", "Stopping", "Stopped"]
+        "enum": [
+          "Pending",
+          "Completed",
+          "CompletedWithViolations",
+          "InProgress",
+          "Failed",
+          "Stopping",
+          "Stopped"
+        ]
       },
       "Experiment": {
         "type": "object",
@@ -37535,7 +37731,12 @@
       },
       "FlowDefinitionSummary": {
         "type": "object",
-        "required": ["FlowDefinitionName", "FlowDefinitionArn", "FlowDefinitionStatus", "CreationTime"],
+        "required": [
+          "FlowDefinitionName",
+          "FlowDefinitionArn",
+          "FlowDefinitionStatus",
+          "CreationTime"
+        ],
         "properties": {
           "FlowDefinitionName": {
             "allOf": [
@@ -37639,7 +37840,17 @@
       },
       "Framework": {
         "type": "string",
-        "enum": ["TENSORFLOW", "KERAS", "MXNET", "ONNX", "PYTORCH", "XGBOOST", "TFLITE", "DARKNET", "SKLEARN"]
+        "enum": [
+          "TENSORFLOW",
+          "KERAS",
+          "MXNET",
+          "ONNX",
+          "PYTORCH",
+          "XGBOOST",
+          "TFLITE",
+          "DARKNET",
+          "SKLEARN"
+        ]
       },
       "ResourceType": {
         "type": "string",
@@ -38642,7 +38853,11 @@
       },
       "LabelingJobForWorkteamSummary": {
         "type": "object",
-        "required": ["JobReferenceCode", "WorkRequesterAccountId", "CreationTime"],
+        "required": [
+          "JobReferenceCode",
+          "WorkRequesterAccountId",
+          "CreationTime"
+        ],
         "properties": {
           "LabelingJobName": {
             "allOf": [
@@ -39293,7 +39508,12 @@
       },
       "ModelPackageSummary": {
         "type": "object",
-        "required": ["ModelPackageName", "ModelPackageArn", "CreationTime", "ModelPackageStatus"],
+        "required": [
+          "ModelPackageName",
+          "ModelPackageArn",
+          "CreationTime",
+          "ModelPackageStatus"
+        ],
         "properties": {
           "ModelPackageName": {
             "allOf": [
@@ -40097,7 +40317,10 @@
       },
       "NotebookInstanceLifecycleConfigSummary": {
         "type": "object",
-        "required": ["NotebookInstanceLifecycleConfigName", "NotebookInstanceLifecycleConfigArn"],
+        "required": [
+          "NotebookInstanceLifecycleConfigName",
+          "NotebookInstanceLifecycleConfigArn"
+        ],
         "properties": {
           "NotebookInstanceLifecycleConfigName": {
             "allOf": [
@@ -40781,7 +41004,12 @@
       },
       "ProcessingJobSummary": {
         "type": "object",
-        "required": ["ProcessingJobName", "ProcessingJobArn", "CreationTime", "ProcessingJobStatus"],
+        "required": [
+          "ProcessingJobName",
+          "ProcessingJobArn",
+          "CreationTime",
+          "ProcessingJobStatus"
+        ],
         "properties": {
           "ProcessingJobName": {
             "allOf": [
@@ -41061,7 +41289,12 @@
       },
       "ProductionVariant": {
         "type": "object",
-        "required": ["VariantName", "ModelName", "InitialInstanceCount", "InstanceType"],
+        "required": [
+          "VariantName",
+          "ModelName",
+          "InitialInstanceCount",
+          "InstanceType"
+        ],
         "properties": {
           "VariantName": {
             "allOf": [
@@ -42412,7 +42645,12 @@
       },
       "TrainingJobSummary": {
         "type": "object",
-        "required": ["TrainingJobName", "TrainingJobArn", "CreationTime", "TrainingJobStatus"],
+        "required": [
+          "TrainingJobName",
+          "TrainingJobArn",
+          "CreationTime",
+          "TrainingJobStatus"
+        ],
         "properties": {
           "TrainingJobName": {
             "allOf": [
@@ -42743,7 +42981,12 @@
       },
       "TransformJobSummary": {
         "type": "object",
-        "required": ["TransformJobName", "TransformJobArn", "CreationTime", "TransformJobStatus"],
+        "required": [
+          "TransformJobName",
+          "TransformJobArn",
+          "CreationTime",
+          "TransformJobStatus"
+        ],
         "properties": {
           "TransformJobName": {
             "allOf": [
@@ -44599,7 +44842,15 @@
       },
       "ImageStatus": {
         "type": "string",
-        "enum": ["CREATING", "CREATED", "CREATE_FAILED", "UPDATING", "UPDATE_FAILED", "DELETING", "DELETE_FAILED"]
+        "enum": [
+          "CREATING",
+          "CREATED",
+          "CREATE_FAILED",
+          "UPDATING",
+          "UPDATE_FAILED",
+          "DELETING",
+          "DELETE_FAILED"
+        ]
       },
       "ImageContainerImage": {
         "type": "string",
@@ -44608,7 +44859,13 @@
       },
       "ImageVersionStatus": {
         "type": "string",
-        "enum": ["CREATING", "CREATED", "CREATE_FAILED", "DELETING", "DELETE_FAILED"]
+        "enum": [
+          "CREATING",
+          "CREATED",
+          "CREATE_FAILED",
+          "DELETING",
+          "DELETE_FAILED"
+        ]
       },
       "MountPath": {
         "type": "string",
@@ -44653,7 +44910,13 @@
       },
       "Image": {
         "type": "object",
-        "required": ["CreationTime", "ImageArn", "ImageName", "ImageStatus", "LastModifiedTime"],
+        "required": [
+          "CreationTime",
+          "ImageArn",
+          "ImageName",
+          "ImageStatus",
+          "LastModifiedTime"
+        ],
         "properties": {
           "CreationTime": {
             "allOf": [
@@ -45513,7 +45776,12 @@
       },
       "CreateFeatureGroupRequest": {
         "type": "object",
-        "required": ["FeatureGroupName", "RecordIdentifierFeatureName", "EventTimeFeatureName", "FeatureDefinitions"],
+        "required": [
+          "FeatureGroupName",
+          "RecordIdentifierFeatureName",
+          "EventTimeFeatureName",
+          "FeatureDefinitions"
+        ],
         "title": "CreateFeatureGroupRequest",
         "properties": {
           "FeatureGroupName": {
@@ -46005,7 +46273,12 @@
       },
       "CreatePipelineRequest": {
         "type": "object",
-        "required": ["PipelineName", "PipelineDefinition", "ClientRequestToken", "RoleArn"],
+        "required": [
+          "PipelineName",
+          "PipelineDefinition",
+          "ClientRequestToken",
+          "RoleArn"
+        ],
         "title": "CreatePipelineRequest",
         "properties": {
           "PipelineName": {
@@ -46170,7 +46443,11 @@
       },
       "CreateStudioLifecycleConfigRequest": {
         "type": "object",
-        "required": ["StudioLifecycleConfigName", "StudioLifecycleConfigContent", "StudioLifecycleConfigAppType"],
+        "required": [
+          "StudioLifecycleConfigName",
+          "StudioLifecycleConfigContent",
+          "StudioLifecycleConfigAppType"
+        ],
         "title": "CreateStudioLifecycleConfigRequest",
         "properties": {
           "StudioLifecycleConfigName": {
@@ -47207,7 +47484,13 @@
       },
       "DescribeDeviceFleetResponse": {
         "type": "object",
-        "required": ["DeviceFleetName", "DeviceFleetArn", "OutputConfig", "CreationTime", "LastModifiedTime"],
+        "required": [
+          "DeviceFleetName",
+          "DeviceFleetArn",
+          "OutputConfig",
+          "CreationTime",
+          "LastModifiedTime"
+        ],
         "properties": {
           "DeviceFleetName": {
             "allOf": [
@@ -47310,7 +47593,11 @@
       },
       "DescribeEdgePackagingJobResponse": {
         "type": "object",
-        "required": ["EdgePackagingJobArn", "EdgePackagingJobName", "EdgePackagingJobStatus"],
+        "required": [
+          "EdgePackagingJobArn",
+          "EdgePackagingJobName",
+          "EdgePackagingJobStatus"
+        ],
         "properties": {
           "EdgePackagingJobArn": {
             "allOf": [
@@ -51733,7 +52020,14 @@
       },
       "ActionStatus": {
         "type": "string",
-        "enum": ["Unknown", "InProgress", "Completed", "Failed", "Stopping", "Stopped"]
+        "enum": [
+          "Unknown",
+          "InProgress",
+          "Completed",
+          "Failed",
+          "Stopping",
+          "Stopped"
+        ]
       },
       "ActionSummary": {
         "type": "object",
@@ -52300,7 +52594,13 @@
       },
       "AthenaDatasetDefinition": {
         "type": "object",
-        "required": ["Catalog", "Database", "QueryString", "OutputS3Uri", "OutputFormat"],
+        "required": [
+          "Catalog",
+          "Database",
+          "QueryString",
+          "OutputS3Uri",
+          "OutputFormat"
+        ],
         "properties": {
           "Catalog": {
             "$ref": "#/components/schemas/AthenaCatalog"
@@ -53817,7 +54117,15 @@
       },
       "RedshiftDatasetDefinition": {
         "type": "object",
-        "required": ["ClusterId", "Database", "DbUser", "QueryString", "ClusterRoleArn", "OutputS3Uri", "OutputFormat"],
+        "required": [
+          "ClusterId",
+          "Database",
+          "DbUser",
+          "QueryString",
+          "ClusterRoleArn",
+          "OutputS3Uri",
+          "OutputFormat"
+        ],
         "properties": {
           "ClusterId": {
             "$ref": "#/components/schemas/RedshiftClusterId"
@@ -54027,7 +54335,14 @@
       },
       "EdgePackagingJobStatus": {
         "type": "string",
-        "enum": ["STARTING", "INPROGRESS", "COMPLETED", "FAILED", "STOPPING", "STOPPED"]
+        "enum": [
+          "STARTING",
+          "INPROGRESS",
+          "COMPLETED",
+          "FAILED",
+          "STOPPING",
+          "STOPPED"
+        ]
       },
       "EdgePresetDeploymentOutput": {
         "type": "object",
@@ -54078,7 +54393,13 @@
       },
       "FeatureGroupStatus": {
         "type": "string",
-        "enum": ["Creating", "Created", "CreateFailed", "Deleting", "DeleteFailed"]
+        "enum": [
+          "Creating",
+          "Created",
+          "CreateFailed",
+          "Deleting",
+          "DeleteFailed"
+        ]
       },
       "OfflineStoreStatus": {
         "type": "object",
@@ -54109,7 +54430,14 @@
       },
       "ModelPackageGroupStatus": {
         "type": "string",
-        "enum": ["Pending", "InProgress", "Completed", "Failed", "Deleting", "DeleteFailed"]
+        "enum": [
+          "Pending",
+          "InProgress",
+          "Completed",
+          "Failed",
+          "Deleting",
+          "DeleteFailed"
+        ]
       },
       "ModelPackageVersion": {
         "type": "integer",
@@ -54117,7 +54445,12 @@
       },
       "MonitoringType": {
         "type": "string",
-        "enum": ["DataQuality", "ModelQuality", "ModelBias", "ModelExplainability"]
+        "enum": [
+          "DataQuality",
+          "ModelQuality",
+          "ModelBias",
+          "ModelExplainability"
+        ]
       },
       "PipelineExecutionName": {
         "type": "string",
@@ -54611,7 +54944,11 @@
       },
       "EdgePackagingJobSummary": {
         "type": "object",
-        "required": ["EdgePackagingJobArn", "EdgePackagingJobName", "EdgePackagingJobStatus"],
+        "required": [
+          "EdgePackagingJobArn",
+          "EdgePackagingJobName",
+          "EdgePackagingJobStatus"
+        ],
         "properties": {
           "EdgePackagingJobArn": {
             "allOf": [
@@ -55027,7 +55364,12 @@
       },
       "FeatureGroupSortBy": {
         "type": "string",
-        "enum": ["Name", "FeatureGroupStatus", "OfflineStoreStatus", "CreationTime"]
+        "enum": [
+          "Name",
+          "FeatureGroupStatus",
+          "OfflineStoreStatus",
+          "CreationTime"
+        ]
       },
       "FeatureGroupSortOrder": {
         "type": "string",
@@ -55180,7 +55522,13 @@
       },
       "SortAssociationsBy": {
         "type": "string",
-        "enum": ["SourceArn", "DestinationArn", "SourceType", "DestinationType", "CreationTime"]
+        "enum": [
+          "SourceArn",
+          "DestinationArn",
+          "SourceType",
+          "DestinationType",
+          "CreationTime"
+        ]
       },
       "SortContextsBy": {
         "type": "string",
@@ -55206,7 +55554,13 @@
       },
       "ListEdgePackagingJobsSortBy": {
         "type": "string",
-        "enum": ["NAME", "MODEL_NAME", "CREATION_TIME", "LAST_MODIFIED_TIME", "STATUS"]
+        "enum": [
+          "NAME",
+          "MODEL_NAME",
+          "CREATION_TIME",
+          "LAST_MODIFIED_TIME",
+          "STATUS"
+        ]
       },
       "OfflineStoreStatusValue": {
         "type": "string",
@@ -55646,7 +56000,12 @@
       },
       "ModelPackageGroupSummary": {
         "type": "object",
-        "required": ["ModelPackageGroupName", "ModelPackageGroupArn", "CreationTime", "ModelPackageGroupStatus"],
+        "required": [
+          "ModelPackageGroupName",
+          "ModelPackageGroupArn",
+          "CreationTime",
+          "ModelPackageGroupStatus"
+        ],
         "properties": {
           "ModelPackageGroupName": {
             "allOf": [
@@ -55703,7 +56062,11 @@
       },
       "MonitoringProblemType": {
         "type": "string",
-        "enum": ["BinaryClassification", "MulticlassClassification", "Regression"]
+        "enum": [
+          "BinaryClassification",
+          "MulticlassClassification",
+          "Regression"
+        ]
       },
       "ModelStepMetadata": {
         "type": "object",
@@ -55723,7 +56086,12 @@
       },
       "MonitoringJobDefinitionSummary": {
         "type": "object",
-        "required": ["MonitoringJobDefinitionName", "MonitoringJobDefinitionArn", "CreationTime", "EndpointName"],
+        "required": [
+          "MonitoringJobDefinitionName",
+          "MonitoringJobDefinitionArn",
+          "CreationTime",
+          "EndpointName"
+        ],
         "properties": {
           "MonitoringJobDefinitionName": {
             "allOf": [
@@ -56233,7 +56601,14 @@
       },
       "StepStatus": {
         "type": "string",
-        "enum": ["Starting", "Executing", "Stopping", "Stopped", "Failed", "Succeeded"]
+        "enum": [
+          "Starting",
+          "Executing",
+          "Stopping",
+          "Stopped",
+          "Failed",
+          "Succeeded"
+        ]
       },
       "PipelineExecutionStepMetadata": {
         "type": "object",
@@ -56957,7 +57332,13 @@
       },
       "ProjectSummary": {
         "type": "object",
-        "required": ["ProjectName", "ProjectArn", "ProjectId", "CreationTime", "ProjectStatus"],
+        "required": [
+          "ProjectName",
+          "ProjectArn",
+          "ProjectId",
+          "CreationTime",
+          "ProjectStatus"
+        ],
         "properties": {
           "ProjectName": {
             "allOf": [
