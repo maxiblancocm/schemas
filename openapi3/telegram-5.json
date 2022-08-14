@@ -4,7 +4,10 @@
     "title": "Telegram Bot",
     "description": "Auto-generated OpenAPI schema",
     "version": "5.0.0",
-    "x-categories": ["chat"]
+    "x-categories": ["chat"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/telegram.svg"
+    }
   },
   "servers": [
     {

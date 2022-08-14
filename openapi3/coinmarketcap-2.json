@@ -4,11 +4,12 @@
     "title": "CoinMarketCap",
     "version": "2",
     "description": "# Introduction\nThe CoinMarketCap API is a suite of high-performance RESTful JSON endpoints that are specifically designed to meet the mission-critical demands of application developers, data scientists, and enterprise business platforms.\n\nThis API reference includes all technical documentation developers need to integrate third-party applications and platforms. Additional answers to common questions can be found in the CoinMarketCap API FAQ.\n\nQuick Start Guide\n\nFor developers eager to hit the ground running with the CoinMarketCap API here are a few quick steps to make your first call with the API.\n\nSign up for a free Developer Portal account. You can sign up at pro.coinmarketcap.com - This is our live production environment with the latest market data. Select the free Basic plan if it meets your needs or upgrade to a paid tier.\n\nCopy your API Key. Once you sign up you'll land on your Developer Portal account dashboard. Copy your API from the API Key box in the top left panel.\n\nMake a test call using your key. You may use the code examples provided below to make a test call with your programming language of choice. This example fetches all active cryptocurrencies by market cap and return market values in USD.\nBe sure to replace the API Key in sample code with your own and use API domain pro-api.coinmarketcap.com or use the test API Key b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c for sandbox-api.coinmarketcap.com testing with our sandbox environment. Please note that our sandbox api has mock data and should not be used in your application.\n\nImplement your application. Now that you've confirmed your API Key is working, get familiar with the API by reading the rest of this API Reference and commence building your application!\n\n\\*Note: Making HTTP requests on the client side with Javascript is currently prohibited through CORS configuration. This is to protect your API Key which should not be visible to users of your application so your API Key is not stolen. Secure your API Key by routing calls through your own backend service.\\*\n\ncurl -H \"X-CMC_PRO_API_KEY: b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c\" -H \"Accept: application/json\" -d \"start=1&limit=5000&convert=USD\" -G https&#x3A;//sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest\n\nfrom requests import Request, Session\nfrom requests.exceptions import ConnectionError, Timeout, TooManyRedirects\nimport json\n\nurl = 'https&#x3A;//sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'\nparameters = {\n  'start':'1',\n  'limit':'5000',\n  'convert':'USD'\n}\nheaders = {\n  'Accepts': 'application/json',\n  'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c',\n}\n\nsession = Session()\nsession.headers.update(headers)\n\ntry:\n  response = session.get(url, params=parameters)\n  data = json.loads(response.text)\n  print(data)\nexcept (ConnectionError, Timeout, TooManyRedirects) as e:\n  print(e)\n\n/\\*\\* \n\nThis example uses the Apache HTTPComponents library. \n\\*/\n\nimport org.apache.http.HttpEntity;\nimport org.apache.http.HttpHeaders;\nimport org.apache.http.NameValuePair;\nimport org.apache.http.client.methods.CloseableHttpResponse;\nimport org.apache.http.client.methods.HttpGet;\nimport org.apache.http.client.utils.URIBuilder;\nimport org.apache.http.impl.client.CloseableHttpClient;\nimport org.apache.http.impl.client.HttpClients;\nimport org.apache.http.message.BasicNameValuePair;\nimport org.apache.http.util.EntityUtils;\n\nimport java.io.IOException;\nimport java.net.URISyntaxException;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class JavaExample {\n\n  private static String apiKey = \"b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c\";\n\n  public static void main(String\\[] args) {\n    String uri = \"https&#x3A;//sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest\";\n    List paratmers = new ArrayList();\n    paratmers.add(new BasicNameValuePair(\"start\",\"1\"));\n    paratmers.add(new BasicNameValuePair(\"limit\",\"5000\"));\n    paratmers.add(new BasicNameValuePair(\"convert\",\"USD\"));\n\n  }\n\n  public static String makeAPICall(String uri, List parameters)\n      throws URISyntaxException, IOException {\n    String response_content = \"\";\n\n  }\n\n}\n\npackage main\n\nimport (\n  \"fmt\"\n  \"io/ioutil\"\n  \"log\"\n  \"net/http\"\n  \"net/url\"\n  \"os\"\n)\n\nfunc main() {\n  client := &http.Client{}\n  req, err := http.NewRequest(\"GET\",\"https&#x3A;//sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest\", nil)\n  if err != nil {\n    log.Print(err)\n    os.Exit(1)\n  }\n\n  q := url.Values{}\n  q.Add(\"start\", \"1\")\n  q.Add(\"limit\", \"5000\")\n  q.Add(\"convert\", \"USD\")\n\n  req.Header.Set(\"Accepts\", \"application/json\")\n  req.Header.Add(\"X-CMC_PRO_API_KEY\", \"b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c\")\n  req.URL.RawQuery = q.Encode()\n\n  resp, err := client.Do(req);\n  if err != nil {\n    fmt.Println(\"Error sending request to server\")\n    os.Exit(1)\n  }\n  fmt.Println(resp.Status);\n  respBody, \\_ := ioutil.ReadAll(resp.Body)\n  fmt.Println(string(respBody));\n\n}\n\n{\n  \"data\" : {\n    ...\n  },\n  \"status\": {\n    \"timestamp\": \"2018-06-06T07:52:27.273Z\",\n    \"error_code\": 400,\n    \"error_message\": \"Invalid value for \\\\\"id\\\\\"\",\n    \"elapsed\": 0,\n    \"credit_count\": 0\n  }\n}\n\n\"data\" : {\n    \"BTC\" : {\n      ...\n    },\n    \"ETH\" : {\n      ...\n    }\n}\n\n\"data\" : {\n    \"1\" : {\n      ...\n    },\n    \"1027\" : {\n      ...\n    }\n}",
-    "contact": {
-      "email": "api@coinmarketcap.com"
-    },
+    "contact": { "email": "api@coinmarketcap.com" },
     "termsOfService": "https://coinmarketcap.com/terms/",
-    "x-categories": ["exchanges"]
+    "x-categories": ["exchanges"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/coinmarketcap.svg"
+    }
   },
   "paths": {
     "/v1/cryptocurrency/airdrop": {
@@ -22,9 +23,7 @@
             "name": "id",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -103,11 +102,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -134,28 +129,19 @@
             "description": "Filtered airdrops by one cryptocurrency CoinMarketCap IDs. Example: 1",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d*$" }
           },
           {
             "description": "Alternatively filter airdrops by a cryptocurrency slug. Example: \"bitcoin\"",
             "name": "slug",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9a-z-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9a-z-]*$" }
           },
           {
             "description": "Alternatively filter airdrops one cryptocurrency symbol. Example: \"BTC\".",
             "name": "symbol",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9A-Za-z$@\\-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9A-Za-z$@\\-]*$" }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -234,30 +220,19 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
             "name": "limit",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 5000
-            }
+            "schema": { "type": "integer", "minimum": 1, "maximum": 5000 }
           },
           {
             "description": "Filtered categories by one or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively filter categories by a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -354,19 +329,13 @@
             "name": "id",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Optionally offset the start (1-based index) of the paginated list of coins to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of coins to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -392,10 +361,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -473,10 +439,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency IDs. Example: \"1,2\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -500,9 +463,7 @@
             "description": "Alternatively pass in a contract address. Example: \"0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e\"",
             "name": "address",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `urls,logo,description,tags,platform,date_added,notice,status` to include all auxiliary fields.",
@@ -601,21 +562,13 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
             "name": "limit",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 5000
-            }
+            "schema": { "type": "integer", "minimum": 1, "maximum": 5000 }
           },
           {
             "description": "What field to sort the list of cryptocurrencies by.",
@@ -722,10 +675,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency exchange ids. Example: \"1,2\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively, one or more comma-separated exchange names in URL friendly shorthand \"slug\" format (all lowercase, spaces replaced with hyphens). Example: \"binance,gdax\". At least one \"id\" *or* \"slug\" is required.",
@@ -842,21 +792,13 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
             "name": "limit",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 5000
-            }
+            "schema": { "type": "integer", "minimum": 1, "maximum": 5000 }
           },
           {
             "description": "What field to sort the list of exchanges by.",
@@ -882,10 +824,7 @@
             "description": "Optionally include one fiat or cryptocurrency IDs to filter market pairs by. For example `?crypto_id=1` would only return exchanges that have BTC.",
             "name": "crypto_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d*$" }
           }
         ],
         "tags": ["exchange"],
@@ -964,21 +903,13 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
             "name": "limit",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 5000
-            }
+            "schema": { "type": "integer", "minimum": 1, "maximum": 5000 }
           },
           {
             "description": "What field to sort the list by.",
@@ -994,10 +925,7 @@
             "description": "Pass `true` to include precious metals.",
             "name": "include_metals",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
+            "schema": { "type": "boolean", "default": false }
           }
         ],
         "tags": ["fiat"],
@@ -1157,27 +1085,19 @@
             "description": "The CoinMarketCap currency ID of the base cryptocurrency or fiat to convert from. Example: \"1\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d*$" }
           },
           {
             "description": "Alternatively the currency symbol of the base cryptocurrency or fiat to convert from. Example: \"BTC\". One \"id\" *or* \"symbol\" is required.",
             "name": "symbol",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9A-Za-z$@\\-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9A-Za-z$@\\-]*$" }
           },
           {
             "description": "Optional timestamp (Unix or ISO 8601) to reference historical pricing during conversion. If not passed, the current time will be used. If passed, we'll reference the closest historic values available for this conversion.",
             "name": "time",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Pass up to 120 comma-separated fiat or cryptocurrency symbols to convert the source amount to.",
@@ -1192,10 +1112,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["deprecated"],
@@ -1273,10 +1190,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency IDs. Example: \"1,2\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -1300,9 +1214,7 @@
             "description": "Alternatively pass in a contract address. Example: \"0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e\"",
             "name": "address",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `urls,logo,description,tags,platform,date_added,notice,status` to include all auxiliary fields.",
@@ -1401,27 +1313,19 @@
             "description": "The CoinMarketCap currency ID of the base cryptocurrency or fiat to convert from. Example: \"1\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d*$" }
           },
           {
             "description": "Alternatively the currency symbol of the base cryptocurrency or fiat to convert from. Example: \"BTC\". One \"id\" *or* \"symbol\" is required.",
             "name": "symbol",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9A-Za-z$@\\-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9A-Za-z$@\\-]*$" }
           },
           {
             "description": "Optional timestamp (Unix or ISO 8601) to reference historical pricing during conversion. If not passed, the current time will be used. If passed, we'll reference the closest historic values available for this conversion.",
             "name": "time",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Pass up to 120 comma-separated fiat or cryptocurrency symbols to convert the source amount to.",
@@ -1436,10 +1340,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["tools"],
@@ -1517,10 +1418,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs to return blockchain data for. Pass `1,2,1027` to request all currently supported blockchains.",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass one or more comma-separated cryptocurrency symbols. Pass `BTC,LTC,ETH` to request all currently supported blockchains.",
@@ -1618,19 +1516,13 @@
             "name": "date",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -1656,10 +1548,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "What field to sort the list of cryptocurrencies by.",
@@ -1689,10 +1578,7 @@
             "description": "The direction in which to order cryptocurrencies against the specified sort.",
             "name": "sort_dir",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            }
+            "schema": { "type": "string", "enum": ["asc", "desc"] }
           },
           {
             "description": "The type of cryptocurrency to include.",
@@ -1791,11 +1677,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -1892,19 +1774,13 @@
             "description": "Optionally specify a threshold of minimum 24 hour percent change to filter results by.",
             "name": "percent_change_24h_min",
             "in": "query",
-            "schema": {
-              "type": "number",
-              "minimum": -100
-            }
+            "schema": { "type": "number", "minimum": -100 }
           },
           {
             "description": "Optionally specify a threshold of maximum 24 hour percent change to filter results by.",
             "name": "percent_change_24h_max",
             "in": "query",
-            "schema": {
-              "type": "number",
-              "minimum": -100
-            }
+            "schema": { "type": "number", "minimum": -100 }
           },
           {
             "description": "Optionally calculate market quotes in up to 120 currencies at once by passing a comma-separated list of cryptocurrency or fiat currency symbols. Each additional convert option beyond the first requires an additional call credit. A list of supported fiat options can be found [here](#section/Standards-and-Conventions). Each conversion is returned in its own \"quote\" object.",
@@ -1919,10 +1795,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "What field to sort the list of cryptocurrencies by.",
@@ -1956,10 +1829,7 @@
             "description": "The direction in which to order cryptocurrencies against the specified sort.",
             "name": "sort_dir",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            }
+            "schema": { "type": "string", "enum": ["asc", "desc"] }
           },
           {
             "description": "The type of cryptocurrency to include.",
@@ -2068,11 +1938,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -2098,19 +1964,13 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "The direction in which to order cryptocurrencies against the specified sort.",
             "name": "sort_dir",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            }
+            "schema": { "type": "string", "enum": ["asc", "desc"] }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -2188,37 +2048,25 @@
             "description": "A cryptocurrency or fiat currency by CoinMarketCap ID to list market pairs for. Example: \"1\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Alternatively pass a cryptocurrency by slug. Example: \"bitcoin\"",
             "name": "slug",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9a-z-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9a-z-]*$" }
           },
           {
             "description": "Alternatively pass a cryptocurrency by symbol. Fiat currencies are not supported by this field. Example: \"BTC\". A single cryptocurrency \"id\", \"slug\", *or* \"symbol\" is required.",
             "name": "symbol",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9A-Za-z$@\\-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9A-Za-z$@\\-]*$" }
           },
           {
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -2272,10 +2120,7 @@
             "description": "Optionally include one or more fiat or cryptocurrency IDs to filter market pairs by. For example `?id=1&matched_id=2781` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\". This parameter cannot be used when `matched_symbol` is used.",
             "name": "matched_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Optionally include one or more fiat or cryptocurrency symbols to filter market pairs by. For example `?symbol=BTC&matched_symbol=USD` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\". This parameter cannot be used when `matched_id` is used.",
@@ -2302,7 +2147,13 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "enum": ["all", "percentage", "no-fees", "transactional-mining", "unknown"],
+              "enum": [
+                "all",
+                "percentage",
+                "no-fees",
+                "transactional-mining",
+                "unknown"
+              ],
               "default": "all"
             }
           },
@@ -2319,10 +2170,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["deprecated"],
@@ -2400,10 +2248,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency IDs. Example: \"1,1027\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -2437,17 +2282,13 @@
             "description": "Timestamp (Unix or ISO 8601) to start returning OHLCV time periods for. Only the date portion of the timestamp is used for daily OHLCV so it's recommended to send an ISO date format like \"2018-09-19\" without time.",
             "name": "time_start",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Timestamp (Unix or ISO 8601) to stop returning OHLCV time periods for (inclusive). Optional, if not passed we'll default to the current time. Only the date portion of the timestamp is used for daily OHLCV so it's recommended to send an ISO date format like \"2018-09-19\" without time.",
             "name": "time_end",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Optionally limit the number of time periods to return results for. The default is 10 items. The current query limit is 10000 items.",
@@ -2505,19 +2346,13 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if any invalid cryptocurrencies are requested or a cryptocurrency does not have matching records in the requested timeframe. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["deprecated"],
@@ -2595,10 +2430,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass one or more comma-separated cryptocurrency symbols. Example: \"BTC,ETH\". At least one \"id\" *or* \"symbol\" is required.",
@@ -2622,19 +2454,13 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if any invalid cryptocurrencies are requested or a cryptocurrency does not have matching records in the requested timeframe. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["deprecated"],
@@ -2712,10 +2538,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -2758,19 +2581,13 @@
             "description": "Optionally calculate quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["deprecated"],
@@ -2848,10 +2665,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency IDs. Example: \"1,2\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass one or more comma-separated cryptocurrency symbols. Example: \"BTC,ETH\". At least one \"id\" *or* \"symbol\" is required for this request.",
@@ -2866,17 +2680,13 @@
             "description": "Timestamp (Unix or ISO 8601) to start returning quotes for. Optional, if not passed, we'll return quotes calculated in reverse from \"time_end\".",
             "name": "time_start",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Timestamp (Unix or ISO 8601) to stop returning quotes for (inclusive). Optional, if not passed, we'll default to the current time. If no \"time_start\" is passed, we return quotes in reverse order starting from this time.",
             "name": "time_end",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "The number of interval periods to return results for. Optional, required if both \"time_start\" and \"time_end\" aren't supplied. The default is 10 items. The current query limit is 10000.",
@@ -2959,10 +2769,7 @@
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["deprecated"],
@@ -3040,10 +2847,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -3095,10 +2899,7 @@
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["deprecated"],
@@ -3176,11 +2977,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -3216,10 +3013,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "What field to sort the list of cryptocurrencies by.",
@@ -3235,10 +3029,7 @@
             "description": "The direction in which to order cryptocurrencies against the specified sort.",
             "name": "sort_dir",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            }
+            "schema": { "type": "string", "enum": ["asc", "desc"] }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -3316,11 +3107,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -3356,10 +3143,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -3437,11 +3221,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -3477,10 +3257,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -3559,11 +3336,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -3582,7 +3355,12 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "enum": ["name", "volume_24h", "volume_24h_adjusted", "exchange_score"],
+              "enum": [
+                "name",
+                "volume_24h",
+                "volume_24h_adjusted",
+                "exchange_score"
+              ],
               "default": "volume_24h"
             }
           },
@@ -3590,10 +3368,7 @@
             "description": "The direction in which to order exchanges against the specified sort.",
             "name": "sort_dir",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            }
+            "schema": { "type": "string", "enum": ["asc", "desc"] }
           },
           {
             "description": "The type of exchange markets to include in rankings. This field is deprecated. Please use \"all\" for accurate sorting.",
@@ -3639,10 +3414,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["exchange"],
@@ -3720,29 +3492,19 @@
             "description": "A CoinMarketCap exchange ID. Example: \"1\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d*$" }
           },
           {
             "description": "Alternatively pass an exchange \"slug\" (URL friendly all lowercase shorthand version of name with spaces replaced with hyphens). Example: \"binance\". One \"id\" *or* \"slug\" is required.",
             "name": "slug",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9a-z-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9a-z-]*$" }
           },
           {
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -3769,10 +3531,7 @@
             "description": "Optionally include one or more comma-delimited fiat or cryptocurrency IDs to filter market pairs by. For example `?matched_id=2781` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\" for the requested exchange. This parameter cannot be used when `matched_symbol` is used.",
             "name": "matched_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Optionally include one or more comma-delimited fiat or cryptocurrency symbols to filter market pairs by. For example `?matched_symbol=USD` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\" for the requested exchange. This parameter cannot be used when `matched_id` is used.",
@@ -3789,7 +3548,14 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "enum": ["all", "spot", "derivatives", "otc", "futures", "perpetual"],
+              "enum": [
+                "all",
+                "spot",
+                "derivatives",
+                "otc",
+                "futures",
+                "perpetual"
+              ],
               "default": "all"
             }
           },
@@ -3799,7 +3565,13 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "enum": ["all", "percentage", "no-fees", "transactional-mining", "unknown"],
+              "enum": [
+                "all",
+                "percentage",
+                "no-fees",
+                "transactional-mining",
+                "unknown"
+              ],
               "default": "all"
             }
           },
@@ -3816,10 +3588,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["exchange"],
@@ -3897,10 +3666,7 @@
             "description": "One or more comma-separated exchange CoinMarketCap ids. Example: \"24,270\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively, one or more comma-separated exchange names in URL friendly shorthand \"slug\" format (all lowercase, spaces replaced with hyphens). Example: \"binance,kraken\". At least one \"id\" *or* \"slug\" is required.",
@@ -3915,17 +3681,13 @@
             "description": "Timestamp (Unix or ISO 8601) to start returning quotes for. Optional, if not passed, we'll return quotes calculated in reverse from \"time_end\".",
             "name": "time_start",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Timestamp (Unix or ISO 8601) to stop returning quotes for (inclusive). Optional, if not passed, we'll default to the current time. If no \"time_start\" is passed, we return quotes in reverse order starting from this time.",
             "name": "time_end",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "The number of interval periods to return results for. Optional, required if both \"time_start\" and \"time_end\" aren't supplied. The default is 10 items. The current query limit is 10000.",
@@ -3989,10 +3751,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["exchange"],
@@ -4070,10 +3829,7 @@
             "description": "One or more comma-separated CoinMarketCap exchange IDs. Example: \"1,2\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively, pass a comma-separated list of exchange \"slugs\" (URL friendly all lowercase shorthand version of name with spaces replaced with hyphens). Example: \"binance,gdax\". At least one \"id\" *or* \"slug\" is required.",
@@ -4097,10 +3853,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `num_market_pairs,traffic_score,rank,exchange_score,liquidity_score,effective_liquidity_24h` to include all auxiliary fields.",
@@ -4188,17 +3941,13 @@
             "description": "Timestamp (Unix or ISO 8601) to start returning quotes for. Optional, if not passed, we'll return quotes calculated in reverse from \"time_end\".",
             "name": "time_start",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Timestamp (Unix or ISO 8601) to stop returning quotes for (inclusive). Optional, if not passed, we'll default to the current time. If no \"time_start\" is passed, we return quotes in reverse order starting from this time.",
             "name": "time_end",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "The number of interval periods to return results for. Optional, required if both \"time_start\" and \"time_end\" aren't supplied. The default is 10 items. The current query limit is 10000.",
@@ -4262,10 +4011,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `btc_dominance,active_cryptocurrencies,active_exchanges,active_market_pairs,total_volume_24h,total_volume_24h_reported,altcoin_market_cap,altcoin_volume_24h,altcoin_volume_24h_reported,search_interval` to include all auxiliary fields.",
@@ -4362,10 +4108,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["global-metrics"],
@@ -4443,37 +4186,25 @@
             "description": "A cryptocurrency or fiat currency by CoinMarketCap ID to list market pairs for. Example: \"1\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Alternatively pass a cryptocurrency by slug. Example: \"bitcoin\"",
             "name": "slug",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9a-z-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9a-z-]*$" }
           },
           {
             "description": "Alternatively pass a cryptocurrency by symbol. Fiat currencies are not supported by this field. Example: \"BTC\". A single cryptocurrency \"id\", \"slug\", *or* \"symbol\" is required.",
             "name": "symbol",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^[0-9A-Za-z$@\\-]*$"
-            }
+            "schema": { "type": "string", "pattern": "^[0-9A-Za-z$@\\-]*$" }
           },
           {
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -4527,10 +4258,7 @@
             "description": "Optionally include one or more fiat or cryptocurrency IDs to filter market pairs by. For example `?id=1&matched_id=2781` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\". This parameter cannot be used when `matched_symbol` is used.",
             "name": "matched_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Optionally include one or more fiat or cryptocurrency symbols to filter market pairs by. For example `?symbol=BTC&matched_symbol=USD` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\". This parameter cannot be used when `matched_id` is used.",
@@ -4557,7 +4285,13 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "enum": ["all", "percentage", "no-fees", "transactional-mining", "unknown"],
+              "enum": [
+                "all",
+                "percentage",
+                "no-fees",
+                "transactional-mining",
+                "unknown"
+              ],
               "default": "all"
             }
           },
@@ -4574,10 +4308,7 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -4655,10 +4386,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency IDs. Example: \"1,1027\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -4692,17 +4420,13 @@
             "description": "Timestamp (Unix or ISO 8601) to start returning OHLCV time periods for. Only the date portion of the timestamp is used for daily OHLCV so it's recommended to send an ISO date format like \"2018-09-19\" without time.",
             "name": "time_start",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Timestamp (Unix or ISO 8601) to stop returning OHLCV time periods for (inclusive). Optional, if not passed we'll default to the current time. Only the date portion of the timestamp is used for daily OHLCV so it's recommended to send an ISO date format like \"2018-09-19\" without time.",
             "name": "time_end",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Optionally limit the number of time periods to return results for. The default is 10 items. The current query limit is 10000 items.",
@@ -4760,19 +4484,13 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if any invalid cryptocurrencies are requested or a cryptocurrency does not have matching records in the requested timeframe. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -4850,10 +4568,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass one or more comma-separated cryptocurrency symbols. Example: \"BTC,ETH\". At least one \"id\" *or* \"symbol\" is required.",
@@ -4877,19 +4592,13 @@
             "description": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if any invalid cryptocurrencies are requested or a cryptocurrency does not have matching records in the requested timeframe. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -4967,10 +4676,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -5013,19 +4719,13 @@
             "description": "Optionally calculate quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used.",
             "name": "convert_id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -5103,10 +4803,7 @@
             "description": "One or more comma-separated CoinMarketCap cryptocurrency IDs. Example: \"1,2\"",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass one or more comma-separated cryptocurrency symbols. Example: \"BTC,ETH\". At least one \"id\" *or* \"symbol\" is required for this request.",
@@ -5121,17 +4818,13 @@
             "description": "Timestamp (Unix or ISO 8601) to start returning quotes for. Optional, if not passed, we'll return quotes calculated in reverse from \"time_end\".",
             "name": "time_start",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "Timestamp (Unix or ISO 8601) to stop returning quotes for (inclusive). Optional, if not passed, we'll default to the current time. If no \"time_start\" is passed, we return quotes in reverse order starting from this time.",
             "name": "time_end",
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "description": "The number of interval periods to return results for. Optional, required if both \"time_start\" and \"time_end\" aren't supplied. The default is 10 items. The current query limit is 10000.",
@@ -5214,10 +4907,7 @@
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -5295,10 +4985,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -5350,10 +5037,7 @@
             "description": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned.",
             "name": "skip_invalid",
             "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
+            "schema": { "type": "boolean", "default": true }
           }
         ],
         "tags": ["cryptocurrency"],
@@ -5432,11 +5116,7 @@
             "description": "Optionally offset the start (1-based index) of the paginated list of items to return.",
             "name": "start",
             "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "integer", "minimum": 1, "default": 1 }
           },
           {
             "description": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size.",
@@ -5535,10 +5215,7 @@
             "description": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2",
             "name": "id",
             "in": "query",
-            "schema": {
-              "type": "string",
-              "pattern": "^\\d+(?:,\\d+)*$"
-            }
+            "schema": { "type": "string", "pattern": "^\\d+(?:,\\d+)*$" }
           },
           {
             "description": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\"",
@@ -5730,11 +5407,7 @@
       "description": "##### Deprecated (V1) Endpoints\n<br /><br />These endpoints have been replaced with their V2 versions, and are no longer being actively supported.\n<br />We strongly suggest migrating to V2 endpoints, and this documentation only exists for legacy purposes."
     }
   ],
-  "servers": [
-    {
-      "url": "https://pro-api.coinmarketcap.com/"
-    }
-  ],
+  "servers": [{ "url": "https://pro-api.coinmarketcap.com/" }],
   "components": {
     "schemas": {
       "coin": {
@@ -5794,15 +5467,19 @@
             "example": 0
           }
         },
-        "required": ["timestamp", "error_code", "error_message", "elapsed", "credit_count"]
+        "required": [
+          "timestamp",
+          "error_code",
+          "error_message",
+          "elapsed",
+          "credit_count"
+        ]
       },
       "tags": {
         "type": "array",
         "description": "Array of tags associated with this cryptocurrency. Currently only a mineable tag will be returned if the cryptocurrency is mineable. Additional tags will be returned in the future.",
         "example": ["mineable"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "platform": {
         "type": "object",
@@ -5840,25 +5517,19 @@
         "type": "array",
         "description": "Array of self reported tags associated with this cryptocurrency.",
         "example": ["Store Of Value", "Play To Earn"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "website": {
         "type": "array",
         "description": "Array of website URLs.",
         "example": ["https://bitcoin.org/"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "technical_doc": {
         "type": "array",
         "description": "Array of white paper or technical documentation URLs.",
         "example": ["https://bitcoin.org/bitcoin.pdf"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "explorer": {
         "type": "array",
@@ -5868,73 +5539,55 @@
           "https://blockchain.info/",
           "https://live.blockcypher.com/btc/"
         ],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "source_code": {
         "type": "array",
         "description": "Array of source code URLs.",
         "example": ["https://github.com/bitcoin/"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "message_board": {
         "type": "array",
         "description": "Array of message board URLs.",
         "example": ["https://bitcointalk.org"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "chat": {
         "type": "array",
         "description": "Array of chat service URLs.",
         "example": [],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "announcement": {
         "type": "array",
         "description": "Array of announcement URLs.",
         "example": [],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "reddit": {
         "type": "array",
         "description": "Array of Reddit community page URLs.",
         "example": ["https://reddit.com/r/bitcoin"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "twitter": {
         "type": "array",
         "description": "Array of official twitter profile URLs.",
         "example": ["https://twitter.com/Bitcoin"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "blog": {
         "type": "array",
         "description": "Official blog URLs.",
         "example": ["https://blog.kraken.com/"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "fee": {
         "type": "array",
         "description": "Official web URLs covering exchange fees.",
         "example": ["https://www.gdax.com/fees"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "plan": {
         "type": "object",
@@ -6043,15 +5696,9 @@
         "type": "object",
         "description": "Object containing live usage details about your API Key.",
         "properties": {
-          "current_minute": {
-            "$ref": "#/components/schemas/current_minute"
-          },
-          "current_day": {
-            "$ref": "#/components/schemas/current_day"
-          },
-          "current_month": {
-            "$ref": "#/components/schemas/current_month"
-          }
+          "current_minute": { "$ref": "#/components/schemas/current_minute" },
+          "current_day": { "$ref": "#/components/schemas/current_day" },
+          "current_month": { "$ref": "#/components/schemas/current_month" }
         },
         "required": ["current_minute", "current_day", "current_month"]
       },
@@ -6079,9 +5726,7 @@
             "description": "The current status of the airdrop.",
             "example": "UPCOMING"
           },
-          "coin": {
-            "$ref": "#/components/schemas/coin"
-          },
+          "coin": { "$ref": "#/components/schemas/coin" },
           "start_date": {
             "type": "string",
             "format": "date",
@@ -6094,14 +5739,8 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "total_prize": {
-            "type": "integer",
-            "example": 10000
-          },
-          "winner_count": {
-            "type": "integer",
-            "example": 55
-          },
+          "total_prize": { "type": "integer", "example": 10000 },
+          "winner_count": { "type": "integer", "example": 55 },
           "link": {
             "type": "string",
             "description": "A link to the airdrop information.",
@@ -6131,9 +5770,7 @@
           "link": "https://coinmarketcap.com/currencies/derace/airdrop/"
         },
         "properties": {
-          "$key": {
-            "$ref": "#/components/schemas/Airdrop_-_Airdrop_object"
-          }
+          "$key": { "$ref": "#/components/schemas/Airdrop_-_Airdrop_object" }
         },
         "required": ["$key"]
       },
@@ -6167,28 +5804,26 @@
             "example": 1
           }
         },
-        "required": ["timestamp", "error_code", "error_message", "elapsed", "credit_count"]
+        "required": [
+          "timestamp",
+          "error_code",
+          "error_message",
+          "elapsed",
+          "credit_count"
+        ]
       },
       "Airdrop_-_Response_Model": {
         "type": "object",
         "properties": {
-          "data": {
-            "$ref": "#/components/schemas/Airdrop_-_Results_map"
-          },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "data": { "$ref": "#/components/schemas/Airdrop_-_Results_map" },
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data", "status"]
       },
       "HTTP_Status_400_Error_Object": {
         "type": "object",
         "description": "Bad Request",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/status"
-          }
-        }
+        "properties": { "status": { "$ref": "#/components/schemas/status" } }
       },
       "status_1": {
         "type": "object",
@@ -6221,16 +5856,18 @@
             "example": 0
           }
         },
-        "required": ["timestamp", "error_code", "error_message", "elapsed", "credit_count"]
+        "required": [
+          "timestamp",
+          "error_code",
+          "error_message",
+          "elapsed",
+          "credit_count"
+        ]
       },
       "HTTP_Status_401_Error_Object": {
         "type": "object",
         "description": "Unauthorized",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/status_1"
-          }
-        }
+        "properties": { "status": { "$ref": "#/components/schemas/status_1" } }
       },
       "status_2": {
         "type": "object",
@@ -6263,16 +5900,18 @@
             "example": 0
           }
         },
-        "required": ["timestamp", "error_code", "error_message", "elapsed", "credit_count"]
+        "required": [
+          "timestamp",
+          "error_code",
+          "error_message",
+          "elapsed",
+          "credit_count"
+        ]
       },
       "HTTP_Status_403_Error_Object": {
         "type": "object",
         "description": "Forbidden",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/status_2"
-          }
-        }
+        "properties": { "status": { "$ref": "#/components/schemas/status_2" } }
       },
       "status_3": {
         "type": "object",
@@ -6305,16 +5944,18 @@
             "example": 0
           }
         },
-        "required": ["timestamp", "error_code", "error_message", "elapsed", "credit_count"]
+        "required": [
+          "timestamp",
+          "error_code",
+          "error_message",
+          "elapsed",
+          "credit_count"
+        ]
       },
       "HTTP_Status_429_Error_Object": {
         "type": "object",
         "description": "Too Many Requests",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/status_3"
-          }
-        }
+        "properties": { "status": { "$ref": "#/components/schemas/status_3" } }
       },
       "status_4": {
         "type": "object",
@@ -6347,16 +5988,18 @@
             "example": 0
           }
         },
-        "required": ["timestamp", "error_code", "error_message", "elapsed", "credit_count"]
+        "required": [
+          "timestamp",
+          "error_code",
+          "error_message",
+          "elapsed",
+          "credit_count"
+        ]
       },
       "HTTP_Status_500_Error_Object": {
         "type": "object",
         "description": "Internal Server Error",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/status_4"
-          }
-        }
+        "properties": { "status": { "$ref": "#/components/schemas/status_4" } }
       },
       "Airdrops_-_Airdrop_Object": {
         "type": "object",
@@ -6382,9 +6025,7 @@
             "description": "The current status of the airdrop.",
             "example": "UPCOMING"
           },
-          "coin": {
-            "$ref": "#/components/schemas/coin"
-          },
+          "coin": { "$ref": "#/components/schemas/coin" },
           "start_date": {
             "type": "string",
             "format": "date",
@@ -6397,14 +6038,8 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "total_prize": {
-            "type": "integer",
-            "example": 10000
-          },
-          "winner_count": {
-            "type": "integer",
-            "example": 55
-          },
+          "total_prize": { "type": "integer", "example": 10000 },
+          "winner_count": { "type": "integer", "example": 55 },
           "link": {
             "type": "string",
             "description": "A link to the airdrop information.",
@@ -6416,9 +6051,7 @@
       "Airdrops_-_Airdrop_Array": {
         "type": "array",
         "description": "Array of airdrop object results.",
-        "items": {
-          "$ref": "#/components/schemas/Airdrops_-_Airdrop_Object"
-        }
+        "items": { "$ref": "#/components/schemas/Airdrops_-_Airdrop_Object" }
       },
       "Airdrops_-_Response_Model": {
         "type": "object",
@@ -6451,12 +6084,8 @@
           }
         },
         "properties": {
-          "data": {
-            "$ref": "#/components/schemas/Airdrops_-_Airdrop_Array"
-          },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "data": { "$ref": "#/components/schemas/Airdrops_-_Airdrop_Array" },
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -6484,10 +6113,7 @@
             "description": "The description of the category",
             "example": "A16Z Portfolio"
           },
-          "num_tokens": {
-            "type": "integer",
-            "example": 12
-          },
+          "num_tokens": { "type": "integer", "example": 12 },
           "avg_price_change": {
             "type": "number",
             "description": "Average price change of coins within this categry",
@@ -6533,9 +6159,7 @@
       "Categories_-_Results_map": {
         "type": "array",
         "description": "Results of your query returned as an object map.",
-        "items": {
-          "$ref": "#/components/schemas/Categories_-_Category_object"
-        }
+        "items": { "$ref": "#/components/schemas/Categories_-_Category_object" }
       },
       "Categories_-_Response_Model": {
         "type": "object",
@@ -6564,12 +6188,8 @@
           }
         },
         "properties": {
-          "data": {
-            "$ref": "#/components/schemas/Categories_-_Results_map"
-          },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "data": { "$ref": "#/components/schemas/Categories_-_Results_map" },
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -6745,15 +6365,9 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags"
-          },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
-          "quote": {
-            "$ref": "#/components/schemas/Cryptocurrency_-_Quote_map"
-          }
+          "tags": { "$ref": "#/components/schemas/tags" },
+          "platform": { "$ref": "#/components/schemas/platform" },
+          "quote": { "$ref": "#/components/schemas/Cryptocurrency_-_Quote_map" }
         },
         "required": ["id", "name", "symbol", "slug", "last_updated", "quote"]
       },
@@ -6789,10 +6403,7 @@
             "description": "The description of the category",
             "example": "A16Z Portfolio"
           },
-          "num_tokens": {
-            "type": "integer",
-            "example": 12
-          },
+          "num_tokens": { "type": "integer", "example": 12 },
           "avg_price_change": {
             "type": "number",
             "description": "Average price change of coins within this categry",
@@ -6936,12 +6547,8 @@
       "Category_-_Response_Model": {
         "type": "object",
         "properties": {
-          "data": {
-            "$ref": "#/components/schemas/Category_-_Results_map"
-          },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "data": { "$ref": "#/components/schemas/Category_-_Results_map" },
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -6949,41 +6556,21 @@
         "type": "array",
         "description": "Tags associated with this cryptocurrency.",
         "example": ["mineable"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "Cryptocurrencies_Info_-_URLs_object": {
         "type": "object",
         "description": "An object containing various resource URLs for this cryptocurrency.",
         "properties": {
-          "website": {
-            "$ref": "#/components/schemas/website"
-          },
-          "technical_doc": {
-            "$ref": "#/components/schemas/technical_doc"
-          },
-          "explorer": {
-            "$ref": "#/components/schemas/explorer"
-          },
-          "source_code": {
-            "$ref": "#/components/schemas/source_code"
-          },
-          "message_board": {
-            "$ref": "#/components/schemas/message_board"
-          },
-          "chat": {
-            "$ref": "#/components/schemas/chat"
-          },
-          "announcement": {
-            "$ref": "#/components/schemas/announcement"
-          },
-          "reddit": {
-            "$ref": "#/components/schemas/reddit"
-          },
-          "twitter": {
-            "$ref": "#/components/schemas/twitter"
-          }
+          "website": { "$ref": "#/components/schemas/website" },
+          "technical_doc": { "$ref": "#/components/schemas/technical_doc" },
+          "explorer": { "$ref": "#/components/schemas/explorer" },
+          "source_code": { "$ref": "#/components/schemas/source_code" },
+          "message_board": { "$ref": "#/components/schemas/message_board" },
+          "chat": { "$ref": "#/components/schemas/chat" },
+          "announcement": { "$ref": "#/components/schemas/announcement" },
+          "reddit": { "$ref": "#/components/schemas/reddit" },
+          "twitter": { "$ref": "#/components/schemas/twitter" }
         },
         "required": [
           "website",
@@ -7053,12 +6640,8 @@
             "type": "string",
             "description": "A [Markdown](https://commonmark.org/help/) formatted notice that may highlight a significant event or condition that is impacting the cryptocurrency or how it is displayed, otherwise null. A notice may highlight a recent or upcoming mainnet swap, symbol change, exploit event, or known issue with a particular exchange or market, for example. If present, this notice is also displayed in an alert banner at the top of the cryptocurrency's page on coinmarketcap.com."
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags_1"
-          },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
+          "tags": { "$ref": "#/components/schemas/tags_1" },
+          "platform": { "$ref": "#/components/schemas/platform" },
           "self_reported_circulating_supply": {
             "type": "number",
             "description": "The self reported number of coins circulating for this cryptocurrency.",
@@ -7127,11 +6710,15 @@
           "1027": {
             "urls": {
               "website": ["https://www.ethereum.org/"],
-              "technical_doc": ["https://github.com/ethereum/wiki/wiki/White-Paper"],
+              "technical_doc": [
+                "https://github.com/ethereum/wiki/wiki/White-Paper"
+              ],
               "twitter": ["https://twitter.com/ethereum"],
               "reddit": ["https://reddit.com/r/ethereum"],
               "message_board": ["https://forum.ethereum.org/"],
-              "announcement": ["https://bitcointalk.org/index.php?topic=428589.0"],
+              "announcement": [
+                "https://bitcointalk.org/index.php?topic=428589.0"
+              ],
               "chat": ["https://gitter.im/orgs/ethereum/rooms"],
               "explorer": [
                 "https://blockchain.coinmarketcap.com/chain/ethereum",
@@ -7170,9 +6757,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Info_-_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7225,9 +6810,7 @@
             "description": "Timestamp (ISO 8601) of the last time this cryptocurrency's market data was updated.",
             "example": "2018-06-02T22:51:28.209Z"
           },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          }
+          "platform": { "$ref": "#/components/schemas/platform" }
         },
         "required": ["id", "name", "symbol", "slug"]
       },
@@ -7300,9 +6883,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Map_-_Cryptocurrency_Array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7310,45 +6891,29 @@
         "type": "array",
         "description": "Official website URLs.",
         "example": ["https://binance.com"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "chat_1": {
         "type": "array",
         "description": "Official chat URLs.",
         "example": ["https://t.me/coinbene"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "twitter_1": {
         "type": "array",
         "description": "Official twitter profile URLs.",
         "example": ["https://twitter.com/Bitcoin"],
-        "items": {
-          "type": "string"
-        }
+        "items": { "type": "string" }
       },
       "Exchanges_Info_-_URLs_object": {
         "type": "object",
         "description": "An object containing various resource URLs for this exchange.",
         "properties": {
-          "website": {
-            "$ref": "#/components/schemas/website_1"
-          },
-          "blog": {
-            "$ref": "#/components/schemas/blog"
-          },
-          "chat": {
-            "$ref": "#/components/schemas/chat_1"
-          },
-          "fee": {
-            "$ref": "#/components/schemas/fee"
-          },
-          "twitter": {
-            "$ref": "#/components/schemas/twitter_1"
-          }
+          "website": { "$ref": "#/components/schemas/website_1" },
+          "blog": { "$ref": "#/components/schemas/blog" },
+          "chat": { "$ref": "#/components/schemas/chat_1" },
+          "fee": { "$ref": "#/components/schemas/fee" },
+          "twitter": { "$ref": "#/components/schemas/twitter_1" }
         },
         "required": ["website", "blog", "chat", "fee", "twitter"]
       },
@@ -7405,7 +6970,16 @@
             "$ref": "#/components/schemas/Exchanges_Info_-_URLs_object"
           }
         },
-        "required": ["id", "name", "slug", "logo", "description", "date_launched", "notice", "urls"]
+        "required": [
+          "id",
+          "name",
+          "slug",
+          "logo",
+          "description",
+          "date_launched",
+          "notice",
+          "urls"
+        ]
       },
       "Exchanges_Info_-_Results_map": {
         "type": "object",
@@ -7450,9 +7024,7 @@
           "data": {
             "$ref": "#/components/schemas/Exchanges_Info_-_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7516,9 +7088,7 @@
           "data": {
             "$ref": "#/components/schemas/Exchange_Map_-_Exchanges_Array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7552,9 +7122,7 @@
       "Fiat_Map_-_Fiat_Array": {
         "type": "array",
         "description": "Array of fiat object results.",
-        "items": {
-          "$ref": "#/components/schemas/Fiat_Map_-_Fiat_Object"
-        }
+        "items": { "$ref": "#/components/schemas/Fiat_Map_-_Fiat_Object" }
       },
       "Fiat_Map_-_Response_Model": {
         "type": "object",
@@ -7588,12 +7156,8 @@
           }
         },
         "properties": {
-          "data": {
-            "$ref": "#/components/schemas/Fiat_Map_-_Fiat_Array"
-          },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "data": { "$ref": "#/components/schemas/Fiat_Map_-_Fiat_Array" },
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7601,12 +7165,8 @@
         "type": "object",
         "description": "Details about your API key are returned in this object.",
         "properties": {
-          "plan": {
-            "$ref": "#/components/schemas/plan"
-          },
-          "usage": {
-            "$ref": "#/components/schemas/usage"
-          }
+          "plan": { "$ref": "#/components/schemas/plan" },
+          "usage": { "$ref": "#/components/schemas/usage" }
         },
         "required": ["plan", "usage"]
       },
@@ -7616,9 +7176,7 @@
           "data": {
             "$ref": "#/components/schemas/Account_Info_-_Response_Object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7713,9 +7271,7 @@
           "data": {
             "$ref": "#/components/schemas/Tools_Price_Conversion_-_Results_Object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7839,9 +7395,7 @@
           "data": {
             "$ref": "#/components/schemas/Blockchain_Statistics_Latest_-_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -7985,12 +7539,8 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags"
-          },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
+          "tags": { "$ref": "#/components/schemas/tags" },
+          "platform": { "$ref": "#/components/schemas/platform" },
           "quote": {
             "$ref": "#/components/schemas/Cryptocurrency_Listings_Latest_-_Quote_map"
           }
@@ -8105,9 +7655,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Listings_Latest_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -8311,9 +7859,7 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags"
-          },
+          "tags": { "$ref": "#/components/schemas/tags" },
           "self_reported_circulating_supply": {
             "type": "number",
             "description": "The self reported number of coins circulating for this cryptocurrency.",
@@ -8329,9 +7875,7 @@
             "description": "Percentage of Total Value Locked",
             "example": 0
           },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
+          "platform": { "$ref": "#/components/schemas/platform" },
           "quote": {
             "$ref": "#/components/schemas/Cryptocurrency_Listings_Latest_-_Quote_map_1"
           }
@@ -8446,9 +7990,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Listings_Latest_-_Results_array_1"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -8647,12 +8189,8 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags"
-          },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
+          "tags": { "$ref": "#/components/schemas/tags" },
+          "platform": { "$ref": "#/components/schemas/platform" },
           "quote": {
             "$ref": "#/components/schemas/Cryptocurrency_Listings_Latest_-_Quote_map_2"
           }
@@ -8765,9 +8303,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Listings_New_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -8834,7 +8370,12 @@
             "enum": ["cryptocurrency", "fiat"]
           }
         },
-        "required": ["currency_id", "currency_symbol", "exchange_symbol", "currency_type"]
+        "required": [
+          "currency_id",
+          "currency_symbol",
+          "exchange_symbol",
+          "currency_type"
+        ]
       },
       "Cryptocurrency_Market_Pairs_Latest_-_Pair_Base_Currency_Info_object_1": {
         "type": "object",
@@ -8872,7 +8413,12 @@
             "enum": ["cryptocurrency", "fiat"]
           }
         },
-        "required": ["currency_id", "currency_symbol", "exchange_symbol", "currency_type"]
+        "required": [
+          "currency_id",
+          "currency_symbol",
+          "exchange_symbol",
+          "currency_type"
+        ]
       },
       "Cryptocurrency_Market_Pairs_Latest_-_Market_Pair_Exchange_Reported_Quote": {
         "type": "object",
@@ -8893,15 +8439,9 @@
             "description": "The latest exchange reported 24 hour rolling volume for this market pair in quote cryptocurrency units.",
             "example": 250448443.2
           },
-          "effective_liquidity": {
-            "x-hidden": true
-          },
-          "market_score": {
-            "x-hidden": true
-          },
-          "market_reputation": {
-            "x-hidden": true
-          },
+          "effective_liquidity": { "x-hidden": true },
+          "market_score": { "x-hidden": true },
+          "market_reputation": { "x-hidden": true },
           "last_updated": {
             "type": "string",
             "format": "date",
@@ -8909,7 +8449,12 @@
             "example": "2018-06-02T23:59:59.999Z"
           }
         },
-        "required": ["price", "volume_24h_base", "volume_24h_quote", "last_updated"]
+        "required": [
+          "price",
+          "volume_24h_base",
+          "volume_24h_quote",
+          "last_updated"
+        ]
       },
       "Cryptocurrency_Market_Pairs_Latest_-_Market_Pair_Quote": {
         "type": "object",
@@ -9004,7 +8549,9 @@
         "items": {
           "$ref": "#/components/schemas/Cryptocurrency_Market_Pairs_Latest_-_Market_Pair_Info_object"
         },
-        "required": ["Cryptocurrency Market Pairs Latest - Market Pair Info object"]
+        "required": [
+          "Cryptocurrency Market Pairs Latest - Market Pair Info object"
+        ]
       },
       "Cryptocurrency_Market_Pairs_Latest_-_Results_object": {
         "type": "object",
@@ -9016,11 +8563,7 @@
           "num_market_pairs": 7526,
           "market_pairs": [
             {
-              "exchange": {
-                "id": 157,
-                "name": "BitMEX",
-                "slug": "bitmex"
-              },
+              "exchange": { "id": 157, "name": "BitMEX", "slug": "bitmex" },
               "market_id": 4902,
               "market_pair": "BTC/USD",
               "category": "derivatives",
@@ -9123,9 +8666,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Market_Pairs_Latest_-_Results_object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -9170,7 +8711,15 @@
             "example": "2019-01-02T23:59:59.999Z"
           }
         },
-        "required": ["open", "high", "low", "close", "volume", "market_cap", "timestamp"]
+        "required": [
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "market_cap",
+          "timestamp"
+        ]
       },
       "Cryptocurrency_OHLCV_Historical_-_Quote_map": {
         "type": "object",
@@ -9214,7 +8763,13 @@
             "$ref": "#/components/schemas/Cryptocurrency_OHLCV_Historical_-_Quote_map"
           }
         },
-        "required": ["time_open", "time_close", "time_high", "time_low", "quote"]
+        "required": [
+          "time_open",
+          "time_close",
+          "time_high",
+          "time_low",
+          "quote"
+        ]
       },
       "Cryptocurrency_OHLCV_Historical_-_Interval_Quotes_array": {
         "type": "array",
@@ -9296,9 +8851,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_OHLCV_Historical_-_Results_object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -9453,9 +9006,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_OHLCV_Latest_-_Cryptocurrency_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -9573,7 +9124,13 @@
             "$ref": "#/components/schemas/Cryptocurrency_Price_Performance_Stats_Latest_-_Quote_map"
           }
         },
-        "required": ["open_timestamp", "high_timestamp", "low_timestamp", "close_timestamp", "quote"]
+        "required": [
+          "open_timestamp",
+          "high_timestamp",
+          "low_timestamp",
+          "close_timestamp",
+          "quote"
+        ]
       },
       "Cryptocurrency_Price_Performance_Stats_Latest_-_Period_object_map": {
         "type": "object",
@@ -9668,9 +9225,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Price_Performance_Stats_Latest_-_Cryptocurrency_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -9832,9 +9387,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Quotes_Historical_-_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -10021,12 +9574,8 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags"
-          },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
+          "tags": { "$ref": "#/components/schemas/tags" },
+          "platform": { "$ref": "#/components/schemas/platform" },
           "last_updated": {
             "type": "string",
             "format": "date",
@@ -10101,9 +9650,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Quotes_Latest_-_Cryptocurrency_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -10113,7 +9660,9 @@
         "items": {
           "$ref": "#/components/schemas/Cryptocurrency_-_Cryptocurrency_object"
         },
-        "required": ["Cryptocurrency Trending Gainers & Losers - Cryptocurrency object"]
+        "required": [
+          "Cryptocurrency Trending Gainers & Losers - Cryptocurrency object"
+        ]
       },
       "Cryptocurrency_Trending_Gainers_Losers_-_Response_Model": {
         "type": "object",
@@ -10201,9 +9750,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Trending_Gainers_Losers_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -10297,15 +9844,9 @@
             "description": "Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.",
             "example": "2013-04-28T00:00:00.000Z"
           },
-          "tags": {
-            "$ref": "#/components/schemas/tags"
-          },
-          "platform": {
-            "$ref": "#/components/schemas/platform"
-          },
-          "quote": {
-            "$ref": "#/components/schemas/Cryptocurrency_-_Quote_map"
-          }
+          "tags": { "$ref": "#/components/schemas/tags" },
+          "platform": { "$ref": "#/components/schemas/platform" },
+          "quote": { "$ref": "#/components/schemas/Cryptocurrency_-_Quote_map" }
         },
         "required": ["id", "name", "symbol", "slug", "last_updated", "quote"]
       },
@@ -10407,9 +9948,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Trending_Latest_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -10419,7 +9958,9 @@
         "items": {
           "$ref": "#/components/schemas/Cryptocurrency_-_Cryptocurrency_object"
         },
-        "required": ["Cryptocurrency Trending Most Visited - Cryptocurrency object"]
+        "required": [
+          "Cryptocurrency Trending Most Visited - Cryptocurrency object"
+        ]
       },
       "Cryptocurrency_Trending_Most_Visited_-_Response_Model": {
         "type": "object",
@@ -10507,9 +10048,7 @@
           "data": {
             "$ref": "#/components/schemas/Cryptocurrency_Trending_Most_Visited_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -10593,11 +10132,7 @@
       "Exchange_Listings_Latest_-_Quote_map": {
         "type": "object",
         "description": "A map of market quotes in different currency conversions. The default map included is USD.",
-        "example": {
-          "USD": {
-            "volume_24h": 1418940000
-          }
-        },
+        "example": { "USD": { "volume_24h": 1418940000 } },
         "properties": {
           "$key": {
             "$ref": "#/components/schemas/Exchange_Listings_Latest_-_Quote_object"
@@ -10735,9 +10270,7 @@
           "data": {
             "$ref": "#/components/schemas/Exchange_Listings_Latest_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -10777,7 +10310,12 @@
             "enum": ["cryptocurrency", "fiat"]
           }
         },
-        "required": ["currency_id", "currency_symbol", "exchange_symbol", "currency_type"]
+        "required": [
+          "currency_id",
+          "currency_symbol",
+          "exchange_symbol",
+          "currency_type"
+        ]
       },
       "Exchange_Market_Pairs_Latest_-_Pair_Base_Currency_Info_object_1": {
         "type": "object",
@@ -10815,7 +10353,12 @@
             "enum": ["cryptocurrency", "fiat"]
           }
         },
-        "required": ["currency_id", "currency_symbol", "exchange_symbol", "currency_type"]
+        "required": [
+          "currency_id",
+          "currency_symbol",
+          "exchange_symbol",
+          "currency_type"
+        ]
       },
       "Exchange_Market_Pairs_Latest_-_Market_Pair_Exchange_Reported_Quote": {
         "type": "object",
@@ -10848,7 +10391,13 @@
             "example": "2018-06-02T23:59:59.999Z"
           }
         },
-        "required": ["price", "volume_24h_base", "volume_24h_quote", "volume_percentage", "last_updated"]
+        "required": [
+          "price",
+          "volume_24h_base",
+          "volume_24h_quote",
+          "volume_percentage",
+          "last_updated"
+        ]
       },
       "Exchange_Market_Pairs_Latest_-_Market_Pair_Quote": {
         "type": "object",
@@ -10879,15 +10428,9 @@
             "description": "+2% Depth in the specified currency.",
             "example": 1600000
           },
-          "effective_liquidity": {
-            "x-hidden": true
-          },
-          "market_score": {
-            "x-hidden": true
-          },
-          "market_reputation": {
-            "x-hidden": true
-          },
+          "effective_liquidity": { "x-hidden": true },
+          "market_score": { "x-hidden": true },
+          "market_reputation": { "x-hidden": true },
           "last_updated": {
             "type": "string",
             "format": "date",
@@ -10951,7 +10494,14 @@
             "$ref": "#/components/schemas/Exchange_Market_Pairs_Latest_-_Market_Pair_Quote_object"
           }
         },
-        "required": ["market_id", "market_pair", "category", "mark_pair_base", "mark_pair_quote", "quote"]
+        "required": [
+          "market_id",
+          "market_pair",
+          "category",
+          "mark_pair_base",
+          "mark_pair_quote",
+          "quote"
+        ]
       },
       "Exchange_Market_Pairs_Latest_-_Market_Pairs_array": {
         "type": "array",
@@ -11075,7 +10625,14 @@
             "$ref": "#/components/schemas/Exchange_Market_Pairs_Latest_-_Market_Pairs_array"
           }
         },
-        "required": ["id", "name", "slug", "num_market_pairs", "volume_24h", "market_pairs"]
+        "required": [
+          "id",
+          "name",
+          "slug",
+          "num_market_pairs",
+          "volume_24h",
+          "market_pairs"
+        ]
       },
       "Exchange_Market_Pairs_Latest_-_Response_Model": {
         "type": "object",
@@ -11083,9 +10640,7 @@
           "data": {
             "$ref": "#/components/schemas/Exchange_Market_Pairs_Latest_-_Results_object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -11224,9 +10779,7 @@
           "data": {
             "$ref": "#/components/schemas/Exchange_Historical_Quotes_-_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -11366,7 +10919,14 @@
             "$ref": "#/components/schemas/Exchange_Quotes_Latest_-_Quote_map"
           }
         },
-        "required": ["id", "name", "slug", "num_market_pairs", "last_updated", "quote"]
+        "required": [
+          "id",
+          "name",
+          "slug",
+          "num_market_pairs",
+          "last_updated",
+          "quote"
+        ]
       },
       "Exchange_Quotes_Latest_-_Exchange_Results_map": {
         "type": "object",
@@ -11410,9 +10970,7 @@
           "data": {
             "$ref": "#/components/schemas/Exchange_Quotes_Latest_-_Exchange_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -11607,9 +11165,7 @@
           "data": {
             "$ref": "#/components/schemas/Global_Metrics_Quotes_Historic_-_Results_object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -11790,9 +11346,7 @@
           "data": {
             "$ref": "#/components/schemas/Global_Metrics_Quotes_Latest_-_Results_Object"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -11896,9 +11450,7 @@
           "data": {
             "$ref": "#/components/schemas/FCAS_Listings_Latest_-_Results_array"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       },
@@ -11988,9 +11540,7 @@
           "data": {
             "$ref": "#/components/schemas/FCAS_Quote_Latest_-_Cryptocurrency_Results_map"
           },
-          "status": {
-            "$ref": "#/components/schemas/API_Status_Object"
-          }
+          "status": { "$ref": "#/components/schemas/API_Status_Object" }
         },
         "required": ["data"]
       }
@@ -12005,9 +11555,5 @@
       }
     }
   },
-  "security": [
-    {
-      "ApiKey": []
-    }
-  ]
+  "security": [{ "ApiKey": [] }]
 }

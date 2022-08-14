@@ -1,6 +1,13 @@
 {
   "openapi": "3.0.0",
-  "info": { "title": "Discord", "version": "10", "x-categories": ["chat"] },
+  "info": {
+    "title": "Discord",
+    "version": "10",
+    "x-categories": ["chat"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/discord.svg"
+    }
+  },
   "externalDocs": { "url": "https://discord.com/developers" },
   "servers": [{ "url": "https://discord.com/api" }],
   "paths": {

@@ -4,7 +4,9 @@
     "title": "GraphQL",
     "version": "1",
     "x-categories": ["chainjet"],
-    "x-logo": {}
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/graphql.svg"
+    }
   },
   "paths": {
     "/": {
@@ -41,10 +43,7 @@
             "description": "HTTP Response",
             "content": {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
+                "schema": { "type": "object", "properties": {} }
               }
             }
           }

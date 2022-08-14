@@ -3,7 +3,10 @@
   "info": {
     "title": "DEX Screener",
     "version": "1",
-    "x-categories": ["blockchain"]
+    "x-categories": ["blockchain"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/dexscreener.png"
+    }
   },
   "servers": [{ "url": "https://api.dexscreener.com" }],
   "externalDocs": { "url": "https://docs.dexscreener.com/" },

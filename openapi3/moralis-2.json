@@ -3,7 +3,10 @@
   "info": {
     "title": "Moralis",
     "version": "2",
-    "x-categories": ["blockchain"]
+    "x-categories": ["blockchain"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/moralis.png"
+    }
   },
   "paths": {
     "/block/{block_number_or_hash}": {
