@@ -4,20 +4,14 @@
     "title": "Airtable",
     "version": "1",
     "x-categories": ["document", "nocode"],
-    "x-logo": {
-      "url": "https://flowoid.s3.amazonaws.com/logos/airtable.svg"
-    }
+    "x-logo": { "url": "https://flowoid.s3.amazonaws.com/logos/airtable.svg" }
   },
   "servers": [
     {
       "url": "https://api.airtable.com/v0/{baseId}/{tableName}",
       "variables": {
-        "baseId": {
-          "default": ""
-        },
-        "tableName": {
-          "default": ""
-        }
+        "baseId": { "default": "" },
+        "tableName": { "default": "" }
       }
     }
   ],
@@ -33,9 +27,7 @@
             "description": "",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RecordsResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/RecordsResponse" }
               }
             }
           }
@@ -59,9 +51,7 @@
                     "items": {
                       "type": "object",
                       "properties": {
-                        "fields": {
-                          "x-dynamicRef": "#/definitions/record"
-                        }
+                        "fields": { "x-dynamicRef": "#/definitions/record" }
                       }
                     },
                     "minItems": 1
@@ -76,9 +66,7 @@
             "description": "",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RecordsResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/RecordsResponse" }
               }
             }
           }
@@ -107,9 +95,7 @@
                           "type": "string",
                           "description": "It must start with 'rec'."
                         },
-                        "fields": {
-                          "x-dynamicRef": "#/definitions/record"
-                        }
+                        "fields": { "x-dynamicRef": "#/definitions/record" }
                       }
                     },
                     "minItems": 1
@@ -124,9 +110,7 @@
             "description": "",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RecordsResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/RecordsResponse" }
               }
             }
           }
@@ -158,16 +142,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "fields": {
-                      "x-dynamicRef": "#/definitions/record"
-                    },
-                    "createdTime": {
-                      "type": "string",
-                      "format": "date-time"
-                    }
+                    "id": { "type": "string" },
+                    "fields": { "x-dynamicRef": "#/definitions/record" },
+                    "createdTime": { "type": "string", "format": "date-time" }
                   }
                 }
               }
@@ -187,12 +164,8 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "deleted": {
-                      "type": "boolean"
-                    }
+                    "id": { "type": "string" },
+                    "deleted": { "type": "boolean" }
                   }
                 }
               }
@@ -212,12 +185,8 @@
             "items": {
               "type": "object",
               "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "fields": {
-                  "x-dynamicRef": "#/definitions/record"
-                }
+                "id": { "type": "string" },
+                "fields": { "x-dynamicRef": "#/definitions/record" }
               }
             }
           }

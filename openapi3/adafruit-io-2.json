@@ -10,15 +10,9 @@
     }
   },
   "security": [
-    {
-      "HeaderKey": []
-    },
-    {
-      "HeaderSignature": []
-    },
-    {
-      "QueryKey": []
-    }
+    { "HeaderKey": [] },
+    { "HeaderSignature": [] },
+    { "QueryKey": [] }
   ],
   "paths": {
     "/user": {
@@ -31,29 +25,15 @@
             "description": "A User record",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
+                "schema": { "$ref": "#/components/schemas/User" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/User" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -62,11 +42,7 @@
         "operationId": "getCurrentUserThrottle",
         "summary": "Get the user's data rate limit and current activity level.",
         "tags": ["Users"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
           "200": {
             "description": "Data rate limit and current actions.",
@@ -103,18 +79,10 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -125,18 +93,10 @@
         "description": "The Activities endpoint returns information about the user's activities.",
         "tags": ["Activities"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/StartTime"
-          },
-          {
-            "$ref": "#/components/parameters/EndTime"
-          },
-          {
-            "$ref": "#/components/parameters/Limit"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/StartTime" },
+          { "$ref": "#/components/parameters/EndTime" },
+          { "$ref": "#/components/parameters/Limit" }
         ],
         "responses": {
           "200": {
@@ -144,60 +104,40 @@
             "headers": {
               "X-Pagination-Limit": {
                 "description": "The limit this request is using, either your given value or the default (1000).",
-                "schema": {
-                  "type": "integer"
-                }
+                "schema": { "type": "integer" }
               },
               "X-Pagination-Count": {
                 "description": "The number of records returned.",
-                "schema": {
-                  "type": "integer"
-                }
+                "schema": { "type": "integer" }
               },
               "X-Pagination-Start": {
                 "description": "The created_at value for the oldest record returned.",
-                "schema": {
-                  "type": "string"
-                }
+                "schema": { "type": "string" }
               },
               "X-Pagination-End": {
                 "description": "The created_at value for the newest record returned.",
-                "schema": {
-                  "type": "string"
-                }
+                "schema": { "type": "string" }
               }
             },
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Activity"
-                  }
+                  "items": { "$ref": "#/components/schemas/Activity" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Activity"
-                  }
+                  "items": { "$ref": "#/components/schemas/Activity" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -205,27 +145,13 @@
         "summary": "List activities for current user",
         "description": "Delete all your activities.",
         "tags": ["Activities"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
-          "200": {
-            "description": "Deleted activities successfully"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "200": { "description": "Deleted activities successfully" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -236,21 +162,11 @@
         "description": "The Activities endpoint returns information about the user's activities.",
         "tags": ["Activities"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/ActivityTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/StartTime"
-          },
-          {
-            "$ref": "#/components/parameters/EndTime"
-          },
-          {
-            "$ref": "#/components/parameters/Limit"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/ActivityTypePath" },
+          { "$ref": "#/components/parameters/StartTime" },
+          { "$ref": "#/components/parameters/EndTime" },
+          { "$ref": "#/components/parameters/Limit" }
         ],
         "responses": {
           "200": {
@@ -259,33 +175,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Activity"
-                  }
+                  "items": { "$ref": "#/components/schemas/Activity" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Activity"
-                  }
+                  "items": { "$ref": "#/components/schemas/Activity" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -295,11 +199,7 @@
         "summary": "List feeds for current user",
         "description": "The Feeds endpoint returns information about the user's feeds. The response includes the latest value of each feed, and other metadata about each feed.",
         "tags": ["Feeds"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
           "200": {
             "description": "An array of feeds",
@@ -307,33 +207,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feed"
-                  }
+                  "items": { "$ref": "#/components/schemas/Feed" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feed"
-                  }
+                  "items": { "$ref": "#/components/schemas/Feed" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
@@ -341,45 +229,25 @@
         "description": "",
         "operationId": "createFeed",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupParam"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupParam" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createFeedFeed"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createFeedFeed" },
         "tags": ["Feeds"],
         "responses": {
           "200": {
             "description": "New feed",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
+                "schema": { "$ref": "#/components/schemas/Feed" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Feed" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -394,37 +262,19 @@
             "description": "Feed response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
+                "schema": { "$ref": "#/components/schemas/Feed" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Feed" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         },
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ]
       },
       "put": {
@@ -432,45 +282,25 @@
         "operationId": "replaceFeed",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createFeedFeed"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createFeedFeed" },
         "tags": ["Feeds"],
         "responses": {
           "200": {
             "description": "Updated feed",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
+                "schema": { "$ref": "#/components/schemas/Feed" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Feed" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -478,45 +308,25 @@
         "description": "",
         "operationId": "updateFeed",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createFeedFeed"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createFeedFeed" },
         "tags": ["Feeds"],
         "responses": {
           "200": {
             "description": "Updated feed",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
+                "schema": { "$ref": "#/components/schemas/Feed" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Feed" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -524,30 +334,16 @@
         "description": "",
         "operationId": "destroyFeed",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
         "tags": ["Feeds"],
         "responses": {
-          "200": {
-            "description": "Deleted feed successfully"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "200": { "description": "Deleted feed successfully" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -562,37 +358,19 @@
             "description": "Feed response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
+                "schema": { "$ref": "#/components/schemas/Feed" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Feed" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         },
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ]
       }
     },
@@ -603,24 +381,12 @@
         "description": "",
         "tags": ["Data"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/StartTime"
-          },
-          {
-            "$ref": "#/components/parameters/EndTime"
-          },
-          {
-            "$ref": "#/components/parameters/Limit"
-          },
-          {
-            "$ref": "#/components/parameters/DataInclude"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/StartTime" },
+          { "$ref": "#/components/parameters/EndTime" },
+          { "$ref": "#/components/parameters/Limit" },
+          { "$ref": "#/components/parameters/DataInclude" }
         ],
         "responses": {
           "200": {
@@ -628,60 +394,40 @@
             "headers": {
               "X-Pagination-Limit": {
                 "description": "The limit this request is using, either your given value or the default (1000).",
-                "schema": {
-                  "type": "integer"
-                }
+                "schema": { "type": "integer" }
               },
               "X-Pagination-Count": {
                 "description": "The number of records returned.",
-                "schema": {
-                  "type": "integer"
-                }
+                "schema": { "type": "integer" }
               },
               "X-Pagination-Start": {
                 "description": "The created_at value for the oldest record returned.",
-                "schema": {
-                  "type": "string"
-                }
+                "schema": { "type": "string" }
               },
               "X-Pagination-End": {
                 "description": "The created_at value for the newest record returned.",
-                "schema": {
-                  "type": "string"
-                }
+                "schema": { "type": "string" }
               }
             },
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
@@ -689,45 +435,25 @@
         "operationId": "createData",
         "description": "Create new data records on the given feed.\n\n**NOTE:** when feed history is on, data `value` size is limited to 1KB, when feed history is turned off data value size is limited to 100KB.",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createDataDatum"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createDataDatum" },
         "tags": ["Data"],
         "responses": {
           "200": {
             "description": "New data",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Data"
-                }
+                "schema": { "$ref": "#/components/schemas/Data" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Data"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Data" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -738,35 +464,21 @@
         "description": "The Chart API is what we use on io.adafruit.com to populate charts over varying timespans with a consistent number of data points. The maximum number of points returned is 480. This API works by aggregating slices of time into a single value by averaging.\n\nAll time-based parameters are optional, if none are given it will default to 1 hour at the finest-grained resolution possible.",
         "tags": ["Data"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/StartTime"
-          },
-          {
-            "$ref": "#/components/parameters/EndTime"
-          },
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/StartTime" },
+          { "$ref": "#/components/parameters/EndTime" },
           {
             "name": "resolution",
             "in": "query",
             "description": "A resolution size in minutes. By giving a resolution value you will get back grouped data points aggregated over resolution-sized intervals. NOTE: time span is preferred over resolution, so if you request a span of time that includes more than max limit points you may get a larger resolution than you requested. Valid resolutions are 1, 5, 10, 30, 60, and 120.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
+            "schema": { "type": "integer", "format": "int32" }
           },
           {
             "name": "hours",
             "in": "query",
             "description": "The number of hours the chart should cover.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
+            "schema": { "type": "integer", "format": "int32" }
           }
         ],
         "responses": {
@@ -780,36 +492,23 @@
                     "feed": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "key": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
+                        "id": { "type": "integer" },
+                        "key": { "type": "string" },
+                        "name": { "type": "string" }
                       }
                     },
-                    "parameters": {
-                      "type": "object",
-                      "properties": {}
-                    },
+                    "parameters": { "type": "object", "properties": {} },
                     "columns": {
                       "type": "array",
                       "description": "The names of the columns returned as data.",
-                      "items": {
-                        "type": "string"
-                      }
+                      "items": { "type": "string" }
                     },
                     "data": {
                       "type": "array",
                       "description": "The actual chart data.",
                       "items": {
                         "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
+                        "items": { "type": "string" }
                       }
                     }
                   }
@@ -822,36 +521,23 @@
                     "feed": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "key": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
+                        "id": { "type": "integer" },
+                        "key": { "type": "string" },
+                        "name": { "type": "string" }
                       }
                     },
-                    "parameters": {
-                      "type": "object",
-                      "properties": {}
-                    },
+                    "parameters": { "type": "object", "properties": {} },
                     "columns": {
                       "type": "array",
                       "description": "The names of the columns returned as data.",
-                      "items": {
-                        "type": "string"
-                      }
+                      "items": { "type": "string" }
                     },
                     "data": {
                       "type": "array",
                       "description": "The actual chart data.",
                       "items": {
                         "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
+                        "items": { "type": "string" }
                       }
                     }
                   }
@@ -859,18 +545,10 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -879,12 +557,8 @@
         "summary": "Create multiple new Data records",
         "operationId": "batchCreateData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/batchCreateDataData"
@@ -897,33 +571,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -933,15 +595,9 @@
         "description": "Get the previously processed data point in the feed. NOTE: this method doesn't move the processing queue pointer.",
         "operationId": "previousData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/DataInclude"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/DataInclude" }
         ],
         "tags": ["Data"],
         "responses": {
@@ -949,29 +605,17 @@
             "description": "Data response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -981,15 +625,9 @@
         "description": "Get the next newest data point in the feed. If queue processing hasn't been started, the first data point in the feed will be returned.",
         "operationId": "nextData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/DataInclude"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/DataInclude" }
         ],
         "tags": ["Data"],
         "responses": {
@@ -997,29 +635,17 @@
             "description": "Data response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1029,15 +655,9 @@
         "description": "Get the most recent data point in the feed. This request sets the queue pointer to the end of the feed.",
         "operationId": "lastData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/DataInclude"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/DataInclude" }
         ],
         "tags": ["Data"],
         "responses": {
@@ -1045,29 +665,17 @@
             "description": "Data response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1077,15 +685,9 @@
         "description": "Get the oldest data point in the feed. This request sets the queue pointer to the beginning of the feed.",
         "operationId": "firstData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/DataInclude"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/DataInclude" }
         ],
         "tags": ["Data"],
         "responses": {
@@ -1093,29 +695,17 @@
             "description": "Data response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1125,37 +715,19 @@
         "description": "Get the most recent data point in the feed in an MQTT compatible CSV format: `value,lat,lon,ele`",
         "operationId": "retainData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
         "tags": ["Data"],
         "responses": {
           "200": {
             "description": "CSV string in `value,lat,lon,ele` format. The lat, lon, and ele values are left blank if they are not set.",
-            "content": {
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
+            "content": { "text/csv": { "schema": { "type": "string" } } }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1166,47 +738,27 @@
         "operationId": "getData",
         "tags": ["Data"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          },
-          {
-            "$ref": "#/components/parameters/DataInclude"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/IDPath" },
+          { "$ref": "#/components/parameters/DataInclude" }
         ],
         "responses": {
           "200": {
             "description": "Data response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "put": {
@@ -1214,48 +766,28 @@
         "operationId": "replaceData",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createDataDatum"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createDataDatum" },
         "tags": ["Data"],
         "responses": {
           "200": {
             "description": "Updated Data",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -1263,48 +795,28 @@
         "description": "",
         "operationId": "updateData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createDataDatum"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createDataDatum" },
         "tags": ["Data"],
         "responses": {
           "200": {
             "description": "Updated Data",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -1312,45 +824,23 @@
         "description": "",
         "operationId": "destroyData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "tags": ["Data"],
         "responses": {
           "200": {
             "description": "Deleted Group successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1360,11 +850,7 @@
         "description": "The Groups endpoint returns information about the user's groups. The response includes the latest value of each feed in the group, and other metadata about the group.\n",
         "operationId": "allGroups",
         "tags": ["Groups"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
           "200": {
             "description": "An array of groups",
@@ -1372,44 +858,28 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Group"
-                  }
+                  "items": { "$ref": "#/components/schemas/Group" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Group"
-                  }
+                  "items": { "$ref": "#/components/schemas/Group" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
         "summary": "Create a new Group",
         "description": "",
         "operationId": "createGroup",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "requestBody": {
           "$ref": "#/components/requestBodies/createGroupGroup"
         },
@@ -1419,29 +889,15 @@
             "description": "New Group",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
+                "schema": { "$ref": "#/components/schemas/Group" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Group" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1451,41 +907,23 @@
         "operationId": "getGroup",
         "tags": ["Groups"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" }
         ],
         "responses": {
           "200": {
             "description": "Group response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
+                "schema": { "$ref": "#/components/schemas/Group" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Group" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error\""
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error\"" }
         }
       },
       "put": {
@@ -1493,12 +931,8 @@
         "operationId": "replaceGroup",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createGroupGroup"
@@ -1509,29 +943,15 @@
             "description": "Updated group",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
+                "schema": { "$ref": "#/components/schemas/Group" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Group" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -1539,12 +959,8 @@
         "description": "",
         "operationId": "updateGroup",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createGroupGroup"
@@ -1555,29 +971,15 @@
             "description": "Updated Group",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
+                "schema": { "$ref": "#/components/schemas/Group" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Group" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -1585,42 +987,22 @@
         "description": "",
         "operationId": "destroyGroup",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" }
         ],
         "tags": ["Groups"],
         "responses": {
           "200": {
             "description": "Deleted Group successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1631,44 +1013,24 @@
         "operationId": "addFeedToGroup",
         "tags": ["Groups", "Feeds"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          },
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedParam"
-          }
+          { "$ref": "#/components/parameters/GroupPath" },
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedParam" }
         ],
         "responses": {
           "200": {
             "description": "Updated group",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
+                "schema": { "$ref": "#/components/schemas/Group" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Group" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1679,44 +1041,24 @@
         "operationId": "removeFeedFromGroup",
         "tags": ["Groups", "Feeds"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          },
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedParam"
-          }
+          { "$ref": "#/components/parameters/GroupPath" },
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/FeedParam" }
         ],
         "responses": {
           "200": {
             "description": "Updated group",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
+                "schema": { "$ref": "#/components/schemas/Group" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Group"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Group" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1727,12 +1069,8 @@
         "description": "The Group Feeds endpoint returns information about the user's feeds. The response includes the latest value of each feed, and other metadata about each feed, but only for feeds within the given group.",
         "tags": ["Groups", "Feeds"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          },
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
+          { "$ref": "#/components/parameters/GroupPath" },
+          { "$ref": "#/components/parameters/UsernamePath" }
         ],
         "responses": {
           "200": {
@@ -1741,33 +1079,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feed"
-                  }
+                  "items": { "$ref": "#/components/schemas/Feed" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feed"
-                  }
+                  "items": { "$ref": "#/components/schemas/Feed" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
@@ -1775,45 +1101,25 @@
         "description": "",
         "operationId": "createGroupFeed",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createFeedFeed"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createFeedFeed" },
         "tags": ["Feeds"],
         "responses": {
           "200": {
             "description": "New feed",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
+                "schema": { "$ref": "#/components/schemas/Feed" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feed"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Feed" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1822,12 +1128,8 @@
         "summary": "Create new data for multiple feeds in a group",
         "operationId": "createGroupData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" }
         ],
         "requestBody": {
           "content": {
@@ -1841,15 +1143,9 @@
                     "description": "A location record with `lat`, `lon`, and [optional] `ele` properties.",
                     "required": ["lat", "lon"],
                     "properties": {
-                      "lat": {
-                        "type": "number"
-                      },
-                      "lon": {
-                        "type": "number"
-                      },
-                      "ele": {
-                        "type": "number"
-                      }
+                      "lat": { "type": "number" },
+                      "lon": { "type": "number" },
+                      "ele": { "type": "number" }
                     }
                   },
                   "feeds": {
@@ -1859,12 +1155,8 @@
                       "type": "object",
                       "required": ["key", "value"],
                       "properties": {
-                        "key": {
-                          "type": "string"
-                        },
-                        "value": {
-                          "type": "string"
-                        }
+                        "key": { "type": "string" },
+                        "value": { "type": "string" }
                       }
                     }
                   },
@@ -1885,15 +1177,9 @@
                     "description": "A location record with `lat`, `lon`, and [optional] `ele` properties.",
                     "required": ["lat", "lon"],
                     "properties": {
-                      "lat": {
-                        "type": "number"
-                      },
-                      "lon": {
-                        "type": "number"
-                      },
-                      "ele": {
-                        "type": "number"
-                      }
+                      "lat": { "type": "number" },
+                      "lon": { "type": "number" },
+                      "ele": { "type": "number" }
                     }
                   },
                   "feeds": {
@@ -1903,12 +1189,8 @@
                       "type": "object",
                       "required": ["key", "value"],
                       "properties": {
-                        "key": {
-                          "type": "string"
-                        },
-                        "value": {
-                          "type": "string"
-                        }
+                        "key": { "type": "string" },
+                        "value": { "type": "string" }
                       }
                     }
                   },
@@ -1930,33 +1212,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -1967,40 +1237,26 @@
         "description": "",
         "tags": ["Data"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          },
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" },
+          { "$ref": "#/components/parameters/FeedPath" },
           {
             "name": "start_time",
             "in": "query",
             "description": "Start time for filtering data. Returns data created after given time.",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
+            "schema": { "type": "string", "format": "date-time" }
           },
           {
             "name": "end_time",
             "in": "query",
             "description": "End time for filtering data. Returns data created before give time.",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
+            "schema": { "type": "string", "format": "date-time" }
           },
           {
             "name": "limit",
             "in": "query",
             "description": "Limit the number of records returned.",
-            "schema": {
-              "type": "integer"
-            }
+            "schema": { "type": "integer" }
           }
         ],
         "responses": {
@@ -2010,81 +1266,49 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
         "summary": "Create new Data in a feed belonging to a particular group",
         "operationId": "createGroupFeedData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/createDataDatum"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/createDataDatum" },
         "tags": ["Data"],
         "responses": {
           "200": {
             "description": "New data",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/DataResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/DataResponse" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2093,15 +1317,9 @@
         "summary": "Create multiple new Data records in a feed belonging to a particular group",
         "operationId": "batchCreateGroupFeedData",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/GroupPath"
-          },
-          {
-            "$ref": "#/components/parameters/FeedPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/GroupPath" },
+          { "$ref": "#/components/parameters/FeedPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/batchCreateDataData"
@@ -2114,33 +1332,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataResponse"
-                  }
+                  "items": { "$ref": "#/components/schemas/DataResponse" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2150,11 +1356,7 @@
         "description": "The Dashboards endpoint returns information about the user's dashboards.\n",
         "operationId": "allDashboards",
         "tags": ["Dashboards"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
           "200": {
             "description": "An array of dashboards",
@@ -2162,44 +1364,28 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Dashboard"
-                  }
+                  "items": { "$ref": "#/components/schemas/Dashboard" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Dashboard"
-                  }
+                  "items": { "$ref": "#/components/schemas/Dashboard" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
         "summary": "Create a new Dashboard",
         "description": "",
         "operationId": "createDashboard",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "requestBody": {
           "$ref": "#/components/requestBodies/createDashboardDashboard"
         },
@@ -2209,29 +1395,17 @@
             "description": "New Dashboard",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2242,41 +1416,25 @@
         "operationId": "getDashboard",
         "tags": ["Dashboards"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "responses": {
           "200": {
             "description": "Dashboard response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error\""
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error\"" }
         }
       },
       "put": {
@@ -2284,12 +1442,8 @@
         "operationId": "replaceDashboard",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createDashboardDashboard"
@@ -2300,29 +1454,17 @@
             "description": "Updated dashboard",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -2330,12 +1472,8 @@
         "description": "",
         "operationId": "updateDashboard",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createDashboardDashboard"
@@ -2346,29 +1484,17 @@
             "description": "Updated Dashboard",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Dashboard"
-                }
+                "schema": { "$ref": "#/components/schemas/Dashboard" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -2376,42 +1502,22 @@
         "description": "",
         "operationId": "destroyDashboard",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "tags": ["Dashboards"],
         "responses": {
           "200": {
             "description": "Deleted Dashboard successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2422,12 +1528,8 @@
         "operationId": "allBlocks",
         "tags": ["Blocks"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/DashboardIDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/DashboardIDPath" }
         ],
         "responses": {
           "200": {
@@ -2436,33 +1538,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Block"
-                  }
+                  "items": { "$ref": "#/components/schemas/Block" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Block"
-                  }
+                  "items": { "$ref": "#/components/schemas/Block" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
@@ -2470,12 +1560,8 @@
         "description": "",
         "operationId": "createBlock",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/DashboardIDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/DashboardIDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createBlockBlock"
@@ -2486,29 +1572,15 @@
             "description": "New Block",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
+                "schema": { "$ref": "#/components/schemas/Block" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Block" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2519,44 +1591,24 @@
         "operationId": "getBlock",
         "tags": ["Blocks"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/DashboardIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/DashboardIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "responses": {
           "200": {
             "description": "Block response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
+                "schema": { "$ref": "#/components/schemas/Block" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Block" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error\""
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error\"" }
         }
       },
       "put": {
@@ -2564,15 +1616,9 @@
         "operationId": "replaceBlock",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/DashboardIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/DashboardIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createBlockBlock"
@@ -2583,29 +1629,15 @@
             "description": "Updated block",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
+                "schema": { "$ref": "#/components/schemas/Block" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Block" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -2613,15 +1645,9 @@
         "description": "",
         "operationId": "updateBlock",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/DashboardIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/DashboardIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createBlockBlock"
@@ -2632,29 +1658,15 @@
             "description": "Updated Block",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
+                "schema": { "$ref": "#/components/schemas/Block" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Block"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Block" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -2662,45 +1674,23 @@
         "description": "",
         "operationId": "destroyBlock",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/DashboardIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/DashboardIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "tags": ["Blocks"],
         "responses": {
           "200": {
             "description": "Deleted Block successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2710,11 +1700,7 @@
         "description": "The Tokens endpoint returns information about the user's tokens.\n",
         "operationId": "allTokens",
         "tags": ["Tokens"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
           "200": {
             "description": "An array of tokens",
@@ -2722,44 +1708,28 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Token"
-                  }
+                  "items": { "$ref": "#/components/schemas/Token" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Token"
-                  }
+                  "items": { "$ref": "#/components/schemas/Token" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
         "summary": "Create a new Token",
         "description": "",
         "operationId": "createToken",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "requestBody": {
           "$ref": "#/components/requestBodies/createTokenToken"
         },
@@ -2769,29 +1739,15 @@
             "description": "New Token",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
+                "schema": { "$ref": "#/components/schemas/Token" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Token" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2802,41 +1758,23 @@
         "operationId": "getToken",
         "tags": ["Tokens"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "responses": {
           "200": {
             "description": "Token response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
+                "schema": { "$ref": "#/components/schemas/Token" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Token" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error\""
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error\"" }
         }
       },
       "put": {
@@ -2844,12 +1782,8 @@
         "operationId": "replaceToken",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createTokenToken"
@@ -2860,29 +1794,15 @@
             "description": "Updated token",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
+                "schema": { "$ref": "#/components/schemas/Token" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Token" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -2890,12 +1810,8 @@
         "description": "",
         "operationId": "updateToken",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createTokenToken"
@@ -2906,29 +1822,15 @@
             "description": "Updated Token",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
+                "schema": { "$ref": "#/components/schemas/Token" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Token"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Token" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -2936,42 +1838,22 @@
         "description": "",
         "operationId": "destroyToken",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "tags": ["Tokens"],
         "responses": {
           "200": {
             "description": "Deleted Token successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -2981,11 +1863,7 @@
         "description": "The Triggers endpoint returns information about the user's triggers.\n",
         "operationId": "allTriggers",
         "tags": ["Triggers"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "responses": {
           "200": {
             "description": "An array of triggers",
@@ -2993,44 +1871,28 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Trigger"
-                  }
+                  "items": { "$ref": "#/components/schemas/Trigger" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Trigger"
-                  }
+                  "items": { "$ref": "#/components/schemas/Trigger" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
         "summary": "Create a new Trigger",
         "description": "",
         "operationId": "createTrigger",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          }
-        ],
+        "parameters": [{ "$ref": "#/components/parameters/UsernamePath" }],
         "requestBody": {
           "$ref": "#/components/requestBodies/createTriggerTrigger"
         },
@@ -3040,29 +1902,17 @@
             "description": "New Trigger",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -3073,41 +1923,25 @@
         "operationId": "getTrigger",
         "tags": ["Triggers"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "responses": {
           "200": {
             "description": "Trigger response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error\""
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error\"" }
         }
       },
       "put": {
@@ -3115,12 +1949,8 @@
         "operationId": "replaceTrigger",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createTriggerTrigger"
@@ -3131,29 +1961,17 @@
             "description": "Updated trigger",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -3161,12 +1979,8 @@
         "description": "",
         "operationId": "updateTrigger",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createTriggerTrigger"
@@ -3177,29 +1991,17 @@
             "description": "Updated Trigger",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Trigger"
-                }
+                "schema": { "$ref": "#/components/schemas/Trigger" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -3207,42 +2009,22 @@
         "description": "",
         "operationId": "destroyTrigger",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "tags": ["Triggers"],
         "responses": {
           "200": {
             "description": "Deleted Trigger successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -3253,15 +2035,9 @@
         "operationId": "allPermissions",
         "tags": ["Permissions"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypeIDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/PermTypePath" },
+          { "$ref": "#/components/parameters/PermTypeIDPath" }
         ],
         "responses": {
           "200": {
@@ -3270,33 +2046,21 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Permission"
-                  }
+                  "items": { "$ref": "#/components/schemas/Permission" }
                 }
               },
               "text/csv": {
                 "schema": {
                   "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Permission"
-                  }
+                  "items": { "$ref": "#/components/schemas/Permission" }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "post": {
@@ -3304,15 +2068,9 @@
         "description": "",
         "operationId": "createPermission",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypeIDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/PermTypePath" },
+          { "$ref": "#/components/parameters/PermTypeIDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createPermissionPermission"
@@ -3323,29 +2081,17 @@
             "description": "New Permission",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -3356,47 +2102,27 @@
         "operationId": "getPermission",
         "tags": ["Permissions"],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypeIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/PermTypePath" },
+          { "$ref": "#/components/parameters/PermTypeIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "responses": {
           "200": {
             "description": "Permission response",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error\""
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error\"" }
         }
       },
       "put": {
@@ -3404,18 +2130,10 @@
         "operationId": "replacePermission",
         "description": "",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypeIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/PermTypePath" },
+          { "$ref": "#/components/parameters/PermTypeIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createPermissionPermission"
@@ -3426,29 +2144,17 @@
             "description": "Updated permission",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "patch": {
@@ -3456,18 +2162,10 @@
         "description": "",
         "operationId": "updatePermission",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypeIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/PermTypePath" },
+          { "$ref": "#/components/parameters/PermTypeIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "requestBody": {
           "$ref": "#/components/requestBodies/createPermissionPermission"
@@ -3478,29 +2176,17 @@
             "description": "Updated Permission",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               },
               "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Permission"
-                }
+                "schema": { "$ref": "#/components/schemas/Permission" }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       },
       "delete": {
@@ -3508,48 +2194,24 @@
         "description": "",
         "operationId": "destroyPermission",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/UsernamePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypePath"
-          },
-          {
-            "$ref": "#/components/parameters/PermTypeIDPath"
-          },
-          {
-            "$ref": "#/components/parameters/IDPath"
-          }
+          { "$ref": "#/components/parameters/UsernamePath" },
+          { "$ref": "#/components/parameters/PermTypePath" },
+          { "$ref": "#/components/parameters/PermTypeIDPath" },
+          { "$ref": "#/components/parameters/IDPath" }
         ],
         "tags": ["Permissions"],
         "responses": {
           "200": {
             "description": "Deleted Permission successfully",
             "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+              "application/json": { "schema": { "type": "string" } },
+              "text/csv": { "schema": { "type": "string" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -3563,21 +2225,13 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  }
-                }
+                "properties": { "value": { "type": "string" } }
               }
             },
             "application/x-www-form-urlencoded": {
               "schema": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  }
-                }
+                "properties": { "value": { "type": "string" } }
               }
             }
           },
@@ -3590,29 +2244,15 @@
             "description": "New feed data record",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Data"
-                }
+                "schema": { "$ref": "#/components/schemas/Data" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Data"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Data" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     },
@@ -3627,40 +2267,22 @@
             "description": "New feed data record",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Data"
-                }
+                "schema": { "$ref": "#/components/schemas/Data" }
               },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/Data"
-                }
-              }
+              "text/csv": { "schema": { "$ref": "#/components/schemas/Data" } }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Server Error"
-          }
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "500": { "description": "Server Error" }
         }
       }
     }
   },
   "servers": [
-    {
-      "url": "https://io.adafruit.com/api/v2"
-    },
-    {
-      "url": "http://io.adafruit.com/api/v2"
-    }
+    { "url": "https://io.adafruit.com/api/v2" },
+    { "url": "http://io.adafruit.com/api/v2" }
   ],
   "components": {
     "parameters": {
@@ -3668,115 +2290,85 @@
         "name": "type",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "PermTypeIDPath": {
         "name": "type_id",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "StartTime": {
         "name": "start_time",
         "in": "query",
         "description": "Start time for filtering, returns records created after given time.",
-        "schema": {
-          "type": "string",
-          "format": "date-time"
-        }
+        "schema": { "type": "string", "format": "date-time" }
       },
       "EndTime": {
         "name": "end_time",
         "in": "query",
         "description": "End time for filtering, returns records created before give time.",
-        "schema": {
-          "type": "string",
-          "format": "date-time"
-        }
+        "schema": { "type": "string", "format": "date-time" }
       },
       "Limit": {
         "name": "limit",
         "in": "query",
         "description": "Limit the number of records returned.",
-        "schema": {
-          "type": "integer"
-        }
+        "schema": { "type": "integer" }
       },
       "DataInclude": {
         "name": "include",
         "in": "query",
         "description": "List of Data record fields to include in response as comma separated list. Acceptable values are: `value`, `lat`, `lon`, `ele`, `id`, and `created_at`. ",
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "UsernamePath": {
         "name": "username",
         "in": "path",
         "required": true,
         "description": "a valid username string",
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "ActivityTypePath": {
         "name": "type",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "FeedPath": {
         "name": "feed_key",
         "description": "a valid feed key",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "FeedParam": {
         "name": "feed_key",
         "in": "query",
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "GroupPath": {
         "name": "group_key",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "GroupParam": {
         "name": "group_key",
         "in": "query",
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "IDPath": {
         "name": "id",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       },
       "DashboardIDPath": {
         "name": "dashboard_id",
         "in": "path",
         "required": true,
-        "schema": {
-          "type": "string"
-        }
+        "schema": { "type": "string" }
       }
     },
     "requestBodies": {
@@ -3786,18 +2378,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "license": {
-                  "type": "string"
-                }
+                "name": { "type": "string" },
+                "key": { "type": "string" },
+                "description": { "type": "string" },
+                "license": { "type": "string" }
               }
             }
           },
@@ -3805,18 +2389,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "license": {
-                  "type": "string"
-                }
+                "name": { "type": "string" },
+                "key": { "type": "string" },
+                "description": { "type": "string" },
+                "license": { "type": "string" }
               }
             }
           }
@@ -3831,25 +2407,12 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "created_at": {
-                    "type": "string",
-                    "format": "dateTime"
-                  },
-                  "lat": {
-                    "type": "string"
-                  },
-                  "lon": {
-                    "type": "string"
-                  },
-                  "ele": {
-                    "type": "string"
-                  },
-                  "epoch": {
-                    "type": "number"
-                  }
+                  "value": { "type": "string" },
+                  "created_at": { "type": "string", "format": "dateTime" },
+                  "lat": { "type": "string" },
+                  "lon": { "type": "string" },
+                  "ele": { "type": "string" },
+                  "epoch": { "type": "number" }
                 }
               }
             }
@@ -3860,25 +2423,12 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "created_at": {
-                    "type": "string",
-                    "format": "dateTime"
-                  },
-                  "lat": {
-                    "type": "string"
-                  },
-                  "lon": {
-                    "type": "string"
-                  },
-                  "ele": {
-                    "type": "string"
-                  },
-                  "epoch": {
-                    "type": "number"
-                  }
+                  "value": { "type": "string" },
+                  "created_at": { "type": "string", "format": "dateTime" },
+                  "lat": { "type": "string" },
+                  "lon": { "type": "string" },
+                  "ele": { "type": "string" },
+                  "epoch": { "type": "number" }
                 }
               }
             }
@@ -3903,9 +2453,7 @@
                   "default": "public",
                   "enum": ["secret", "public", "user", "organization"]
                 },
-                "scope_value": {
-                  "type": "string"
-                }
+                "scope_value": { "type": "string" }
               }
             }
           },
@@ -3923,9 +2471,7 @@
                   "default": "public",
                   "enum": ["secret", "public", "user", "organization"]
                 },
-                "scope_value": {
-                  "type": "string"
-                }
+                "scope_value": { "type": "string" }
               }
             }
           }
@@ -3938,15 +2484,9 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "key": { "type": "string" }
               }
             }
           },
@@ -3954,15 +2494,9 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "key": { "type": "string" }
               }
             }
           }
@@ -3975,15 +2509,9 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "key": { "type": "string" }
               }
             }
           },
@@ -3991,15 +2519,9 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "key": { "type": "string" }
               }
             }
           }
@@ -4012,25 +2534,12 @@
             "schema": {
               "type": "object",
               "properties": {
-                "value": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string",
-                  "format": "dateTime"
-                },
-                "lat": {
-                  "type": "string"
-                },
-                "lon": {
-                  "type": "string"
-                },
-                "ele": {
-                  "type": "string"
-                },
-                "epoch": {
-                  "type": "number"
-                }
+                "value": { "type": "string" },
+                "created_at": { "type": "string", "format": "dateTime" },
+                "lat": { "type": "string" },
+                "lon": { "type": "string" },
+                "ele": { "type": "string" },
+                "epoch": { "type": "number" }
               }
             }
           },
@@ -4038,25 +2547,12 @@
             "schema": {
               "type": "object",
               "properties": {
-                "value": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string",
-                  "format": "dateTime"
-                },
-                "lat": {
-                  "type": "string"
-                },
-                "lon": {
-                  "type": "string"
-                },
-                "ele": {
-                  "type": "string"
-                },
-                "epoch": {
-                  "type": "number"
-                }
+                "value": { "type": "string" },
+                "created_at": { "type": "string", "format": "dateTime" },
+                "lat": { "type": "string" },
+                "lon": { "type": "string" },
+                "ele": { "type": "string" },
+                "epoch": { "type": "number" }
               }
             }
           }
@@ -4070,50 +2566,26 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                },
-                "dashboard_id": {
-                  "type": "number"
-                },
-                "visual_type": {
-                  "type": "string"
-                },
-                "column": {
-                  "type": "number"
-                },
-                "row": {
-                  "type": "number"
-                },
-                "size_x": {
-                  "type": "number"
-                },
-                "size_y": {
-                  "type": "number"
-                },
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "key": { "type": "string" },
+                "dashboard_id": { "type": "number" },
+                "visual_type": { "type": "string" },
+                "column": { "type": "number" },
+                "row": { "type": "number" },
+                "size_x": { "type": "number" },
+                "size_y": { "type": "number" },
                 "block_feeds": {
                   "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "feed_id": {
-                        "type": "string"
-                      },
-                      "group_id": {
-                        "type": "string"
-                      }
+                      "feed_id": { "type": "string" },
+                      "group_id": { "type": "string" }
                     }
                   }
                 },
-                "properties": {
-                  "type": "object"
-                }
+                "properties": { "type": "object" }
               }
             }
           },
@@ -4121,50 +2593,26 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                },
-                "dashboard_id": {
-                  "type": "number"
-                },
-                "visual_type": {
-                  "type": "string"
-                },
-                "column": {
-                  "type": "number"
-                },
-                "row": {
-                  "type": "number"
-                },
-                "size_x": {
-                  "type": "number"
-                },
-                "size_y": {
-                  "type": "number"
-                },
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "key": { "type": "string" },
+                "dashboard_id": { "type": "number" },
+                "visual_type": { "type": "string" },
+                "column": { "type": "number" },
+                "row": { "type": "number" },
+                "size_x": { "type": "number" },
+                "size_y": { "type": "number" },
                 "block_feeds": {
                   "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "feed_id": {
-                        "type": "string"
-                      },
-                      "group_id": {
-                        "type": "string"
-                      }
+                      "feed_id": { "type": "string" },
+                      "group_id": { "type": "string" }
                     }
                   }
                 },
-                "properties": {
-                  "type": "object"
-                }
+                "properties": { "type": "object" }
               }
             }
           }
@@ -4176,21 +2624,13 @@
           "application/json": {
             "schema": {
               "type": "object",
-              "properties": {
-                "token": {
-                  "type": "string"
-                }
-              }
+              "properties": { "token": { "type": "string" } }
             }
           },
           "application/x-www-form-urlencoded": {
             "schema": {
               "type": "object",
-              "properties": {
-                "token": {
-                  "type": "string"
-                }
-              }
+              "properties": { "token": { "type": "string" } }
             }
           }
         },
@@ -4201,21 +2641,13 @@
           "application/json": {
             "schema": {
               "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string"
-                }
-              }
+              "properties": { "name": { "type": "string" } }
             }
           },
           "application/x-www-form-urlencoded": {
             "schema": {
               "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string"
-                }
-              }
+              "properties": { "name": { "type": "string" } }
             }
           }
         },
@@ -4246,26 +2678,11 @@
       "Activity": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "number",
-            "readOnly": true
-          },
-          "action": {
-            "type": "string",
-            "readOnly": true
-          },
-          "model": {
-            "type": "string",
-            "readOnly": true
-          },
-          "data": {
-            "type": "object",
-            "readOnly": true
-          },
-          "user_id": {
-            "type": "number",
-            "readOnly": true
-          },
+          "id": { "type": "number", "readOnly": true },
+          "action": { "type": "string", "readOnly": true },
+          "model": { "type": "string", "readOnly": true },
+          "data": { "type": "object", "readOnly": true },
+          "user_id": { "type": "number", "readOnly": true },
           "created_at": {
             "type": "string",
             "format": "dateTime",
@@ -4281,26 +2698,11 @@
       "User": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "number",
-            "readOnly": true
-          },
-          "name": {
-            "type": "string",
-            "readOnly": true
-          },
-          "color": {
-            "type": "string",
-            "readOnly": true
-          },
-          "username": {
-            "type": "string",
-            "readOnly": true
-          },
-          "time_zone": {
-            "type": "string",
-            "readOnly": true
-          },
+          "id": { "type": "number", "readOnly": true },
+          "name": { "type": "string", "readOnly": true },
+          "color": { "type": "string", "readOnly": true },
+          "username": { "type": "string", "readOnly": true },
+          "time_zone": { "type": "string", "readOnly": true },
           "created_at": {
             "type": "string",
             "format": "dateTime",
@@ -4316,69 +2718,34 @@
       "Group": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "number",
-            "readOnly": true
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
+          "id": { "type": "number", "readOnly": true },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
           "feeds": {
             "type": "array",
             "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/Feed"
-            }
+            "items": { "$ref": "#/components/schemas/Feed" }
           },
-          "created_at": {
-            "type": "string",
-            "readOnly": true
-          },
-          "updated_at": {
-            "readOnly": true,
-            "type": "string"
-          }
+          "created_at": { "type": "string", "readOnly": true },
+          "updated_at": { "readOnly": true, "type": "string" }
         }
       },
       "ShallowGroup": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "number",
-            "readOnly": true
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "created_at": {
-            "type": "string",
-            "readOnly": true
-          },
-          "updated_at": {
-            "readOnly": true,
-            "type": "string"
-          }
+          "id": { "type": "number", "readOnly": true },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "created_at": { "type": "string", "readOnly": true },
+          "updated_at": { "readOnly": true, "type": "string" }
         }
       },
       "Feed": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "number",
-            "readOnly": true
-          },
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
+          "id": { "type": "number", "readOnly": true },
+          "name": { "type": "string" },
+          "key": { "type": "string" },
           "group": {
             "type": "object",
             "readOnly": true,
@@ -4389,13 +2756,9 @@
           "groups": {
             "type": "array",
             "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/ShallowGroup"
-            }
+            "items": { "$ref": "#/components/schemas/ShallowGroup" }
           },
-          "description": {
-            "type": "string"
-          },
+          "description": { "type": "string" },
           "details": {
             "type": "object",
             "description": "Additional details about this feed.",
@@ -4404,9 +2767,7 @@
               "shared_with": {
                 "type": "array",
                 "description": "Access control list for this feed",
-                "items": {
-                  "type": "object"
-                }
+                "items": { "type": "object" }
               },
               "data": {
                 "type": "object",
@@ -4431,35 +2792,18 @@
               }
             }
           },
-          "unit_type": {
-            "type": "string"
-          },
-          "unit_symbol": {
-            "type": "string"
-          },
-          "history": {
-            "type": "boolean"
-          },
+          "unit_type": { "type": "string" },
+          "unit_symbol": { "type": "string" },
+          "history": { "type": "boolean" },
           "visibility": {
             "type": "string",
             "default": "private",
             "enum": ["private", "public"]
           },
-          "license": {
-            "type": "string"
-          },
-          "enabled": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "last_value": {
-            "type": "string",
-            "readOnly": true
-          },
-          "status": {
-            "type": "string",
-            "readOnly": true
-          },
+          "license": { "type": "string" },
+          "enabled": { "type": "boolean", "readOnly": true },
+          "last_value": { "type": "string", "readOnly": true },
+          "status": { "type": "string", "readOnly": true },
           "status_notify": {
             "type": "boolean",
             "description": "Is status notification active?"
@@ -4468,227 +2812,111 @@
             "type": "integer",
             "description": "Status notification timeout in minutes."
           },
-          "created_at": {
-            "type": "string",
-            "readOnly": true
-          },
-          "updated_at": {
-            "type": "string",
-            "readOnly": true
-          }
+          "created_at": { "type": "string", "readOnly": true },
+          "updated_at": { "type": "string", "readOnly": true }
         }
       },
       "Permission": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "number",
-            "readOnly": true
-          },
-          "user_id": {
-            "readOnly": true,
-            "type": "number"
-          },
+          "id": { "type": "number", "readOnly": true },
+          "user_id": { "readOnly": true, "type": "number" },
           "scope": {
             "type": "string",
             "default": "public",
             "enum": ["secret", "public", "user", "organization"]
           },
-          "scope_value": {
-            "type": "string"
-          },
+          "scope_value": { "type": "string" },
           "model": {
             "type": "string",
             "default": "feed",
             "enum": ["feed", "group", "dashboard"]
           },
-          "object_id": {
-            "type": "number"
-          },
-          "created_at": {
-            "readOnly": true,
-            "type": "string"
-          },
-          "updated_at": {
-            "readOnly": true,
-            "type": "string"
-          }
+          "object_id": { "type": "number" },
+          "created_at": { "readOnly": true, "type": "string" },
+          "updated_at": { "readOnly": true, "type": "string" }
         }
       },
       "Data": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "readOnly": true
-          },
-          "value": {
-            "type": "string"
-          },
-          "feed_id": {
-            "type": "number"
-          },
-          "group_id": {
-            "readOnly": true,
-            "type": "number"
-          },
-          "expiration": {
-            "type": "string"
-          },
-          "lat": {
-            "type": "number"
-          },
-          "lon": {
-            "type": "number"
-          },
-          "ele": {
-            "type": "number"
-          },
-          "completed_at": {
-            "readOnly": true,
-            "type": "string"
-          },
-          "created_at": {
-            "readOnly": true,
-            "type": "string"
-          },
-          "updated_at": {
-            "readOnly": true,
-            "type": "string"
-          },
-          "created_epoch": {
-            "readOnly": true,
-            "type": "number"
-          }
+          "id": { "type": "string", "readOnly": true },
+          "value": { "type": "string" },
+          "feed_id": { "type": "number" },
+          "group_id": { "readOnly": true, "type": "number" },
+          "expiration": { "type": "string" },
+          "lat": { "type": "number" },
+          "lon": { "type": "number" },
+          "ele": { "type": "number" },
+          "completed_at": { "readOnly": true, "type": "string" },
+          "created_at": { "readOnly": true, "type": "string" },
+          "updated_at": { "readOnly": true, "type": "string" },
+          "created_epoch": { "readOnly": true, "type": "number" }
         }
       },
       "DataResponse": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string"
-          },
-          "feed_id": {
-            "type": "number"
-          },
-          "group_id": {
-            "type": "number"
-          },
-          "expiration": {
-            "type": "string"
-          },
-          "lat": {
-            "type": "number"
-          },
-          "lon": {
-            "type": "number"
-          },
-          "ele": {
-            "type": "number"
-          },
-          "completed_at": {
-            "type": "string"
-          },
-          "created_at": {
-            "type": "string"
-          },
-          "updated_at": {
-            "type": "string"
-          },
-          "created_epoch": {
-            "type": "number"
-          }
+          "id": { "type": "string" },
+          "value": { "type": "string" },
+          "feed_id": { "type": "number" },
+          "group_id": { "type": "number" },
+          "expiration": { "type": "string" },
+          "lat": { "type": "number" },
+          "lon": { "type": "number" },
+          "ele": { "type": "number" },
+          "completed_at": { "type": "string" },
+          "created_at": { "type": "string" },
+          "updated_at": { "type": "string" },
+          "created_epoch": { "type": "number" }
         }
       },
       "Dashboard": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "key": { "type": "string" },
           "blocks": {
             "type": "array",
             "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/Block"
-            }
+            "items": { "$ref": "#/components/schemas/Block" }
           }
         }
       },
       "Block": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "visual_type": {
-            "type": "string"
-          },
-          "column": {
-            "type": "number"
-          },
-          "row": {
-            "type": "number"
-          },
-          "size_x": {
-            "type": "number"
-          },
-          "size_y": {
-            "type": "number"
-          },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "key": { "type": "string" },
+          "visual_type": { "type": "string" },
+          "column": { "type": "number" },
+          "row": { "type": "number" },
+          "size_x": { "type": "number" },
+          "size_y": { "type": "number" },
           "block_feeds": {
             "type": "array",
             "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/BlockFeed"
-            }
+            "items": { "$ref": "#/components/schemas/BlockFeed" }
           }
         }
       },
       "BlockFeed": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "feed": {
-            "$ref": "#/components/schemas/Feed"
-          },
-          "group": {
-            "$ref": "#/components/schemas/Group"
-          }
+          "id": { "type": "string" },
+          "feed": { "$ref": "#/components/schemas/Feed" },
+          "group": { "$ref": "#/components/schemas/Group" }
         }
       },
       "Token": {
         "type": "object",
-        "properties": {
-          "token": {
-            "type": "string"
-          }
-        }
+        "properties": { "token": { "type": "string" } }
       },
       "Trigger": {
         "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
+        "properties": { "name": { "type": "string" } }
       }
     }
   }

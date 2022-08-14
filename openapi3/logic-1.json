@@ -28,16 +28,10 @@
           {
             "name": "expression",
             "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/OrExpressions"
-            }
+            "schema": { "$ref": "#/components/schemas/OrExpressions" }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "Condition response"
-          }
-        }
+        "responses": { "200": { "description": "Condition response" } }
       }
     },
     "/assertions": {
@@ -52,18 +46,12 @@
             "schema": {
               "title": "Assertions",
               "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Expression"
-              },
+              "items": { "$ref": "#/components/schemas/Expression" },
               "minItems": 1
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        }
+        "responses": { "200": { "description": "" } }
       }
     }
   },
@@ -73,83 +61,37 @@
         "type": "object",
         "required": ["comparator"],
         "properties": {
-          "leftValue": {
-            "title": "Value",
-            "type": "string"
-          },
+          "leftValue": { "title": "Value", "type": "string" },
           "comparator": {
             "title": "Comparator",
             "type": "string",
             "oneOf": [
-              {
-                "title": "Equals",
-                "x-const": "="
-              },
-              {
-                "title": "Not Equal",
-                "x-const": "!="
-              },
-              {
-                "title": "Contains",
-                "x-const": "contains"
-              },
-              {
-                "title": "Not Contain",
-                "x-const": "!contains"
-              },
-              {
-                "title": "Starts With",
-                "x-const": "startsWith"
-              },
-              {
-                "title": "Not Start With",
-                "x-const": "!startsWith"
-              },
-              {
-                "title": "Ends With",
-                "x-const": "endsWith"
-              },
-              {
-                "title": "Not End With",
-                "x-const": "!endsWith"
-              },
-              {
-                "title": "Greather Than",
-                "x-const": ">"
-              },
-              {
-                "title": "Greather or Equal Than",
-                "x-const": ">="
-              },
-              {
-                "title": "Less Than",
-                "x-const": "<"
-              },
-              {
-                "title": "Less or Equal Than",
-                "x-const": "<="
-              }
+              { "title": "Equals", "x-const": "=" },
+              { "title": "Not Equal", "x-const": "!=" },
+              { "title": "Contains", "x-const": "contains" },
+              { "title": "Not Contain", "x-const": "!contains" },
+              { "title": "Starts With", "x-const": "startsWith" },
+              { "title": "Not Start With", "x-const": "!startsWith" },
+              { "title": "Ends With", "x-const": "endsWith" },
+              { "title": "Not End With", "x-const": "!endsWith" },
+              { "title": "Greather Than", "x-const": ">" },
+              { "title": "Greather or Equal Than", "x-const": ">=" },
+              { "title": "Less Than", "x-const": "<" },
+              { "title": "Less or Equal Than", "x-const": "<=" }
             ]
           },
-          "rightValue": {
-            "title": "Value",
-            "type": "string"
-          }
+          "rightValue": { "title": "Value", "type": "string" }
         }
       },
       "AndExpressions": {
         "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Expression"
-        },
+        "items": { "$ref": "#/components/schemas/Expression" },
         "minItems": 1,
         "maxItems": 1
       },
       "OrExpressions": {
         "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AndExpressions"
-        },
+        "items": { "$ref": "#/components/schemas/AndExpressions" },
         "minItems": 1,
         "maxItems": 1
       }

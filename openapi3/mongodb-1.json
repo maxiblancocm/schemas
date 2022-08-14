@@ -1,9 +1,6 @@
 {
   "openapi": "3.0.0",
-  "info": {
-    "title": "MongoDB",
-    "version": "1"
-  },
+  "info": { "title": "MongoDB", "version": "1" },
   "paths": {
     "/mongodb-create-new-document": {
       "get": {
@@ -14,11 +11,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -32,11 +25,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -50,11 +39,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -68,11 +53,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -86,11 +67,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -104,11 +81,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -122,11 +95,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -140,11 +109,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -158,11 +123,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }

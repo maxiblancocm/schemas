@@ -4,9 +4,7 @@
     "title": "Sleep",
     "version": "1",
     "x-categories": ["chainjet"],
-    "x-logo": {
-      "url": "https://flowoid.s3.amazonaws.com/logos/sleep.svg"
-    }
+    "x-logo": { "url": "https://flowoid.s3.amazonaws.com/logos/sleep.svg" }
   },
   "paths": {
     "/sleepFor": {
@@ -20,11 +18,7 @@
             "name": "amount",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "number",
-              "minimum": 1,
-              "default": 1
-            }
+            "schema": { "type": "number", "minimum": 1, "default": 1 }
           },
           {
             "name": "unit",
@@ -37,11 +31,7 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        }
+        "responses": { "200": { "description": "" } }
       }
     }
   }

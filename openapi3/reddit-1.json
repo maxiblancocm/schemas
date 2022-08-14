@@ -2,7 +2,10 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Reddit",
-    "version": "1"
+    "version": "1",
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/reddit.svg"
+    }
   },
   "paths": {
     "/reddit-list-comments-in-a-post": {
@@ -22,11 +25,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -40,11 +39,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -58,11 +53,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -77,19 +68,13 @@
           {
             "name": "text",
             "in": "query",
-            "schema": {
-              "x-ui:widget": "textarea"
-            }
+            "schema": { "x-ui:widget": "textarea" }
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -104,19 +89,13 @@
           {
             "name": "text",
             "in": "query",
-            "schema": {
-              "x-ui:widget": "textarea"
-            }
+            "schema": { "x-ui:widget": "textarea" }
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -130,11 +109,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -148,11 +123,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -166,11 +137,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -184,11 +151,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -202,11 +165,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }
@@ -220,11 +179,7 @@
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
+            "content": { "application/json": { "schema": {} } }
           }
         }
       }

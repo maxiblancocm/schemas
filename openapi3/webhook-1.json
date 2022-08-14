@@ -3,9 +3,7 @@
   "info": {
     "title": "Webhook",
     "version": "1",
-    "x-logo": {
-      "url": "https://flowoid.s3.amazonaws.com/logos/webhook.svg"
-    },
+    "x-logo": { "url": "https://flowoid.s3.amazonaws.com/logos/webhook.svg" },
     "x-categories": ["chainjet"]
   },
   "paths": {
@@ -26,20 +24,10 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "query": {
-                      "title": "Query Parameters",
-                      "type": "object"
-                    },
-                    "body": {
-                      "type": "object"
-                    },
-                    "headers": {
-                      "type": "object"
-                    },
-                    "httpMethod": {
-                      "title": "HTTP Method",
-                      "type": "string"
-                    }
+                    "query": { "title": "Query Parameters", "type": "object" },
+                    "body": { "type": "object" },
+                    "headers": { "type": "object" },
+                    "httpMethod": { "title": "HTTP Method", "type": "string" }
                   }
                 }
               }

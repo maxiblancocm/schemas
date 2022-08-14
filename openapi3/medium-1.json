@@ -21,21 +21,15 @@
         "description": "Returns details of the user who has granted permission to the application.",
         "tags": ["Users"],
         "security": [
-          {
-            "BearerToken": []
-          },
-          {
-            "OauthSecurity": ["basicProfile"]
-          }
+          { "BearerToken": [] },
+          { "OauthSecurity": ["basicProfile"] }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/UserResponse" }
               }
             }
           },
@@ -54,12 +48,8 @@
         "x-triggerIdKey": "data[].id",
         "tags": ["Publications"],
         "security": [
-          {
-            "BearerToken": []
-          },
-          {
-            "OauthSecurity": ["listPublications"]
-          }
+          { "BearerToken": [] },
+          { "OauthSecurity": ["listPublications"] }
         ],
         "parameters": [
           {
@@ -67,10 +57,7 @@
             "name": "userId",
             "description": "A unique identifier for the user.",
             "required": true,
-            "schema": {
-              "x-hidden": true,
-              "type": "string"
-            }
+            "schema": { "x-hidden": true, "type": "string" }
           }
         ],
         "responses": {
@@ -78,9 +65,7 @@
             "description": "OK",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublicationResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/PublicationResponse" }
               }
             }
           },
@@ -102,12 +87,8 @@
         "x-triggerIdKey": "data[].userId",
         "tags": ["Publications", "Users"],
         "security": [
-          {
-            "BearerToken": []
-          },
-          {
-            "OauthSecurity": ["listPublications"]
-          }
+          { "BearerToken": [] },
+          { "OauthSecurity": ["listPublications"] }
         ],
         "parameters": [
           {
@@ -115,9 +96,7 @@
             "name": "publicationId",
             "description": "A unique identifier for the publication.",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -125,9 +104,7 @@
             "description": "OK",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ContibutorResponse"
-                }
+                "schema": { "$ref": "#/components/schemas/ContibutorResponse" }
               }
             }
           },
@@ -144,12 +121,8 @@
         "description": "Creates a post on the authenticated user’s profile.",
         "tags": ["Users", "Posts"],
         "security": [
-          {
-            "BearerToken": []
-          },
-          {
-            "OauthSecurity": ["publishPost"]
-          }
+          { "BearerToken": [] },
+          { "OauthSecurity": ["publishPost"] }
         ],
         "parameters": [
           {
@@ -157,18 +130,13 @@
             "name": "authorId",
             "description": "authorId is the user id of the authenticated user.",
             "required": true,
-            "schema": {
-              "x-hidden": true,
-              "type": "string"
-            }
+            "schema": { "x-hidden": true, "type": "string" }
           }
         ],
         "requestBody": {
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Post"
-              }
+              "schema": { "$ref": "#/components/schemas/Post" }
             }
           },
           "description": "Creates a post for user.",
@@ -179,9 +147,7 @@
             "description": "OK",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostDetails"
-                }
+                "schema": { "$ref": "#/components/schemas/PostDetails" }
               }
             }
           },
@@ -204,12 +170,8 @@
         "description": "creating a post and associating it with a publication on Medium. The request also shows this association, considering posts a collection of resources under a publication\n\nThere are additional rules around publishing that each request to this API must respect:\n  - If the authenticated user is an 'editor' for the publication, they can create posts with any publish status. Posts published as 'public' or 'unlisted' will appear in collection immediately, while posts created as 'draft' will remain in pending state under publication.\n  - If the authenticated user is a 'writer' for the chosen publication, they can only create a post as a 'draft'. That post will remain in pending state under publication until an editor for the publication approves it.\n  - If the authenticated user is neither a 'writer' nor an 'editor', they are not allowed to create any posts in a publication.\n",
         "tags": ["Posts", "Publications"],
         "security": [
-          {
-            "BearerToken": []
-          },
-          {
-            "OauthSecurity": ["publishPost"]
-          }
+          { "BearerToken": [] },
+          { "OauthSecurity": ["publishPost"] }
         ],
         "parameters": [
           {
@@ -217,17 +179,13 @@
             "name": "publicationId",
             "description": "Here publicationId is the id of the publication the post is being created under. The publicationId can be acquired from the API for listing user’s publications.",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Post"
-              }
+              "schema": { "$ref": "#/components/schemas/Post" }
             }
           },
           "description": "Creates a post for publication.",
@@ -238,9 +196,7 @@
             "description": "OK",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostDetails"
-                }
+                "schema": { "$ref": "#/components/schemas/PostDetails" }
               }
             }
           },
@@ -258,11 +214,7 @@
       }
     }
   },
-  "servers": [
-    {
-      "url": "https://api.medium.com/v1"
-    }
-  ],
+  "servers": [{ "url": "https://api.medium.com/v1" }],
   "components": {
     "securitySchemes": {
       "BearerToken": {
@@ -296,11 +248,7 @@
         "type": "object",
         "title": "User Container",
         "description": "Container object for user info",
-        "properties": {
-          "data": {
-            "$ref": "#/components/schemas/User"
-          }
-        },
+        "properties": { "data": { "$ref": "#/components/schemas/User" } },
         "example": {
           "data": {
             "id": "5303d74c64f66366f00cb9b2a94f3251bf5",
@@ -349,9 +297,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Publication"
-            }
+            "items": { "$ref": "#/components/schemas/Publication" }
           }
         },
         "example": {
@@ -413,9 +359,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Contibutor"
-            }
+            "items": { "$ref": "#/components/schemas/Contibutor" }
           }
         },
         "example": {
@@ -488,9 +432,7 @@
           },
           "tags": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
+            "items": { "type": "string" },
             "description": "Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored."
           },
           "canonicalUrl": {
@@ -537,19 +479,14 @@
             "type": "string",
             "description": "A unique identifier for the post."
           },
-          "title": {
-            "type": "string",
-            "description": "The post’s title"
-          },
+          "title": { "type": "string", "description": "The post’s title" },
           "authorId": {
             "type": "string",
             "description": "The userId of the post’s author"
           },
           "tags": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
+            "items": { "type": "string" },
             "description": "The post’s tags"
           },
           "url": {

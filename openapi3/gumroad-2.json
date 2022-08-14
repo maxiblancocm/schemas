@@ -6,17 +6,9 @@
     "version": "2",
     "termsOfService": "https://gumroad.com/terms",
     "x-categories": ["e-commerce"],
-    "x-logo": {
-      "url": "https://flowoid.s3.amazonaws.com/logos/gumroad.svg"
-    },
-    "contact": {
-      "name": "ChainJet",
-      "url": "https://chainjet.io"
-    },
-    "license": {
-      "name": "MIT",
-      "url": "https://www.mit.edu/~amini/LICENSE.md"
-    }
+    "x-logo": { "url": "https://flowoid.s3.amazonaws.com/logos/gumroad.svg" },
+    "contact": { "name": "ChainJet", "url": "https://chainjet.io" },
+    "license": { "name": "MIT", "url": "https://www.mit.edu/~amini/LICENSE.md" }
   },
   "paths": {
     "/products": {
@@ -31,9 +23,7 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "products": {
                       "type": "array",
                       "uniqueItems": true,
@@ -65,65 +55,29 @@
                           },
                           "custom_fields": {
                             "type": "array",
-                            "items": {
-                              "properties": {}
-                            }
+                            "items": { "properties": {} }
                           },
                           "customizable_price": {},
-                          "description": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "deleted": {
-                            "type": "boolean"
-                          },
+                          "description": { "type": "string", "minLength": 1 },
+                          "deleted": { "type": "boolean" },
                           "max_purchase_count": {},
-                          "name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "name": { "type": "string", "minLength": 1 },
                           "preview_url": {},
-                          "require_shipping": {
-                            "type": "boolean"
-                          },
+                          "require_shipping": { "type": "boolean" },
                           "subscription_duration": {},
-                          "published": {
-                            "type": "boolean"
-                          },
-                          "url": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "price": {
-                            "type": "number"
-                          },
-                          "currency": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "short_url": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "published": { "type": "boolean" },
+                          "url": { "type": "string", "minLength": 1 },
+                          "id": { "type": "string", "minLength": 1 },
+                          "price": { "type": "number" },
+                          "currency": { "type": "string", "minLength": 1 },
+                          "short_url": { "type": "string", "minLength": 1 },
                           "formatted_price": {
                             "type": "string",
                             "minLength": 1
                           },
-                          "file_info": {
-                            "type": "object",
-                            "properties": {}
-                          },
-                          "shown_on_profile": {
-                            "type": "boolean"
-                          },
-                          "sales_count": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "file_info": { "type": "object", "properties": {} },
+                          "shown_on_profile": { "type": "boolean" },
+                          "sales_count": { "type": "string", "minLength": 1 },
                           "sales_usd_cents": {
                             "type": "string",
                             "minLength": 1
@@ -151,9 +105,7 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -165,83 +117,36 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "product": {
                       "type": "object",
                       "properties": {
                         "custom_permalink": {},
                         "custom_receipt": {},
-                        "custom_summary": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "custom_summary": { "type": "string", "minLength": 1 },
                         "custom_fields": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
                         "customizable_price": {},
-                        "description": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "deleted": {
-                          "type": "boolean"
-                        },
+                        "description": { "type": "string", "minLength": 1 },
+                        "deleted": { "type": "boolean" },
                         "max_purchase_count": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "name": { "type": "string", "minLength": 1 },
                         "preview_url": {},
-                        "require_shipping": {
-                          "type": "boolean"
-                        },
+                        "require_shipping": { "type": "boolean" },
                         "subscription_duration": {},
-                        "published": {
-                          "type": "boolean"
-                        },
-                        "url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price": {
-                          "type": "number"
-                        },
-                        "currency": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "short_url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "formatted_price": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "file_info": {
-                          "type": "object",
-                          "properties": {}
-                        },
-                        "shown_on_profile": {
-                          "type": "boolean"
-                        },
-                        "sales_count": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "sales_usd_cents": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "published": { "type": "boolean" },
+                        "url": { "type": "string", "minLength": 1 },
+                        "id": { "type": "string", "minLength": 1 },
+                        "price": { "type": "number" },
+                        "currency": { "type": "string", "minLength": 1 },
+                        "short_url": { "type": "string", "minLength": 1 },
+                        "formatted_price": { "type": "string", "minLength": 1 },
+                        "file_info": { "type": "object", "properties": {} },
+                        "shown_on_profile": { "type": "boolean" },
+                        "sales_count": { "type": "string", "minLength": 1 },
+                        "sales_usd_cents": { "type": "string", "minLength": 1 }
                       },
                       "required": [
                         "custom_summary",
@@ -280,9 +185,7 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -294,13 +197,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "message": {
-                      "type": "string",
-                      "minLength": 1
-                    }
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string", "minLength": 1 }
                   },
                   "required": ["success", "message"]
                 }
@@ -320,9 +218,7 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -334,83 +230,36 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "product": {
                       "type": "object",
                       "properties": {
                         "custom_permalink": {},
                         "custom_receipt": {},
-                        "custom_summary": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "custom_summary": { "type": "string", "minLength": 1 },
                         "custom_fields": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
                         "customizable_price": {},
-                        "description": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "deleted": {
-                          "type": "boolean"
-                        },
+                        "description": { "type": "string", "minLength": 1 },
+                        "deleted": { "type": "boolean" },
                         "max_purchase_count": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "name": { "type": "string", "minLength": 1 },
                         "preview_url": {},
-                        "require_shipping": {
-                          "type": "boolean"
-                        },
+                        "require_shipping": { "type": "boolean" },
                         "subscription_duration": {},
-                        "published": {
-                          "type": "boolean"
-                        },
-                        "url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price": {
-                          "type": "number"
-                        },
-                        "currency": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "short_url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "formatted_price": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "file_info": {
-                          "type": "object",
-                          "properties": {}
-                        },
-                        "shown_on_profile": {
-                          "type": "boolean"
-                        },
-                        "sales_count": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "sales_usd_cents": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "published": { "type": "boolean" },
+                        "url": { "type": "string", "minLength": 1 },
+                        "id": { "type": "string", "minLength": 1 },
+                        "price": { "type": "number" },
+                        "currency": { "type": "string", "minLength": 1 },
+                        "short_url": { "type": "string", "minLength": 1 },
+                        "formatted_price": { "type": "string", "minLength": 1 },
+                        "file_info": { "type": "object", "properties": {} },
+                        "shown_on_profile": { "type": "boolean" },
+                        "sales_count": { "type": "string", "minLength": 1 },
+                        "sales_usd_cents": { "type": "string", "minLength": 1 }
                       },
                       "required": [
                         "custom_summary",
@@ -451,9 +300,7 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -465,87 +312,37 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "product": {
                       "type": "object",
                       "properties": {
                         "custom_permalink": {},
                         "custom_receipt": {},
-                        "custom_summary": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "custom_summary": { "type": "string", "minLength": 1 },
                         "custom_fields": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
                         "customizable_price": {},
-                        "description": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "deleted": {
-                          "type": "boolean"
-                        },
+                        "description": { "type": "string", "minLength": 1 },
+                        "deleted": { "type": "boolean" },
                         "max_purchase_count": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "name": { "type": "string", "minLength": 1 },
                         "preview_url": {},
-                        "require_shipping": {
-                          "type": "boolean"
-                        },
+                        "require_shipping": { "type": "boolean" },
                         "subscription_duration": {},
-                        "published": {
-                          "type": "boolean"
-                        },
-                        "url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price": {
-                          "type": "number"
-                        },
-                        "currency": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "short_url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "formatted_price": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "file_info": {
-                          "type": "object",
-                          "properties": {}
-                        },
-                        "shown_on_profile": {
-                          "type": "boolean"
-                        },
-                        "view_count": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "sales_count": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "sales_usd_cents": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "published": { "type": "boolean" },
+                        "url": { "type": "string", "minLength": 1 },
+                        "id": { "type": "string", "minLength": 1 },
+                        "price": { "type": "number" },
+                        "currency": { "type": "string", "minLength": 1 },
+                        "short_url": { "type": "string", "minLength": 1 },
+                        "formatted_price": { "type": "string", "minLength": 1 },
+                        "file_info": { "type": "object", "properties": {} },
+                        "shown_on_profile": { "type": "boolean" },
+                        "view_count": { "type": "string", "minLength": 1 },
+                        "sales_count": { "type": "string", "minLength": 1 },
+                        "sales_usd_cents": { "type": "string", "minLength": 1 }
                       },
                       "required": [
                         "custom_summary",
@@ -587,14 +384,10 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Body"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/Body" },
         "responses": {
           "200": {
             "description": "",
@@ -604,20 +397,12 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant_category": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "title": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "id": { "type": "string", "minLength": 1 },
+                        "title": { "type": "string", "minLength": 1 }
                       },
                       "required": ["id", "title"]
                     }
@@ -638,9 +423,7 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -652,9 +435,7 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant_categories": {
                       "type": "array",
                       "uniqueItems": true,
@@ -662,14 +443,8 @@
                       "items": {
                         "required": ["id", "title"],
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "title": {
-                            "type": "string",
-                            "minLength": 1
-                          }
+                          "id": { "type": "string", "minLength": 1 },
+                          "title": { "type": "string", "minLength": 1 }
                         }
                       }
                     }
@@ -692,17 +467,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -714,20 +485,12 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant_category": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "title": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "id": { "type": "string", "minLength": 1 },
+                        "title": { "type": "string", "minLength": 1 }
                       },
                       "required": ["id", "title"]
                     }
@@ -748,22 +511,16 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Body"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/Body" },
         "responses": {
           "200": {
             "description": "",
@@ -773,20 +530,12 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant_category": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "title": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "id": { "type": "string", "minLength": 1 },
+                        "title": { "type": "string", "minLength": 1 }
                       },
                       "required": ["id", "title"]
                     }
@@ -807,17 +556,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -829,13 +574,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "message": {
-                      "type": "string",
-                      "minLength": 1
-                    }
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string", "minLength": 1 }
                   },
                   "required": ["success", "message"]
                 }
@@ -855,22 +595,16 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "variant_category_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Body2"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/Body2" },
         "responses": {
           "200": {
             "description": "",
@@ -880,24 +614,14 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "id": { "type": "string", "minLength": 1 },
                         "max_purchase_count": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price_difference_cents": {
-                          "type": "number"
-                        }
+                        "name": { "type": "string", "minLength": 1 },
+                        "price_difference_cents": { "type": "number" }
                       },
                       "required": ["id", "name", "price_difference_cents"]
                     }
@@ -918,17 +642,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "variant_category_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -940,9 +660,7 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variants": {
                       "type": "array",
                       "uniqueItems": true,
@@ -950,18 +668,10 @@
                       "items": {
                         "required": ["id", "name", "price_difference_cents"],
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "id": { "type": "string", "minLength": 1 },
                           "max_purchase_count": {},
-                          "name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "price_difference_cents": {
-                            "type": "number"
-                          }
+                          "name": { "type": "string", "minLength": 1 },
+                          "price_difference_cents": { "type": "number" }
                         }
                       }
                     }
@@ -984,25 +694,19 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "variant_category_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1014,24 +718,14 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "id": { "type": "string", "minLength": 1 },
                         "max_purchase_count": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price_difference_cents": {
-                          "type": "number"
-                        }
+                        "name": { "type": "string", "minLength": 1 },
+                        "price_difference_cents": { "type": "number" }
                       },
                       "required": ["id", "name", "price_difference_cents"]
                     }
@@ -1052,30 +746,22 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "variant_category_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Body2"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/Body2" },
         "responses": {
           "200": {
             "description": "",
@@ -1085,24 +771,14 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "variant": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "id": { "type": "string", "minLength": 1 },
                         "max_purchase_count": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price_difference_cents": {
-                          "type": "number"
-                        }
+                        "name": { "type": "string", "minLength": 1 },
+                        "price_difference_cents": { "type": "number" }
                       },
                       "required": ["id", "name", "price_difference_cents"]
                     }
@@ -1123,25 +799,19 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "variant_category_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1153,13 +823,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "message": {
-                      "type": "string",
-                      "minLength": 1
-                    }
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string", "minLength": 1 }
                   },
                   "required": ["success", "message"]
                 }
@@ -1180,9 +845,7 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1194,34 +857,26 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "offer_codes": {
                       "type": "array",
                       "uniqueItems": true,
                       "minItems": 1,
                       "items": {
-                        "required": ["id", "name", "amount_cents", "universal", "times_used"],
+                        "required": [
+                          "id",
+                          "name",
+                          "amount_cents",
+                          "universal",
+                          "times_used"
+                        ],
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "amount_cents": {
-                            "type": "number"
-                          },
+                          "id": { "type": "string", "minLength": 1 },
+                          "name": { "type": "string", "minLength": 1 },
+                          "amount_cents": { "type": "number" },
                           "max_purchase_count": {},
-                          "universal": {
-                            "type": "boolean"
-                          },
-                          "times_used": {
-                            "type": "number"
-                          }
+                          "universal": { "type": "boolean" },
+                          "times_used": { "type": "number" }
                         }
                       }
                     }
@@ -1243,9 +898,7 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
@@ -1253,23 +906,11 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "amount_off": {
-                    "type": "number"
-                  },
-                  "offer_type": {
-                    "type": "string",
-                    "default": "cents"
-                  },
-                  "max_purchase_count": {
-                    "type": "number"
-                  },
-                  "universal": {
-                    "type": "boolean",
-                    "default": false
-                  }
+                  "name": { "type": "string" },
+                  "amount_off": { "type": "number" },
+                  "offer_type": { "type": "string", "default": "cents" },
+                  "max_purchase_count": { "type": "number" },
+                  "universal": { "type": "boolean", "default": false }
                 },
                 "required": ["name", "amount_off", "universal"]
               }
@@ -1285,27 +926,15 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "offer_code": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "amount_cents": {
-                          "type": "number"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "name": { "type": "string", "minLength": 1 },
+                        "amount_cents": { "type": "number" },
                         "max_purchase_count": {},
-                        "times_used": {
-                          "type": "number"
-                        }
+                        "times_used": { "type": "number" }
                       },
                       "required": ["id", "name", "amount_cents", "times_used"]
                     }
@@ -1328,17 +957,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1350,27 +975,15 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "offer_code": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "amount_cents": {
-                          "type": "number"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "name": { "type": "string", "minLength": 1 },
+                        "amount_cents": { "type": "number" },
                         "max_purchase_count": {},
-                        "times_used": {
-                          "type": "number"
-                        }
+                        "times_used": { "type": "number" }
                       },
                       "required": ["id", "name", "amount_cents", "times_used"]
                     }
@@ -1391,17 +1004,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
@@ -1409,12 +1018,8 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "offer_code": {
-                    "type": "string"
-                  },
-                  "max_purchase_count": {
-                    "type": "number"
-                  }
+                  "offer_code": { "type": "string" },
+                  "max_purchase_count": { "type": "number" }
                 },
                 "required": ["offer_code", "max_purchase_count"]
               }
@@ -1430,31 +1035,23 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "offer_code": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "amount_cents": {
-                          "type": "number"
-                        },
-                        "max_purchase_count": {
-                          "type": "number"
-                        },
-                        "universal": {
-                          "type": "boolean"
-                        }
+                        "id": { "type": "string", "minLength": 1 },
+                        "name": { "type": "string", "minLength": 1 },
+                        "amount_cents": { "type": "number" },
+                        "max_purchase_count": { "type": "number" },
+                        "universal": { "type": "boolean" }
                       },
-                      "required": ["id", "name", "amount_cents", "max_purchase_count", "universal"]
+                      "required": [
+                        "id",
+                        "name",
+                        "amount_cents",
+                        "max_purchase_count",
+                        "universal"
+                      ]
                     }
                   },
                   "required": ["success", "offer_code"]
@@ -1473,17 +1070,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1495,13 +1088,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "message": {
-                      "type": "string",
-                      "minLength": 1
-                    }
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string", "minLength": 1 }
                   },
                   "required": ["success", "message"]
                 }
@@ -1521,9 +1109,7 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1535,9 +1121,7 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "custom_fields": {
                       "type": "array",
                       "uniqueItems": true,
@@ -1545,14 +1129,8 @@
                       "items": {
                         "required": ["name", "required"],
                         "properties": {
-                          "name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "required": {
-                            "type": "string",
-                            "minLength": 1
-                          }
+                          "name": { "type": "string", "minLength": 1 },
+                          "required": { "type": "string", "minLength": 1 }
                         }
                       }
                     }
@@ -1573,9 +1151,7 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
@@ -1583,15 +1159,9 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "variant": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "required": {
-                    "type": "boolean"
-                  }
+                  "variant": { "type": "string" },
+                  "name": { "type": "string" },
+                  "required": { "type": "boolean" }
                 },
                 "required": ["variant", "name", "required"]
               }
@@ -1607,20 +1177,12 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "custom_field": {
                       "type": "object",
                       "properties": {
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "required": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "name": { "type": "string", "minLength": 1 },
+                        "required": { "type": "string", "minLength": 1 }
                       },
                       "required": ["name", "required"]
                     }
@@ -1643,17 +1205,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "name",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
@@ -1661,12 +1219,8 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "variant": {
-                    "type": "string"
-                  },
-                  "required": {
-                    "type": "boolean"
-                  }
+                  "variant": { "type": "string" },
+                  "required": { "type": "boolean" }
                 },
                 "required": ["variant", "required"]
               }
@@ -1682,20 +1236,12 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "custom_field": {
                       "type": "object",
                       "properties": {
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "required": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "name": { "type": "string", "minLength": 1 },
+                        "required": { "type": "string", "minLength": 1 }
                       },
                       "required": ["name", "required"]
                     }
@@ -1716,17 +1262,13 @@
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "name",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1738,13 +1280,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "message": {
-                      "type": "string",
-                      "minLength": 1
-                    }
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string", "minLength": 1 }
                   },
                   "required": ["success", "message"]
                 }
@@ -1768,34 +1305,17 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "user": {
                       "type": "object",
                       "properties": {
-                        "bio": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "bio": { "type": "string", "minLength": 1 },
                         "facebook_profile": {},
-                        "name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "name": { "type": "string", "minLength": 1 },
                         "twitter_handle": {},
-                        "user_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "url": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "user_id": { "type": "string", "minLength": 1 },
+                        "email": { "type": "string", "minLength": 1 },
+                        "url": { "type": "string", "minLength": 1 }
                       },
                       "required": ["bio", "name", "user_id", "email", "url"]
                     }
@@ -1823,24 +1343,13 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "resource_subscription": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "resource_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "post_url": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "id": { "type": "string", "minLength": 1 },
+                        "resource_name": { "type": "string", "minLength": 1 },
+                        "post_url": { "type": "string", "minLength": 1 }
                       },
                       "required": ["id", "resource_name", "post_url"]
                     }
@@ -1862,9 +1371,7 @@
             "name": "resource_name",
             "required": true,
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1876,9 +1383,7 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "resource_subscriptions": {
                       "type": "array",
                       "uniqueItems": true,
@@ -1886,18 +1391,9 @@
                       "items": {
                         "required": ["id", "resource_name", "post_url"],
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "resource_name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "post_url": {
-                            "type": "string",
-                            "minLength": 1
-                          }
+                          "id": { "type": "string", "minLength": 1 },
+                          "resource_name": { "type": "string", "minLength": 1 },
+                          "post_url": { "type": "string", "minLength": 1 }
                         }
                       }
                     }
@@ -1921,9 +1417,7 @@
             "in": "path",
             "name": "resource_subscription_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -1935,13 +1429,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "message": {
-                      "type": "string",
-                      "minLength": 1
-                    }
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string", "minLength": 1 }
                   },
                   "required": ["success", "message"]
                 }
@@ -1962,42 +1451,31 @@
             "name": "after",
             "required": false,
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "before",
             "required": false,
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "email",
             "required": false,
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "name": "page",
             "required": true,
             "in": "query",
-            "schema": {
-              "type": "number",
-              "default": 1
-            }
+            "schema": { "type": "number", "default": 1 }
           },
           {
             "name": "product_id",
             "required": false,
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -2009,13 +1487,8 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "next_page_url": {
-                      "type": "string",
-                      "minLength": 1
-                    },
+                    "success": { "type": "boolean" },
+                    "next_page_url": { "type": "string", "minLength": 1 },
                     "sales": {
                       "type": "array",
                       "uniqueItems": true,
@@ -2051,36 +1524,14 @@
                           "referrer"
                         ],
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "email": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "seller_id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "timestamp": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "created_at": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "product_name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "price": {
-                            "type": "number"
-                          },
-                          "gumroad_fee": {
-                            "type": "number"
-                          },
+                          "id": { "type": "string", "minLength": 1 },
+                          "email": { "type": "string", "minLength": 1 },
+                          "seller_id": { "type": "string", "minLength": 1 },
+                          "timestamp": { "type": "string", "minLength": 1 },
+                          "created_at": { "type": "string", "minLength": 1 },
+                          "product_name": { "type": "string", "minLength": 1 },
+                          "price": { "type": "number" },
+                          "gumroad_fee": { "type": "number" },
                           "subscription_duration": {
                             "type": "string",
                             "minLength": 1
@@ -2093,30 +1544,16 @@
                             "type": "string",
                             "minLength": 1
                           },
-                          "product_id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "product_id": { "type": "string", "minLength": 1 },
                           "purchase_email": {
                             "type": "string",
                             "minLength": 1
                           },
-                          "full_name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "paid": {
-                            "type": "boolean"
-                          },
-                          "variants": {
-                            "type": "string"
-                          },
-                          "variants_and_quantity": {
-                            "type": "string"
-                          },
-                          "has_custom_fields": {
-                            "type": "boolean"
-                          },
+                          "full_name": { "type": "string", "minLength": 1 },
+                          "paid": { "type": "boolean" },
+                          "variants": { "type": "string" },
+                          "variants_and_quantity": { "type": "string" },
+                          "has_custom_fields": { "type": "boolean" },
                           "custom_fields": {
                             "type": "object",
                             "properties": {
@@ -2127,36 +1564,18 @@
                             },
                             "required": ["Twitter handle"]
                           },
-                          "order_id": {
-                            "type": "number"
-                          },
-                          "is_product_physical": {
-                            "type": "boolean"
-                          },
-                          "purchaser_id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "is_recurring_billing": {
-                            "type": "boolean"
-                          },
-                          "is_following": {
-                            "type": "boolean"
-                          },
+                          "order_id": { "type": "number" },
+                          "is_product_physical": { "type": "boolean" },
+                          "purchaser_id": { "type": "string", "minLength": 1 },
+                          "is_recurring_billing": { "type": "boolean" },
+                          "is_following": { "type": "boolean" },
                           "subscription_id": {
                             "type": "string",
                             "minLength": 1
                           },
-                          "cancelled": {
-                            "type": "boolean"
-                          },
-                          "ended": {
-                            "type": "boolean"
-                          },
-                          "referrer": {
-                            "type": "string",
-                            "minLength": 1
-                          }
+                          "cancelled": { "type": "boolean" },
+                          "ended": { "type": "boolean" },
+                          "referrer": { "type": "string", "minLength": 1 }
                         }
                       }
                     }
@@ -2180,9 +1599,7 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -2194,42 +1611,18 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "sale": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "seller_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "timestamp": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price": {
-                          "type": "number"
-                        },
-                        "gumroad_fee": {
-                          "type": "number"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "email": { "type": "string", "minLength": 1 },
+                        "seller_id": { "type": "string", "minLength": 1 },
+                        "timestamp": { "type": "string", "minLength": 1 },
+                        "created_at": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "price": { "type": "number" },
+                        "gumroad_fee": { "type": "number" },
                         "subscription_duration": {
                           "type": "string",
                           "minLength": 1
@@ -2242,30 +1635,13 @@
                           "type": "string",
                           "minLength": 1
                         },
-                        "product_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "purchase_email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "full_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "paid": {
-                          "type": "boolean"
-                        },
-                        "variants": {
-                          "type": "string"
-                        },
-                        "variants_and_quantity": {
-                          "type": "string"
-                        },
-                        "has_custom_fields": {
-                          "type": "boolean"
-                        },
+                        "product_id": { "type": "string", "minLength": 1 },
+                        "purchase_email": { "type": "string", "minLength": 1 },
+                        "full_name": { "type": "string", "minLength": 1 },
+                        "paid": { "type": "boolean" },
+                        "variants": { "type": "string" },
+                        "variants_and_quantity": { "type": "string" },
+                        "has_custom_fields": { "type": "boolean" },
                         "custom_fields": {
                           "type": "object",
                           "properties": {
@@ -2276,39 +1652,16 @@
                           },
                           "required": ["Twitter handle"]
                         },
-                        "order_id": {
-                          "type": "number"
-                        },
-                        "is_product_physical": {
-                          "type": "boolean"
-                        },
-                        "purchaser_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "is_recurring_billing": {
-                          "type": "boolean"
-                        },
-                        "is_following": {
-                          "type": "boolean"
-                        },
-                        "subscription_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "cancelled": {
-                          "type": "boolean"
-                        },
-                        "ended": {
-                          "type": "boolean"
-                        },
-                        "referrer": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "quantity": {
-                          "type": "number"
-                        }
+                        "order_id": { "type": "number" },
+                        "is_product_physical": { "type": "boolean" },
+                        "purchaser_id": { "type": "string", "minLength": 1 },
+                        "is_recurring_billing": { "type": "boolean" },
+                        "is_following": { "type": "boolean" },
+                        "subscription_id": { "type": "string", "minLength": 1 },
+                        "cancelled": { "type": "boolean" },
+                        "ended": { "type": "boolean" },
+                        "referrer": { "type": "string", "minLength": 1 },
+                        "quantity": { "type": "number" }
                       },
                       "required": [
                         "id",
@@ -2361,20 +1714,14 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "tracking_url": {
-                    "type": "string"
-                  }
-                }
+                "properties": { "tracking_url": { "type": "string" } }
               }
             }
           }
@@ -2388,35 +1735,16 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "sale": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "timestamp": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "price": {
-                          "type": "number"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "email": { "type": "string", "minLength": 1 },
+                        "timestamp": { "type": "string", "minLength": 1 },
+                        "created_at": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "price": { "type": "number" },
                         "subscription_duration": {
                           "type": "string",
                           "minLength": 1
@@ -2429,30 +1757,13 @@
                           "type": "string",
                           "minLength": 1
                         },
-                        "product_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "purchase_email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "full_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "paid": {
-                          "type": "boolean"
-                        },
-                        "variants": {
-                          "type": "string"
-                        },
-                        "variants_and_quantity": {
-                          "type": "string"
-                        },
-                        "has_custom_fields": {
-                          "type": "boolean"
-                        },
+                        "product_id": { "type": "string", "minLength": 1 },
+                        "purchase_email": { "type": "string", "minLength": 1 },
+                        "full_name": { "type": "string", "minLength": 1 },
+                        "paid": { "type": "boolean" },
+                        "variants": { "type": "string" },
+                        "variants_and_quantity": { "type": "string" },
+                        "has_custom_fields": { "type": "boolean" },
                         "custom_fields": {
                           "type": "object",
                           "properties": {
@@ -2463,46 +1774,18 @@
                           },
                           "required": ["Twitter handle"]
                         },
-                        "order_id": {
-                          "type": "number"
-                        },
-                        "is_product_physical": {
-                          "type": "boolean"
-                        },
-                        "purchaser_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "is_recurring_billing": {
-                          "type": "boolean"
-                        },
-                        "is_following": {
-                          "type": "boolean"
-                        },
-                        "subscription_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "cancelled": {
-                          "type": "boolean"
-                        },
-                        "ended": {
-                          "type": "boolean"
-                        },
-                        "referrer": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "shipped": {
-                          "type": "boolean"
-                        },
-                        "tracking_url": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "quantity": {
-                          "type": "number"
-                        }
+                        "order_id": { "type": "number" },
+                        "is_product_physical": { "type": "boolean" },
+                        "purchaser_id": { "type": "string", "minLength": 1 },
+                        "is_recurring_billing": { "type": "boolean" },
+                        "is_following": { "type": "boolean" },
+                        "subscription_id": { "type": "string", "minLength": 1 },
+                        "cancelled": { "type": "boolean" },
+                        "ended": { "type": "boolean" },
+                        "referrer": { "type": "string", "minLength": 1 },
+                        "shipped": { "type": "boolean" },
+                        "tracking_url": { "type": "string", "minLength": 1 },
+                        "quantity": { "type": "number" }
                       },
                       "required": [
                         "id",
@@ -2555,20 +1838,14 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "amount_cents": {
-                    "type": "number"
-                  }
-                }
+                "properties": { "amount_cents": { "type": "number" } }
               }
             }
           }
@@ -2582,42 +1859,18 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "sale": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "timestamp": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "daystamp": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_has_variants": {
-                          "type": "boolean"
-                        },
-                        "price": {
-                          "type": "number"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "email": { "type": "string", "minLength": 1 },
+                        "timestamp": { "type": "string", "minLength": 1 },
+                        "daystamp": { "type": "string", "minLength": 1 },
+                        "created_at": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "product_has_variants": { "type": "boolean" },
+                        "price": { "type": "number" },
                         "formatted_display_price": {
                           "type": "string",
                           "minLength": 1
@@ -2626,51 +1879,25 @@
                           "type": "string",
                           "minLength": 1
                         },
-                        "currency_symbol": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "currency_symbol": { "type": "string", "minLength": 1 },
                         "amount_refundable_in_currency": {
                           "type": "string",
                           "minLength": 1
                         },
-                        "product_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "product_id": { "type": "string", "minLength": 1 },
                         "product_permalink": {
                           "type": "string",
                           "minLength": 1
                         },
-                        "refunded": {
-                          "type": "boolean"
-                        },
-                        "partially_refunded": {
-                          "type": "boolean"
-                        },
-                        "chargedback": {
-                          "type": "boolean"
-                        },
-                        "purchase_email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "full_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "paid": {
-                          "type": "boolean"
-                        },
-                        "has_variants": {
-                          "type": "boolean"
-                        },
-                        "variants_and_quantity": {
-                          "type": "string"
-                        },
-                        "has_custom_fields": {
-                          "type": "boolean"
-                        },
+                        "refunded": { "type": "boolean" },
+                        "partially_refunded": { "type": "boolean" },
+                        "chargedback": { "type": "boolean" },
+                        "purchase_email": { "type": "string", "minLength": 1 },
+                        "full_name": { "type": "string", "minLength": 1 },
+                        "paid": { "type": "boolean" },
+                        "has_variants": { "type": "boolean" },
+                        "variants_and_quantity": { "type": "string" },
+                        "has_custom_fields": { "type": "boolean" },
                         "custom_fields": {
                           "type": "object",
                           "properties": {
@@ -2681,78 +1908,39 @@
                           },
                           "required": ["Twitter handle"]
                         },
-                        "order_id": {
-                          "type": "number"
-                        },
-                        "is_product_physical": {
-                          "type": "boolean"
-                        },
-                        "purchaser_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "is_recurring_billing": {
-                          "type": "boolean"
-                        },
-                        "can_contact": {
-                          "type": "boolean"
-                        },
-                        "is_following": {
-                          "type": "boolean"
-                        },
-                        "cancelled": {
-                          "type": "boolean"
-                        },
-                        "ended": {
-                          "type": "boolean"
-                        },
-                        "is_additional_contribution": {
-                          "type": "boolean"
-                        },
-                        "discover_fee_charged": {
-                          "type": "boolean"
-                        },
-                        "is_gift_sender_purchase": {
-                          "type": "boolean"
-                        },
-                        "is_gift_receiver_purchase": {
-                          "type": "boolean"
-                        },
-                        "referrer": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "order_id": { "type": "number" },
+                        "is_product_physical": { "type": "boolean" },
+                        "purchaser_id": { "type": "string", "minLength": 1 },
+                        "is_recurring_billing": { "type": "boolean" },
+                        "can_contact": { "type": "boolean" },
+                        "is_following": { "type": "boolean" },
+                        "cancelled": { "type": "boolean" },
+                        "ended": { "type": "boolean" },
+                        "is_additional_contribution": { "type": "boolean" },
+                        "discover_fee_charged": { "type": "boolean" },
+                        "is_gift_sender_purchase": { "type": "boolean" },
+                        "is_gift_receiver_purchase": { "type": "boolean" },
+                        "referrer": { "type": "string", "minLength": 1 },
                         "card": {
                           "type": "object",
                           "properties": {
-                            "visual": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "type": {
-                              "type": "string",
-                              "minLength": 1
-                            },
+                            "visual": { "type": "string", "minLength": 1 },
+                            "type": { "type": "string", "minLength": 1 },
                             "bin": {},
-                            "expiry_month": {
-                              "type": "number"
-                            },
-                            "expiry_year": {
-                              "type": "number"
-                            }
+                            "expiry_month": { "type": "number" },
+                            "expiry_year": { "type": "number" }
                           },
-                          "required": ["visual", "type", "expiry_month", "expiry_year"]
+                          "required": [
+                            "visual",
+                            "type",
+                            "expiry_month",
+                            "expiry_year"
+                          ]
                         },
                         "product_rating": {},
-                        "reviews_count": {
-                          "type": "number"
-                        },
-                        "average_rating": {
-                          "type": "number"
-                        },
-                        "quantity": {
-                          "type": "number"
-                        }
+                        "reviews_count": { "type": "number" },
+                        "average_rating": { "type": "number" },
+                        "quantity": { "type": "number" }
                       },
                       "required": [
                         "id",
@@ -2818,17 +2006,13 @@
             "name": "email",
             "required": false,
             "in": "query",
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           },
           {
             "in": "path",
             "name": "product_id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -2840,9 +2024,7 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "subscribers": {
                       "type": "array",
                       "uniqueItems": true,
@@ -2858,43 +2040,20 @@
                           "recurrence"
                         ],
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "product_id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "product_name": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "user_id": {
-                            "type": "string",
-                            "minLength": 1
-                          },
-                          "user_email": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "id": { "type": "string", "minLength": 1 },
+                          "product_id": { "type": "string", "minLength": 1 },
+                          "product_name": { "type": "string", "minLength": 1 },
+                          "user_id": { "type": "string", "minLength": 1 },
+                          "user_email": { "type": "string", "minLength": 1 },
                           "purchase_ids": {
                             "type": "array",
-                            "items": {
-                              "properties": {}
-                            }
+                            "items": { "properties": {} }
                           },
-                          "created_at": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "created_at": { "type": "string", "minLength": 1 },
                           "cancelled_at": {},
                           "user_requested_cancellation_at": {},
                           "charge_occurrence_count": {},
-                          "recurrence": {
-                            "type": "string",
-                            "minLength": 1
-                          },
+                          "recurrence": { "type": "string", "minLength": 1 },
                           "ended_at": {}
                         }
                       }
@@ -2919,9 +2078,7 @@
             "in": "path",
             "name": "id",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -2933,49 +2090,24 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
+                    "success": { "type": "boolean" },
                     "subscribers": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "user_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "user_email": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "product_id": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "user_id": { "type": "string", "minLength": 1 },
+                        "user_email": { "type": "string", "minLength": 1 },
                         "purchase_ids": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "created_at": { "type": "string", "minLength": 1 },
                         "cancelled_at": {},
                         "user_requested_cancellation_at": {},
                         "charge_occurrence_count": {},
-                        "recurrence": {
-                          "type": "string",
-                          "minLength": 1
-                        },
+                        "recurrence": { "type": "string", "minLength": 1 },
                         "ended_at": {}
                       },
                       "required": [
@@ -3008,16 +2140,9 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "product_permalink": {
-                    "type": "string"
-                  },
-                  "license_key": {
-                    "type": "string"
-                  },
-                  "increment_uses_count": {
-                    "type": "boolean",
-                    "default": true
-                  }
+                  "product_permalink": { "type": "string" },
+                  "license_key": { "type": "string" },
+                  "increment_uses_count": { "type": "boolean", "default": true }
                 },
                 "required": ["product_permalink", "license_key"]
               }
@@ -3033,64 +2158,28 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "uses": {
-                      "type": "number"
-                    },
+                    "success": { "type": "boolean" },
+                    "uses": { "type": "number" },
                     "purchase": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "seller_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "purchaser_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "gumroad_fee": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "full_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "variants": {
-                          "type": "string"
-                        },
-                        "refunded": {
-                          "type": "boolean"
-                        },
-                        "chargebacked": {
-                          "type": "boolean"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "seller_id": { "type": "string", "minLength": 1 },
+                        "purchaser_id": { "type": "string", "minLength": 1 },
+                        "gumroad_fee": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "created_at": { "type": "string", "minLength": 1 },
+                        "full_name": { "type": "string", "minLength": 1 },
+                        "variants": { "type": "string" },
+                        "refunded": { "type": "boolean" },
+                        "chargebacked": { "type": "boolean" },
                         "subscription_cancelled_at": {},
                         "subscription_failed_at": {},
                         "custom_fields": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "email": { "type": "string", "minLength": 1 }
                       },
                       "required": [
                         "id",
@@ -3121,9 +2210,7 @@
     },
     "/licenses/enable": {
       "put": {
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Body3"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/Body3" },
         "responses": {
           "200": {
             "description": "",
@@ -3133,64 +2220,28 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "uses": {
-                      "type": "number"
-                    },
+                    "success": { "type": "boolean" },
+                    "uses": { "type": "number" },
                     "purchase": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "seller_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "purchaser_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "gumroad_fee": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "full_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "variants": {
-                          "type": "string"
-                        },
-                        "refunded": {
-                          "type": "boolean"
-                        },
-                        "chargebacked": {
-                          "type": "boolean"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "seller_id": { "type": "string", "minLength": 1 },
+                        "purchaser_id": { "type": "string", "minLength": 1 },
+                        "gumroad_fee": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "created_at": { "type": "string", "minLength": 1 },
+                        "full_name": { "type": "string", "minLength": 1 },
+                        "variants": { "type": "string" },
+                        "refunded": { "type": "boolean" },
+                        "chargebacked": { "type": "boolean" },
                         "subscription_cancelled_at": {},
                         "subscription_failed_at": {},
                         "custom_fields": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "email": { "type": "string", "minLength": 1 }
                       },
                       "required": [
                         "id",
@@ -3221,9 +2272,7 @@
     },
     "/licenses/disable": {
       "put": {
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Body3"
-        },
+        "requestBody": { "$ref": "#/components/requestBodies/Body3" },
         "responses": {
           "200": {
             "description": "",
@@ -3233,64 +2282,28 @@
                   "description": "",
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "uses": {
-                      "type": "number"
-                    },
+                    "success": { "type": "boolean" },
+                    "uses": { "type": "number" },
                     "purchase": {
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "seller_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "purchaser_id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "gumroad_fee": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "product_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "created_at": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "full_name": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "variants": {
-                          "type": "string"
-                        },
-                        "refunded": {
-                          "type": "boolean"
-                        },
-                        "chargebacked": {
-                          "type": "boolean"
-                        },
+                        "id": { "type": "string", "minLength": 1 },
+                        "seller_id": { "type": "string", "minLength": 1 },
+                        "purchaser_id": { "type": "string", "minLength": 1 },
+                        "gumroad_fee": { "type": "string", "minLength": 1 },
+                        "product_name": { "type": "string", "minLength": 1 },
+                        "created_at": { "type": "string", "minLength": 1 },
+                        "full_name": { "type": "string", "minLength": 1 },
+                        "variants": { "type": "string" },
+                        "refunded": { "type": "boolean" },
+                        "chargebacked": { "type": "boolean" },
                         "subscription_cancelled_at": {},
                         "subscription_failed_at": {},
                         "custom_fields": {
                           "type": "array",
-                          "items": {
-                            "properties": {}
-                          }
+                          "items": { "properties": {} }
                         },
-                        "email": {
-                          "type": "string",
-                          "minLength": 1
-                        }
+                        "email": { "type": "string", "minLength": 1 }
                       },
                       "required": [
                         "id",
@@ -3320,11 +2333,7 @@
       }
     }
   },
-  "servers": [
-    {
-      "url": "https://api.gumroad.com/v2"
-    }
-  ],
+  "servers": [{ "url": "https://api.gumroad.com/v2" }],
   "components": {
     "requestBodies": {
       "Body": {
@@ -3332,12 +2341,8 @@
           "application/json": {
             "schema": {
               "properties": {
-                "variant_category": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                }
+                "variant_category": { "type": "string" },
+                "title": { "type": "string" }
               },
               "required": ["variant_category", "title"]
             }
@@ -3349,18 +2354,10 @@
           "application/json": {
             "schema": {
               "properties": {
-                "variant": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "price_difference_cents": {
-                  "type": "number"
-                },
-                "max_purchase_count": {
-                  "type": "number"
-                }
+                "variant": { "type": "string" },
+                "name": { "type": "string" },
+                "price_difference_cents": { "type": "number" },
+                "max_purchase_count": { "type": "number" }
               },
               "required": ["variant", "name", "price_difference_cents"]
             }
@@ -3372,12 +2369,8 @@
           "application/json": {
             "schema": {
               "properties": {
-                "product_permalink": {
-                  "type": "string"
-                },
-                "license_key": {
-                  "type": "string"
-                }
+                "product_permalink": { "type": "string" },
+                "license_key": { "type": "string" }
               },
               "required": ["product_permalink", "license_key"]
             }
@@ -3403,9 +2396,5 @@
       }
     }
   },
-  "security": [
-    {
-      "oauth2": []
-    }
-  ]
+  "security": [{ "oauth2": [] }]
 }

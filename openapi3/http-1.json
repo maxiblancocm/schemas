@@ -21,11 +21,7 @@
                 "type": "object",
                 "required": ["url", "method"],
                 "properties": {
-                  "url": {
-                    "title": "URL",
-                    "type": "string",
-                    "format": "uri"
-                  },
+                  "url": { "title": "URL", "type": "string", "format": "uri" },
                   "method": {
                     "type": "string",
                     "enum": [
@@ -53,52 +49,33 @@
                   },
                   "headers": {
                     "type": "object",
-                    "additionalProperties": {
-                      "type": "string"
-                    }
+                    "additionalProperties": { "type": "string" }
                   },
                   "queryParams": {
                     "title": "Query Params",
                     "type": "object",
-                    "additionalProperties": {
-                      "type": "string"
-                    }
+                    "additionalProperties": { "type": "string" }
                   },
-                  "body": {
-                    "type": "object",
-                    "additionalProperties": true
-                  },
+                  "body": { "type": "object", "additionalProperties": true },
                   "basicAuth": {
                     "title": "Basic Authentication",
                     "type": "object",
                     "properties": {
-                      "username": {
-                        "type": "string"
-                      },
-                      "password": {
-                        "type": "string",
-                        "format": "password"
-                      }
+                      "username": { "type": "string" },
+                      "password": { "type": "string", "format": "password" }
                     }
                   },
                   "proxy": {
                     "type": "object",
                     "properties": {
-                      "host": {
-                        "type": "string"
-                      },
+                      "host": { "type": "string" },
                       "port": {
                         "type": "integer",
                         "minimum": 1,
                         "maximum": 65535
                       },
-                      "username": {
-                        "type": "string"
-                      },
-                      "password": {
-                        "type": "string",
-                        "format": "password"
-                      }
+                      "username": { "type": "string" },
+                      "password": { "type": "string", "format": "password" }
                     }
                   }
                 }
@@ -114,19 +91,10 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "data": {
-                      "type": "object",
-                      "additionalProperties": true
-                    },
-                    "status": {
-                      "type": "number"
-                    },
-                    "statusText": {
-                      "type": "string"
-                    },
-                    "headers": {
-                      "type": "object"
-                    }
+                    "data": { "type": "object", "additionalProperties": true },
+                    "status": { "type": "number" },
+                    "statusText": { "type": "string" },
+                    "headers": { "type": "object" }
                   }
                 }
               }
