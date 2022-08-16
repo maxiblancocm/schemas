@@ -129,6 +129,8 @@
   "components": {
     "parameters": {
       "network": {
+        "name": "network",
+        "in": "query",
         "schema": {
           "type": "integer",
           "oneOf": [
@@ -152,7 +154,11 @@
           ]
         }
       },
-      "address": { "schema": { "type": "string" } }
+      "address": {
+        "name": "address",
+        "in": "query",
+        "schema": { "type": "string" }
+      }
     }
   }
 }
