@@ -1,6 +1,13 @@
 {
   "openapi": "3.0.0",
-  "info": { "title": "MongoDB", "version": "1" },
+  "info": {
+    "title": "MongoDB",
+    "version": "1",
+    "x-categories": ["database"],
+    "x-logo": {
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/mongodb.svg"
+    }
+  },
   "paths": {
     "/mongodb-create-new-document": {
       "get": {
