@@ -3,7 +3,7 @@
   "info": {
     "title": "Uniswap V2",
     "version": "1",
-    "x-categories": ["exchanges"],
+    "x-categories": ["exchanges", "defi"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/dapps/app.uniswap.org.png"
     }

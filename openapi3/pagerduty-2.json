@@ -26439,6 +26439,14 @@
                       "unauthorized_count": 1,
                       "non_existent_count": 0
                     }
+                  },
+                  "response": {
+                    "summary": "Response Example",
+                    "value": {
+                      "deleted_count": 1,
+                      "unauthorized_count": 1,
+                      "non_existent_count": 0
+                    }
                   }
                 }
               }
@@ -27090,6 +27098,37 @@
                       "total": 1000,
                       "more": true
                     }
+                  },
+                  "response": {
+                    "summary": "Response Example",
+                    "value": {
+                      "subscriptions": [
+                        {
+                          "subscription": {
+                            "subscriber_id": "PD1234",
+                            "subscriber_type": "team",
+                            "subscribable_id": "PD1234",
+                            "subscribable_type": "incident",
+                            "subscribable_name": null,
+                            "account_id": "PD1234"
+                          }
+                        },
+                        {
+                          "subscription": {
+                            "subscriber_id": "PD1234",
+                            "subscriber_type": "team",
+                            "subscribable_id": "PD1234",
+                            "subscribable_type": "business_service",
+                            "subscribable_name": "Online Payment",
+                            "account_id": "PD1234"
+                          }
+                        }
+                      ],
+                      "limit": 2,
+                      "offset": 0,
+                      "total": 1000,
+                      "more": true
+                    }
                   }
                 }
               }
@@ -27295,7 +27334,8 @@
           },
           "description": "The entities to unsubscribe from."
         }
-      }
+      },
+      "summary": "Remove Team Notification Subscriptions"
     },
     "/users/{id}/notification_subscriptions": {
       "get": {

@@ -3,7 +3,7 @@
   "info": {
     "title": "DEX Screener",
     "version": "1",
-    "x-categories": ["blockchain"],
+    "x-categories": ["blockchain", "defi"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/dexscreener.png"
     }
