@@ -1734,6 +1734,20 @@
             "in": "query",
             "name": "cursor",
             "description": "The cursor returned in the last response (for getting the next page)\n",
+            "schema": { "type": "string", "minimum": 1 },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "range",
+            "description": "The desired subrange to query",
+            "required": false,
+            "schema": { "type": "integer", "minimum": 1 }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The cursor returned in the previous response (used to getting the next page).",
             "schema": { "type": "string" }
           }
         ],

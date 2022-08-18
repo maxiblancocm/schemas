@@ -3,7 +3,7 @@
   "info": {
     "title": "Logic",
     "version": "1",
-    "x-categories": ["chainjet"],
+    "x-categories": ["popular", "chainjet"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/logic.svg"
     }

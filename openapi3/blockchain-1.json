@@ -3,7 +3,7 @@
   "info": {
     "title": "Blockchain",
     "version": "1",
-    "x-categories": ["chainjet", "blockchain"],
+    "x-categories": ["popular", "chainjet", "blockchain"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/blockchain.svg"
     }

@@ -3,7 +3,7 @@
   "info": {
     "title": "Discord",
     "version": "10",
-    "x-categories": ["chat"],
+    "x-categories": ["popular", "chat"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/discord.svg"
     }

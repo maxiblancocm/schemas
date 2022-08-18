@@ -3,7 +3,7 @@
   "info": {
     "title": "Ethereum Name Service (ENS)",
     "version": "1",
-    "x-categories": ["blockchain"],
+    "x-categories": ["popular", "blockchain"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/dapps/app.ens.domains.png"
     }

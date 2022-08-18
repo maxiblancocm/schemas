@@ -4,8 +4,9 @@
     "title": "Reddit",
     "version": "1",
     "x-logo": {
-      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/reddit.svg"
-    }
+      "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/reddit.png"
+    },
+    "x-categories": ["popular"]
   },
   "paths": {
     "/reddit-list-comments-in-a-post": {

@@ -8,7 +8,7 @@
   "info": {
     "title": "Gmail",
     "version": "v1",
-    "x-categories": ["email"],
+    "x-categories": ["popular", "email"],
     "x-logo": {
       "url": "https://lh3.googleusercontent.com/3apmn5ZrO9g69LOLLshuSID-zQ99Z3q9bvJEWbj_rxaxS9p6K_rKEynb8wuYbxGuoFxWtWTUbuRFrHHfmM1g=w160-h160"
     },
@@ -286,8 +286,12 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.compose"],
@@ -475,8 +479,12 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.compose"],
@@ -527,8 +535,12 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.compose"],
@@ -789,8 +801,12 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.compose"],
@@ -827,7 +843,12 @@
             "name": "historyTypes",
             "schema": {
               "items": {
-                "enum": ["messageAdded", "messageDeleted", "labelAdded", "labelRemoved"],
+                "enum": [
+                  "messageAdded",
+                  "messageDeleted",
+                  "labelAdded",
+                  "labelRemoved"
+                ],
                 "type": "string"
               },
               "type": "array"
@@ -2194,8 +2215,12 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.action.compose"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.action.compose"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.compose"],
@@ -2317,16 +2342,28 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.action"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.action"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.action"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.action"
+            ]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.metadata"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.metadata"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.metadata"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.metadata"
+            ]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.readonly"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.metadata"],
@@ -2699,12 +2736,20 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.action"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.action"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.action"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.action"
+            ]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.readonly"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.modify"],
@@ -2965,8 +3010,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -3095,8 +3144,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -3135,8 +3188,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -3619,8 +3676,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -3659,8 +3720,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4271,8 +4336,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4311,8 +4380,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4461,8 +4534,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4519,8 +4596,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4582,8 +4663,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4675,8 +4760,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4728,8 +4817,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4798,8 +4891,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4921,8 +5018,12 @@
             "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.basic"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -4996,8 +5097,12 @@
         },
         "security": [
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.settings.sharing"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.settings.sharing"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.settings.sharing"
+            ]
           }
         ],
         "tags": ["users"],
@@ -5448,16 +5553,28 @@
             "Oauth2c": ["https://mail.google.com/"]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.action"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.action"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.action"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.action"
+            ]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.metadata"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.metadata"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.metadata"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.metadata"
+            ]
           },
           {
-            "Oauth2": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly"],
-            "Oauth2c": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly"]
+            "Oauth2": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/gmail.addons.current.message.readonly"
+            ]
           },
           {
             "Oauth2": ["https://www.googleapis.com/auth/gmail.metadata"],
@@ -5984,7 +6101,13 @@
         "properties": {
           "disposition": {
             "description": "The state that a message should be left in after it has been forwarded.",
-            "enum": ["dispositionUnspecified", "leaveInInbox", "archive", "trash", "markRead"],
+            "enum": [
+              "dispositionUnspecified",
+              "leaveInInbox",
+              "archive",
+              "trash",
+              "markRead"
+            ],
             "type": "string"
           },
           "emailAddress": {
@@ -6045,7 +6168,13 @@
           },
           "verificationStatus": {
             "description": "Indicates whether this address has been verified and can act as a delegate for the account. Read-only.",
-            "enum": ["verificationStatusUnspecified", "accepted", "pending", "rejected", "expired"],
+            "enum": [
+              "verificationStatusUnspecified",
+              "accepted",
+              "pending",
+              "rejected",
+              "expired"
+            ],
             "type": "string"
           }
         },
@@ -6271,7 +6400,12 @@
           },
           "expungeBehavior": {
             "description": "The action that will be executed on a message when it is marked as deleted and expunged from the last visible IMAP folder.",
-            "enum": ["expungeBehaviorUnspecified", "archive", "trash", "deleteForever"],
+            "enum": [
+              "expungeBehaviorUnspecified",
+              "archive",
+              "trash",
+              "deleteForever"
+            ],
             "type": "string"
           },
           "maxFolderSize": {
@@ -6730,12 +6864,23 @@
         "properties": {
           "accessWindow": {
             "description": "The range of messages which are accessible via POP.",
-            "enum": ["accessWindowUnspecified", "disabled", "fromNowOn", "allMail"],
+            "enum": [
+              "accessWindowUnspecified",
+              "disabled",
+              "fromNowOn",
+              "allMail"
+            ],
             "type": "string"
           },
           "disposition": {
             "description": "The action that will be executed on a message after it has been fetched via POP.",
-            "enum": ["dispositionUnspecified", "leaveInInbox", "archive", "trash", "markRead"],
+            "enum": [
+              "dispositionUnspecified",
+              "leaveInInbox",
+              "archive",
+              "trash",
+              "markRead"
+            ],
             "type": "string"
           }
         },
@@ -7025,7 +7170,9 @@
               "https://www.googleapis.com/auth/gmail.settings.basic": "Manage your basic mail settings",
               "https://www.googleapis.com/auth/gmail.settings.sharing": "Manage your sensitive mail settings, including who can manage your mail"
             },
-            "x-ignoreScopes": ["https://www.googleapis.com/auth/gmail.metadata"],
+            "x-ignoreScopes": [
+              "https://www.googleapis.com/auth/gmail.metadata"
+            ],
             "tokenUrl": "https://accounts.google.com/o/oauth2/token"
           }
         },

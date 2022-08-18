@@ -5,7 +5,7 @@
     "version": "2",
     "description": "The Coinbase v2 API",
     "contact": { "name": "CoinFabrik", "url": "http://www.coinfabrik.com/" },
-    "x-categories": ["exchanges"],
+    "x-categories": ["popular", "exchanges"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/integrations/coinbase.svg"
     }

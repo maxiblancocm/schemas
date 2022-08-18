@@ -3,7 +3,7 @@
   "info": {
     "title": "PancakeSwap",
     "version": "1",
-    "x-categories": ["exchanges", "defi"],
+    "x-categories": ["popular", "exchanges", "defi"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/dapps/pancakeswap.finance.png"
     }

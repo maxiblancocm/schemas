@@ -3,7 +3,7 @@
   "info": {
     "title": "Compound V2",
     "version": "1",
-    "x-categories": ["defi"],
+    "x-categories": ["popular", "defi"],
     "x-logo": {
       "url": "https://raw.githubusercontent.com/chainjet/assets/master/dapps/compound.finance.png"
     }
