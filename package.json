@@ -1,0 +1,10 @@
+{
+  "name": "schemas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chainjet/schemas.git"
+  }
+}
