@@ -4,3 +4,6 @@
 
 ## Product
 * [Intro](product/intro.md)
+
+## Features
+* [Introduction](features/intro.md)
